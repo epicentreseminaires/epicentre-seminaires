@@ -1,0 +1,231 @@
+---
+import Base from '@/layouts/Base.astro';
+import TrustStrip from '@/components/TrustStrip.astro';
+import ClientsLogos from '@/components/ClientsLogos.astro';
+import Testimonials from '@/components/Testimonials.astro';
+import FAQ from '@/components/FAQ.astro';
+import StickyCTA from '@/components/StickyCTA.astro';
+
+const title = "Epicentre Séminaires : Production événementielle | Plaine de l'Ain & Épinac";
+const description = "Agence de production événementielle. Plénières, galas, congrès, lancements de produits, captation vidéo. Plaine de l'Ain (entre Lyon et Genève) et domaine en Bourgogne, à Épinac.";
+
+const heroImg = 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop';
+const epinacImg = 'https://images.unsplash.com/photo-1601565828050-65947b4c0f88?w=1600&q=85&auto=format&fit=crop';
+const plaineImg = 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1600&q=85&auto=format&fit=crop';
+---
+
+<Base title={title} description={description} zone="brand">
+  <!-- HERO -->
+  <section class="relative min-h-screen overflow-hidden bg-ink flex flex-col">
+    <img
+      src={heroImg}
+      alt="Plénière d'entreprise avec scénographie lumière"
+      class="absolute inset-0 w-full h-full object-cover opacity-50"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/40 to-ink"></div>
+
+    <div class="relative z-10 flex-1 container-wide flex flex-col justify-end pb-20 md:pb-28 pt-32">
+      <p class="eyebrow text-bone/60 mb-8">Agence de production événementielle</p>
+      <h1 class="text-bone display-xl max-w-6xl">
+        À l'épicentre<br />de vos événements<br /><span class="text-accent">d'entreprise.</span>
+      </h1>
+      <p class="text-bone/70 max-w-2xl mt-10 text-lg md:text-xl leading-relaxed">
+        Plénières, galas, congrès, lancements de produits, captation vidéo.
+        Une exigence de production héritée des grandes scènes, à l'épicentre de la Plaine de l'Ain et au cœur de la Bourgogne.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="/contact/" class="btn-accent text-base px-8 py-4">
+          Demander un devis
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#savoir-faire" class="text-bone/80 hover:text-bone text-sm flex items-center gap-2 transition-colors">
+          Voir nos productions
+        </a>
+      </div>
+    </div>
+
+    <a href="#manifeste" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-bone/50 text-[0.7rem] uppercase tracking-[0.2em] z-10 flex flex-col items-center gap-2">
+      Découvrir
+      <span class="block w-px h-8 bg-bone/40"></span>
+    </a>
+  </section>
+
+  <TrustStrip variant="light" />
+
+  <!-- MANIFESTE / TRIPLE SENS -->
+  <section id="manifeste" class="py-32 md:py-44 bg-bone">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="eyebrow">Le manifeste</p>
+        <h2 class="text-4xl md:text-6xl mt-6">
+          Trois fois<br />épicentre.
+        </h2>
+      </div>
+      <div class="md:col-span-7 md:col-start-6 space-y-10 text-xl leading-[1.5]">
+        <p>
+          <strong class="text-accent-dark font-semibold">Épi(nac)centre.</strong>
+          Au cœur d'Épinac, en Bourgogne, un domaine familial avec 9 000 m² de terrain pour accueillir vos séminaires d'entreprise dans un écrin rare.
+        </p>
+        <p>
+          <strong class="text-accent-dark font-semibold">Épicentre géographique.</strong>
+          Entre Lyon et Genève, la Plaine de l'Ain est l'un des bassins industriels les plus dynamiques de France. C'est là que nous produisons vos événements.
+        </p>
+        <p>
+          <strong class="text-accent-dark font-semibold">Épicentre d'énergie.</strong>
+          Plénières XXL, scène, son, lumière, vidéo. Nous concevons des productions à forte intensité, là où il se passe quelque chose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEUX UNIVERS -->
+  <section class="bg-ink text-bone py-32 md:py-40">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-20">
+        <p class="eyebrow text-bone/50">Nos deux territoires</p>
+        <h2 class="text-5xl md:text-7xl mt-6">
+          Une agence.<br />Deux façons de travailler ensemble.
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <a href="/plaine-de-lain/" class="group relative overflow-hidden block aspect-[4/5] md:aspect-[3/4]">
+          <img src={plaineImg} alt="Plénière avec scène et captation vidéo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-plaine-deep via-plaine/40 to-transparent"></div>
+          <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+            <p class="eyebrow text-bone/60">Plaine de l'Ain</p>
+            <h3 class="text-3xl md:text-4xl lg:text-5xl mt-4 leading-tight">
+              On produit votre événement, là où vous le souhaitez.
+            </h3>
+            <p class="mt-4 text-bone/80 max-w-md">
+              Agence de production événementielle pour les entreprises du bassin Plaine de l'Ain. Nous intervenons sur les lieux de votre choix.
+            </p>
+            <span class="mt-8 inline-flex items-center gap-3 text-sm font-medium text-bone/90 group-hover:text-accent transition-colors">
+              Découvrir l'agence
+              <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+
+        <a href="/epinac/" class="group relative overflow-hidden block aspect-[4/5] md:aspect-[3/4]">
+          <img src={epinacImg} alt="Domaine et chapiteau pour séminaire en Bourgogne" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-epinac-deep via-epinac/40 to-transparent"></div>
+          <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-end">
+            <p class="eyebrow text-bone/60">Épinac · Bourgogne</p>
+            <h3 class="text-3xl md:text-4xl lg:text-5xl mt-4 leading-tight">
+              On vous reçoit dans notre domaine, en Bourgogne.
+            </h3>
+            <p class="mt-4 text-bone/80 max-w-md">
+              Un lieu de séminaire résidentiel rare, à l'écart : 9 000 m² de parc, chambres d'hôtes, possibilité de chapiteau cristal pour vos plénières et galas.
+            </p>
+            <span class="mt-8 inline-flex items-center gap-3 text-sm font-medium text-bone/90 group-hover:text-accent transition-colors">
+              Découvrir le domaine
+              <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <ClientsLogos />
+
+  <!-- RÉASSURANCE / CHIFFRES -->
+  <section class="py-32 bg-bone-soft">
+    <div class="container-wide grid md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-5">
+        <p class="eyebrow">L'expérience</p>
+        <h2 class="text-5xl md:text-6xl mt-6">
+          Une production rodée sur les plus grandes scènes.
+        </h2>
+        <p class="mt-8 text-lg leading-relaxed text-ink/75">
+          Avant de fonder Epicentre, nous avons piloté des productions sur certaines des plus grandes scènes du sport et du spectacle français : devant des jauges de plusieurs milliers de spectateurs.
+          Cette exigence opérationnelle, nous l'apportons aujourd'hui à chaque événement d'entreprise, qu'il s'agisse d'une plénière de 100 personnes ou d'une convention de 1 500.
+        </p>
+        <a href="/a-propos/" class="btn-outline mt-10">Notre histoire</a>
+      </div>
+
+      <div class="md:col-span-6 md:col-start-7 grid grid-cols-2 gap-4">
+        <div class="bg-ink text-bone p-8 aspect-square flex flex-col justify-between">
+          <p class="eyebrow text-bone/50">Productions</p>
+          <p class="text-6xl font-semibold tracking-tightest">+150</p>
+          <p class="text-sm text-bone/70">événements pilotés en propre ou en co-production</p>
+        </div>
+        <div class="bg-ink text-bone p-8 aspect-square flex flex-col justify-between mt-12">
+          <p class="eyebrow text-bone/50">Capacité</p>
+          <p class="text-6xl font-semibold tracking-tightest">1 500<span class="text-3xl">+</span></p>
+          <p class="text-sm text-bone/70">spectateurs sur des plénières et galas grand format</p>
+        </div>
+        <div class="bg-bone p-8 aspect-square flex flex-col justify-between border border-ink/10">
+          <p class="eyebrow">Captation</p>
+          <p class="text-6xl font-semibold tracking-tightest">4K</p>
+          <p class="text-sm text-ink/70">multicam, régie son lumière, diffusion live</p>
+        </div>
+        <div class="bg-bone p-8 aspect-square flex flex-col justify-between mt-12 border border-ink/10">
+          <p class="eyebrow">Domaine</p>
+          <p class="text-6xl font-semibold tracking-tightest">9 000<span class="text-3xl"> m²</span></p>
+          <p class="text-sm text-ink/70">de parc privatisé en Bourgogne</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVOIR-FAIRE -->
+  <section id="savoir-faire" class="bg-ink text-bone py-32">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <p class="eyebrow text-bone/50">Savoir-faire</p>
+        <h2 class="text-5xl md:text-7xl mt-6">
+          Ce que nous produisons.
+        </h2>
+        <p class="mt-8 text-bone/70 text-xl max-w-2xl">
+          Notre niche : la production technique d'événements à enjeu. Scène, son, lumière, vidéo, captation. Pas d'animations gadgets, ni de salons.
+        </p>
+      </div>
+
+      <div class="mt-20 grid md:grid-cols-3 gap-px bg-bone/10">
+        {[
+          { t: 'Plénières & conventions', d: 'Scénographie, mise en scène, captation multicam.' },
+          { t: 'Galas & remises de prix', d: 'Dîner assis, scène, show, mise en lumière.' },
+          { t: 'Lancements de produits', d: 'Reveal scénographié, presse, captation, diffusion.' },
+          { t: 'Congrès & assemblées générales', d: 'Plénière, ateliers, restauration, retransmission.' },
+          { t: 'Inaugurations', d: 'Discours officiel, scénographie, presse.' },
+          { t: 'Concerts & shows d\'entreprise', d: 'Production technique son, lumière, vidéo, régie.' },
+        ].map((item) => (
+          <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
+            <h3 class="text-2xl">{item.t}</h3>
+            <p class="mt-3 text-bone/55 text-sm leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <FAQ />
+
+  <!-- CTA FINAL -->
+  <section class="bg-ink text-bone py-32">
+    <div class="container-wide text-center">
+      <p class="eyebrow text-bone/50">Parlons de votre projet</p>
+      <h2 class="text-5xl md:text-7xl max-w-4xl mx-auto mt-6">
+        Un événement à produire ?<br /><span class="text-accent">On l'étudie sous 24 h.</span>
+      </h2>
+      <p class="mt-10 text-lg text-bone/70 max-w-xl mx-auto">
+        Décrivez-nous votre projet en deux lignes. On vous rappelle dans la journée, sans engagement.
+      </p>
+      <div class="mt-12 flex flex-wrap justify-center gap-4">
+        <a href="/contact/" class="btn-accent text-base px-8 py-4">
+          Demander un devis
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="tel:+33600000000" class="btn-outline border-bone/40 text-bone hover:bg-bone hover:text-ink">
+          06 00 00 00 00
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <StickyCTA />
+</Base>

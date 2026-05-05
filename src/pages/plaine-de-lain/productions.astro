@@ -1,0 +1,92 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const title = "Productions : Plénières, galas, congrès, lancements | Epicentre Plaine de l'Ain";
+const description = "Productions événementielles dans la Plaine de l'Ain : plénières, galas, remises de prix, congrès, AG, lancements produits, inaugurations, captation vidéo multicam.";
+
+const cover = 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop';
+
+const productions = [
+  {
+    title: 'Plénières & conventions',
+    description: 'Scénographie, mise en scène, écran LED, captation multicam, régie son et lumière. De 100 à 1 500 personnes.',
+    img: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Galas & remises de prix',
+    description: 'Dîner assis, scène, mise en lumière, intervention show, vidéos d\'intronisation. Remise de prix, cérémonies internes.',
+    img: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Lancements de produits',
+    description: 'Reveal scénographié, dispositif scénique sur-mesure, gestion presse, captation, soirée de lancement.',
+    img: 'https://images.unsplash.com/photo-1559223607-a43c990c692c?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Congrès & assemblées générales',
+    description: 'Plénière en jauge importante, ateliers parallèles, retransmission, restauration, AG d\'actionnaires.',
+    img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Inaugurations',
+    description: 'Discours officiels, scénographie de site, presse, captation, cocktail. Pour ouverture de site, livraison de bâtiment, événement institutionnel.',
+    img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Concerts & shows d\'entreprise',
+    description: 'Production technique complète : scène, son, lumière, vidéo, régie, sécurité. Pour concert privé, soirée d\'entreprise spectaculaire.',
+    img: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1600&q=85&auto=format&fit=crop',
+  },
+  {
+    title: 'Captation vidéo multicam',
+    description: 'Captation 2 à 6 caméras, régie de production, streaming live, montage et livrables post-événement.',
+    img: 'https://images.unsplash.com/photo-1560439514-4e9645039924?w=1600&q=85&auto=format&fit=crop',
+  },
+];
+---
+
+<Base title={title} description={description} zone="plaine">
+  <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-plaine-deep">
+    <img src={cover} alt="Production événementielle - plénière, scène, lumière" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+    <div class="absolute inset-0 bg-gradient-to-b from-plaine-deep/30 to-plaine-deep"></div>
+    <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
+      <p class="eyebrow text-bone/70 mb-4">Productions</p>
+      <h1 class="font-display text-4xl md:text-6xl max-w-4xl">Ce que l'on produit.</h1>
+    </div>
+  </section>
+
+  <section class="py-24 bg-bone">
+    <div class="container-wide">
+      <p class="eyebrow">Notre niche</p>
+      <h2 class="font-display text-3xl md:text-4xl mt-6 max-w-3xl leading-tight">
+        Les productions à enjeu, avec scène et technique. Pas le reste.
+      </h2>
+      <p class="mt-6 text-ink/70 max-w-2xl leading-relaxed">
+        Nous avons fait le choix de la spécialisation. Plénières XXL, galas, congrès, lancements de produits, captation, scène. Nous ne faisons ni team building gadget, ni salons : ce n'est pas notre métier.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-bone-soft py-24">
+    <div class="container-wide grid md:grid-cols-2 gap-6">
+      {productions.map((p) => (
+        <article class="bg-bone overflow-hidden group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src={p.img} alt={p.title} class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          </div>
+          <div class="p-8">
+            <h3 class="font-display text-2xl">{p.title}</h3>
+            <p class="mt-4 text-ink/70 leading-relaxed">{p.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-plaine text-bone py-24">
+    <div class="container-wide text-center">
+      <h2 class="font-display text-4xl md:text-5xl">Un projet à confier ?</h2>
+      <a href="/plaine-de-lain/contact/" class="btn-bone mt-10 inline-flex">Demander un devis</a>
+    </div>
+  </section>
+</Base>

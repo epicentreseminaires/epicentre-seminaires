@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import Prose from '@/components/Prose.astro';
+
+export async function getStaticPaths() {
+  const lieux = await getCollection('lieux', (l) => l.data.zone === 'plaine');
+  return lieux.map((lieu) => ({
+    params: { slug: lieu.id },
+    props: { lieu },
+  }));
+}
+
+const { lieu } = Astro.props;
+const { Content } = await render(lieu);
+---
+
+<Base title={`${lieu.data.title} | Epicentre Séminaires`} description={lieu.data.description} image={lieu.data.cover} zone="plaine">
+  <article>
+    <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-plaine-deep">
+      <img src={lieu.data.cover} alt={lieu.data.title} class="absolute inset-0 w-full h-full object-cover opacity-50" />
+      <div class="absolute inset-0 bg-gradient-to-b from-plaine-deep/30 to-plaine-deep"></div>
+      <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
+        <p class="eyebrow text-bone/60 mb-4">Plaine de l'Ain · {lieu.data.ville}</p>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight">
+          {lieu.data.title}
+        </h1>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-28 bg-bone">
+      <div class="container-wide">
+        <Prose>
+          <Content />
+        </Prose>
+      </div>
+    </section>
+
+    <section class="bg-plaine text-bone py-24">
+      <div class="container-wide text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-5xl leading-tight">
+          Parlons de votre projet à {lieu.data.ville}.
+        </h2>
+        <p class="mt-6 text-bone/70">
+          Réponse sous 24 h, devis détaillé sous 72 h.
+        </p>
+        <a href="/plaine-de-lain/contact/" class="btn-bone mt-10 inline-flex">
+          Demander un devis
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </article>
+</Base>

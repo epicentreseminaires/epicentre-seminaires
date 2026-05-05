@@ -1,0 +1,56 @@
+---
+const items = [
+  {
+    q: 'Vous intervenez dans toute la Plaine de l\'Ain ?',
+    a: 'Oui. Ambérieu, Lagnieu, Meximieux, Pérouges, Loyettes, Saint-Vulbas, Belley, Bourg-en-Bresse : et nous montons aussi sur Lyon proche. Notre périmètre est volontairement resserré pour garantir une réactivité réelle et une connaissance fine des lieux et prestataires locaux.',
+  },
+  {
+    q: 'À partir de quel budget vous intervenez ?',
+    a: 'Nous travaillons sur des productions à enjeu, à partir d\'environ 15 000 € de prestation technique. En dessous, nous ne sommes pas l\'agence la plus pertinente : d\'autres acteurs locaux sont mieux dimensionnés pour le format.',
+  },
+  {
+    q: 'Vous vous occupez de la captation vidéo en plus de la production événementielle ?',
+    a: 'Oui. Captation multicam (2 à 6 caméras), régie, streaming live, livrables post-événement (rushes, montage, teaser). C\'est l\'un de nos cœurs de métier hérité des productions de spectacle.',
+  },
+  {
+    q: 'Quelle est la différence entre votre offre Plaine de l\'Ain et votre domaine d\'Épinac ?',
+    a: 'Plaine de l\'Ain = nous sommes l\'agence de production qui vient chez vous (sur le lieu de votre choix). Épinac = nous vous accueillons dans notre domaine familial en Bourgogne pour un séminaire résidentiel. Deux offres distinctes, une seule exigence de production.',
+  },
+  {
+    q: 'Combien de temps avant l\'événement faut-il vous solliciter ?',
+    a: 'Idéalement 3 à 6 mois avant pour un événement de plus de 200 personnes avec scénographie complète. Nous gérons aussi des productions plus rapides (4 à 8 semaines) sur des formats plus contenus.',
+  },
+  {
+    q: 'Vous proposez du team building ou des animations classiques ?',
+    a: 'Non, ce n\'est pas notre métier. Nous nous concentrons sur la production technique d\'événements à enjeu : plénière, gala, lancement, captation. Pour du team building loisir, d\'autres prestataires sont plus pertinents.',
+  },
+];
+---
+
+<section class="py-28 bg-bone-soft">
+  <div class="container-wide max-w-4xl">
+    <div class="mb-16">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="text-4xl md:text-5xl mt-6">
+        Les questions qu'on nous pose.
+      </h2>
+    </div>
+
+    <div class="divide-y divide-ink/10 border-y border-ink/10">
+      {items.map((it, i) => (
+        <details class="group py-6 cursor-pointer" open={i === 0}>
+          <summary class="flex items-start justify-between gap-6 list-none">
+            <h3 class="text-lg md:text-xl font-semibold leading-snug">{it.q}</h3>
+            <span class="shrink-0 mt-1 text-ink/40 group-open:rotate-45 transition-transform duration-200">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round" />
+                <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round" />
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-4 text-ink/70 leading-relaxed pr-12">{it.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const title = "Contact : Agence événementielle Plaine de l'Ain | Epicentre";
+const description = "Contactez notre agence de production événementielle dans la Plaine de l'Ain. Devis sur-mesure pour vos plénières, galas, congrès, lancements produits.";
+---
+
+<Base title={title} description={description} zone="plaine">
+  <section class="bg-plaine-deep text-bone py-24 md:py-32">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="eyebrow text-bone/60">Plaine de l'Ain · Entre Lyon et Genève</p>
+        <h1 class="font-display text-4xl md:text-6xl mt-6 leading-tight">Demandez votre devis.</h1>
+        <p class="mt-8 text-bone/70 leading-relaxed">
+          Décrivez votre projet en quelques lignes. Nous vous rappelons sous 24 h pour comprendre vos enjeux et préparer une proposition technique précise.
+        </p>
+        <div class="mt-10 space-y-3 text-bone/80 text-sm">
+          <p><span class="text-bone/50">Email : </span><a href="mailto:contact@epicentre-seminaires.fr" class="hover:text-accent">contact@epicentre-seminaires.fr</a></p>
+          <p><span class="text-bone/50">Zone : </span>Plaine de l'Ain, Bugey, Pays de Gex, Lyon</p>
+        </div>
+      </div>
+
+      <div class="md:col-span-6 md:col-start-7 bg-bone text-ink p-8 md:p-12">
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="eyebrow">Prénom</span>
+              <input type="text" name="firstname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+            <label class="block">
+              <span class="eyebrow">Nom</span>
+              <input type="text" name="lastname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="eyebrow">Entreprise</span>
+            <input type="text" name="company" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+          </label>
+          <label class="block">
+            <span class="eyebrow">Email</span>
+            <input type="email" name="email" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+          </label>
+          <label class="block">
+            <span class="eyebrow">Téléphone</span>
+            <input type="tel" name="phone" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+          </label>
+          <label class="block">
+            <span class="eyebrow">Type de production</span>
+            <select name="type" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
+              <option>Plénière / convention</option>
+              <option>Gala / remise de prix</option>
+              <option>Lancement de produit</option>
+              <option>Congrès / AG</option>
+              <option>Inauguration</option>
+              <option>Concert / show d'entreprise</option>
+              <option>Captation vidéo</option>
+              <option>Autre</option>
+            </select>
+          </label>
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="eyebrow">Jauge approximative</span>
+              <input type="text" name="audience" placeholder="ex. 300 personnes" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+            <label class="block">
+              <span class="eyebrow">Date pressentie</span>
+              <input type="text" name="date" placeholder="ex. octobre 2026" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="eyebrow">Votre projet en quelques mots</span>
+            <textarea name="message" rows="4" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink resize-none"></textarea>
+          </label>
+          <button type="submit" class="btn-primary w-full justify-center">Envoyer ma demande</button>
+          <p class="text-xs text-ink/40">En soumettant ce formulaire, vous acceptez d'être recontacté par Epicentre Séminaires.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Base>

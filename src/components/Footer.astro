@@ -1,0 +1,85 @@
+---
+import Logo from './Logo.astro';
+import LegalModals from './LegalModals.astro';
+
+export interface Props {
+  zone?: 'epinac' | 'plaine' | 'brand';
+}
+const { zone = 'brand' } = Astro.props;
+
+const otherZone = zone === 'epinac'
+  ? { label: 'Découvrir notre agence Plaine de l\'Ain', href: '/plaine-de-lain/' }
+  : zone === 'plaine'
+  ? { label: 'Découvrir notre domaine en Bourgogne, à Épinac', href: '/epinac/' }
+  : null;
+
+const year = new Date().getFullYear();
+---
+
+{otherZone && (
+  <section class="bg-bone-soft py-16 border-t border-ink/10">
+    <div class="container-wide flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <p class="font-display text-2xl md:text-3xl text-ink max-w-xl">
+        {otherZone.label}
+      </p>
+      <a href={otherZone.href} class="btn-outline">
+        Y aller
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+)}
+
+<footer class="bg-ink text-bone/70">
+  <div class="container-wide py-16 grid md:grid-cols-5 gap-10">
+    <div class="md:col-span-2">
+      <Logo variant="light" height={64} />
+      <p class="mt-6 max-w-md text-sm leading-relaxed">
+        Agence de production événementielle.
+        Plénières XXL, galas, congrès, lancements de produits, captation vidéo.
+        À l'épicentre de la Plaine de l'Ain et au cœur de la Bourgogne, à Épinac.
+      </p>
+    </div>
+
+    <div>
+      <p class="eyebrow text-bone/50 mb-4">Épinac · Bourgogne</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/epinac/" class="hover:text-bone">Le domaine</a></li>
+        <li><a href="/epinac/le-domaine/" class="hover:text-bone">Visiter le lieu</a></li>
+        <li><a href="/epinac/productions/" class="hover:text-bone">Nos productions</a></li>
+        <li><a href="/epinac/contact/" class="hover:text-bone">Réserver un séjour</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="eyebrow text-bone/50 mb-4">Plaine de l'Ain</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/plaine-de-lain/" class="hover:text-bone">L'agence</a></li>
+        <li><a href="/plaine-de-lain/productions/" class="hover:text-bone">Nos productions</a></li>
+        <li><a href="/plaine-de-lain/realisations/" class="hover:text-bone">Notre approche</a></li>
+        <li><a href="/plaine-de-lain/contact/" class="hover:text-bone">Demander un devis</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="eyebrow text-bone/50 mb-4">Lire</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/journal/" class="hover:text-bone">Le journal</a></li>
+        <li><a href="/a-propos/" class="hover:text-bone">À propos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-bone/10">
+    <div class="container-wide py-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-bone/40">
+      <p>© {year} Epicentre Séminaires · Tous droits réservés</p>
+      <div class="flex gap-6">
+        <button type="button" data-open-dialog="dialog-legal" class="hover:text-bone underline-offset-2 hover:underline">Mentions légales</button>
+        <button type="button" data-open-dialog="dialog-privacy" class="hover:text-bone underline-offset-2 hover:underline">Confidentialité</button>
+        <a href="/contact/" class="hover:text-bone">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<LegalModals />

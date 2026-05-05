@@ -1,0 +1,52 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const title = "Contact : Epicentre Séminaires";
+const description = "Contactez Epicentre Séminaires. Choisissez votre territoire : Plaine de l'Ain (agence de production) ou Épinac (domaine de séminaire en Bourgogne).";
+---
+
+<Base title={title} description={description} zone="brand">
+  <section class="bg-ink text-bone py-24 md:py-32">
+    <div class="container-wide">
+      <p class="eyebrow text-bone/60">Contact</p>
+      <h1 class="font-display text-4xl md:text-6xl mt-6 max-w-4xl leading-tight">
+        Choisissez votre territoire.
+      </h1>
+      <p class="mt-6 text-bone/70 max-w-2xl text-lg">
+        Pour qu'on cible directement la bonne équipe, dites-nous où votre projet se passe.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-16">
+        <a href="/plaine-de-lain/contact/" class="group bg-plaine hover:bg-plaine-deep transition-colors p-10 md:p-12 block">
+          <p class="eyebrow text-bone/60">Plaine de l'Ain</p>
+          <h2 class="font-display text-3xl md:text-4xl mt-4 leading-tight">
+            Demander un devis pour une production événementielle.
+          </h2>
+          <p class="mt-6 text-bone/70 leading-relaxed">
+            Plénière, gala, congrès, lancement, captation. Sur le lieu de votre choix dans le bassin Plaine de l'Ain.
+          </p>
+          <span class="mt-10 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
+            Aller au formulaire →
+          </span>
+        </a>
+
+        <a href="/epinac/contact/" class="group bg-epinac hover:bg-epinac-deep transition-colors p-10 md:p-12 block">
+          <p class="eyebrow text-bone/60">Épinac · Bourgogne</p>
+          <h2 class="font-display text-3xl md:text-4xl mt-4 leading-tight">
+            Réserver une visite ou un séminaire au domaine.
+          </h2>
+          <p class="mt-6 text-bone/70 leading-relaxed">
+            Séminaire résidentiel, plénière sous chapiteau, gala, dîner et dégustation au domaine familial d'Épinac.
+          </p>
+          <span class="mt-10 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
+            Aller au formulaire →
+          </span>
+        </a>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-bone/10 text-bone/60 text-sm">
+        <p>Vous préférez écrire directement : <a href="mailto:contact@epicentre-seminaires.fr" class="text-bone hover:text-accent">contact@epicentre-seminaires.fr</a></p>
+      </div>
+    </div>
+  </section>
+</Base>

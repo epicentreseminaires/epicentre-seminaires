@@ -1,0 +1,87 @@
+---
+import Logo from './Logo.astro';
+
+export interface Props {
+  zone?: 'epinac' | 'plaine' | 'brand';
+}
+const { zone = 'brand' } = Astro.props;
+
+const navByZone = {
+  brand: [
+    { label: 'Épinac', href: '/epinac/' },
+    { label: "Plaine de l'Ain", href: '/plaine-de-lain/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'À propos', href: '/a-propos/' },
+    { label: 'Contact', href: '/contact/' },
+  ],
+  epinac: [
+    { label: 'Le domaine', href: '/epinac/le-domaine/' },
+    { label: 'Productions', href: '/epinac/productions/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'À propos', href: '/a-propos/' },
+    { label: 'Contact', href: '/epinac/contact/' },
+  ],
+  plaine: [
+    { label: "L'agence", href: '/plaine-de-lain/agence/' },
+    { label: 'Productions', href: '/plaine-de-lain/productions/' },
+    { label: 'Notre approche', href: '/plaine-de-lain/realisations/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'Contact', href: '/plaine-de-lain/contact/' },
+  ],
+};
+
+const nav = navByZone[zone];
+const ctaHref = zone === 'epinac' ? '/epinac/contact/' : zone === 'plaine' ? '/plaine-de-lain/contact/' : '/contact/';
+const phone = '06 00 00 00 00';
+const phoneHref = 'tel:+33600000000';
+---
+
+<header class="absolute top-0 left-0 right-0 z-40">
+  <div class="container-wide flex items-center justify-between py-6">
+    <Logo variant="light" height={56} />
+
+    <nav class="hidden lg:flex items-center gap-8 text-sm text-bone/85">
+      {nav.map((item) => (
+        <a href={item.href} class="hover:text-bone transition-colors">{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a href={phoneHref} class="text-bone/70 hover:text-bone text-sm flex items-center gap-2 transition-colors">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {phone}
+      </a>
+      <a href={ctaHref} class="btn-bone text-sm">
+        Demander un devis
+      </a>
+    </div>
+
+    <button class="lg:hidden text-bone" aria-label="Menu" id="mobileMenuBtn">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="3" y1="7" x2="21" y2="7" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="17" x2="21" y2="17" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden lg:hidden bg-ink text-bone border-t border-bone/10">
+    <nav class="container-wide py-6 flex flex-col gap-4">
+      {nav.map((item) => (
+        <a href={item.href} class="text-base">{item.label}</a>
+      ))}
+      <a href={phoneHref} class="text-base text-bone/70">📞 {phone}</a>
+      <a href={ctaHref} class="btn-bone text-sm mt-2 w-fit">Demander un devis</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

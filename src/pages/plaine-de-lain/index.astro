@@ -1,0 +1,145 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const title = "Agence événementielle dans la Plaine de l'Ain | Epicentre Séminaires";
+const description = "Agence de production événementielle pour les entreprises de la Plaine de l'Ain. Plénières, galas, congrès, lancements produits, captation vidéo. Ambérieu, Bugey, entre Lyon et Genève.";
+
+const hero = 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=2400&q=85&auto=format&fit=crop';
+const cas1 = 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=85&auto=format&fit=crop';
+const cas2 = 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&q=85&auto=format&fit=crop';
+const cas3 = 'https://images.unsplash.com/photo-1559223607-a43c990c692c?w=1600&q=85&auto=format&fit=crop';
+---
+
+<Base title={title} description={description} zone="plaine">
+  <!-- HERO -->
+  <section class="relative h-[100vh] min-h-[600px] overflow-hidden bg-plaine-deep">
+    <img src={hero} alt="Plénière d'entreprise dans la Plaine de l'Ain" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+    <div class="absolute inset-0 bg-gradient-to-b from-plaine-deep/40 via-plaine-deep/20 to-plaine-deep"></div>
+
+    <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-24 md:pb-32 text-bone">
+      <p class="eyebrow text-bone/70 mb-6">Plaine de l'Ain · Entre Lyon et Genève</p>
+      <h1 class="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
+        Votre agence<br />de production<br /><em class="not-italic text-accent">à l'épicentre du bassin.</em>
+      </h1>
+      <p class="text-bone/80 max-w-2xl mt-8 text-lg leading-relaxed">
+        Plénières, galas, congrès, AG, lancements produits, captation vidéo. Nous produisons vos événements d'entreprise sur les lieux de votre choix, dans toute la Plaine de l'Ain.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/plaine-de-lain/contact/" class="btn-bone">Demander un devis</a>
+        <a href="/plaine-de-lain/realisations/" class="btn-outline border-bone/40 text-bone hover:bg-bone hover:text-ink">Voir nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI ICI -->
+  <section class="py-28 bg-bone">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-4">
+        <p class="eyebrow">Pourquoi ici</p>
+        <h2 class="font-display text-4xl md:text-5xl mt-6 leading-tight">
+          Le bassin qui ne dort plus.
+        </h2>
+      </div>
+      <div class="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed">
+        <p>
+          La <strong>Plaine de l'Ain</strong> n'est plus un secteur secondaire. Aéronautique en croissance, nouveaux projets d'énergie, nouveaux établissements scolaires, écosystème industriel en explosion : ce bassin entre Lyon et Genève vit un boom économique réel.
+        </p>
+        <p>
+          Et pourtant, presque aucune <strong>agence événementielle locale</strong> n'a le niveau d'exigence technique attendu sur les grandes scènes nationales du sport et du spectacle.
+        </p>
+        <p>
+          Nous, si. Nous l'apportons ici, à proximité, pour les entreprises qui veulent un événement à la hauteur de leur trajectoire.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 PRODUCTIONS PHARES -->
+  <section class="bg-ink text-bone py-28">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow text-bone/50">Nos productions</p>
+        <h2 class="font-display text-4xl md:text-5xl mt-6 leading-tight">
+          Plénière, gala, lancement, captation.
+        </h2>
+        <p class="mt-6 text-bone/60 text-lg">
+          Notre niche : la production événementielle à enjeu, avec scène, technique son lumière vidéo et captation. Pas d'animation gadget, pas de salons.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/plaine-de-lain/productions/" class="group relative aspect-[4/5] overflow-hidden block">
+          <img src={cas1} alt="Plénière avec scène et captation vidéo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink to-transparent"></div>
+          <div class="absolute inset-0 p-8 flex flex-col justify-end">
+            <p class="eyebrow text-bone/60">Plénière & convention</p>
+            <h3 class="font-display text-3xl mt-3">Scénographie + captation</h3>
+          </div>
+        </a>
+        <a href="/plaine-de-lain/productions/" class="group relative aspect-[4/5] overflow-hidden block">
+          <img src={cas2} alt="Gala d'entreprise avec mise en lumière" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink to-transparent"></div>
+          <div class="absolute inset-0 p-8 flex flex-col justify-end">
+            <p class="eyebrow text-bone/60">Gala & remise de prix</p>
+            <h3 class="font-display text-3xl mt-3">Show, scène, dîner</h3>
+          </div>
+        </a>
+        <a href="/plaine-de-lain/productions/" class="group relative aspect-[4/5] overflow-hidden block">
+          <img src={cas3} alt="Lancement de produit scénographié" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink to-transparent"></div>
+          <div class="absolute inset-0 p-8 flex flex-col justify-end">
+            <p class="eyebrow text-bone/60">Lancement & inauguration</p>
+            <h3 class="font-display text-3xl mt-3">Reveal & presse</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/plaine-de-lain/productions/" class="btn-outline border-bone/40 text-bone hover:bg-bone hover:text-ink">Voir tous nos savoir-faire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE D'INTERVENTION -->
+  <section class="py-28 bg-bone-soft">
+    <div class="container-wide grid md:grid-cols-12 gap-10 items-start">
+      <div class="md:col-span-5">
+        <p class="eyebrow">Zone d'intervention</p>
+        <h2 class="font-display text-4xl md:text-5xl mt-6 leading-tight">
+          Là où vos équipes travaillent.
+        </h2>
+        <p class="mt-6 text-ink/70 leading-relaxed">
+          Nous intervenons dans toute la Plaine de l'Ain et son périmètre proche. Sur le lieu de votre choix : siège, parc industriel, salle privatisée, lieu de prestige local.
+        </p>
+      </div>
+      <div class="md:col-span-6 md:col-start-7 grid grid-cols-2 sm:grid-cols-3 gap-3 text-ink">
+        {[
+          'Ambérieu-en-Bugey',
+          'Lagnieu',
+          'Meximieux',
+          'Pérouges',
+          'Loyettes',
+          'Saint-Vulbas',
+          'Belley',
+          'Bourg-en-Bresse',
+          'Lyon (proche)',
+        ].map((c) => (
+          <div class="bg-bone p-4 text-center text-sm border border-ink/10">{c}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-plaine text-bone py-28">
+    <div class="container-wide text-center">
+      <h2 class="font-display text-4xl md:text-6xl max-w-3xl mx-auto leading-tight">
+        Vous avez un événement à produire ?
+      </h2>
+      <p class="mt-8 text-bone/80 max-w-xl mx-auto">
+        Plénière, gala, lancement, AG : on étudie ensemble. Réponse sous 24 h.
+      </p>
+      <a href="/plaine-de-lain/contact/" class="btn-bone mt-10 inline-flex">Demander un devis</a>
+    </div>
+  </section>
+</Base>
