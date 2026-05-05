@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import Prose from '@/components/Prose.astro';
+import PageFaq from '@/components/PageFaq.astro';
+import NearbyLinks from '@/components/NearbyLinks.astro';
 
 export async function getStaticPaths() {
   const lieux = await getCollection('lieux', (l) => l.data.zone === 'epinac');
@@ -13,9 +15,52 @@ export async function getStaticPaths() {
 
 const { lieu } = Astro.props;
 const { Content } = await render(lieu);
+
+const siteUrl = 'https://epicentre-seminaires.fr';
+const pageUrl = `${siteUrl}/epinac/${lieu.id}/`;
+
+const faqJsonLd = lieu.data.faq && lieu.data.faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: lieu.data.faq.map((it) => ({
+        '@type': 'Question',
+        name: it.q,
+        acceptedAnswer: { '@type': 'Answer', text: it.a },
+      })),
+    }
+  : null;
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EventVenue',
+  '@id': `${pageUrl}#venue`,
+  name: `Epicentre Séminaires : domaine d'Épinac (rayon ${lieu.data.ville})`,
+  description: lieu.data.description,
+  url: pageUrl,
+  image: lieu.data.cover,
+  areaServed: { '@type': 'City', name: lieu.data.ville },
+  ...(lieu.data.geo && {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: lieu.data.geo.lat,
+      longitude: lieu.data.geo.lng,
+    },
+  }),
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Épinac',
+    postalCode: '71360',
+    addressRegion: 'Bourgogne-Franche-Comté',
+    addressCountry: 'FR',
+  },
+};
 ---
 
 <Base title={`${lieu.data.title} | Epicentre Séminaires`} description={lieu.data.description} image={lieu.data.cover} zone="epinac">
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
+  {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
+
   <article>
     <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-epinac-deep">
       <img src={lieu.data.cover} alt={lieu.data.title} class="absolute inset-0 w-full h-full object-cover opacity-55" />
@@ -35,6 +80,17 @@ const { Content } = await render(lieu);
         </Prose>
       </div>
     </section>
+
+    {lieu.data.faq && lieu.data.faq.length > 0 && (
+      <PageFaq items={lieu.data.faq} heading={`Vos questions sur un séminaire à ${lieu.data.ville} ou Épinac.`} />
+    )}
+
+    <NearbyLinks
+      zone="epinac"
+      currentSlug={lieu.id}
+      villes={lieu.data.nearbyVilles}
+      articles={lieu.data.nearbyArticles}
+    />
 
     <section class="bg-epinac text-bone py-24">
       <div class="container-wide text-center max-w-3xl mx-auto">

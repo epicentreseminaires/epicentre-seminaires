@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+
+export interface Props {
+  zone: 'epinac' | 'plaine';
+  currentSlug: string;
+  villes?: string[];
+  articles?: string[];
+}
+const { zone, currentSlug, villes = [], articles = [] } = Astro.props;
+
+const allLieux = await getCollection('lieux', (l) => l.data.zone === zone && l.id !== currentSlug);
+const villeSlugs = new Set(villes);
+const villesToShow = villes.length > 0
+  ? allLieux.filter((l) => villeSlugs.has(l.id))
+  : allLieux.slice(0, 4);
+
+const allArticles = await getCollection('journal');
+const articleSlugs = new Set(articles);
+const articlesToShow = articles.length > 0
+  ? allArticles.filter((a) => articleSlugs.has(a.id))
+  : [];
+
+const zonePath = zone === 'epinac' ? '/epinac' : '/plaine-de-lain';
+---
+
+{(villesToShow.length > 0 || articlesToShow.length > 0) && (
+  <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
+    <div class="container-wide grid md:grid-cols-2 gap-12">
+      {villesToShow.length > 0 && (
+        <div>
+          <p class="eyebrow">{zone === 'epinac' ? 'Aussi en Bourgogne' : 'Aussi dans la Plaine de l\'Ain'}</p>
+          <h2 class="text-2xl md:text-3xl mt-4 leading-tight">Autres villes où nous intervenons.</h2>
+          <ul class="mt-8 space-y-3">
+            {villesToShow.map((l) => (
+              <li>
+                <a href={`${zonePath}/${l.id}/`} class="group flex items-center justify-between border-b border-ink/10 pb-3 hover:border-ink transition-colors">
+                  <span class="text-base md:text-lg font-medium">{l.data.ville}</span>
+                  <span class="text-ink-muted group-hover:text-ink transition-colors" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {articlesToShow.length > 0 && (
+        <div>
+          <p class="eyebrow">À lire</p>
+          <h2 class="text-2xl md:text-3xl mt-4 leading-tight">Articles utiles pour préparer votre événement.</h2>
+          <ul class="mt-8 space-y-4">
+            {articlesToShow.map((a) => (
+              <li>
+                <a href={`/journal/${a.id}/`} class="group block border-b border-ink/10 pb-4 hover:border-ink transition-colors">
+                  <p class="text-base md:text-lg font-medium leading-snug group-hover:text-accent-dark transition-colors">{a.data.title}</p>
+                  <p class="mt-1 text-sm text-ink/60">{a.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+)}
