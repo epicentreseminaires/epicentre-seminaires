@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 export interface Props {
   zone?: 'epinac' | 'plaine' | 'brand';
@@ -32,8 +33,8 @@ const navByZone = {
 
 const nav = navByZone[zone];
 const ctaHref = zone === 'epinac' ? '/epinac/contact/' : zone === 'plaine' ? '/plaine-de-lain/contact/' : '/contact/';
-const phone = '06 00 00 00 00';
-const phoneHref = 'tel:+33600000000';
+const phone = CONTACT_PHONE_DISPLAY;
+const phoneHref = CONTACT_PHONE_HREF;
 ---
 
 <header class="absolute top-0 left-0 right-0 z-40">

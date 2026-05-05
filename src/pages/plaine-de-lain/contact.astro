@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { WEB3FORMS_ACCESS_KEY, SITE_URL } from '@/config';
 
 const title = "Contact : Agence événementielle Plaine de l'Ain | Epicentre";
 const description = "Contactez notre agence de production événementielle dans la Plaine de l'Ain. Devis sur-mesure pour vos plénières, galas, congrès, lancements produits.";
@@ -15,13 +16,18 @@ const description = "Contactez notre agence de production événementielle dans 
           Décrivez votre projet en quelques lignes. Nous vous rappelons sous 24 h pour comprendre vos enjeux et préparer une proposition technique précise.
         </p>
         <div class="mt-10 space-y-3 text-bone/80 text-sm">
-          <p><span class="text-bone/50">Email : </span><a href="mailto:contact@epicentre-seminaires.fr" class="hover:text-accent">contact@epicentre-seminaires.fr</a></p>
+          <p><span class="text-bone/50">Email : </span><a href="mailto:morganspirli@icloud.com" class="hover:text-accent">morganspirli@icloud.com</a></p>
           <p><span class="text-bone/50">Zone : </span>Plaine de l'Ain, Bugey, Pays de Gex, Lyon</p>
         </div>
       </div>
 
       <div class="md:col-span-6 md:col-start-7 bg-bone text-ink p-8 md:p-12">
-        <form class="space-y-6">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+          <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+          <input type="hidden" name="from_name" value="Epicentre Séminaires - Plaine de l'Ain" />
+          <input type="hidden" name="subject" value="Nouvelle demande de devis - Plaine de l'Ain" />
+          <input type="hidden" name="redirect" value={`${SITE_URL}/merci/`} />
+          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
           <div class="grid md:grid-cols-2 gap-4">
             <label class="block">
               <span class="eyebrow">Prénom</span>
