@@ -15,36 +15,40 @@ const epinacImg = 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?
 
 <Base title={title} description={description} zone="brand">
   <!-- HERO : pure agence Plaine de l'Ain -->
-  <section class="relative min-h-screen overflow-hidden bg-ink flex flex-col">
+  <section class="relative min-h-[88vh] md:min-h-screen overflow-hidden bg-ink flex flex-col">
     <img
       src={heroImg}
       alt="Plénière d'entreprise avec scénographie lumière"
-      class="absolute inset-0 w-full h-full object-cover opacity-50"
+      class="absolute inset-0 w-full h-full object-cover opacity-45"
     />
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/40 to-ink"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/30 to-ink"></div>
 
-    <div class="relative z-10 flex-1 container-wide flex flex-col justify-end pb-20 md:pb-28 pt-32">
-      <p class="eyebrow text-bone/60 mb-8">Agence événementielle · Plaine de l'Ain</p>
-      <h1 class="text-bone display-xl max-w-6xl">
-        Votre agence<br />événementielle<br /><span class="text-accent">dans la Plaine de l'Ain.</span>
-      </h1>
-      <p class="text-bone/70 max-w-2xl mt-10 text-lg md:text-xl leading-relaxed">
-        Vous êtes une entreprise du bassin (industrie, énergie, aéronautique, services) ? Nous prenons en charge vos plénières, galas, congrès, lancements, captations. Sur la Plaine, à Lyon, où votre projet a le plus de sens.
-      </p>
-      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-        <a href="/contact/" class="btn-accent text-base px-8 py-4">
-          Demander un devis
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="#services" class="text-bone/80 hover:text-bone text-sm flex items-center gap-2 transition-colors">
-          Voir nos services
-        </a>
+    <div class="relative z-10 flex-1 container-wide flex flex-col justify-center pt-32 pb-20 md:pb-24">
+      <div class="max-w-4xl">
+        <p class="eyebrow text-bone/55 mb-6">Plaine de l'Ain · Entre Lyon et Genève</p>
+        <h1 class="text-bone font-display font-semibold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]">
+          Votre agence événementielle
+          <span class="block mt-1 text-accent">dans la Plaine de l'Ain.</span>
+        </h1>
+        <p class="text-bone/70 max-w-2xl mt-8 text-base md:text-lg leading-relaxed">
+          Plénières, galas, congrès, lancements, captation vidéo. Production locale pour les entreprises du bassin (industrie, énergie, aéronautique, services). Sur la Plaine, à Lyon, où votre projet a le plus de sens.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-4">
+          <a href="/contact/" class="btn-accent text-sm px-7 py-3.5">
+            Demander un devis
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#services" class="text-bone/75 hover:text-bone text-sm flex items-center gap-2 transition-colors group">
+            Voir nos services
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+        </div>
       </div>
     </div>
 
-    <a href="#services" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-bone/50 text-[0.7rem] uppercase tracking-[0.2em] z-10 flex flex-col items-center gap-2">
-      Découvrir
-      <span class="block w-px h-8 bg-bone/40"></span>
+    <a href="#services" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-bone/45 text-[0.65rem] uppercase tracking-[0.22em] z-10 flex flex-col items-center gap-2 hover:text-bone/70 transition-colors">
+      Scroller
+      <span class="block w-px h-6 bg-bone/35"></span>
     </a>
   </section>
 
