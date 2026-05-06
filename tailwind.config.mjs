@@ -19,10 +19,10 @@ export default {
           DEFAULT: '#00491b',
           deep: '#003707',
         },
-        // Accent (action, CTAs)
+        // Accent : vert brand (remplace l'or, palette unifiée)
         accent: {
-          DEFAULT: '#C8A86B',
-          dark: '#A6884F',
+          DEFAULT: '#00491b',
+          dark: '#003707',
         },
         // Zone Épinac (Bourgogne, nature) — alignée brand
         epinac: {
