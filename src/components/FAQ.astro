@@ -1,28 +1,36 @@
 ---
 const items = [
   {
-    q: 'Vous intervenez dans toute la Plaine de l\'Ain ?',
-    a: 'Oui. Ambérieu, Lagnieu, Meximieux, Pérouges, Loyettes, Saint-Vulbas, Belley, Bourg-en-Bresse : et nous montons aussi sur Lyon proche. Notre périmètre est volontairement resserré pour garantir une réactivité réelle et une connaissance fine des lieux et prestataires locaux.',
+    q: 'Combien coûte une plénière ou un gala d\'entreprise avec vous ?',
+    a: 'Pour une plénière scénographiée (scène, son, lumière, captation) : à partir d\'environ 15 000 € de prestation technique. Pour un gala complet avec dîner assis, mise en lumière, intervention show et captation : 30 000 à 80 000 € selon la jauge et les exigences. Pour un lancement de produit ou une convention de 500+ personnes : on est généralement entre 50 000 et 150 000 €. Devis ligne à ligne sous 72 h après cadrage : équipement nommé, équipe identifiée, rétroplanning détaillé, rien de flou.',
   },
   {
-    q: 'À partir de quel budget vous intervenez ?',
-    a: 'Nous travaillons sur des productions à enjeu, à partir d\'environ 15 000 € de prestation technique. En dessous, nous ne sommes pas l\'agence la plus pertinente : d\'autres acteurs locaux sont mieux dimensionnés pour le format.',
+    q: 'En quoi vous êtes différents d\'une agence lyonnaise ou parisienne ?',
+    a: 'Trois différences concrètes. Coût : pas de frais de déplacement et d\'hôtellerie d\'équipe à facturer, on est sur place. Réactivité : intermittents et techniciens locaux mobilisables en quelques heures en cas d\'aléa. Connaissance : on connaît les lieux, les prestataires (traiteurs, sécurité, transport) et les contraintes du bassin (PIPA, sites industriels, salles polyvalentes). Une agence parisienne découvre tout cela à votre frais. Pour une qualité de production équivalente, vous économisez 15 à 30 %.',
   },
   {
-    q: 'Vous vous occupez de la captation vidéo en plus de la production événementielle ?',
-    a: 'Oui. Captation multicam (2 à 6 caméras), régie, streaming live, livrables post-événement (rushes, montage, teaser). C\'est l\'un de nos cœurs de métier hérité des productions de spectacle.',
+    q: 'Pour quel enjeu d\'entreprise vous êtes pertinents ?',
+    a: 'Convention annuelle (intégration, motivation), anniversaire d\'entreprise (5, 10, 25 ans), lancement de produit ou de gamme, inauguration de site industriel, AG d\'actionnaires, gala interne ou remise de prix, congrès professionnel. Notre périmètre est volontairement resserré sur la production technique d\'événements à enjeu. Pour du team building loisir ou des animations sans scénographie, on n\'est pas l\'agence la mieux dimensionnée et on peut vous orienter vers d\'autres prestataires locaux.',
   },
   {
-    q: 'Quelle est la différence entre votre offre Plaine de l\'Ain et votre domaine d\'Épinac ?',
-    a: 'Plaine de l\'Ain = nous sommes l\'agence de production qui vient chez vous (sur le lieu de votre choix). Épinac = nous vous accueillons au domaine partenaire d\'Épinac, en Bourgogne, pour un séminaire résidentiel. Deux offres distinctes, une seule exigence de production.',
+    q: 'Vous intervenez sur mon site industriel (PIPA, atrium, hall de production) ?',
+    a: 'Oui, c\'est l\'une de nos spécialités. Plan de prévention (PPSPS), EPI obligatoires, formation accueil pour intermittents, alimentation électrique tri-phasée, accès poids lourds, coordination HSE en amont, montage de nuit ou le week-end pour ne pas arrêter votre production. Notre culture vient des grandes scènes du sport et du spectacle où ces contraintes sont équivalentes : le savoir-faire est directement transposable au cadre industriel.',
   },
   {
     q: 'Combien de temps avant l\'événement faut-il vous solliciter ?',
-    a: 'Idéalement 3 à 6 mois avant pour un événement de plus de 200 personnes avec scénographie complète. Nous gérons aussi des productions plus rapides (4 à 8 semaines) sur des formats plus contenus.',
+    a: 'Idéalement 3 à 6 mois pour une plénière de plus de 200 personnes avec scénographie complète : c\'est le délai pour réserver les meilleurs lieux et prestataires, et pour caler une production solide. 4 à 8 semaines suffisent pour des formats plus contenus (AG, inauguration, convention de moins de 200). En urgence (3-4 semaines), c\'est possible mais plus risqué côté lieu et qualité. Plus tôt vous nous appelez, plus large est la palette d\'options.',
   },
   {
-    q: 'Vous proposez du team building ou des animations classiques ?',
-    a: 'Non, ce n\'est pas notre métier. Nous nous concentrons sur la production technique d\'événements à enjeu : plénière, gala, lancement, captation. Pour du team building loisir, d\'autres prestataires sont plus pertinents.',
+    q: 'Qui gère le traiteur, l\'hébergement, le transport ? Vous ou moi ?',
+    a: 'Nous, si vous nous le confiez. La production technique est notre cœur, mais nous coordonnons l\'écosystème complet : traiteurs partenaires (du cocktail dînatoire au gala étoilé), hébergement (hôtels du bassin avec tarifs négociés pour les groupes), transports (navettes, bus dédiés depuis aéroport ou gares), sécurité, photographe, animateurs. Vous avez un seul interlocuteur, on pilote le reste. C\'est notre service "Organisation" complet.',
+  },
+  {
+    q: 'La captation vidéo, ça sert à quoi concrètement et ça coûte combien ?',
+    a: 'Trois usages concrets. Diffusion live aux collaborateurs sur sites distants (utile dès qu\'on a 50+ personnes en interne réparties sur plusieurs implantations). Archive corporate réutilisée plusieurs années (rapport annuel, communication interne, recrutement, presse). Teaser pour la suite (sortie d\'un produit, communication post-événement). Budget : 3 000 à 8 000 € pour 2 caméras et un montage simple ; 8 000 à 20 000 € pour 4-6 caméras avec régie complète et streaming live. Souvent rentabilisé en un seul réemploi.',
+  },
+  {
+    q: 'Et si le jour J, il y a un problème technique ?',
+    a: 'C\'est précisément ce contre quoi notre culture de production live nous a entraînés. Les grandes scènes du sport ne tolèrent aucune panne devant 5 000 spectateurs en direct : nous appliquons les mêmes principes à votre événement. Doublage des éléments critiques (alimentation, micros HF, captation), équipe sur place avec compétences croisées, plan B documenté pour chaque scénario d\'aléa, intervenants techniciens locaux mobilisables en complément. Et un seul pilote sur place, qui prend les décisions en temps réel.',
   },
 ];
 ---
@@ -30,9 +38,9 @@ const items = [
 <section class="py-28 bg-bone-soft">
   <div class="container-wide max-w-4xl">
     <div class="mb-16">
-      <p class="eyebrow">FAQ</p>
+      <p class="eyebrow">Questions fréquentes</p>
       <h2 class="text-4xl md:text-5xl mt-6">
-        Les questions qu'on nous pose.
+        Vos premières questions,<br />nos réponses directes.
       </h2>
     </div>
 
@@ -52,5 +60,9 @@ const items = [
         </details>
       ))}
     </div>
+
+    <p class="mt-12 text-ink/60 text-base text-center">
+      D'autres questions ? <a href="/contact/" class="underline underline-offset-4 hover:text-ink">Décrivez-nous votre projet</a>, on vous rappelle dans la journée.
+    </p>
   </div>
 </section>

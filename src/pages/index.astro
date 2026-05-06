@@ -6,8 +6,8 @@ import Testimonials from '@/components/Testimonials.astro';
 import FAQ from '@/components/FAQ.astro';
 import StickyCTA from '@/components/StickyCTA.astro';
 
-const title = "Epicentre Séminaires : Agence événementielle Plaine de l'Ain";
-const description = "Agence de production événementielle pour les entreprises de la Plaine de l'Ain. Plénières, galas, congrès, lancements, captation vidéo. Renseignement, organisation, conseil de lieu. Lieu partenaire en Bourgogne pour les projets résidentiels.";
+const title = "Agence événementielle Plaine de l'Ain : séminaire, plénière, gala | Epicentre";
+const description = "Organisateur de séminaire d'entreprise dans l'Ain. Production événementielle pour les entreprises de la Plaine de l'Ain (Ambérieu, PIPA, Lagnieu, Pérouges). Plénières, galas, lancements, captation vidéo. Renseignement, organisation, conseil de lieu.";
 
 const heroImg = 'https://images.unsplash.com/photo-1442115597578-2d0fb2413734?w=2400&q=85&auto=format&fit=crop';
 const epinacImg = 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=1600&q=85&auto=format&fit=crop';
@@ -131,33 +131,64 @@ const epinacImg = 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?
     </div>
   </section>
 
-  <!-- SAVOIR-FAIRE -->
+  <!-- QUEL FORMAT POUR QUEL ENJEU -->
   <section id="savoir-faire" class="bg-ink text-bone py-32">
     <div class="container-wide">
       <div class="max-w-3xl">
-        <p class="eyebrow text-bone/50">Savoir-faire</p>
-        <h2 class="text-5xl md:text-7xl mt-6">
-          Ce que nous produisons.
+        <p class="eyebrow text-bone/50">Quel format pour quel enjeu</p>
+        <h2 class="text-5xl md:text-7xl mt-6 leading-tight">
+          Vous savez ce que vous voulez dire.<br /><span class="text-accent">Nous savons comment le produire.</span>
         </h2>
         <p class="mt-8 text-bone/70 text-xl max-w-2xl">
-          Notre niche : la production technique d'événements à enjeu. Scène, son, lumière, vidéo, captation. Pas d'animations gadgets, ni de salons.
+          Cinq enjeux d'entreprise, cinq formats que nous produisons régulièrement dans la Plaine de l'Ain. Le format suit l'objectif, pas l'inverse.
         </p>
       </div>
 
-      <div class="mt-20 grid md:grid-cols-3 gap-px bg-bone/10">
+      <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-bone/10">
         {[
-          { t: 'Plénières & conventions', d: 'Scénographie, mise en scène, captation multicam.' },
-          { t: 'Galas & remises de prix', d: 'Dîner assis, scène, show, mise en lumière.' },
-          { t: 'Lancements de produits', d: 'Reveal scénographié, presse, captation, diffusion.' },
-          { t: 'Congrès & assemblées générales', d: 'Plénière, ateliers, restauration, retransmission.' },
-          { t: 'Inaugurations', d: 'Discours officiel, scénographie, presse.' },
-          { t: 'Concerts & shows d\'entreprise', d: 'Production technique son, lumière, vidéo, régie.' },
+          {
+            enjeu: 'Convention annuelle, séminaire d\'intégration',
+            format: 'Plénière + ateliers + dîner gala (1 à 2 jours)',
+            d: 'Aligner les équipes, transmettre la stratégie, créer du lien. Scène, captation multicam, mise en lumière, animation des moments forts. De 100 à 1 500 personnes.',
+          },
+          {
+            enjeu: 'Lancement de produit ou de gamme',
+            format: 'Reveal scénographié + presse + soirée',
+            d: 'Marquer un moment vis-à-vis du marché, de la presse, de la distribution et de l\'équipe interne. Mise en scène du produit, dispositif scénique sur-mesure, gestion presse régionale, captation diffusable.',
+          },
+          {
+            enjeu: 'Anniversaire d\'entreprise (5, 10, 25 ans)',
+            format: 'Gala scénographié + show + archive',
+            d: 'Célébrer, fédérer, marquer durablement. Dîner assis ou cocktail haut de gamme, intervention show ou musicale, captation pour archive corporate à long terme. La référence à laquelle l\'équipe repense pendant des années.',
+          },
+          {
+            enjeu: 'Inauguration de site, livraison de bâtiment',
+            format: 'Discours officiels + scénographie + presse',
+            d: 'Moment institutionnel : élus locaux, presse régionale, partenaires, équipe. Plan de prévention industriel, scénographie sobre et précise, captation pour archive corporate, cocktail. Spécialiste des productions sur site PIPA.',
+          },
+          {
+            enjeu: 'AG d\'actionnaires ou de coopérative',
+            format: 'Plénière + retransmission live + vote électronique',
+            d: 'Conformité, retransmission, vote. Régie complète, retransmission multi-sites, système de vote électronique sécurisé, captation officielle pour archive juridique.',
+          },
+          {
+            enjeu: 'Soirée d\'entreprise, événement client',
+            format: 'Concert privé, dîner d\'exception, dispositif sur-mesure',
+            d: 'Sortir du standard. Production technique complète : son, lumière, vidéo, scène, sécurité. Pour les très belles entreprises qui veulent un événement à la hauteur de leur trajectoire.',
+          },
         ].map((item) => (
           <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
-            <h3 class="text-2xl">{item.t}</h3>
-            <p class="mt-3 text-bone/55 text-sm leading-relaxed">{item.d}</p>
+            <p class="eyebrow text-bone/50">{item.enjeu}</p>
+            <h3 class="text-xl md:text-2xl mt-4 leading-snug">{item.format}</h3>
+            <p class="mt-4 text-bone/65 text-sm leading-relaxed">{item.d}</p>
           </div>
         ))}
+      </div>
+
+      <div class="mt-16 max-w-3xl text-bone/65 text-base leading-relaxed">
+        <p>
+          Vous ne reconnaissez pas votre enjeu dans cette liste ? <a href="/contact/" class="text-accent hover:underline underline-offset-4">Parlons-en</a>. Notre métier, c\'est précisément de cadrer le bon format à partir de votre objectif réel : une session de renseignement vous aide à clarifier avant même de lancer une production.
+        </p>
       </div>
     </div>
   </section>
