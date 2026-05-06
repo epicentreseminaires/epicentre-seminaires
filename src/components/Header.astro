@@ -7,23 +7,60 @@ export interface Props {
 }
 const { zone = 'brand' } = Astro.props;
 
-// Navigation principale unifiée : identique sur toutes les pages.
-const nav = [
-  { label: 'Épinac', href: '/epinac/' },
-  { label: "Plaine de l'Ain", href: '/plaine-de-lain/' },
-  { label: 'Journal', href: '/journal/' },
-  { label: 'À propos', href: '/a-propos/' },
-  { label: 'Contact', href: '/contact/' },
-];
+// Chaque univers a sa propre navigation : on est dans une "agence" à la fois.
+// La marque (home, journal, à propos) propose les 2 portes d'entrée.
+const navByZone = {
+  brand: [
+    { label: 'Épinac', href: '/epinac/' },
+    { label: "Plaine de l'Ain", href: '/plaine-de-lain/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'À propos', href: '/a-propos/' },
+    { label: 'Contact', href: '/contact/' },
+  ],
+  epinac: [
+    { label: 'Le domaine', href: '/epinac/le-domaine/' },
+    { label: 'Productions', href: '/epinac/productions/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'À propos', href: '/a-propos/' },
+    { label: 'Contact', href: '/epinac/contact/' },
+  ],
+  plaine: [
+    { label: "L'agence", href: '/plaine-de-lain/agence/' },
+    { label: 'Productions', href: '/plaine-de-lain/productions/' },
+    { label: 'Notre approche', href: '/plaine-de-lain/realisations/' },
+    { label: 'Journal', href: '/journal/' },
+    { label: 'Contact', href: '/plaine-de-lain/contact/' },
+  ],
+};
 
-const ctaHref = '/contact/';
+const nav = navByZone[zone];
+const ctaHref = zone === 'epinac'
+  ? '/epinac/contact/'
+  : zone === 'plaine'
+  ? '/plaine-de-lain/contact/'
+  : '/contact/';
+
+// Indicateur de "sous-marque" : on sait clairement dans quelle agence on est.
+const zoneTag = zone === 'epinac'
+  ? 'Épinac · Bourgogne'
+  : zone === 'plaine'
+  ? "Plaine de l'Ain"
+  : null;
+
 const phone = CONTACT_PHONE_DISPLAY;
 const phoneHref = CONTACT_PHONE_HREF;
 ---
 
 <header class="absolute top-0 left-0 right-0 z-40">
   <div class="container-wide flex items-center justify-between py-6">
-    <Logo variant="light" height={56} />
+    <div class="flex items-center gap-4">
+      <Logo variant="light" height={56} />
+      {zoneTag && (
+        <span class="hidden md:flex items-center gap-3 text-bone/60 text-xs uppercase tracking-[0.18em] border-l border-bone/20 pl-4">
+          {zoneTag}
+        </span>
+      )}
+    </div>
 
     <nav class="hidden lg:flex items-center gap-8 text-sm text-bone/85">
       {nav.map((item) => (
@@ -54,6 +91,9 @@ const phoneHref = CONTACT_PHONE_HREF;
 
   <div id="mobileMenu" class="hidden lg:hidden bg-ink text-bone border-t border-bone/10">
     <nav class="container-wide py-6 flex flex-col gap-4">
+      {zoneTag && (
+        <p class="eyebrow text-bone/50 mb-2">{zoneTag}</p>
+      )}
       {nav.map((item) => (
         <a href={item.href} class="text-base">{item.label}</a>
       ))}
