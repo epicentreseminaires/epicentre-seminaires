@@ -15,37 +15,76 @@ const plaineImg = 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?
 ---
 
 <Base title={title} description={description} zone="brand">
-  <!-- HERO -->
-  <section class="relative min-h-screen overflow-hidden bg-ink flex flex-col">
-    <img
-      src={heroImg}
-      alt="Plénière d'entreprise avec scénographie lumière"
-      class="absolute inset-0 w-full h-full object-cover opacity-50"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/40 to-ink"></div>
+  <!-- HERO SPLITTER : 2 portes d'entrée plein écran -->
+  <section class="relative min-h-screen w-full bg-ink overflow-hidden">
+    <!-- Conteneur split : 2 panneaux qui réagissent au hover -->
+    <div class="absolute inset-0 flex flex-col md:flex-row">
+      <!-- ÉPINAC -->
+      <a href="/epinac/" class="group relative flex-1 overflow-hidden md:hover:flex-[1.15] transition-[flex] duration-700 ease-out">
+        <img
+          src={epinacImg}
+          alt="Domaine en Bourgogne pour séminaire d'entreprise à Épinac"
+          class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-55 transition-opacity duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-epinac-deep/85 via-epinac-deep/70 to-epinac/80 group-hover:from-epinac-deep/75 group-hover:to-epinac/65 transition-all duration-700"></div>
 
-    <div class="relative z-10 flex-1 container-wide flex flex-col justify-end pb-20 md:pb-28 pt-32">
-      <p class="eyebrow text-bone/60 mb-8">Agence de production événementielle</p>
-      <h1 class="text-bone display-xl max-w-6xl">
-        À l'épicentre<br />de vos événements<br /><span class="text-accent">d'entreprise.</span>
-      </h1>
-      <p class="text-bone/70 max-w-2xl mt-10 text-lg md:text-xl leading-relaxed">
-        Plénières, galas, congrès, lancements de produits, captation vidéo.
-        Une exigence de production héritée des grandes scènes, à l'épicentre de la Plaine de l'Ain et au cœur de la Bourgogne.
-      </p>
-      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-        <a href="/contact/" class="btn-accent text-base px-8 py-4">
-          Demander un devis
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="#savoir-faire" class="text-bone/80 hover:text-bone text-sm flex items-center gap-2 transition-colors">
-          Voir nos productions
-        </a>
+        <div class="relative z-10 h-full flex flex-col justify-end p-8 md:p-14 lg:p-20 text-bone">
+          <p class="eyebrow text-bone/60 mb-4">Bourgogne · Saône-et-Loire</p>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tightest font-semibold max-w-md">
+            Notre domaine<br />à Épinac.
+          </h2>
+          <p class="mt-6 text-bone/75 max-w-md leading-relaxed">
+            Lieu de séminaire résidentiel privatisé. 9 000 m² de parc, plénières sous chapiteau, galas, dégustations.
+          </p>
+          <span class="mt-10 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-bone group-hover:text-accent transition-colors">
+            Entrer dans l'univers
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-2">→</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- DIVIDER central (desktop only) -->
+      <div class="hidden md:block w-px bg-bone/15 z-10"></div>
+
+      <!-- PLAINE DE L'AIN -->
+      <a href="/plaine-de-lain/" class="group relative flex-1 overflow-hidden md:hover:flex-[1.15] transition-[flex] duration-700 ease-out">
+        <img
+          src={plaineImg}
+          alt="Plénière d'entreprise avec scène et captation"
+          class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-55 transition-opacity duration-700"
+        />
+        <div class="absolute inset-0 bg-gradient-to-bl from-plaine-deep/85 via-plaine-deep/70 to-plaine/80 group-hover:from-plaine-deep/75 group-hover:to-plaine/65 transition-all duration-700"></div>
+
+        <div class="relative z-10 h-full flex flex-col justify-end p-8 md:p-14 lg:p-20 text-bone md:text-right md:items-end">
+          <p class="eyebrow text-bone/60 mb-4">Entre Lyon et Genève</p>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tightest font-semibold max-w-md md:ml-auto">
+            Notre agence<br />Plaine de l'Ain.
+          </h2>
+          <p class="mt-6 text-bone/75 max-w-md md:ml-auto leading-relaxed">
+            Production événementielle pour les entreprises du bassin. Plénières, galas, congrès, captation, sur le lieu de votre choix.
+          </p>
+          <span class="mt-10 inline-flex items-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-bone group-hover:text-accent transition-colors">
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:-translate-x-2 md:hidden">→</span>
+            Entrer dans l'univers
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-2 md:hidden hidden md:inline">→</span>
+            <span aria-hidden="true" class="hidden md:inline transition-transform duration-300 group-hover:-translate-x-2">←</span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Marque centrale flottante (sur grand écran) + scroll indicator -->
+    <div class="absolute top-0 left-0 right-0 z-20 pointer-events-none">
+      <div class="container-wide pt-32 md:pt-36 text-center">
+        <p class="eyebrow text-bone/50">Agence de production événementielle</p>
+        <p class="mt-4 text-bone/85 text-sm md:text-base font-medium tracking-wide">
+          Une marque, deux territoires, une exigence.
+        </p>
       </div>
     </div>
 
-    <a href="#manifeste" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-bone/50 text-[0.7rem] uppercase tracking-[0.2em] z-10 flex flex-col items-center gap-2">
-      Découvrir
+    <a href="#manifeste" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-bone/60 text-[0.7rem] uppercase tracking-[0.22em] z-20 flex flex-col items-center gap-2 hover:text-bone transition-colors">
+      Découvrir la marque
       <span class="block w-px h-8 bg-bone/40"></span>
     </a>
   </section>
