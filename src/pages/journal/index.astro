@@ -7,7 +7,7 @@ const articles = (await getCollection('journal')).sort(
 );
 
 const title = "Journal : Production événementielle, plénières, séminaires | Epicentre";
-const description = "Notre journal sur la production événementielle d'entreprise : guides pour choisir une agence, comprendre les coûts d'une plénière, anticiper les bonnes décisions techniques.";
+const description = "Le journal Epicentre : guides pour choisir une agence événementielle, comprendre les coûts d'une plénière, anticiper les bonnes décisions techniques.";
 
 const formatDate = (d: Date) =>
   new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }).format(d);

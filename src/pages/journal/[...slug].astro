@@ -16,9 +16,44 @@ const { Content } = await render(article);
 
 const formatDate = (d: Date) =>
   new Intl.DateTimeFormat('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }).format(d);
+
+const siteUrl = 'https://epicentre-seminaires.fr';
+const articleUrl = `${siteUrl}/journal/${article.id}/`;
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${articleUrl}#article`,
+  headline: article.data.title,
+  description: article.data.description,
+  url: articleUrl,
+  ...(article.data.cover && { image: article.data.cover }),
+  datePublished: article.data.publishedAt.toISOString(),
+  ...(article.data.updatedAt && { dateModified: article.data.updatedAt.toISOString() }),
+  author: {
+    '@type': 'Organization',
+    name: 'Epicentre Séminaires',
+    url: siteUrl,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Epicentre Séminaires',
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/images/logo-epicentre-black.png`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
+  },
+  ...(article.data.tags && article.data.tags.length > 0 && { keywords: article.data.tags.join(', ') }),
+};
 ---
 
 <Base title={`${article.data.title} | Journal Epicentre`} description={article.data.description} image={article.data.cover} zone="brand">
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+
   <article>
     {article.data.cover && (
       <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-ink">
