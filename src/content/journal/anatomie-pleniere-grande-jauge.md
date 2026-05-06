@@ -2,7 +2,7 @@
 title: "Anatomie d'une plénière grande jauge : ce qui se joue en coulisses"
 description: "Plénière d'entreprise grande jauge : le détail des coulisses techniques. Régie son, lumière, captation multicam, scénographie. Tout ce qu'un dirigeant ou DRH ignore et qui fait pourtant la différence le jour J."
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=2400&q=85&auto=format&fit=crop"
 tags: ["plénière", "production technique", "coulisses"]
 readingTime: "8 min"
 ---

@@ -4,7 +4,7 @@ description: "Domaine privatisé en Bourgogne à 1h15 de Lyon : alternative aux 
 ville: "Lyon (1h15)"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?w=2400&q=85&auto=format&fit=crop"
 nearbyVilles:
   - seminaire-autun
   - seminaire-beaune

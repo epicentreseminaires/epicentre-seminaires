@@ -4,7 +4,7 @@ description: "Séminaire résidentiel depuis Paris en 2h porte-à-porte : 1h25 T
 ville: "Paris (1h25 TGV)"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1606768666853-403c90a981ad?w=2400&q=85&auto=format&fit=crop"
 nearbyVilles:
   - seminaire-autun
   - seminaire-le-creusot

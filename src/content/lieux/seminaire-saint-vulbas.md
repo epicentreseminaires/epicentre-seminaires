@@ -4,7 +4,7 @@ description: "Agence de production événementielle pour le Parc Industriel de l
 ville: "Saint-Vulbas"
 zone: "plaine"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1542596594-649edbc13630?w=2400&q=85&auto=format&fit=crop"
 geo:
   lat: 45.7993
   lng: 5.2734

@@ -4,7 +4,7 @@ description: "Domaine privatisé pour séminaires résidentiels à 25 min de la 
 ville: "Le Creusot"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1601565828050-65947b4c0f88?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=2400&q=85&auto=format&fit=crop"
 geo:
   lat: 46.8033
   lng: 4.4356

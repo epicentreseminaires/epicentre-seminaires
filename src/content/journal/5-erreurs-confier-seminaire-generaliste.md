@@ -2,7 +2,7 @@
 title: "5 erreurs classiques quand on confie son séminaire d'entreprise à un généraliste"
 description: "Les 5 pièges récurrents quand on choisit une agence événementielle généraliste pour un séminaire d'entreprise à enjeu : et comment les éviter en arbitrant mieux."
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=2400&q=85&auto=format&fit=crop"
 tags: ["séminaire", "agence événementielle", "achats"]
 readingTime: "5 min"
 ---

@@ -4,7 +4,7 @@ description: "Domaine privatisé pour séminaires résidentiels en sud Bourgogne
 ville: "Beaune"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=2400&q=85&auto=format&fit=crop"
 geo:
   lat: 47.0247
   lng: 4.8390

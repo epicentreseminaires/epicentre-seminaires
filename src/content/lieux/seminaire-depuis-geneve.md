@@ -4,7 +4,7 @@ description: "Domaine privatisé en Bourgogne pour entreprises genevoises et fra
 ville: "Genève (2h45)"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1601565828050-65947b4c0f88?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=2400&q=85&auto=format&fit=crop"
 nearbyVilles:
   - seminaire-autun
   - seminaire-beaune

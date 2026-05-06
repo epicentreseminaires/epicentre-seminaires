@@ -4,7 +4,7 @@ description: "Domaine privatisé pour séminaires résidentiels en sud Saône-et
 ville: "Autun"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1601565828050-65947b4c0f88?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=2400&q=85&auto=format&fit=crop"
 geo:
   lat: 46.9499
   lng: 4.2984

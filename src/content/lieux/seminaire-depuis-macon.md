@@ -4,7 +4,7 @@ description: "Domaine privatisé en Bourgogne sud à 1h de Mâcon par l'A6. Alte
 ville: "Mâcon (1h)"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1542315192-1f61a1792f33?w=2400&q=85&auto=format&fit=crop"
 nearbyVilles:
   - seminaire-autun
   - seminaire-beaune

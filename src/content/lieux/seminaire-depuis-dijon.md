@@ -4,7 +4,7 @@ description: "Domaine privatisé pour entreprises dijonnaises à 1h d'Épinac. A
 ville: "Dijon (1h)"
 zone: "epinac"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1571055107559-3e67626fa8be?w=2400&q=85&auto=format&fit=crop"
 nearbyVilles:
   - seminaire-autun
   - seminaire-beaune

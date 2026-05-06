@@ -2,7 +2,7 @@
 title: "Combien coûte une plénière d'entreprise (et ce qui fait vraiment le prix)"
 description: "Plénière d'entreprise : grilles de prix réalistes selon la jauge, le format et le niveau de production technique. Le détail des postes qui font varier le devis."
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=2400&q=85&auto=format&fit=crop"
 tags: ["plénière", "budget", "production technique"]
 readingTime: "7 min"
 ---

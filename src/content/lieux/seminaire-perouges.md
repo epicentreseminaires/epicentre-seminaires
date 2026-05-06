@@ -4,7 +4,7 @@ description: "Production événementielle dans la cité médiévale de Pérouges
 ville: "Pérouges"
 zone: "plaine"
 publishedAt: 2026-05-05
-cover: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=2400&q=85&auto=format&fit=crop"
+cover: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=2400&q=85&auto=format&fit=crop"
 geo:
   lat: 45.9015
   lng: 5.2270
