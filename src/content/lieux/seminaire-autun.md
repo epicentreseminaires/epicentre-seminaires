@@ -18,7 +18,7 @@ nearbyArticles:
   - combien-coute-pleniere-entreprise
 faq:
   - q: "Quelle est la différence entre votre domaine et un hôtel-séminaire classique ?"
-    a: "Notre domaine d'Épinac, à 20 minutes d'Autun, est privatisé : votre entreprise est seule sur place pendant la durée du séjour. C'est une différence majeure avec un hôtel-séminaire qui mutualise plusieurs entreprises. Le parc de 9 000 m² ouvre des possibilités scéniques (chapiteau cristal, plénière en plein air, dîner de gala extérieur) impossibles dans un cadre standard."
+    a: "Le domaine d'Épinac, à 20 minutes d'Autun, est privatisé : votre entreprise est seule sur place pendant la durée du séjour. C'est une différence majeure avec un hôtel-séminaire qui mutualise plusieurs entreprises. Le parc de 9 000 m² ouvre des possibilités scéniques (chapiteau cristal, plénière en plein air, dîner de gala extérieur) impossibles dans un cadre standard."
   - q: "Combien de personnes peut accueillir le domaine pour un séminaire ?"
     a: "Pour un séminaire résidentiel avec hébergement sur place : 30 à 60 personnes selon le format. Pour un événement à la journée ou demi-journée (plénière sous chapiteau, gala): jusqu'à 300 personnes. Au-delà, nous travaillons en hébergement réparti sur les hôtels partenaires d'Autun et alentours."
   - q: "Le domaine est-il adapté à un séminaire à la journée seulement ?"
@@ -33,7 +33,7 @@ faq:
 
 Le sud de la Saône-et-Loire est l'un des secteurs les plus sous-évalués de France pour les **séminaires d'entreprise résidentiels**. Entre Autun, Le Creusot, Beaune et Chalon-sur-Saône, le territoire combine ce que les sièges parisiens, lyonnais et genevois peinent à trouver à cette distance : des lieux d'exception, une accessibilité réelle (TGV Le Creusot, A6, A40), un calme rare, et un ancrage culturel puissant (vins, gastronomie, patrimoine roman).
 
-À 20 minutes d'Autun, **notre domaine d'Épinac** est conçu pour cet usage : recevoir des entreprises pour des séminaires haut de gamme, des plénières sous chapiteau cristal, des galas et des dîners scénographiés. C'est un domaine familial privatisable, avec 9 000 m² de parc, plusieurs chambres d'hôtes, et une production événementielle pilotée par une équipe dont la culture technique vient des grandes scènes du sport et du spectacle.
+À 20 minutes d'Autun, **le domaine d'Épinac** est conçu pour cet usage : recevoir des entreprises pour des séminaires haut de gamme, des plénières sous chapiteau cristal, des galas et des dîners scénographiés. C'est un domaine familial privatisable, avec 9 000 m² de parc, plusieurs chambres d'hôtes, et une production événementielle pilotée par une équipe dont la culture technique vient des grandes scènes du sport et du spectacle.
 
 ## Pourquoi un séminaire à Autun ou Épinac
 

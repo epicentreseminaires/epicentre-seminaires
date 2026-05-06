@@ -81,4 +81,4 @@ Comptez **15 à 25 % du budget total de l'événement en production technique** 
 
 ---
 
-*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ou souhaitez utiliser notre domaine d'Épinac ? [Décrivez-nous votre projet](/contact/) en deux lignes, on revient vers vous sous 24 h avec une grille de coûts adaptée.*
+*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ou souhaitez utiliser le domaine d'Épinac ? [Décrivez-nous votre projet](/contact/) en deux lignes, on revient vers vous sous 24 h avec une grille de coûts adaptée.*

@@ -17,7 +17,7 @@ nearbyArticles:
   - combien-coute-pleniere-entreprise
   - pleniere-convention-seminaire-difference
 faq:
-  - q: "Quelle est la distance entre la gare TGV Le Creusot et notre domaine d'Épinac ?"
+  - q: "Quelle est la distance entre la gare TGV Le Creusot et le domaine d'Épinac ?"
     a: "25 minutes en voiture par la D980. Pour des séminaires à grande jauge nous organisons des transferts en bus dédiés depuis la gare. C'est l'une des connexions TGV les plus efficaces pour rejoindre la Bourgogne sud sans changer de moyen de transport."
   - q: "Combien de temps de TGV depuis Paris et depuis Lyon vers Le Creusot ?"
     a: "Paris Gare de Lyon → Le Creusot Montchanin : 1h25 (TGV direct). Lyon Part-Dieu → Le Creusot Montchanin : 50 minutes. C'est la gare TGV qui rapproche le plus efficacement les équipes parisiennes et lyonnaises sur un même point central."

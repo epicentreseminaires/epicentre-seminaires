@@ -1,6 +1,6 @@
 ---
-title: "Séminaire d'entreprise à Saint-Vulbas et au PIPA"
-description: "Agence de production événementielle pour le Parc Industriel de la Plaine de l'Ain (PIPA) à Saint-Vulbas : inaugurations, plénières, captations, AG. Spécialiste des sites industriels."
+title: "Agence événementielle à Saint-Vulbas et au PIPA"
+description: "Vous êtes une entreprise du PIPA ou de Saint-Vulbas ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Inauguration de site industriel, convention, AG, captation."
 ville: "Saint-Vulbas"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -17,52 +17,65 @@ nearbyArticles:
   - 5-erreurs-confier-seminaire-generaliste
   - captation-video-evenement-entreprise-guide
 faq:
-  - q: "Vous intervenez sur les sites industriels du PIPA ?"
-    a: "Oui, c'est l'une de nos spécialités. Production sur atrium, hall industriel, parking ou zone extérieure de site, avec gestion des contraintes spécifiques : plan de prévention, EPI, accès poids lourds, coordination avec la production en activité, alimentation électrique renforcée. Notre culture vient du spectacle live, où ces enjeux sont quotidiens."
-  - q: "Quels formats produisez-vous le plus à Saint-Vulbas et au PIPA ?"
-    a: "Inaugurations de site et de bâtiment, mises en service industrielle avec discours officiels et presse, conventions internes d'entreprise, lancements de gammes, AG d'actionnaires. Le tissu industriel du PIPA génère essentiellement ces formats : ce sont les nôtres."
-  - q: "Combien de temps de production prévoir pour une inauguration au PIPA ?"
-    a: "Pour une inauguration de site industriel avec discours, scénographie, captation et cocktail : compter 8 à 12 semaines de préparation. Le délai est souvent contraint par la livraison du bâtiment lui-même : nous nous adaptons à votre calendrier industriel, pas l'inverse."
+  - q: "Vous êtes une agence implantée à Saint-Vulbas ?"
+    a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement sur le PIPA et alentours. Nous connaissons les contraintes industrielles spécifiques (énergie, aéronautique, sous-traitance technique) et le tissu de prestataires locaux fiables."
+  - q: "Mon entreprise est sur le PIPA mais je veux organiser à Lyon. Vous gérez ?"
+    a: "Oui. Notre métier est de prendre en charge votre projet, où qu'il se passe. Idéalement, nous poussons à produire localement (la Plaine a les moyens et les salles pour faire de très belles choses), mais si Lyon ou un autre lieu fait sens pour votre format, on suit votre logique."
   - q: "Vous gérez les contraintes de sécurité et de plan de prévention ?"
-    a: "Oui. Nous fournissons les PPSPS, les attestations d'EPI, les plans techniques (implantation, fluides, accès secours), et nous coordonnons avec votre HSE en amont. Pour des productions sur site nucléaire ou aéronautique, nous savons travailler dans des cadres réglementaires exigeants."
+    a: "Oui. Nous fournissons les PPSPS, les attestations d'EPI, les plans techniques (implantation, fluides, accès secours), et nous coordonnons avec votre HSE en amont. Pour des productions sur site industriel sensible (énergie, aéronautique, sous-traitance nucléaire), nous savons travailler dans des cadres réglementaires exigeants."
+  - q: "Quels lieux pouvez-vous me conseiller à Saint-Vulbas / PIPA ?"
+    a: "Selon votre format : votre site industriel directement (atrium, hall, parking aménagé), les hôtels-séminaire de Saint-Vulbas / Lagnieu / Loyettes pour les conventions à la journée, des salles polyvalentes communales pour les grandes jauges, ou des lieux de prestige du Bugey à 30-45 minutes pour des galas. Sourcing gratuit en amont du cadrage."
   - q: "La captation vidéo est-elle pertinente pour une AG ou un événement industriel ?"
     a: "Très souvent oui. Pour une AG avec collaborateurs sur sites distants (le PIPA en compte beaucoup), une captation multicam avec streaming live permet à tout le monde de suivre en direct ou en replay. Pour une inauguration, la captation devient une archive corporate utilisée plusieurs années (rapport annuel, communication interne, presse)."
-  - q: "Quel est votre rayon d'intervention depuis Saint-Vulbas ?"
-    a: "Nous couvrons toute la Plaine de l'Ain (Ambérieu, Lagnieu, Meximieux, Pérouges, Loyettes), Lyon et son agglomération, et les bassins industriels limitrophes (Bugey, Bresse). Pour des événements en Bourgogne ou Suisse romande, nous étudions au cas par cas."
+  - q: "Combien de temps prévoir pour une inauguration au PIPA ?"
+    a: "Pour une inauguration de site industriel avec discours, scénographie, captation et cocktail : compter 8 à 12 semaines de préparation. Le délai est souvent contraint par la livraison du bâtiment lui-même. Nous nous adaptons à votre calendrier industriel, pas l'inverse."
 ---
 
-**Saint-Vulbas** est, avec son **Parc Industriel de la Plaine de l'Ain (PIPA)**, le poumon économique du bassin. C'est l'un des plus grands parcs industriels de France hors région parisienne, avec **plus de 200 entreprises** réunies sur un même site : industrie lourde, énergie, logistique, sous-traitance technique, sécurité.
+Vous êtes une entreprise basée à **Saint-Vulbas** ou implantée sur le **Parc Industriel de la Plaine de l'Ain (PIPA)** : industrie lourde, énergie, sous-traitance technique, logistique, sécurité. Vous préparez un événement (**inauguration de site, mise en service, convention interne, AG, lancement de gamme**) et vous cherchez une **agence événementielle** capable de le prendre en charge dans un cadre technique exigeant.
 
-Ce contexte unique génère une **demande forte en événementiel d'entreprise** : conventions internes, séminaires d'intégration de salariés répartis sur sites distants, inaugurations de bâtiment, mises en service industrielle, AG d'actionnaires, lancements de gammes. Le tout dans des cadres techniques exigeants où la moindre erreur logistique a un coût réel.
+C'est notre métier, et notre ancrage est la Plaine de l'Ain.
 
-## Pourquoi un séminaire ou un événement à Saint-Vulbas
+Le **PIPA est l'un des plus grands parcs industriels de France** hors région parisienne, avec plus de 200 entreprises sur un même site. Il génère une demande événementielle forte et spécifique : événements sur sites industriels, contraintes de sécurité, logistique technique. Nous sommes l'agence qui parle le langage de cet écosystème.
 
-- **Cœur du bassin industriel** : zone de pertinence directe pour les entreprises du PIPA et leurs sous-traitants. Vos collaborateurs sont déjà sur place.
-- **Accès** : 45 minutes de Lyon par l'A42, 30 minutes d'Ambérieu-en-Bugey, 1h de Genève. Sortie autoroute dédiée au parc industriel.
-- **Cadre adapté** : présence de salles de séminaire dans les hôtels du secteur (Saint-Vulbas, Lagnieu, Loyettes), possibilité d'événements directement sur site industriel pour les acteurs du PIPA.
-- **Bassin en croissance continue** : nouveaux investissements dans l'énergie, l'aéronautique, le nucléaire civil. Le PIPA n'est pas un site qui dort, c'est un site qui se développe : la demande événementielle suit.
+## Trois façons de travailler avec nous
 
-## Lieux possibles pour votre événement à Saint-Vulbas
+### 1. Renseignement
+Vous voulez parler de votre projet à quelqu'un qui connaît le sujet. Quel format pour quelle ambition ? Quel budget réaliste ? Quels prestataires sur le PIPA ? Quels créneaux disponibles dans votre rétroplanning industriel ? On répond, sans engagement.
 
-Selon votre format, plusieurs typologies de lieux sont disponibles dans et autour du PIPA :
+### 2. Organisation
+Vous nous confiez la production complète : scénographie, scène, son, lumière, vidéo, captation, régie, plan de prévention, coordination HSE. On pilote tout, vous gérez votre métier industriel.
 
-- **Sur votre site industriel** : atrium, hall, parking aménagé, zone extérieure couverte. C'est le format le plus fréquent pour les inaugurations et les conventions internes. Nous gérons les contraintes de sécurité, d'accès et d'alimentation électrique.
-- **Hôtels et résidences avec espaces séminaire** à Saint-Vulbas, Lagnieu et Loyettes, pour des conventions à la journée jusqu'à 200-300 personnes.
-- **Salles municipales et polyvalentes** des communes voisines, pour des AG ou conventions plus importantes.
-- **Lieux de prestige du Bugey** à 30-45 minutes (Cité médiévale de Pérouges, domaines, châteaux), pour des galas ou des lancements qui veulent un cadre signature.
+### 3. Conseil de lieu
+Vous avez besoin d'aide pour identifier le bon lieu : votre site directement, un hôtel-séminaire à Saint-Vulbas / Lagnieu / Loyettes, une salle communale, un lieu de prestige du Bugey pour un gala. On vous oriente. Sourcing gratuit en amont du cadrage.
 
-## Spécificités de la production sur site industriel
+## Spécialiste des productions sur site industriel
 
-Les événements montés directement **sur site industriel** ont des contraintes que peu d'agences savent gérer :
+Les événements montés **directement sur site industriel** ont des contraintes que peu d'agences savent gérer :
 
-- **Sécurité réglementaire** : PPSPS, plans de prévention, EPI obligatoires, formation accueil obligatoire pour les intermittents qui montent et démontent.
+- **Sécurité réglementaire** : PPSPS, plans de prévention, EPI obligatoires, formation accueil pour les intermittents qui montent et démontent.
 - **Logistique lourde** : alimentation électrique tri-phasée renforcée, accès poids lourds, parkings de manutention, coordination avec la production en activité.
-- **Planification serrée** : un site industriel ne s'arrête pas. Le montage et le démontage se font souvent de nuit ou le week-end.
+- **Planification serrée** : un site industriel ne s'arrête pas. Montage et démontage de nuit ou le week-end.
 - **Coordination HSE** : interface avec votre service Hygiène-Sécurité-Environnement en amont pour valider les implantations.
+- **Cadres réglementaires sensibles** : énergie, aéronautique, sous-traitance nucléaire. Nous travaillons dans ces environnements régulièrement.
 
-Notre culture de production vient des grandes scènes du sport et du spectacle français, où ces contraintes sont équivalentes (gestion des flux, sécurité du public, alimentation et fluides, plan d'évacuation). Le transfert vers l'industrie est direct.
+Notre culture de production vient des grandes scènes du sport et du spectacle français, où ces contraintes sont équivalentes (gestion des flux, sécurité du public, alimentation et fluides, plan d'évacuation). Le transfert au cadre industriel du PIPA est direct.
 
-## Ce que nous produisons à Saint-Vulbas et au PIPA
+## Pourquoi (souvent) garder votre événement dans la Plaine
+
+Vous pourriez partir à Lyon. Honnêtement, ce n'est pas toujours pertinent :
+
+- **Vos équipes sont sur le bassin.** Pas de transport lourd, pas d'hôtellerie compliquée.
+- **Votre événement raconte mieux votre histoire** quand il a lieu sur votre site, ou à proximité, ancré dans le territoire industriel.
+- **Les coûts sont mieux maîtrisés** localement.
+- **Notre réseau est local** : traiteurs, transporteurs, intermittents, sécurité. Sourcing fiable et rapide.
+
+C'est pour ça qu'on pousse souvent à produire sur le PIPA ou dans le bassin proche.
+
+## Mais on suit aussi vos déplacements
+
+Si Lyon, Genève, ou ailleurs fait sens pour votre format : on prend en charge. Notre métier est l'**agence**, pas le lieu. Nous couvrons tout le bassin Plaine de l'Ain (Ambérieu, Lagnieu, Meximieux, Pérouges, Loyettes), Lyon et son agglomération, et les bassins industriels limitrophes (Bugey, Bresse). Pour des événements en Bourgogne ou Suisse romande, nous étudions au cas par cas.
+
+## Ce que nous produisons pour les entreprises du PIPA
 
 - **Inaugurations de site, livraisons de bâtiment, mises en service** : avec discours officiels, scénographie, gestion presse régionale et spécialisée, captation, cocktail.
 - **Conventions internes** d'entreprise (jusqu'à plusieurs centaines de personnes selon le lieu).
@@ -71,13 +84,13 @@ Notre culture de production vient des grandes scènes du sport et du spectacle f
 - **Assemblées générales** d'actionnaires ou de coopératives, avec retransmission live et vote électronique.
 - **Soirées d'entreprise et galas** internes, pour les anniversaires d'entreprise ou cérémonies marquantes.
 
-## Notre méthode de production sur le PIPA
+## Notre méthode
 
 - **Direct** : vous parlez au pilote de production, sans intermédiaire commercial.
 - **Précis** : devis ligne à ligne, équipement nommé, équipe identifiée, rétroplanning détaillé.
-- **Local** : nous sommes basés dans la Plaine de l'Ain et nous connaissons les acteurs (traiteurs, sécurité, intermittents, transporteurs).
+- **Local** : nous connaissons les acteurs (traiteurs, sécurité, intermittents, transporteurs).
 - **Exigeant** : la qualité technique des productions de spectacle, transposée à votre événement industriel.
 
 ## Échangeons sur votre projet
 
-Vous préparez une inauguration, une convention ou un événement institutionnel à Saint-Vulbas ou au PIPA ? [Décrivez-nous votre format](/plaine-de-lain/contact/) : devis détaillé sous 72 h après cadrage.
+Vous êtes une entreprise du PIPA ou de Saint-Vulbas et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/) : réponse sous 24 h, devis détaillé sous 72 h après cadrage. Premier échange sans engagement.

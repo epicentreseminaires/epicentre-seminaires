@@ -18,7 +18,7 @@ nearbyArticles:
   - combien-coute-pleniere-entreprise
 faq:
   - q: "Pourquoi proposer Épinac plutôt qu'un séminaire à Beaune même ?"
-    a: "Beaune en centre-ville est une excellente destination, mais aussi une destination saturée : grands hôtels, événements concomitants, signal de prestige mais sans exclusivité. Notre domaine d'Épinac à 45 minutes propose l'inverse : un cadre privatisé total, une seule entreprise sur place, un parc de 9 000 m² qui ouvre toutes les possibilités scéniques. C'est un complément, pas un concurrent."
+    a: "Beaune en centre-ville est une excellente destination, mais aussi une destination saturée : grands hôtels, événements concomitants, signal de prestige mais sans exclusivité. Le domaine d'Épinac à 45 minutes propose l'inverse : un cadre privatisé total, une seule entreprise sur place, un parc de 9 000 m² qui ouvre toutes les possibilités scéniques. C'est un complément, pas un concurrent."
   - q: "Quels lieux peut-on combiner à Beaune avec un séjour à Épinac ?"
     a: "Plusieurs combinaisons possibles : visite des Hospices de Beaune, dégustation chez un grand domaine bourguignon (Chassagne, Pommard, Aloxe-Corton), déjeuner gastronomique en centre-ville, balade sur la route des grands crus. Vos collaborateurs vivent une journée Bourgogne premium, puis basculent dans le cadre privatisé du domaine pour la plénière et le gala."
   - q: "À quelle distance Beaune est-elle d'Épinac ?"

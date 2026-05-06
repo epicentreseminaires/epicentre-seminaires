@@ -1,6 +1,6 @@
 ---
-title: "Séminaire d'entreprise à Lagnieu"
-description: "Agence de production événementielle à Lagnieu et dans le bassin industriel de la Plaine de l'Ain : plénières, galas, lancements, captation vidéo. Spécialiste des productions sur sites industriels."
+title: "Agence événementielle à Lagnieu"
+description: "Vous êtes une entreprise basée à Lagnieu ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Plénière, gala, inauguration de site industriel, captation vidéo."
 ville: "Lagnieu"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -17,67 +17,81 @@ nearbyArticles:
   - 5-erreurs-confier-seminaire-generaliste
   - anatomie-pleniere-grande-jauge
 faq:
-  - q: "À quelle distance Lagnieu se situe-t-elle des autres pôles de la Plaine de l'Ain ?"
-    a: "Lagnieu est à 15 minutes du PIPA et de Saint-Vulbas, 20 minutes d'Ambérieu-en-Bugey, 40 minutes de Lyon par l'A42. C'est un point de convergence naturel pour les entreprises ayant des collaborateurs répartis sur le bassin industriel."
-  - q: "Vous intervenez sur des sites industriels à Lagnieu ?"
-    a: "Oui, c'est l'une de nos spécialités. Industrie du verre, transformation, sous-traitance technique : nous gérons les contraintes des productions sur site (sécurité, accès, alimentation électrique tri-phasée, coordination avec la production en activité)."
-  - q: "Quels lieux recommandez-vous pour un événement d'entreprise à Lagnieu ?"
-    a: "Selon votre format : votre site industriel directement (atrium, hall, parking aménagé), les hôtels-séminaire du secteur Lagnieu/Ambérieu pour les conventions à la journée, des salles polyvalentes pour les jauges importantes, ou des lieux de prestige du Bugey à 25-30 minutes pour des galas."
-  - q: "À partir de combien de personnes intervenez-vous ?"
-    a: "Notre seuil de pertinence est autour de 80-100 personnes. Pour des formats plus petits, le dispositif technique que nous mettons en œuvre n'est pas dimensionné à votre besoin et nous pouvons recommander d'autres prestataires locaux."
-  - q: "Combien de temps d'anticipation pour une convention à Lagnieu ?"
-    a: "Idéalement 3 à 6 mois pour les plénières scénographiées de plus de 200 personnes. 4 à 8 semaines suffisent pour des AG ou des inaugurations plus contenues. Plus tôt vous nous sollicitez, plus la palette de lieux disponibles est large."
+  - q: "Vous êtes une agence implantée à Lagnieu ?"
+    a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement à Lagnieu, à 15 minutes du PIPA, à 20 minutes d'Ambérieu. Nous connaissons les acteurs industriels locaux (verre, sous-traitance technique) et les contraintes de production sur site."
+  - q: "Mon entreprise est à Lagnieu mais je veux organiser à Lyon. Vous gérez ?"
+    a: "Oui. On vous accompagne là où votre projet a le plus de sens. Idéalement, nous poussons à produire localement (la Plaine a les moyens et les salles pour faire de très belles choses), mais si Lyon ou un autre lieu fait sens pour votre format, on suit votre logique."
+  - q: "Vous gérez les productions sur site industriel ?"
+    a: "Oui, c'est l'une de nos spécialités. PPSPS, plans de prévention, EPI, alimentation électrique tri-phasée, coordination avec la production en activité, montage de nuit. Notre culture technique vient des grandes scènes du sport et du spectacle, où ces contraintes sont équivalentes."
+  - q: "Quels lieux pouvez-vous me conseiller à Lagnieu ?"
+    a: "Selon votre format : votre site industriel directement (atrium, hall, parking aménagé), les hôtels-séminaire Lagnieu/Ambérieu pour les conventions à la journée, des salles polyvalentes municipales pour les grandes jauges, ou des lieux de prestige du Bugey (Cité médiévale de Pérouges, domaines viticoles) à 25-30 minutes pour des galas. Le sourcing est l'un de nos services, gratuit en amont du cadrage."
+  - q: "À partir de combien de personnes vous intervenez ?"
+    a: "À partir de 80 à 100 personnes. En dessous, le dispositif technique qu'on met en œuvre n'est pas dimensionné à votre besoin. On peut alors vous orienter vers d'autres prestataires locaux mieux calibrés."
   - q: "Vous proposez la captation vidéo seule, sans la production complète ?"
-    a: "Oui, c'est une prestation autonome possible. Captation multicam (2 à 6 caméras), régie, streaming live, livrables post-événement. Utile pour des AG, des conférences internes, ou des archives corporate sur des inaugurations."
+    a: "Oui, prestation autonome possible. Captation multicam (2 à 6 caméras), régie, streaming live, livrables post-événement. Utile pour des AG, des conférences internes, ou des archives corporate sur des inaugurations."
 ---
 
-**Lagnieu** est l'un des pôles industriels structurants de la Plaine de l'Ain. La ville concentre une activité manufacturière dense, notamment dans la **transformation du verre** (Verallia, leader européen, y est historiquement implanté) et dans la sous-traitance technique. À 15 minutes du PIPA et de Saint-Vulbas, Lagnieu est un point de convergence naturel pour les entreprises ayant des collaborateurs répartis sur le bassin.
+Vous êtes une entreprise basée à **Lagnieu** : industrie du verre, sous-traitance technique, transformation, services. Vous préparez un événement (**inauguration de site, plénière, convention, AG**) et vous cherchez une **agence événementielle** capable de le prendre en charge sérieusement, avec une vraie connaissance du tissu industriel local.
 
-Pour les événements d'entreprise (séminaires d'équipes, conventions commerciales, inaugurations de site, AG), c'est aussi un secteur où la demande est en croissance continue, portée par le tissu industriel local en plein renouvellement.
+C'est notre métier, et notre ancrage est la Plaine de l'Ain.
 
-## Pourquoi un séminaire à Lagnieu
+Epicentre est une agence de production événementielle locale. Nous accompagnons les entreprises de Lagnieu et du bassin industriel pour la conception et la production de leurs événements. Sur votre site, dans la Plaine, à Lyon si nécessaire. Notre culture technique vient des grandes scènes du sport et du spectacle français.
 
-- **Cœur du bassin industriel** : à 15 minutes du Parc Industriel de la Plaine de l'Ain (PIPA) et de Saint-Vulbas, à 20 minutes d'Ambérieu-en-Bugey. Lagnieu est central pour les entreprises avec des collaborateurs sur plusieurs sites du bassin.
-- **Accès** : 40 minutes de Lyon par l'A42 (sortie Lagnieu), accès TER Lyon ↔ Genève via la gare voisine.
-- **Patrimoine industriel** : pour les entreprises souhaitant ancrer leur événement dans une histoire industrielle (visite de site, dégustation industrielle, mise en perspective de marque).
-- **Cadres alentours** : à 30 minutes, le Bugey viticole, la Cité médiévale de Pérouges (un des Plus Beaux Villages de France), des lieux de prestige pour des galas hors site industriel.
+## Trois façons de travailler avec nous
 
-## Lieux possibles pour votre événement à Lagnieu
+Vous nous appelez pour l'une de ces trois raisons, parfois les trois.
 
-Selon votre format et votre image de marque :
+### 1. Renseignement
+Vous voulez parler de votre projet à quelqu'un qui connaît le sujet. Quel format pour quelle ambition ? Quel budget réaliste ? Quels prestataires fiables sur le bassin ? Quels lieux disponibles ? On répond, sans engagement.
 
-- **Sur votre site industriel directement** : atrium, hall de production, zone extérieure aménagée. Format fréquent pour les inaugurations et les conventions internes. Nous gérons la mise en sécurité, le plan de prévention, l'alimentation électrique tri-phasée renforcée.
-- **Hôtels-séminaire du secteur Lagnieu / Ambérieu** : pour des conventions à la journée jusqu'à 200-300 personnes.
-- **Salles polyvalentes municipales** des communes voisines : pour des jauges importantes (AG d'actionnaires, conventions internes de plus de 500 personnes).
-- **Lieux de prestige du Bugey** à 25-30 minutes (Cité de Pérouges, domaines viticoles, châteaux) : pour des galas et lancements qui veulent un cadre signature, hors contexte industriel.
+### 2. Organisation
+Vous nous confiez la production complète : scénographie, scène, son, lumière, vidéo, captation, régie, coordination des prestataires. On pilote tout, vous gérez votre métier.
 
-## Spécificités d'une production sur site industriel
+### 3. Conseil de lieu
+Vous avez besoin d'aide pour identifier le bon lieu : votre site industriel, un hôtel-séminaire à proximité, une salle polyvalente, un lieu de prestige pour un gala. On vous oriente selon votre format, votre budget et votre image. Sourcing gratuit en amont du cadrage.
 
-Lagnieu et son bassin sont des terres d'**événements sur site industriel**, c'est-à-dire produits directement dans les locaux de l'entreprise cliente. Ce format a des contraintes que peu d'agences savent gérer :
+## Spécialiste des productions sur site industriel
+
+Lagnieu est une terre d'**événements sur site industriel** : ateliers, halls de production, parkings aménagés. Ce format a des contraintes que peu d'agences savent gérer :
 
 - **Sécurité réglementaire** : PPSPS, plans de prévention, EPI, formation accueil pour intermittents.
-- **Logistique** : alimentation électrique tri-phasée renforcée, accès poids lourds, parkings de manutention, coordination avec la production en activité.
+- **Logistique lourde** : alimentation électrique tri-phasée renforcée, accès poids lourds, parkings de manutention, coordination avec la production en activité.
 - **Planification serrée** : un site industriel ne s'arrête pas. Le montage et le démontage se font de nuit ou le week-end.
 - **Coordination HSE** : interface avec votre service Hygiène-Sécurité-Environnement en amont pour valider les implantations.
 
-Notre culture technique vient des grandes scènes du sport et du spectacle français, où ces enjeux sont équivalents (gestion des flux, sécurité du public, fluides, plan d'évacuation). Le savoir-faire est directement transposable.
+Notre culture technique vient des grandes scènes du spectacle live, où ces enjeux sont équivalents (gestion des flux, sécurité, fluides, plan d'évacuation). Le savoir-faire est directement transposable au cadre industriel de Verallia, des fonderies du bassin ou de toute autre activité productive.
 
-## Ce que nous produisons à Lagnieu
+## Pourquoi (souvent) garder votre événement dans la Plaine
 
-- **Plénières et conventions commerciales** d'entreprise, avec scénographie complète.
-- **Inaugurations de site industriel**, avec discours officiels, scénographie, presse régionale, captation, cocktail.
-- **Lancements de produits** ou de gammes industrielles.
+Vous pourriez partir à Lyon. Honnêtement, ce n'est pas toujours pertinent :
+
+- **Vos équipes sont sur le bassin.** Pas de transport lourd, pas d'hôtellerie compliquée.
+- **Votre événement raconte mieux votre histoire** quand il a lieu sur votre territoire (industriel, ancré, authentique).
+- **Les coûts sont mieux maîtrisés** localement.
+- **Notre réseau est local** : traiteurs, transporteurs, intermittents, sécurité. Vous bénéficiez d'un sourcing fiable et rapide.
+
+C'est pour ça qu'on pousse souvent à produire à Lagnieu ou dans le bassin proche. Pas par dogmatisme : parce qu'on sait faire de très belles choses ici, sans Lyon.
+
+## Mais on suit aussi vos déplacements
+
+Si Lyon, Genève, ou ailleurs fait sens pour votre format : on prend en charge. Notre métier est l'**agence**, pas le **lieu**.
+
+## Ce que nous produisons pour les entreprises de Lagnieu
+
+- **Inaugurations de site industriel** : discours officiels, scénographie, presse régionale, captation, cocktail. Pour ouverture de bâtiment, livraison de ligne de production, mise en service.
+- **Plénières et conventions commerciales** internes, avec scénographie complète, jusqu'à 1 500 personnes selon le lieu choisi.
+- **Lancements de produits ou de gammes industrielles**.
 - **Galas internes**, soirées d'entreprise, remises de prix.
-- **Assemblées générales** d'actionnaires ou de coopératives.
+- **Assemblées générales** d'actionnaires ou de coopératives, avec retransmission live et vote électronique.
 - **Captations vidéo** multicam avec streaming live et livrables post-événement.
 
 ## Notre méthode
 
 - **Direct** : vous parlez au pilote de production, sans intermédiaire commercial.
 - **Précis** : devis ligne à ligne, équipement nommé, équipe identifiée, rétroplanning détaillé.
-- **Local** : nous sommes basés dans la Plaine de l'Ain et nous connaissons les acteurs (traiteurs, sécurité, intermittents, transporteurs).
+- **Local** : nous connaissons les acteurs du secteur (traiteurs, sécurité, intermittents, transporteurs).
 - **Exigeant** : la qualité technique des productions de spectacle, transposée à votre événement industriel.
 
 ## Échangeons sur votre projet
 
-Vous préparez une convention, une inauguration ou un séminaire à Lagnieu ? [Décrivez-nous votre format](/plaine-de-lain/contact/) : devis détaillé sous 72 h après cadrage.
+Vous êtes une entreprise de Lagnieu et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/) : réponse sous 24 h, devis détaillé sous 72 h après cadrage. Premier échange sans engagement.
