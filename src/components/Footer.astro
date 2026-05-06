@@ -30,7 +30,10 @@ const year = new Date().getFullYear();
   </section>
 )}
 
-<footer class="bg-ink text-bone/70">
+<footer class="bg-ink text-bone/70 relative">
+  <!-- Filet de marque : signature visuelle gradient brand en haut du footer -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-forest-gradient"></div>
+
   <div class="container-wide py-16 grid md:grid-cols-5 gap-10">
     <div class="md:col-span-2">
       <Logo variant="light" height={64} />

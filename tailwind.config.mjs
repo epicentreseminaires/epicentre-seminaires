@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Neutres
         ink: {
           DEFAULT: '#0B0B0F',
           soft: '#161620',
@@ -13,18 +14,30 @@ export default {
           DEFAULT: '#F5F1EA',
           soft: '#EFEAE0',
         },
+        // Brand (logo, favicon, signature)
+        forest: {
+          DEFAULT: '#00491b',
+          deep: '#003707',
+        },
+        // Accent (action, CTAs)
         accent: {
           DEFAULT: '#C8A86B',
           dark: '#A6884F',
         },
+        // Zone Épinac (Bourgogne, nature) — alignée brand
         epinac: {
-          DEFAULT: '#3F5B3A',
-          deep: '#2A3F26',
+          DEFAULT: '#0E3217',
+          deep: '#003707',
         },
+        // Zone Plaine de l'Ain (industriel) — différenciée
         plaine: {
           DEFAULT: '#1B2A4A',
           deep: '#0F1B33',
         },
+      },
+      backgroundImage: {
+        'forest-gradient': 'linear-gradient(135deg, #003707 0%, #00491b 100%)',
+        'forest-gradient-soft': 'linear-gradient(135deg, #003707 0%, #0E3217 100%)',
       },
       fontFamily: {
         display: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
