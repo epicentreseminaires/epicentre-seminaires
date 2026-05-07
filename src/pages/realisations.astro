@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import BeforeAfter3D from '@/components/BeforeAfter3D.astro';
 
 const title = "Réalisations | Epicentre Séminaires";
 const description = "Études de cas d'événements pilotés par Epicentre dans la Plaine de l'Ain. Plénières, galas, conventions, lancements. Références anonymisées sous NDA.";
@@ -19,68 +20,156 @@ const breadcrumb = [
         Nos réalisations.
       </h1>
       <p class="mt-8 text-xl text-bone/70 max-w-2xl leading-relaxed">
-        Etudes de cas anonymisées d'événements pilotés par Epicentre. La majorité de nos clients sont sous accord de confidentialité : les références détaillées se transmettent en RDV, sur demande, sous NDA réciproque.
+        Études de cas anonymisées. Nos clients exigent la discrétion sur leurs événements stratégiques. Les références détaillées (noms, photos non recadrées, budgets) se transmettent en RDV sous NDA réciproque.
       </p>
     </div>
   </section>
 
+  <!-- CAS STAR : long format éditorialisé -->
   <section class="bg-bone py-28 md:py-36">
     <div class="container-wide">
       <div class="max-w-3xl mb-16">
-        <p class="eyebrow">Études de cas</p>
+        <p class="eyebrow text-accent">Cas d'étude · format long</p>
         <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
-          En cours de publication.
+          Convention banque-assurance,<br />600 collaborateurs, automne 2024.
         </h2>
         <p class="mt-8 text-lg leading-relaxed text-ink/70">
-          Les premières études de cas détaillées seront publiées progressivement, avec l'accord écrit des entreprises concernées. Pas de témoignages anonymes, pas de chiffres invérifiables : seulement ce qui peut être documenté précisément.
+          Convention annuelle d'un acteur régional du secteur banque-assurance. Mission complète : conception, modélisation 3D, production technique, captation, livrables corporate. Site privatisé dans le bassin Plaine de l'Ain.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-px bg-ink/10">
-        <div class="bg-bone p-10 md:p-12">
-          <p class="eyebrow text-ink/55">Format type</p>
-          <h3 class="text-2xl md:text-3xl mt-4 leading-tight">Convention annuelle 500 personnes</h3>
-          <p class="mt-5 text-ink/65 leading-relaxed">
-            Plénière scénographiée, captation multicam, ateliers thématiques, dîner gala. Production complète sur lieu industriel privatisé, dans la Plaine de l'Ain.
-          </p>
-          <p class="mt-6 text-sm text-ink/50">Étude de cas détaillée disponible en RDV.</p>
+      <!-- Slider 3D ↔ Photo du cas -->
+      <div class="max-w-5xl mb-20">
+        <BeforeAfter3D
+          context="Plan 3D vs photo finale"
+          caption="La maquette 3D modélisée à J‑42 a permis de cadrer l'implantation, le parcours invité et le dispositif scénique avec le client avant signature. Le jour J, aucune surprise : la production reproduit le plan validé en amont."
+          beforeLabel="Plan 3D · J‑42"
+          afterLabel="Photo finale · jour J"
+        />
+      </div>
+
+      <!-- Détails structurés -->
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-16 max-w-5xl">
+        <div class="space-y-10">
+          <div>
+            <p class="eyebrow text-ink/55">Brief client</p>
+            <p class="mt-4 text-lg leading-relaxed text-ink/85">
+              Convention annuelle stratégique réunissant l'ensemble des collaborateurs du périmètre régional. Plénière de 3h30 avec interventions de la direction, puis ateliers et dîner de gala. Captation requise pour archive corporate et diffusion interne.
+            </p>
+          </div>
+
+          <div>
+            <p class="eyebrow text-ink/55">Contraintes</p>
+            <ul class="mt-4 space-y-3 text-ink/75 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Site polyvalent non équipé scéniquement, à transformer entièrement</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Confidentialité forte sur le contenu stratégique présenté</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Fenêtre de montage limitée à 36h avant le jour J</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Captation et streaming sécurisé interne pour les sites distants</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="bg-bone p-10 md:p-12">
-          <p class="eyebrow text-ink/55">Format type</p>
-          <h3 class="text-2xl md:text-3xl mt-4 leading-tight">Lancement produit B2B 200 invités</h3>
-          <p class="mt-5 text-ink/65 leading-relaxed">
-            Reveal scénographié avec scénographie 3D immersive, dispositif scénique sur-mesure, captation diffusable, gestion presse régionale. Production technique complète.
-          </p>
-          <p class="mt-6 text-sm text-ink/50">Étude de cas détaillée disponible en RDV.</p>
-        </div>
-        <div class="bg-bone p-10 md:p-12">
-          <p class="eyebrow text-ink/55">Format type</p>
-          <h3 class="text-2xl md:text-3xl mt-4 leading-tight">Inauguration de site industriel</h3>
-          <p class="mt-5 text-ink/65 leading-relaxed">
-            Moment institutionnel : élus locaux, presse régionale, équipes. Plan de prévention industriel, scénographie sobre, captation pour archive corporate, cocktail.
-          </p>
-          <p class="mt-6 text-sm text-ink/50">Étude de cas détaillée disponible en RDV.</p>
-        </div>
-        <div class="bg-bone p-10 md:p-12">
-          <p class="eyebrow text-ink/55">Format type</p>
-          <h3 class="text-2xl md:text-3xl mt-4 leading-tight">Anniversaire d'entreprise</h3>
-          <p class="mt-5 text-ink/65 leading-relaxed">
-            Gala scénographié pour célébrer un cap symbolique. Dîner assis, intervention show, mise en lumière sur-mesure, captation pour archive long terme.
-          </p>
-          <p class="mt-6 text-sm text-ink/50">Étude de cas détaillée disponible en RDV.</p>
+
+        <div class="space-y-10">
+          <div>
+            <p class="eyebrow text-ink/55">Dispositif</p>
+            <ul class="mt-4 space-y-3 text-ink/75 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Scène centrale 12 × 6 m, structure aluminium, écrans LED en fond et latéraux</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Sonorisation line array, intercom complet, micros HF redondés</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Captation 4 caméras + régie de réalisation, streaming privé</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                <span>Mise en lumière scénique + ambiance dîner gala avec changement de mood</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="eyebrow text-ink/55">Pilotage</p>
+            <p class="mt-4 text-ink/75 leading-relaxed">
+              Modélisation 3D dès la phase commerciale, validation client à J‑42. Brief technique transmis aux 9 prestataires partenaires sur la base de la maquette. Régie générale Epicentre sur site, un seul pilote, équipe technique de 14 personnes en pic de production.
+            </p>
+          </div>
+
+          <div>
+            <p class="eyebrow text-ink/55">Livrables</p>
+            <p class="mt-4 text-ink/75 leading-relaxed">
+              Captation multicam montée (version intégrale + teaser 3 min), photos de production, archive 4K pour réemploi corporate sur 3 ans.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- AUTRES CAS : grid plus court -->
   <section class="bg-bone-soft py-28 md:py-36">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow">Autres formats</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
+          Trois cas, trois enjeux.
+        </h2>
+        <p class="mt-8 text-lg leading-relaxed text-ink/70">
+          Tous anonymisés selon les accords passés avec nos clients. Études détaillées disponibles en RDV sous NDA.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+        <div class="bg-bone-soft p-10">
+          <p class="eyebrow text-ink/55">Lancement de produit B2B</p>
+          <h3 class="text-2xl mt-4 leading-tight">200 invités · presse régionale et clients premium</h3>
+          <p class="mt-5 text-ink/65 leading-relaxed text-sm">
+            Reveal scénographié dans un site industriel privatisé. Mise en scène du produit avec dispositif de lumière dynamique, captation diffusable, gestion presse régionale, soirée privée à suivre. Modélisation 3D pour validation des angles de mise en scène.
+          </p>
+        </div>
+        <div class="bg-bone-soft p-10">
+          <p class="eyebrow text-ink/55">Inauguration de site industriel</p>
+          <h3 class="text-2xl mt-4 leading-tight">Élus, presse, équipes · plan de prévention</h3>
+          <p class="mt-5 text-ink/65 leading-relaxed text-sm">
+            Moment institutionnel sur site classé ICPE : discours officiels, parcours visite, cocktail. PPSPS rédigé en amont, accueil sécurité des intermittents, alimentation électrique dédiée, captation pour archive corporate.
+          </p>
+        </div>
+        <div class="bg-bone-soft p-10">
+          <p class="eyebrow text-ink/55">Anniversaire d'entreprise</p>
+          <h3 class="text-2xl mt-4 leading-tight">Gala scénographié · célébration d'un cap</h3>
+          <p class="mt-5 text-ink/65 leading-relaxed text-sm">
+            Dîner assis avec mise en lumière sur-mesure, intervention show, captation pour archive long terme. Coordination traiteur étoilé, sommellerie, intermittents son et lumière. Modélisation 3D du parcours invité et de la mise en scène du cocktail.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA RÉFÉRENCES SOUS NDA -->
+  <section class="bg-ink text-bone py-28 md:py-36">
     <div class="container-wide max-w-3xl">
-      <p class="eyebrow">Références sous NDA</p>
+      <p class="eyebrow text-bone/55">Références sous NDA</p>
       <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
         Demandez les références qui correspondent à votre projet.
       </h2>
-      <p class="mt-8 text-lg leading-relaxed text-ink/70">
-        Les références client précises (noms, formats, jauges, budgets, photos) sont communiquées en RDV après signature d'un NDA réciproque, dans le respect des accords passés avec nos clients. Décrivez votre projet : nous vous transmettons des cas similaires en taille et en enjeu.
+      <p class="mt-8 text-lg leading-relaxed text-bone/70">
+        Les références client précises (noms, formats, jauges, budgets, photos non recadrées) sont communiquées en RDV après signature d'un NDA réciproque, dans le respect des accords passés avec nos clients. Décrivez votre projet : nous vous transmettons des cas similaires en taille et en enjeu.
       </p>
       <a href="/contact/" class="btn-accent mt-10 inline-flex">
         Demander un RDV

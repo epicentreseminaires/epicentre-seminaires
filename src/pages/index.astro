@@ -2,17 +2,18 @@
 import Base from '@/layouts/Base.astro';
 import TrustStrip from '@/components/TrustStrip.astro';
 import FAQ from '@/components/FAQ.astro';
+import BeforeAfter3D from '@/components/BeforeAfter3D.astro';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 const title = "Agence événementielle Plaine de l'Ain | Epicentre Séminaires";
-const description = "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, congrès, lancements, captation pour les entreprises du bassin (Ambérieu, PIPA, Pérouges).";
+const description = "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, conventions, lancements. Méthode 3D : vous voyez votre événement avant qu'il ait lieu.";
 
 // Visuel hero : scène événementielle abstraite (lumière, fumée), sobre, premium.
 const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2000&q=85&auto=format&fit=crop';
 ---
 
 <Base title={title} description={description} zone="brand" theme="light">
-  <!-- HERO clair premium : container centré, typo dominante, image en deuxième temps -->
+  <!-- HERO : H1 signature court, H2 SEO en sous-titre -->
   <section class="bg-bone pt-32 md:pt-40 pb-20 md:pb-28 relative overflow-hidden">
     <div class="container-wide">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -24,12 +25,13 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
             </p>
           </div>
 
-          <h1 class="font-display font-semibold text-ink text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[0.96] tracking-[-0.04em]">
-            Votre agence événementielle dans la Plaine de l'Ain.
+          <h1 class="font-display font-semibold text-ink text-[3rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.94] tracking-[-0.045em]">
+            L'événement<br />avant l'événement.
           </h1>
 
-          <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-xl">
-            Un acteur local capable de produire votre événement au niveau des plus grandes scènes. Plénières, conventions, galas, lancements, captation vidéo.
+          <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/65 max-w-xl">
+            <strong class="text-ink/90">Agence événementielle dans la Plaine de l'Ain.</strong><br />
+            Plénières, conventions, galas, lancements. Avant le devis, vous voyez votre événement modélisé en 3D, à l'échelle, dans le moindre détail.
           </p>
 
           <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
@@ -64,39 +66,46 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 
   <TrustStrip variant="light" />
 
-  <!-- MÉTHODE 3D : l'angle différenciant -->
-  <section class="py-28 md:py-36 bg-bone-soft">
+  <!-- SLIDER 3D ↔ PHOTO : signature visuelle unique -->
+  <section class="py-24 md:py-32 bg-bone-soft">
     <div class="container-wide">
-      <div class="max-w-3xl mb-20">
-        <p class="eyebrow">Notre méthode</p>
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow">Notre signature</p>
         <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
           Vous voyez votre événement<br /><span class="text-accent">avant qu'il ait lieu.</span>
         </h2>
         <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Avant le devis, avant le brief technique, le pilotage commence par la modélisation 3D. Une représentation à l'échelle du dispositif, des espaces, des flux et des points de scène. Tout le monde voit la même chose, à la même seconde.
+          Avant le devis, avant le brief technique, le pilotage commence par la modélisation 3D. À l'échelle. Tout le monde voit la même chose, à la même seconde. Faites glisser le curseur ci-dessous.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
-        <div class="bg-bone-soft p-10">
-          <p class="text-accent font-display text-2xl">01</p>
-          <h3 class="text-2xl mt-5 leading-tight">Validation client</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Le client voit son événement avant de signer : implantation, scène, jauge, parcours invité. Plus besoin de projeter dans le vide. Les arbitrages se font sur du concret, pas sur des descriptions.
+      <div class="max-w-5xl">
+        <BeforeAfter3D
+          context="Glissez pour comparer"
+          caption="Du plan 3D modélisé en amont à la photo finale du jour J. Le client voit son événement avant de signer, les prestataires reçoivent un référentiel partagé à l'échelle, le jour J personne ne découvre le dispositif."
+        />
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-px bg-ink/10 max-w-5xl">
+        <div class="bg-bone-soft p-8">
+          <p class="text-accent font-display text-xl">01</p>
+          <h3 class="text-lg mt-3 leading-tight font-semibold">Validation client</h3>
+          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
+            Le client voit son événement avant de signer. Les arbitrages se font sur du concret.
           </p>
         </div>
-        <div class="bg-bone-soft p-10">
-          <p class="text-accent font-display text-2xl">02</p>
-          <h3 class="text-2xl mt-5 leading-tight">Brief des prestataires</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Régie son, lumière, structure, traiteur, sécurité : chacun reçoit un référentiel partagé, à l'échelle, en cotes. Les briefs sont traduits en plans techniques, pas en mots qui se perdent.
+        <div class="bg-bone-soft p-8">
+          <p class="text-accent font-display text-xl">02</p>
+          <h3 class="text-lg mt-3 leading-tight font-semibold">Brief des prestataires</h3>
+          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
+            Régie, sondiers, structure, traiteur reçoivent un référentiel à l'échelle. Plus d'interprétation.
           </p>
         </div>
-        <div class="bg-bone-soft p-10">
-          <p class="text-accent font-display text-2xl">03</p>
-          <h3 class="text-2xl mt-5 leading-tight">Coordination des équipes</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Logistique, technique, accueil : la 3D devient le langage commun de la production. Le jour J, plus personne ne découvre le dispositif. Tout a été vu, validé, ajusté en amont.
+        <div class="bg-bone-soft p-8">
+          <p class="text-accent font-display text-xl">03</p>
+          <h3 class="text-lg mt-3 leading-tight font-semibold">Coordination jour J</h3>
+          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
+            Personne ne découvre le dispositif en arrivant. Tout a été vu, validé, ajusté en amont.
           </p>
         </div>
       </div>
@@ -142,51 +151,77 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
     </div>
   </section>
 
-  <!-- QUEL FORMAT POUR QUEL ENJEU -->
+  <!-- NICHE DURE : ce qu'on fait, ce qu'on ne fait pas -->
   <section class="bg-bone-soft py-28 md:py-36">
     <div class="container-wide">
       <div class="max-w-3xl mb-20">
-        <p class="eyebrow">Quel format pour quel enjeu</p>
+        <p class="eyebrow">Notre périmètre</p>
         <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
-          Vous savez ce que vous voulez dire.<br /><span class="text-accent">Le format suit l'objectif.</span>
+          Ce qu'on fait.<br /><span class="text-accent">Ce qu'on ne fait pas.</span>
         </h2>
+        <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
+          Le périmètre est volontairement resserré. C'est ce qui permet de garder le niveau d'exigence sur chaque mission.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-px bg-ink/10">
-        {[
-          {
-            enjeu: "Convention annuelle, séminaire d'intégration",
-            format: 'Plénière scénographiée, ateliers, dîner gala',
-            d: "Aligner les équipes, transmettre la stratégie, créer du lien. Scène, captation multicam, mise en lumière, animation des moments forts. Format 1 à 2 jours.",
-          },
-          {
-            enjeu: 'Lancement de produit ou de gamme',
-            format: 'Reveal scénographié, presse, soirée privée',
-            d: "Marquer un moment vis-à-vis du marché, de la presse, de la distribution et des équipes internes. Mise en scène du produit, dispositif sur-mesure, captation diffusable.",
-          },
-          {
-            enjeu: "Anniversaire d'entreprise (5, 10, 25 ans)",
-            format: 'Gala scénographié, show, archive corporate',
-            d: "Célébrer, fédérer, marquer durablement. Dîner assis ou cocktail haut de gamme, intervention show ou musicale, captation pour archive corporate sur le long terme.",
-          },
-          {
-            enjeu: 'Inauguration, livraison de bâtiment, AG',
-            format: 'Discours officiels, scénographie sobre, presse',
-            d: "Moment institutionnel : élus locaux, presse régionale, partenaires, équipes. Plan de prévention industriel, scénographie précise, captation pour archive corporate.",
-          },
-        ].map((item) => (
-          <div class="bg-bone-soft p-10 hover:bg-bone transition-colors duration-300">
-            <p class="eyebrow text-ink/55">{item.enjeu}</p>
-            <h3 class="text-xl md:text-2xl mt-5 leading-snug">{item.format}</h3>
-            <p class="mt-4 text-ink/65 text-sm leading-relaxed">{item.d}</p>
-          </div>
-        ))}
-      </div>
-
-      <div class="mt-16 max-w-3xl text-ink/65 text-base leading-relaxed">
-        <p>
-          Vous ne reconnaissez pas votre enjeu dans cette liste ? <a href="/contact/" class="text-accent hover:underline underline-offset-4">Décrivez-nous votre projet</a>. Cadrer le bon format à partir de l'objectif réel, c'est précisément le rôle d'une session de conseil en amont.
-        </p>
+        <div class="bg-bone-soft p-10">
+          <p class="eyebrow text-accent">Notre métier</p>
+          <ul class="mt-6 space-y-4 text-ink/85 text-lg leading-snug">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>Plénières scénographiées et conventions</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>Galas, dîners assis, remises de prix</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>Lancements de produits et reveals presse</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>Inaugurations de sites industriels et institutionnels</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>Captation vidéo multicam et streaming live</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+              <span>AG d'actionnaires et congrès</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-bone-soft p-10">
+          <p class="eyebrow text-ink/45">Hors périmètre</p>
+          <ul class="mt-6 space-y-4 text-ink/55 text-lg leading-snug">
+            <li class="flex items-start gap-3">
+              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span>Team building loisir, animations gadget</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span>Salons et stands commerciaux</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span>Soirées festives sans dispositif scénique</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span>Mariages, événements privés (hors lieu Épinac)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span>Location de matériel sec, régie sans pilotage</span>
+            </li>
+          </ul>
+          <p class="mt-8 text-sm text-ink/55 leading-relaxed">
+            Si votre projet est hors périmètre, dites-le franchement : nous orienterons vers un confrère mieux dimensionné pour vous.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -215,6 +250,63 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
     </div>
   </section>
 
+  <!-- CERTIFICATIONS & ASSURANCES : badges techniques en remplacement des logos clients -->
+  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow">Cadre & assurances</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
+          Le sérieux n'est pas une promesse.<br /><span class="text-accent">C'est un dossier.</span>
+        </h2>
+        <p class="mt-8 text-lg leading-relaxed text-ink/65 max-w-2xl">
+          Un événement à enjeu réclame un cadre réglementaire et assurantiel solide. Les références clients restent confidentielles ; le cadre du métier, lui, est public.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10">
+        {[
+          {
+            label: 'Responsabilité civile pro',
+            desc: 'Couverture événements recevant du public, dommages corporels et matériels. Attestation transmise sur demande.',
+          },
+          {
+            label: 'Cadre ERP / CTS',
+            desc: 'Maîtrise des Établissements Recevant du Public et des Chapiteaux, Tentes, Structures. Dossiers de sécurité rédigés en interne.',
+          },
+          {
+            label: 'Plan de prévention industriel',
+            desc: 'PPSPS rédigés pour les sites industriels (PIPA, plateformes énergie, halles de production). Coordination HSE en amont.',
+          },
+          {
+            label: 'Accessibilité PMR',
+            desc: 'Dispositifs conçus dès le brief avec parcours et points d\'accueil PMR intégrés. Pas une contrainte de dernière minute.',
+          },
+          {
+            label: 'Bureau d\'études interne',
+            desc: 'Modélisation 3D (SketchUp), plans 2D techniques (AutoCAD), dossiers d\'implantation pour prestataires partenaires.',
+          },
+          {
+            label: 'Pilotage direct',
+            desc: 'Pas d\'intermédiaire commercial entre le client et l\'opérationnel. Un seul interlocuteur de la signature au démontage.',
+          },
+          {
+            label: 'Sourcing partenaires',
+            desc: 'Réseau de prestataires son, lumière, structure, traiteur, sécurité. Local par défaut, top niveau quand le projet l\'exige.',
+          },
+          {
+            label: 'Architecture budgétaire',
+            desc: 'Devis ligne à ligne, équipement nommé, équipe identifiée par rôle. Aucune ligne fourre-tout, aucun forfait opaque.',
+          },
+        ].map((b) => (
+          <div class="bg-bone p-7">
+            <p class="text-sm font-semibold text-ink leading-tight">{b.label}</p>
+            <p class="mt-3 text-xs text-ink/60 leading-relaxed">{b.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <FAQ />
 
   <!-- CTA FINAL -->
@@ -225,7 +317,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
         Un événement à produire ?<br /><span class="text-accent">Décrivez-le nous.</span>
       </h2>
       <p class="mt-10 text-lg text-ink/70 max-w-xl mx-auto leading-relaxed">
-        Quelques lignes sur votre projet, votre format, votre jauge, votre date. Nous revenons vers vous, sans engagement.
+        Format, jauge, date pressentie, budget envisagé. Nous revenons vers vous, sans engagement.
       </p>
       <div class="mt-12 flex flex-wrap justify-center gap-4">
         <a href="/contact/" class="btn-accent text-base px-8 py-4">
