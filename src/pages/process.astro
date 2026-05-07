@@ -1,0 +1,103 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+const title = "Notre process | Epicentre Séminaires";
+const description = "Comment Epicentre pilote vos événements : brief, modélisation 3D, devis, production, livraison. Une méthode structurée pour des productions sans dérive.";
+
+const breadcrumb = [
+  { name: 'Accueil', url: '/' },
+  { name: 'Notre process' },
+];
+
+const steps = [
+  {
+    n: '01',
+    title: 'Brief et cadrage',
+    desc: "Premier échange pour comprendre l'objectif réel : pourquoi cet événement, pour qui, avec quel impact attendu. On clarifie les contraintes (date, lieu, jauge, budget) avant de proposer quoi que ce soit. C'est le moment où l'on dit non à une approche qui ne marcherait pas.",
+  },
+  {
+    n: '02',
+    title: 'Modélisation 3D',
+    desc: "L'événement est représenté à l'échelle dans une scène 3D : implantation, scène, écrans, parcours invité, points logistiques. Le client voit le dispositif avant de signer. Les arbitrages se font sur du concret, pas sur des descriptions.",
+  },
+  {
+    n: '03',
+    title: 'Devis ligne à ligne',
+    desc: 'Chaque poste est nommé : matériel scénique précis, équipe identifiée par rôle, rétroplanning détaillé, livrables techniques. Aucune ligne fourre-tout. Le devis devient le contrat opérationnel.',
+  },
+  {
+    n: '04',
+    title: 'Casting et préparation',
+    desc: 'Sélection des prestataires (sondiers, lumière, structure, vidéo, traiteur, sécurité) selon le projet. Local par défaut, top niveau quand le projet l\'exige. Briefs partagés à l\'échelle 3D pour que tous les intervenants travaillent sur la même base.',
+  },
+  {
+    n: '05',
+    title: 'Production sur site',
+    desc: "Montage, répétitions, jour J, démontage. Un seul pilote sur place. Doublage des éléments critiques. Plan B documenté pour chaque scénario d'aléa. Le client n'a pas à gérer les coulisses.",
+  },
+  {
+    n: '06',
+    title: 'Livrables et debrief',
+    desc: 'Captation livrée, archive corporate, photos, rushes selon le contrat. Debrief opérationnel pour identifier ce qui a marché, ce qui peut être amélioré pour la prochaine édition.',
+  },
+];
+---
+
+<Base title={title} description={description} zone="plaine">
+  <section class="bg-plaine-deep text-bone py-24 md:py-32">
+    <div class="container-wide">
+      <Breadcrumb items={breadcrumb} variant="dark" />
+      <h1 class="font-display text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.04em] max-w-4xl">
+        Comment Epicentre pilote votre événement.
+      </h1>
+      <p class="mt-8 text-xl text-bone/70 max-w-2xl leading-relaxed">
+        Six étapes structurées, du premier brief jusqu'au debrief post-événement. Aucune phase n'est sautée, aucun raccourci. C'est ce qui fait la différence entre un événement qui passe et un événement qui marque.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-bone py-28 md:py-36">
+    <div class="container-wide">
+      <div class="space-y-px bg-ink/10">
+        {steps.map((step) => (
+          <div class="bg-bone p-10 md:p-14 grid md:grid-cols-12 gap-10 items-start">
+            <div class="md:col-span-2">
+              <p class="text-accent font-display text-3xl md:text-4xl">{step.n}</p>
+            </div>
+            <div class="md:col-span-10">
+              <h2 class="text-2xl md:text-4xl leading-tight tracking-[-0.02em]">{step.title}</h2>
+              <p class="mt-5 text-ink/70 text-lg leading-relaxed max-w-3xl">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bone-soft py-28 md:py-36">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="eyebrow">Pourquoi cette méthode</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
+          Anticiper plutôt qu'improviser.
+        </h2>
+      </div>
+      <div class="md:col-span-7 space-y-6 text-lg leading-relaxed text-ink/75">
+        <p>
+          Un événement réussi se joue dans les semaines qui précèdent, pas le jour J. Plus la modélisation et la préparation sont serrées, plus la production est sereine.
+        </p>
+        <p>
+          La 3D en amont ne sert pas à faire joli sur une plaquette commerciale. C'est un outil de pilotage : elle force à arbitrer en avance, à voir les conflits avant qu'ils existent, à briefer les prestataires avec un référentiel commun.
+        </p>
+        <p>
+          Le jour J, plus personne ne découvre le dispositif. Tout a été vu, validé, ajusté. C'est ce qui fait la différence entre un événement qui semble fluide et un événement qui semble forcé.
+        </p>
+        <a href="/plaine-de-lain/contact/" class="btn-accent mt-6 inline-flex">
+          Demander un devis
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

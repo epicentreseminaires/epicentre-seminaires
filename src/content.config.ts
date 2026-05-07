@@ -4,8 +4,8 @@ import { glob } from 'astro/loaders';
 const journal = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/journal' }),
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
+    title: z.string().max(70),
+    description: z.string().max(160),
     publishedAt: z.coerce.date(),
     updatedAt: z.coerce.date().optional(),
     cover: z.string().optional(),
@@ -17,8 +17,8 @@ const journal = defineCollection({
 const lieux = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/lieux' }),
   schema: z.object({
-    title: z.string(),
-    description: z.string(),
+    title: z.string().max(70),
+    description: z.string().max(160),
     ville: z.string(),
     zone: z.enum(['epinac', 'plaine']),
     publishedAt: z.coerce.date(),

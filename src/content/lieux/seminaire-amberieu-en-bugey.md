@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Ambérieu-en-Bugey"
-description: "Vous êtes une entreprise basée à Ambérieu-en-Bugey ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Plénière, gala, lancement, captation vidéo."
+description: "Agence événementielle pour entreprises d'Ambérieu-en-Bugey : plénières, galas, lancements, captation vidéo. Bassin Plaine de l'Ain et Bugey."
 ville: "Ambérieu-en-Bugey"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -14,7 +14,8 @@ nearbyVilles:
   - seminaire-perouges
   - seminaire-saint-vulbas
 nearbyArticles:
-  - comment-choisir-agence-evenementielle-seminaire
+  - agence-evenementielle-locale-plaine-de-lain
+  - scenographie-3d-evenement-entreprise
   - anatomie-pleniere-grande-jauge
 faq:
   - q: "Vous êtes une agence basée à Ambérieu-en-Bugey ?"
@@ -30,7 +31,7 @@ faq:
   - q: "Combien de temps avant l'événement faut-il vous solliciter ?"
     a: "Idéalement 3 à 6 mois pour une plénière de plus de 200 personnes avec scénographie complète. Nous gérons aussi des productions plus rapides (4 à 8 semaines) sur des formats plus contenus, notamment pour des AG ou des inaugurations institutionnelles."
   - q: "Quel budget prévoir pour un séminaire ?"
-    a: "Nous intervenons à partir d'environ 15 000 € de prestation technique pour une plénière scénographiée. Pour un gala complet avec scène, mise en lumière et captation, compter 30 000 à 80 000 € selon la jauge et les exigences. Devis détaillé sous 72 h après cadrage."
+    a: "Chaque mission est sur-mesure. Le devis se construit après un échange de cadrage qui précise votre format, votre jauge, votre date et vos enjeux. Devis livré ligne à ligne, équipement nommé, équipe identifiée, rétroplanning détaillé."
 ---
 
 Vous êtes une entreprise basée à **Ambérieu-en-Bugey** : aéronautique, défense, énergie, sous-traitance industrielle, services. Vous préparez un **séminaire d'entreprise**, une **plénière**, un **gala interne** ou un **lancement de produit**, et vous cherchez une **agence événementielle** capable de le prendre en charge sérieusement.
@@ -85,8 +86,8 @@ Quatre arguments concrets :
 - **Local, vraiment** : nous sommes basés dans la Plaine de l'Ain. Pas une agence d'une grande ville qui passe en visioconférence et envoie un sous-traitant le jour J. La connaissance des lieux, des prestataires et des contraintes du Bugey est intégrée à notre travail.
 - **Direct** : vous parlez à celui qui pilote la production. Aucun intermédiaire commercial entre vous et l'opérationnel.
 - **Précis** : devis ligne à ligne, équipement nommé, équipe identifiée, rétroplanning détaillé. Pas de poste vague à 30 % du budget.
-- **Exigeant** : la culture technique des grandes scènes du sport et du spectacle français, transposée à votre événement d'Ambérieu — qu'il fasse 100 personnes ou 1 500.
+- **Exigeant** : la culture technique des grandes scènes du sport et du spectacle français, transposée à votre événement d'Ambérieu, qu'il fasse 100 personnes ou 1 500.
 
 ## Échangeons sur votre projet
 
-Vous êtes une entreprise d'Ambérieu-en-Bugey et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/) : réponse sous 24 h, devis détaillé sous 72 h après cadrage. Premier échange sans engagement.
+Vous êtes une entreprise d'Ambérieu-en-Bugey et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/). Premier échange sans engagement.

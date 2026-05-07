@@ -16,12 +16,23 @@ export default defineConfig({
         defaultLocale: 'fr',
         locales: { fr: 'fr-FR' },
       },
+      filter: (page) => !page.includes('/merci/'),
       serialize(item) {
         // Priorités SEO sur-mesure : la home et les hubs de zones tirent le plus
         const url = item.url;
         if (url === 'https://epicentre-seminaires.fr/') item.priority = 1.0;
-        else if (url.endsWith('/epinac/') || url.endsWith('/plaine-de-lain/')) item.priority = 0.9;
-        else if (url.includes('/contact/')) item.priority = 0.6;
+        else if (url.endsWith('/plaine-de-lain/')) item.priority = 0.95;
+        else if (url.endsWith('/epinac/')) item.priority = 0.9;
+        // Pages lieux SEO porteuses (cocons géo) : plus haut que les pages services
+        else if (url.includes('/plaine-de-lain/seminaire-')) item.priority = 0.85;
+        else if (url.includes('/epinac/seminaire-depuis-lyon/') || url.includes('/epinac/seminaire-depuis-paris/') || url.includes('/epinac/seminaire-depuis-geneve/') || url.includes('/epinac/seminaire-depuis-dijon/')) item.priority = 0.85;
+        else if (url.includes('/epinac/seminaire-')) item.priority = 0.8;
+        // Articles journal : porteurs de longue traîne
+        else if (url.includes('/journal/') && !url.endsWith('/journal/')) item.priority = 0.75;
+        // Pages services et structurantes
+        else if (url.endsWith('/journal/') || url.endsWith('/a-propos/')) item.priority = 0.7;
+        // Pages contact : moins prioritaires (transactionnelles)
+        else if (url.includes('/contact/')) item.priority = 0.5;
         else item.priority = 0.7;
         return item;
       },

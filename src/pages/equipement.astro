@@ -1,0 +1,101 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+const title = "Notre périmètre technique | Epicentre Séminaires";
+const description = "Périmètre technique d'Epicentre : production scénique, son, lumière, vidéo, captation, structure, régie. Compétences couvertes pour vos événements d'entreprise.";
+
+const breadcrumb = [
+  { name: 'Accueil', url: '/' },
+  { name: 'Périmètre technique' },
+];
+
+const blocks = [
+  {
+    title: 'Bureau d\'études',
+    desc: "Modélisation 3D des dispositifs (scène, parcours, implantations), plans techniques 2D pour les prestataires, plans d'agencement et de masse, dossiers de sécurité ERP/CTS pour les événements recevant du public.",
+    items: ['Modélisation 3D immersive', 'Plans techniques 2D', 'Dossiers ERP/CTS', 'Plans de prévention industriels'],
+  },
+  {
+    title: 'Production scénique',
+    desc: "Conception et pilotage du dispositif : scène, structure, scénographie, mise en lumière, son, vidéo, écrans, intercom. Capacités calibrées pour des plénières de 100 à plus de 1 000 personnes.",
+    items: ['Scène et structures', 'Sonorisation et intercom', 'Mise en lumière scénique', 'Écrans et vidéo'],
+  },
+  {
+    title: 'Captation vidéo',
+    desc: "Captation multicam pour archive corporate, diffusion live ou contenus post-événement. Régie son et lumière intégrée. Streaming sécurisé pour les événements à diffusion interne ou externe.",
+    items: ['Captation multicam HD/4K', 'Régie de réalisation', 'Streaming live sécurisé', 'Montage et livrables'],
+  },
+  {
+    title: 'Coordination terrain',
+    desc: "Pilotage opérationnel sur site : régisseur général, équipe technique, coordination des prestataires, gestion des aléas en temps réel. Un seul interlocuteur, des décisions prises sur le terrain.",
+    items: ['Régie générale', 'Coordination prestataires', 'Gestion des aléas en direct', 'Sécurité et accessibilité'],
+  },
+  {
+    title: 'Conformité réglementaire',
+    desc: "Maîtrise des cadres réglementaires des établissements recevant du public (ERP) et des chapiteaux, tentes et structures (CTS). Sécurité incendie, accessibilité PMR, plan de prévention.",
+    items: ['Cadre ERP', 'Cadre CTS', 'Sécurité incendie', 'Accessibilité PMR'],
+  },
+  {
+    title: 'Architecture budgétaire',
+    desc: "Cadrage et suivi du budget événement : architecture des postes, sourcing négocié, optimisation, reporting. Capacité de structuration de mécénat et de sponsoring sur certaines opérations.",
+    items: ['Cadrage budgétaire', 'Sourcing prestataires', 'Sponsoring et mécénat', 'Suivi de production'],
+  },
+];
+---
+
+<Base title={title} description={description} zone="plaine">
+  <section class="bg-plaine-deep text-bone py-24 md:py-32">
+    <div class="container-wide">
+      <Breadcrumb items={breadcrumb} variant="dark" />
+      <h1 class="font-display text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.04em] max-w-4xl">
+        Notre périmètre technique.
+      </h1>
+      <p class="mt-8 text-xl text-bone/70 max-w-2xl leading-relaxed">
+        Les compétences couvertes en propre par Epicentre, et ce qui se mobilise via le réseau de prestataires partenaires : local par défaut, top niveau quand le projet l'exige.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-bone py-28 md:py-36">
+    <div class="container-wide">
+      <div class="grid md:grid-cols-2 gap-px bg-ink/10">
+        {blocks.map((block) => (
+          <div class="bg-bone p-10 md:p-12">
+            <h2 class="text-2xl md:text-3xl leading-tight tracking-[-0.02em]">{block.title}</h2>
+            <p class="mt-5 text-ink/70 leading-relaxed">{block.desc}</p>
+            <ul class="mt-6 space-y-2">
+              {block.items.map((item) => (
+                <li class="flex items-start gap-3 text-ink/85 text-sm">
+                  <span class="text-accent mt-1.5 inline-block w-1 h-1 rounded-full bg-accent flex-shrink-0"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bone-soft py-28 md:py-36">
+    <div class="container-wide max-w-3xl">
+      <p class="eyebrow">Au-delà de l'équipement</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
+        Le matériel n'est qu'un moyen.
+      </h2>
+      <div class="mt-10 space-y-6 text-lg leading-relaxed text-ink/70">
+        <p>
+          Epicentre n'est pas un loueur de matériel. Le périmètre technique listé ici est ce qui se mobilise au service d'une production complète : conception, casting des prestataires, pilotage, livraison.
+        </p>
+        <p>
+          Pour les marques précises de matériel et les configurations techniques exactes, ces choix se font à partir de votre brief, de votre lieu et de votre jauge réelle. Pas de package préfabriqué.
+        </p>
+      </div>
+      <a href="/plaine-de-lain/contact/" class="btn-accent mt-10 inline-flex">
+        Demander un devis
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</Base>

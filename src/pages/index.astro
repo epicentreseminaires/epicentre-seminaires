@@ -1,256 +1,241 @@
 ---
 import Base from '@/layouts/Base.astro';
 import TrustStrip from '@/components/TrustStrip.astro';
-import ClientsLogos from '@/components/ClientsLogos.astro';
-import Testimonials from '@/components/Testimonials.astro';
 import FAQ from '@/components/FAQ.astro';
-import StickyCTA from '@/components/StickyCTA.astro';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 const title = "Agence événementielle Plaine de l'Ain | Epicentre Séminaires";
-const description = "Organisateur de séminaire d'entreprise dans l'Ain. Plénières, galas, lancements, captation pour les boîtes du bassin (Ambérieu, PIPA, Pérouges).";
+const description = "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, congrès, lancements, captation pour les entreprises du bassin (Ambérieu, PIPA, Pérouges).";
 
-const heroImg = 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=2400&q=85&auto=format&fit=crop';
-const epinacImg = 'https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=1600&q=85&auto=format&fit=crop';
+// Visuel hero : scène événementielle abstraite (lumière, fumée), sobre, premium.
+const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2000&q=85&auto=format&fit=crop';
 ---
 
-<Base title={title} description={description} zone="brand">
-  <!-- HERO : éditorial, image qui porte, typographie clean -->
-  <section class="relative min-h-[85vh] lg:min-h-[92vh] overflow-hidden bg-ink">
-    <img
-      src={heroImg}
-      alt="Plénière d'entreprise avec scénographie lumière"
-      class="absolute inset-0 w-full h-full object-cover opacity-70"
-    />
-    <!-- Gradient seulement sur le bas pour garder l'image visible en haut -->
-    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink via-ink/85 to-transparent"></div>
-    <!-- Léger voile en haut pour lisibilité du header sur l'image -->
-    <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/50 to-transparent"></div>
+<Base title={title} description={description} zone="brand" theme="light">
+  <!-- HERO clair premium : container centré, typo dominante, image en deuxième temps -->
+  <section class="bg-bone pt-32 md:pt-40 pb-20 md:pb-28 relative overflow-hidden">
+    <div class="container-wide">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-7 relative z-10">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="block w-8 h-px bg-ink/30"></span>
+            <p class="text-[0.7rem] uppercase tracking-[0.22em] text-ink/55 font-medium">
+              Plaine de l'Ain · Entre Lyon et Genève
+            </p>
+          </div>
 
-    <div class="relative z-10 h-full min-h-[85vh] lg:min-h-[92vh] container-wide flex flex-col justify-end pb-16 md:pb-20 pt-32">
-      <div class="max-w-3xl">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="block w-8 h-px bg-bone/50"></span>
-          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-bone/65 font-medium">
-            Plaine de l'Ain · Entre Lyon et Genève
+          <h1 class="font-display font-semibold text-ink text-[2.75rem] sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[0.96] tracking-[-0.04em]">
+            Votre agence événementielle dans la Plaine de l'Ain.
+          </h1>
+
+          <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-xl">
+            Un acteur local capable de produire votre événement au niveau des plus grandes scènes. Plénières, conventions, galas, lancements, captation vidéo.
           </p>
+
+          <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a href="/plaine-de-lain/contact/" class="btn-accent text-sm px-7 py-4">
+              Demander un devis
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>{CONTACT_PHONE_DISPLAY}</span>
+            </a>
+          </div>
         </div>
-        <h1 class="font-display font-semibold text-bone leading-[1.04] tracking-tight text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[4.25rem]">
-          Votre agence événementielle dans la Plaine de l'Ain.
-        </h1>
-        <p class="text-bone/75 max-w-xl mt-7 text-base md:text-[1.0625rem] leading-relaxed">
-          Plénières, galas, congrès, lancements, captation vidéo. Production locale pour les entreprises du bassin : industrie, énergie, aéronautique, services.
-        </p>
-        <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <a href="/contact/" class="btn-bone text-sm px-7 py-3.5">
-            Demander un devis
-            <span aria-hidden="true">→</span>
-          </a>
-          <a href="#services" class="text-bone/75 hover:text-bone text-sm flex items-center gap-2 transition-colors group ml-1">
-            Voir nos services
-            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </a>
+
+        <div class="lg:col-span-5 relative">
+          <div class="relative aspect-[4/5] overflow-hidden bg-ink-soft rounded-sm">
+            <img
+              src={heroImg}
+              alt="Scène événementielle, mise en lumière et atmosphère technique"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent"></div>
+          </div>
         </div>
       </div>
     </div>
-
-    <a href="#services" class="hidden md:flex absolute bottom-6 right-8 text-bone/40 text-[0.65rem] uppercase tracking-[0.22em] z-10 items-center gap-3 hover:text-bone/70 transition-colors">
-      <span class="block w-10 h-px bg-bone/30"></span>
-      Scroller
-    </a>
   </section>
 
   <TrustStrip variant="light" />
 
-  <!-- 3 SERVICES -->
-  <section id="services" class="bg-ink text-bone py-32">
+  <!-- MÉTHODE 3D : l'angle différenciant -->
+  <section class="py-28 md:py-36 bg-bone-soft">
     <div class="container-wide">
       <div class="max-w-3xl mb-20">
-        <p class="eyebrow text-bone/50">Nos services</p>
-        <h2 class="text-5xl md:text-7xl mt-6 leading-tight">
-          Trois façons de<br />travailler avec nous.
+        <p class="eyebrow">Notre méthode</p>
+        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+          Vous voyez votre événement<br /><span class="text-accent">avant qu'il ait lieu.</span>
         </h2>
-        <p class="mt-8 text-bone/70 text-xl max-w-2xl">
-          Selon votre besoin, nous intervenons au bon niveau. Du conseil ponctuel à la production complète.
+        <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
+          Avant le devis, avant le brief technique, le pilotage commence par la modélisation 3D. Une représentation à l'échelle du dispositif, des espaces, des flux et des points de scène. Tout le monde voit la même chose, à la même seconde.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-bone/10">
-        <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+        <div class="bg-bone-soft p-10">
           <p class="text-accent font-display text-2xl">01</p>
-          <h3 class="text-2xl md:text-3xl mt-4">Renseignement</h3>
-          <p class="mt-4 text-bone/65 leading-relaxed">
-            Vous avez un projet d'événement et vous voulez en parler à quelqu'un qui connaît le métier. Format, budget, prestataires fiables, lieux disponibles. On répond, on partage notre expérience. Sans engagement.
+          <h3 class="text-2xl mt-5 leading-tight">Validation client</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Le client voit son événement avant de signer : implantation, scène, jauge, parcours invité. Plus besoin de projeter dans le vide. Les arbitrages se font sur du concret, pas sur des descriptions.
           </p>
         </div>
-        <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
+        <div class="bg-bone-soft p-10">
           <p class="text-accent font-display text-2xl">02</p>
-          <h3 class="text-2xl md:text-3xl mt-4">Organisation</h3>
-          <p class="mt-4 text-bone/65 leading-relaxed">
-            Vous nous confiez la production complète : scénographie, scène, son, lumière, vidéo, captation, régie, coordination des prestataires. Un événement piloté de bout en bout, sans intermédiaire.
+          <h3 class="text-2xl mt-5 leading-tight">Brief des prestataires</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Régie son, lumière, structure, traiteur, sécurité : chacun reçoit un référentiel partagé, à l'échelle, en cotes. Les briefs sont traduits en plans techniques, pas en mots qui se perdent.
           </p>
         </div>
-        <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
+        <div class="bg-bone-soft p-10">
           <p class="text-accent font-display text-2xl">03</p>
-          <h3 class="text-2xl md:text-3xl mt-4">Conseil de lieu</h3>
-          <p class="mt-4 text-bone/65 leading-relaxed">
-            Vous cherchez le bon lieu pour votre événement : à Ambérieu, dans la Plaine, à Pérouges, à Lyon ou ailleurs. On connaît les lieux du bassin et au-delà. Sourcing gratuit en amont du cadrage.
+          <h3 class="text-2xl mt-5 leading-tight">Coordination des équipes</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Logistique, technique, accueil : la 3D devient le langage commun de la production. Le jour J, plus personne ne découvre le dispositif. Tout a été vu, validé, ajusté en amont.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <ClientsLogos />
-
-  <!-- RÉASSURANCE / CHIFFRES -->
-  <section class="py-32 bg-bone-soft">
-    <div class="container-wide grid md:grid-cols-12 gap-10 items-center">
-      <div class="md:col-span-5">
-        <p class="eyebrow">L'expérience</p>
-        <h2 class="text-5xl md:text-6xl mt-6">
-          Une production rodée sur les plus grandes scènes.
+  <!-- TROIS SERVICES -->
+  <section id="services" class="bg-bone py-28 md:py-36">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-20">
+        <p class="eyebrow">Nos services</p>
+        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+          Trois façons<br />de travailler ensemble.
         </h2>
-        <p class="mt-8 text-lg leading-relaxed text-ink/75">
-          Avant de fonder Epicentre, nous avons piloté des productions sur certaines des plus grandes scènes du sport et du spectacle français : devant des jauges de plusieurs milliers de spectateurs.
-          Cette exigence opérationnelle, nous l'apportons aujourd'hui à chaque événement d'entreprise, qu'il s'agisse d'une plénière de 100 personnes ou d'une convention de 1 500.
+        <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
+          Selon votre besoin, l'agence intervient au bon niveau. Du conseil ponctuel à la production complète, sans intermédiaire commercial.
         </p>
-        <a href="/a-propos/" class="btn-outline mt-10">Notre histoire</a>
       </div>
 
-      <div class="md:col-span-6 md:col-start-7 grid grid-cols-2 gap-4">
-        <div class="bg-ink text-bone p-8 aspect-square flex flex-col justify-between">
-          <p class="eyebrow text-bone/50">Productions</p>
-          <p class="text-6xl font-semibold tracking-tightest">+150</p>
-          <p class="text-sm text-bone/70">événements pilotés en propre ou en co-production</p>
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
+          <p class="text-accent font-display text-2xl">01</p>
+          <h3 class="text-2xl mt-5 leading-tight">Conseil</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Vous avez un projet d'événement et vous voulez en parler à quelqu'un qui connaît le métier. Format, budget, prestataires, lieux disponibles. Premier échange sans engagement.
+          </p>
         </div>
-        <div class="bg-ink text-bone p-8 aspect-square flex flex-col justify-between mt-12">
-          <p class="eyebrow text-bone/50">Capacité</p>
-          <p class="text-6xl font-semibold tracking-tightest">1 500<span class="text-3xl">+</span></p>
-          <p class="text-sm text-bone/70">spectateurs sur des plénières et galas grand format</p>
+        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
+          <p class="text-accent font-display text-2xl">02</p>
+          <h3 class="text-2xl mt-5 leading-tight">Production complète</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Vous confiez la production de bout en bout : scénographie 3D, scène, son, lumière, vidéo, captation, régie, coordination des prestataires. Un événement piloté, sans intermédiaire.
+          </p>
         </div>
-        <div class="bg-bone p-8 aspect-square flex flex-col justify-between border border-ink/10">
-          <p class="eyebrow">Captation</p>
-          <p class="text-6xl font-semibold tracking-tightest">4K</p>
-          <p class="text-sm text-ink/70">multicam, régie son lumière, diffusion live</p>
-        </div>
-        <div class="bg-bone p-8 aspect-square flex flex-col justify-between mt-12 border border-ink/10">
-          <p class="eyebrow">Domaine partenaire</p>
-          <p class="text-6xl font-semibold tracking-tightest">9 000<span class="text-3xl"> m²</span></p>
-          <p class="text-sm text-ink/70">de parc privatisé en Bourgogne, à Épinac</p>
+        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
+          <p class="text-accent font-display text-2xl">03</p>
+          <h3 class="text-2xl mt-5 leading-tight">Sourcing de lieu</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed">
+            Vous cherchez le bon lieu pour votre événement : dans la Plaine de l'Ain, à Ambérieu, à Pérouges, à Lyon. Sourcing en amont du cadrage, sur la base d'une connaissance fine du territoire.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- QUEL FORMAT POUR QUEL ENJEU -->
-  <section id="savoir-faire" class="bg-ink text-bone py-32">
+  <section class="bg-bone-soft py-28 md:py-36">
     <div class="container-wide">
-      <div class="max-w-3xl">
-        <p class="eyebrow text-bone/50">Quel format pour quel enjeu</p>
-        <h2 class="text-5xl md:text-7xl mt-6 leading-tight">
-          Vous savez ce que vous voulez dire.<br /><span class="text-accent">Nous savons comment le produire.</span>
+      <div class="max-w-3xl mb-20">
+        <p class="eyebrow">Quel format pour quel enjeu</p>
+        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+          Vous savez ce que vous voulez dire.<br /><span class="text-accent">Le format suit l'objectif.</span>
         </h2>
-        <p class="mt-8 text-bone/70 text-xl max-w-2xl">
-          Cinq enjeux d'entreprise, cinq formats que nous produisons régulièrement dans la Plaine de l'Ain. Le format suit l'objectif, pas l'inverse.
-        </p>
       </div>
 
-      <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-bone/10">
+      <div class="grid md:grid-cols-2 gap-px bg-ink/10">
         {[
           {
-            enjeu: 'Convention annuelle, séminaire d\'intégration',
-            format: 'Plénière + ateliers + dîner gala (1 à 2 jours)',
-            d: 'Aligner les équipes, transmettre la stratégie, créer du lien. Scène, captation multicam, mise en lumière, animation des moments forts. De 100 à 1 500 personnes.',
+            enjeu: "Convention annuelle, séminaire d'intégration",
+            format: 'Plénière scénographiée, ateliers, dîner gala',
+            d: "Aligner les équipes, transmettre la stratégie, créer du lien. Scène, captation multicam, mise en lumière, animation des moments forts. Format 1 à 2 jours.",
           },
           {
             enjeu: 'Lancement de produit ou de gamme',
-            format: 'Reveal scénographié + presse + soirée',
-            d: 'Marquer un moment vis-à-vis du marché, de la presse, de la distribution et de l\'équipe interne. Mise en scène du produit, dispositif scénique sur-mesure, gestion presse régionale, captation diffusable.',
+            format: 'Reveal scénographié, presse, soirée privée',
+            d: "Marquer un moment vis-à-vis du marché, de la presse, de la distribution et des équipes internes. Mise en scène du produit, dispositif sur-mesure, captation diffusable.",
           },
           {
-            enjeu: 'Anniversaire d\'entreprise (5, 10, 25 ans)',
-            format: 'Gala scénographié + show + archive',
-            d: 'Célébrer, fédérer, marquer durablement. Dîner assis ou cocktail haut de gamme, intervention show ou musicale, captation pour archive corporate à long terme. La référence à laquelle l\'équipe repense pendant des années.',
+            enjeu: "Anniversaire d'entreprise (5, 10, 25 ans)",
+            format: 'Gala scénographié, show, archive corporate',
+            d: "Célébrer, fédérer, marquer durablement. Dîner assis ou cocktail haut de gamme, intervention show ou musicale, captation pour archive corporate sur le long terme.",
           },
           {
-            enjeu: 'Inauguration de site, livraison de bâtiment',
-            format: 'Discours officiels + scénographie + presse',
-            d: 'Moment institutionnel : élus locaux, presse régionale, partenaires, équipe. Plan de prévention industriel, scénographie sobre et précise, captation pour archive corporate, cocktail. Spécialiste des productions sur site PIPA.',
-          },
-          {
-            enjeu: 'AG d\'actionnaires ou de coopérative',
-            format: 'Plénière + retransmission live + vote électronique',
-            d: 'Conformité, retransmission, vote. Régie complète, retransmission multi-sites, système de vote électronique sécurisé, captation officielle pour archive juridique.',
-          },
-          {
-            enjeu: 'Soirée d\'entreprise, événement client',
-            format: 'Concert privé, dîner d\'exception, dispositif sur-mesure',
-            d: 'Sortir du standard. Production technique complète : son, lumière, vidéo, scène, sécurité. Pour les très belles entreprises qui veulent un événement à la hauteur de leur trajectoire.',
+            enjeu: 'Inauguration, livraison de bâtiment, AG',
+            format: 'Discours officiels, scénographie sobre, presse',
+            d: "Moment institutionnel : élus locaux, presse régionale, partenaires, équipes. Plan de prévention industriel, scénographie précise, captation pour archive corporate.",
           },
         ].map((item) => (
-          <div class="bg-ink p-10 hover:bg-ink-soft transition-colors duration-500">
-            <p class="eyebrow text-bone/50">{item.enjeu}</p>
-            <h3 class="text-xl md:text-2xl mt-4 leading-snug">{item.format}</h3>
-            <p class="mt-4 text-bone/65 text-sm leading-relaxed">{item.d}</p>
+          <div class="bg-bone-soft p-10 hover:bg-bone transition-colors duration-300">
+            <p class="eyebrow text-ink/55">{item.enjeu}</p>
+            <h3 class="text-xl md:text-2xl mt-5 leading-snug">{item.format}</h3>
+            <p class="mt-4 text-ink/65 text-sm leading-relaxed">{item.d}</p>
           </div>
         ))}
       </div>
 
-      <div class="mt-16 max-w-3xl text-bone/65 text-base leading-relaxed">
+      <div class="mt-16 max-w-3xl text-ink/65 text-base leading-relaxed">
         <p>
-          Vous ne reconnaissez pas votre enjeu dans cette liste ? <a href="/contact/" class="text-accent hover:underline underline-offset-4">Parlons-en</a>. Notre métier, c\'est précisément de cadrer le bon format à partir de votre objectif réel : une session de renseignement vous aide à clarifier avant même de lancer une production.
+          Vous ne reconnaissez pas votre enjeu dans cette liste ? <a href="/plaine-de-lain/contact/" class="text-accent hover:underline underline-offset-4">Décrivez-nous votre projet</a>. Cadrer le bon format à partir de l'objectif réel, c'est précisément le rôle d'une session de conseil en amont.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- LIEU PARTENAIRE EN BOURGOGNE -->
-  <section class="bg-bone py-32">
-    <div class="container-wide grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-      <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden order-2 md:order-1">
-        <img src={epinacImg} alt="Domaine partenaire en Bourgogne, à Épinac" class="absolute inset-0 w-full h-full object-cover" />
-      </div>
-      <div class="order-1 md:order-2">
-        <p class="eyebrow">Pour les projets ambitieux</p>
-        <h2 class="text-4xl md:text-6xl mt-6 leading-tight">
-          Un lieu partenaire,<br />en Bourgogne.
+  <!-- EXPÉRIENCE : section sombre pour le contraste -->
+  <section class="bg-ink text-bone py-28 md:py-36">
+    <div class="container-wide grid md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-6">
+        <p class="eyebrow text-bone/55">L'expérience</p>
+        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+          Une production rodée<br /><span class="text-accent">sur les plus grandes scènes.</span>
         </h2>
-        <p class="mt-8 text-lg leading-relaxed text-ink/75">
-          À <strong>Épinac, en Saône-et-Loire</strong>, un domaine familial partenaire offre 9 000 m² de parc privatisé pour les entreprises qui cherchent un cadre rare et un format résidentiel.
+      </div>
+      <div class="md:col-span-6 space-y-6 text-lg leading-relaxed text-bone/75">
+        <p>
+          Epicentre apporte aux entreprises de la Plaine de l'Ain une culture de production technique forgée sur les plus grandes scènes lyonnaises du sport et du spectacle.
         </p>
-        <p class="mt-6 text-lg leading-relaxed text-ink/75">
-          Sur ce terrain, tout reste à imaginer : <strong>chapiteau cristal</strong>, <strong>plénière en plein air</strong>, <strong>salle modulaire sous les arbres</strong>, <strong>dîner gala dans le parc</strong>, <strong>dégustation de vin animée par un sommelier</strong>. Un cadre pensé pour les projets ambitieux, à 1h15 de Lyon, 2h30 de Paris.
+        <p>
+          La même exigence opérationnelle : doublage des éléments critiques, plans de prévention écrits, rétroplanning calé, équipe sur place. Un événement n'est jamais qu'un programme : c'est un dispositif technique vivant, où chaque détail compte.
         </p>
-        <a href="/epinac/" class="btn-outline mt-10">Découvrir le domaine d'Épinac</a>
+        <a href="/a-propos/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink mt-4 inline-flex">
+          Notre histoire
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
-
-  <Testimonials />
 
   <FAQ />
 
   <!-- CTA FINAL -->
-  <section class="bg-ink text-bone py-32">
-    <div class="container-wide text-center">
-      <p class="eyebrow text-bone/50">Parlons de votre projet</p>
-      <h2 class="text-5xl md:text-7xl max-w-4xl mx-auto mt-6">
-        Un événement à produire ?<br /><span class="text-accent">On l'étudie sous 24 h.</span>
+  <section class="bg-bone py-28 md:py-36">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <p class="eyebrow">Parlons de votre projet</p>
+      <h2 class="text-4xl md:text-6xl lg:text-7xl max-w-4xl mx-auto mt-6 leading-[1] tracking-[-0.04em]">
+        Un événement à produire ?<br /><span class="text-accent">Décrivez-le nous.</span>
       </h2>
-      <p class="mt-10 text-lg text-bone/70 max-w-xl mx-auto">
-        Décrivez-nous votre projet en deux lignes. On vous rappelle dans la journée, sans engagement.
+      <p class="mt-10 text-lg text-ink/70 max-w-xl mx-auto leading-relaxed">
+        Quelques lignes sur votre projet, votre format, votre jauge, votre date. Nous revenons vers vous, sans engagement.
       </p>
       <div class="mt-12 flex flex-wrap justify-center gap-4">
-        <a href="/contact/" class="btn-accent text-base px-8 py-4">
+        <a href="/plaine-de-lain/contact/" class="btn-accent text-base px-8 py-4">
           Demander un devis
           <span aria-hidden="true">→</span>
         </a>
-        <a href="tel:+33744980015" class="btn-outline border-bone/40 text-bone hover:bg-bone hover:text-ink">
-          07 44 98 00 15
+        <a href={CONTACT_PHONE_HREF} class="btn-outline">
+          {CONTACT_PHONE_DISPLAY}
         </a>
       </div>
     </div>
   </section>
-
-  <StickyCTA />
 </Base>

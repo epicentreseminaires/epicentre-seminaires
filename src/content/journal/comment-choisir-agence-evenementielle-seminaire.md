@@ -1,6 +1,6 @@
 ---
-title: "Comment choisir une agence événementielle pour un séminaire d'entreprise"
-description: "Les vrais critères pour départager les agences événementielles : production technique, transparence du devis, références. Le guide pour ne pas se tromper."
+title: "Comment choisir une agence événementielle pour un séminaire"
+description: "Les vrais critères pour départager les agences événementielles : production technique, devis transparent, références. Comment ne pas se tromper."
 publishedAt: 2026-05-05
 cover: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=2400&q=85&auto=format&fit=crop"
 tags: ["séminaire", "agence événementielle", "achats"]

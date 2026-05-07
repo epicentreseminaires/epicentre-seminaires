@@ -9,6 +9,8 @@ export interface Props {
   image?: string;
   zone?: 'epinac' | 'plaine' | 'brand';
   canonical?: string;
+  noindex?: boolean;
+  theme?: 'light' | 'dark';
 }
 
 const {
@@ -17,6 +19,8 @@ const {
   image = '/og-default.jpg',
   zone = 'brand',
   canonical,
+  noindex = false,
+  theme = 'dark',
 } = Astro.props;
 
 const siteUrl = 'https://epicentre-seminaires.fr';
@@ -49,35 +53,61 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
     <meta name="author" content="Epicentre Séminaires" />
 
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'EventVenue',
-      name: 'Epicentre Séminaires',
-      description: 'Agence de production événementielle. Plénières, galas, congrès, lancements de produits, captation vidéo. Épinac (Bourgogne) et Plaine de l\'Ain.',
-      url: siteUrl,
-      areaServed: ['Plaine de l\'Ain', 'Ambérieu-en-Bugey', 'Épinac', 'Saône-et-Loire', 'Autun'],
-      address: [
-        {
+    {zone === 'epinac' ? (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'EventVenue',
+        '@id': `${siteUrl}/epinac/#venue`,
+        name: 'Domaine d\'Épinac (partenaire d\'Epicentre Séminaires)',
+        description: 'Lieu d\'événement plein air en Bourgogne sud, à Épinac. Domaine partenaire d\'Epicentre Séminaires : galas, plénières sous chapiteau, soirées d\'entreprise, réceptions privées.',
+        url: `${siteUrl}/epinac/`,
+        address: {
           '@type': 'PostalAddress',
+          streetAddress: '8 rue Jean Bouverie',
           addressLocality: 'Épinac',
           postalCode: '71360',
           addressRegion: 'Bourgogne-Franche-Comté',
           addressCountry: 'FR',
         },
-        {
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 46.9883,
+          longitude: 4.5103,
+        },
+        areaServed: ['Bourgogne', 'Saône-et-Loire', 'Autun', 'Beaune', 'Le Creusot', 'Lyon', 'Genève', 'Paris', 'Dijon'],
+      })} />
+    ) : zone === 'plaine' ? (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/plaine-de-lain/#business`,
+        name: 'Epicentre Séminaires (Plaine de l\'Ain)',
+        description: 'Agence événementielle dans la Plaine de l\'Ain. Production technique d\'événements d\'entreprise : plénières, galas, congrès, lancements, captation vidéo.',
+        url: `${siteUrl}/plaine-de-lain/`,
+        address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Ambérieu-en-Bugey',
           addressRegion: 'Auvergne-Rhône-Alpes',
           addressCountry: 'FR',
         },
-      ],
-    })} />
+        areaServed: ['Plaine de l\'Ain', 'Ambérieu-en-Bugey', 'Lagnieu', 'Meximieux', 'Saint-Vulbas', 'Pérouges', 'Bugey', 'Lyon est', 'Pays de Gex'],
+      })} />
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'Epicentre Séminaires',
+        description: 'Agence événementielle dans la Plaine de l\'Ain et lieu d\'événement plein air partenaire à Épinac, en Bourgogne.',
+        url: siteUrl,
+        logo: `${siteUrl}/images/logo-epicentre-black.png`,
+      })} />
+    )}
   </head>
-  <body data-zone={zone}>
-    <Header zone={zone} />
+  <body data-zone={zone} data-theme={theme}>
+    <Header zone={zone} theme={theme} />
     <main>
       <slot />
     </main>

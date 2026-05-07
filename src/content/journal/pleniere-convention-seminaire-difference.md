@@ -1,6 +1,6 @@
 ---
-title: "Plénière, convention, séminaire : quelle différence et comment choisir le bon format"
-description: "Plénière, convention, séminaire d'entreprise : trois mots souvent confondus alors qu'ils désignent des formats événementiels différents. Le guide pour choisir le bon dispositif selon votre objectif."
+title: "Plénière, convention, séminaire : quelle différence ?"
+description: "Plénière, convention, séminaire d'entreprise : trois formats souvent confondus. Le guide pour choisir le bon dispositif selon votre objectif."
 publishedAt: 2026-05-05
 cover: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=2400&q=85&auto=format&fit=crop"
 tags: ["plénière", "convention", "séminaire", "format"]
@@ -94,4 +94,4 @@ Le bon dimensionnement, c'est l'enjeu central de l'avant-projet. Il se cale en a
 
 ---
 
-*Vous préparez une plénière, une convention ou un séminaire dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous calons un échange dans la journée.*
+*Vous préparez une plénière, une convention ou un séminaire dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous pour caler un échange.*

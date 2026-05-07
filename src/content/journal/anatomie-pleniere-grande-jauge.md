@@ -1,6 +1,6 @@
 ---
 title: "Anatomie d'une plénière grande jauge : ce qui se joue en coulisses"
-description: "Plénière d'entreprise grande jauge : le détail des coulisses techniques. Régie son, lumière, captation multicam, scénographie. Tout ce qu'un dirigeant ou DRH ignore et qui fait pourtant la différence le jour J."
+description: "Plénière d'entreprise grande jauge : les coulisses techniques. Régie son, lumière, captation multicam, scénographie. Ce qui se joue le jour J."
 publishedAt: 2026-05-05
 cover: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=2400&q=85&auto=format&fit=crop"
 tags: ["plénière", "production technique", "coulisses"]
@@ -100,4 +100,4 @@ Une plénière grande jauge réussie, c'est entre 100 et 200 heures de préparat
 
 ---
 
-*Vous préparez une plénière grande jauge, une convention ou un événement à enjeu dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous calons un échange dans la journée.*
+*Vous préparez une plénière grande jauge, une convention ou un événement à enjeu dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous pour caler un échange.*

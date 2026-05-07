@@ -4,6 +4,7 @@ import Base from '@/layouts/Base.astro';
 import Prose from '@/components/Prose.astro';
 import PageFaq from '@/components/PageFaq.astro';
 import NearbyLinks from '@/components/NearbyLinks.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const lieux = await getCollection('lieux', (l) => l.data.zone === 'epinac');
@@ -18,6 +19,12 @@ const { Content } = await render(lieu);
 
 const siteUrl = 'https://epicentre-seminaires.fr';
 const pageUrl = `${siteUrl}/epinac/${lieu.id}/`;
+
+const breadcrumb = [
+  { name: 'Accueil', url: '/' },
+  { name: 'Domaine d\'Épinac', url: '/epinac/' },
+  { name: lieu.data.ville },
+];
 
 const faqJsonLd = lieu.data.faq && lieu.data.faq.length > 0
   ? {
@@ -66,8 +73,8 @@ const localBusinessJsonLd = {
       <img src={lieu.data.cover} alt={lieu.data.title} class="absolute inset-0 w-full h-full object-cover opacity-55" />
       <div class="absolute inset-0 bg-gradient-to-b from-epinac-deep/30 to-epinac-deep"></div>
       <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
-        <p class="eyebrow text-bone/60 mb-4">Épinac · Bourgogne · {lieu.data.ville}</p>
-        <h1 class="text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight">
+        <Breadcrumb items={breadcrumb} variant="dark" />
+        <h1 class="text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight mt-6">
           {lieu.data.title}
         </h1>
       </div>

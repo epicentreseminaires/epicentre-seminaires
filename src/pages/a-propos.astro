@@ -1,66 +1,60 @@
 ---
 import Base from '@/layouts/Base.astro';
 
-const title = "À propos : Epicentre Séminaires | Notre histoire";
-const description = "Epicentre Séminaires : agence familiale, Plaine de l'Ain et domaine partenaire à Épinac. Production événementielle héritée des grandes scènes.";
+const title = "À propos : Epicentre Séminaires";
+const description = "Agence événementielle dans la Plaine de l'Ain et lieu d'événement plein air à Épinac, en Bourgogne. Production technique pour entreprises locales et lieu de réception.";
 
-const cover = 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=2400&q=85&auto=format&fit=crop';
+const cover = 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop';
 ---
 
 <Base title={title} description={description} zone="brand">
   <section class="relative h-[60vh] min-h-[420px] overflow-hidden bg-ink">
-    <img src={cover} alt="L'équipe Epicentre Séminaires en production" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+    <img src={cover} alt="Scène événementielle, mise en lumière et régie technique" class="absolute inset-0 w-full h-full object-cover opacity-50" />
     <div class="absolute inset-0 bg-gradient-to-b from-ink/30 to-ink"></div>
     <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
-      <p class="eyebrow text-bone/70 mb-4">L'histoire</p>
-      <h1 class="font-display text-4xl md:text-6xl max-w-4xl">Une agence, deux territoires, une exigence.</h1>
+      <p class="eyebrow text-bone/70 mb-4">L'agence</p>
+      <h1 class="font-display text-4xl md:text-6xl max-w-4xl">Une agence, deux territoires.</h1>
     </div>
   </section>
 
-  <!-- TRIPLE SENS -->
+  <!-- POSITIONNEMENT -->
   <section class="py-24 bg-bone">
     <div class="container-wide grid md:grid-cols-12 gap-10">
       <div class="md:col-span-4">
-        <p class="eyebrow">Le nom</p>
+        <p class="eyebrow">Le projet</p>
         <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight">
-          Pourquoi Epicentre.
+          Un acteur local capable de produire au niveau des plus grandes scènes.
         </h2>
       </div>
       <div class="md:col-span-7 md:col-start-6 space-y-8 text-lg leading-relaxed">
         <p>
-          <strong class="text-accent-dark">Épi(nac)centre.</strong>
-          Au cœur d'Épinac, en Bourgogne, où ma mère a acquis un domaine familial qui devient notre lieu d'accueil pour les séminaires d'entreprise.
+          Epicentre est une agence événementielle ancrée dans la <strong>Plaine de l'Ain</strong>, entre Lyon et Genève. Elle accompagne les entreprises du bassin sur leurs plénières, conventions, galas, lancements et congrès, en mobilisant la culture technique des grandes scènes lyonnaises du sport et du spectacle.
         </p>
         <p>
-          <strong class="text-accent-dark">Épicentre géographique.</strong>
-          La Plaine de l'Ain, entre Lyon et Genève, l'un des bassins industriels les plus dynamiques de France : où nous produisons les événements des entreprises locales.
-        </p>
-        <p>
-          <strong class="text-accent-dark">Épicentre d'énergie.</strong>
-          Les plénières, les galas, les concerts d'entreprise : ces moments où l'on rassemble une équipe ou une marque autour d'un point d'intensité. C'est là qu'on intervient.
+          L'agence travaille également avec un lieu d'événement partenaire en Bourgogne, à <strong>Épinac</strong> (Saône-et-Loire) : un domaine plein air pour des événements à la journée, des galas sous chapiteau, des soirées d'entreprise et des réceptions privées.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- HISTOIRE -->
+  <!-- ORIGINE -->
   <section class="bg-bone-soft py-24">
     <div class="container-wide grid md:grid-cols-12 gap-10">
       <div class="md:col-span-5">
-        <p class="eyebrow">Le parcours</p>
+        <p class="eyebrow">L'origine</p>
         <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight">
-          Des grandes scènes à votre événement d'entreprise.
+          De grandes scènes lyonnaises à votre événement local.
         </h2>
       </div>
       <div class="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed">
         <p>
-          Avant de fonder Epicentre, j'ai piloté la production technique d'événements sur quelques-unes des plus grandes scènes du sport et du spectacle de l'agglomération lyonnaise, devant des jauges de plusieurs milliers de spectateurs.
+          Epicentre est née d'un constat de terrain : beaucoup d'entreprises de la Plaine de l'Ain et de l'est lyonnais font produire leurs événements par des agences extérieures, qui ne connaissent pas le bassin et ses contraintes.
         </p>
         <p>
-          Ce que j'ai appris là-bas : un événement n'est jamais qu'un programme et un beau mot d'accueil. C'est un dispositif technique vivant, où le moindre détail (un câble, un timing, une captation manquée) peut faire ou défaire le souvenir qu'on en gardera.
+          L'idée : devenir l'acteur local capable de piloter ces productions à hauteur des standards techniques pratiqués sur les plus grandes scènes événementielles de l'agglomération lyonnaise, tout en restant ancré sur le territoire.
         </p>
         <p>
-          Cette exigence, je l'apporte aujourd'hui sur deux territoires complémentaires : <strong>la Plaine de l'Ain</strong>, où je suis basé et où je connais l'écosystème économique local en plein boom (aéronautique, énergie, industrie) ; et <strong>Épinac</strong>, en Bourgogne, où le domaine familial offre un cadre rare pour les séminaires résidentiels haut de gamme.
+          La proposition tient en une phrase : <strong>un événement n'est jamais qu'un programme. C'est un dispositif technique vivant, où chaque détail compte.</strong> Un câble, un timing, une captation. C'est cette exigence qu'Epicentre apporte à chaque mission.
         </p>
       </div>
     </div>
@@ -79,7 +73,7 @@ const cover = 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=2400&
           <p class="eyebrow text-accent">Plaine de l'Ain</p>
           <h3 class="font-display text-3xl mt-4">Agence de production</h3>
           <p class="mt-4 text-bone/60 leading-relaxed">
-            On conçoit et on produit votre événement sur le lieu de votre choix dans la Plaine de l'Ain. Plénières, galas, congrès, lancements.
+            Conception et production technique d'événements d'entreprise sur le lieu de votre choix dans la Plaine de l'Ain et l'est lyonnais. Plénières, galas, congrès, lancements.
           </p>
           <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
             Découvrir l'agence →
@@ -87,9 +81,9 @@ const cover = 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=2400&
         </a>
         <a href="/epinac/" class="group border border-bone/10 p-10 hover:border-accent transition-colors">
           <p class="eyebrow text-accent">Épinac · Bourgogne</p>
-          <h3 class="font-display text-3xl mt-4">Domaine de séminaire</h3>
+          <h3 class="font-display text-3xl mt-4">Lieu d'événement plein air</h3>
           <p class="mt-4 text-bone/60 leading-relaxed">
-            Le domaine familial à Épinac vous accueille pour vos séminaires résidentiels, plénières sous chapiteau, galas et dégustations.
+            Un domaine partenaire à Épinac, en Saône-et-Loire, pour des événements d'entreprise à la journée, galas sous chapiteau, soirées privées et réceptions, dans un cadre exclusif de plein air.
           </p>
           <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
             Découvrir le domaine →

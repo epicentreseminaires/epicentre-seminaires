@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Lagnieu"
-description: "Vous êtes une entreprise basée à Lagnieu ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Plénière, gala, inauguration de site industriel, captation vidéo."
+description: "Agence événementielle pour entreprises de Lagnieu : plénières, galas, lancements, inaugurations de sites industriels, captation. Bassin Plaine de l'Ain."
 ville: "Lagnieu"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -14,8 +14,9 @@ nearbyVilles:
   - seminaire-meximieux
   - seminaire-perouges
 nearbyArticles:
+  - agence-evenementielle-locale-plaine-de-lain
+  - securite-erp-cts-evenement-entreprise
   - 5-erreurs-confier-seminaire-generaliste
-  - anatomie-pleniere-grande-jauge
 faq:
   - q: "Vous êtes une agence implantée à Lagnieu ?"
     a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement à Lagnieu, à 15 minutes du PIPA, à 20 minutes d'Ambérieu. Nous connaissons les acteurs industriels locaux (verre, sous-traitance technique) et les contraintes de production sur site."

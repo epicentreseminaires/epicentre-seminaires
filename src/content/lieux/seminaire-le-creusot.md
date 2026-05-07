@@ -1,6 +1,6 @@
 ---
 title: "Séminaire d'entreprise au Creusot et à Montchanin"
-description: "Domaine privatisé pour séminaires résidentiels à 25 min de la gare TGV Le Creusot Montchanin. Paris en 1h25, Lyon en 50 min. Plénières, galas, dégustations en sud Bourgogne."
+description: "Domaine partenaire d'Épinac à 25 min de la gare TGV Le Creusot Montchanin. Paris en 1h25, Lyon en 50 min. Plénières, galas en sud Bourgogne."
 ville: "Le Creusot"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -14,6 +14,7 @@ nearbyVilles:
   - seminaire-depuis-paris
   - seminaire-depuis-lyon
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - combien-coute-pleniere-entreprise
   - pleniere-convention-seminaire-difference
 faq:
@@ -35,7 +36,7 @@ faq:
 
 Cette dualité fait du secteur un point d'entrée pertinent pour les **séminaires d'entreprise** rassemblant des collaborateurs depuis Paris et Lyon, particulièrement quand on cherche un site moins évident que Beaune ou Dijon, mais avec un accès TGV équivalent.
 
-À **25 minutes de la gare TGV**, notre **domaine d'Épinac** est conçu précisément pour cet usage.
+À **25 minutes de la gare TGV**, le **domaine partenaire d'Épinac** est conçu précisément pour cet usage.
 
 ## Pourquoi Le Creusot pour un séminaire d'entreprise
 

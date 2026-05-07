@@ -1,6 +1,6 @@
 ---
 title: "Séminaire d'entreprise à Autun et alentours"
-description: "Domaine privatisé pour séminaires résidentiels en sud Saône-et-Loire, près d'Autun, à Épinac. 9 000 m² de parc, plénières sous chapiteau cristal, galas, dégustations."
+description: "Domaine partenaire à 20 min d'Autun, en sud Saône-et-Loire : 9 000 m² de parc privatisé. Plénière sous chapiteau cristal, gala, dégustations."
 ville: "Autun"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -14,6 +14,7 @@ nearbyVilles:
   - seminaire-depuis-lyon
   - seminaire-depuis-paris
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - pleniere-convention-seminaire-difference
   - combien-coute-pleniere-entreprise
 faq:

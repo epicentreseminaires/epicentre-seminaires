@@ -1,6 +1,6 @@
 ---
-title: "Captation vidéo d'événement d'entreprise : ce qu'il faut savoir avant de signer"
-description: "Multicam, 4K, streaming, livrables : tout ce qu'un dirigeant ou DRH doit comprendre sur la captation vidéo de plénière, gala ou convention pour faire les bons choix techniques et budgétaires."
+title: "Captation vidéo d'événement d'entreprise : le guide"
+description: "Multicam, 4K, streaming, livrables : ce qu'il faut comprendre sur la captation vidéo de plénière, gala ou convention pour bien arbitrer."
 publishedAt: 2026-05-05
 cover: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=2400&q=85&auto=format&fit=crop"
 tags: ["captation vidéo", "production technique", "plénière"]
@@ -97,4 +97,4 @@ Si l'agence répond avec précision aux cinq, vous êtes en bonnes mains. Si ell
 
 ---
 
-*Vous travaillez sur un projet de plénière, convention ou lancement avec captation vidéo dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre format](/contact/) : réponse sous 24 h.*
+*Vous travaillez sur un projet de plénière, convention ou lancement avec captation vidéo dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre format](/contact/), nous revenons vers vous.*

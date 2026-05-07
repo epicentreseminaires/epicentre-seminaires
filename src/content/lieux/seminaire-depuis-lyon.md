@@ -1,6 +1,6 @@
 ---
 title: "Séminaire d'entreprise depuis Lyon : au domaine d'Épinac"
-description: "Domaine privatisé en Bourgogne à 1h15 de Lyon : alternative aux séminaires Beaujolais ou Pilat. Parc 9 000 m², plénières sous chapiteau, dégustations vins, dîners gala scénographiés."
+description: "Domaine partenaire d'Épinac à 1h15 de Lyon : 9 000 m² de parc privatisé pour plénière sous chapiteau, gala scénographié, dégustations vins."
 ville: "Lyon (1h15)"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -11,6 +11,7 @@ nearbyVilles:
   - seminaire-le-creusot
   - seminaire-depuis-paris
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - 5-erreurs-confier-seminaire-generaliste
   - combien-coute-pleniere-entreprise
 faq:
@@ -28,17 +29,16 @@ faq:
     a: "Oui, sur demande. Bus dédiés depuis Lyon (Part-Dieu, La Doua, Confluence selon votre localisation), coordination horaires, retour. Pour les séminaires de plus de 30 personnes c'est généralement plus rationnel qu'une vingtaine de voitures individuelles."
 ---
 
-Quand on est une entreprise lyonnaise et qu'on cherche un **lieu de séminaire résidentiel**, la tentation est de rester proche : Beaujolais, Pilat, Drôme, Bugey. Ces zones marchent — mais elles sont saturées dans l'écosystème lyonnais, vos équipes y sont déjà allées plusieurs fois, et l'effet "destination" est dilué.
+Quand on est une entreprise lyonnaise et qu'on cherche un **lieu de séminaire résidentiel**, la tentation est de rester proche : Beaujolais, Pilat, Drôme, Bugey. Ces zones marchent, mais elles sont saturées dans l'écosystème lyonnais, vos équipes y sont déjà allées plusieurs fois, et l'effet "destination" est dilué.
 
-À **1h15 de Lyon**, notre **domaine d'Épinac** propose une alternative que peu d'entreprises lyonnaises ont identifiée : un domaine familial privatisé en Bourgogne sud, à l'écart, avec une production scénique conçue pour les séminaires d'entreprise haut de gamme. Distance équivalente à un séminaire dans le Pilat ou le Beaujolais, cadre radicalement différent.
+À **1h15 de Lyon**, le **domaine partenaire d'Épinac** propose une alternative que peu d'entreprises lyonnaises ont identifiée : un domaine privatisé en Bourgogne sud, à l'écart, avec une production scénique conçue pour les événements d'entreprise haut de gamme. Distance équivalente à un séminaire dans le Pilat ou le Beaujolais, cadre radicalement différent.
 
 ## Pourquoi quitter Lyon pour Épinac
 
-- **Vrai changement de décor** : une fois sortis du périurbain lyonnais, vos collaborateurs basculent dans un autre rythme. C'est ce que cherche un séminaire — pas une salle louée à 30 minutes du bureau.
+- **Vrai changement de décor** : une fois sortis du périurbain lyonnais, vos collaborateurs basculent dans un autre rythme. C'est ce que cherche un séminaire : pas une salle louée à 30 minutes du bureau.
 - **Cadre exclusif** : 9 000 m² de parc privatisé. Vous êtes seuls. Pas de cohabitation avec d'autres événements comme dans un grand hôtel-séminaire premium.
-- **Effet Bourgogne** : pour vos invités ou clients, c'est une expérience à part — vignobles classés UNESCO, terroir gastronomique, cadre patrimonial. Bien plus différenciant que le Beaujolais ou le Pilat dans l'imaginaire d'un dirigeant ou d'un client.
-- **Coût souvent plus rationnel** que les hôtels-séminaires premium du Beaujolais, du Pilat ou de la côte des grands crus, à prestation équivalente.
-- **Distance optimale** : assez près pour un séminaire 36h sans logistique lourde, assez loin pour basculer mentalement.
+- **Effet Bourgogne** : pour vos invités ou clients, c'est une expérience à part : vignobles classés UNESCO, terroir gastronomique, cadre patrimonial. Bien plus différenciant que le Beaujolais ou le Pilat dans l'imaginaire d'un dirigeant ou d'un client.
+- **Distance optimale** : assez près pour un séminaire sans logistique lourde, assez loin pour basculer mentalement.
 
 ## Deux options de trajet depuis Lyon
 

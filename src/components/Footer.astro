@@ -7,62 +7,45 @@ export interface Props {
 }
 const { zone = 'brand' } = Astro.props;
 
-const otherZone = zone === 'epinac'
-  ? { label: 'Découvrir notre agence Plaine de l\'Ain', href: '/plaine-de-lain/' }
-  : zone === 'plaine'
-  ? { label: 'Découvrir le domaine d\'Épinac, en Bourgogne', href: '/epinac/' }
-  : null;
-
 const year = new Date().getFullYear();
 ---
-
-{otherZone && (
-  <section class="bg-bone-soft py-16 border-t border-ink/10">
-    <div class="container-wide flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-      <p class="font-display text-2xl md:text-3xl text-ink max-w-xl">
-        {otherZone.label}
-      </p>
-      <a href={otherZone.href} class="btn-outline">
-        Y aller
-        <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </section>
-)}
 
 <footer class="bg-ink text-bone/70 relative">
   <!-- Filet de marque : signature visuelle gradient brand en haut du footer -->
   <div class="absolute top-0 left-0 right-0 h-px bg-forest-gradient"></div>
 
-  <div class="container-wide py-16 grid md:grid-cols-5 gap-10">
+  <div class="container-wide py-16 grid md:grid-cols-4 gap-10">
     <div class="md:col-span-2">
       <Logo variant="light" height={64} />
       <p class="mt-6 max-w-md text-sm leading-relaxed">
-        Agence de production événementielle.
-        Plénières XXL, galas, congrès, lancements de produits, captation vidéo.
-        À l'épicentre de la Plaine de l'Ain et au cœur de la Bourgogne, à Épinac.
+        {zone === 'epinac'
+          ? "Lieu d'événement plein air en Bourgogne sud, à Épinac."
+          : "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, congrès, lancements de produits."}
       </p>
     </div>
 
-    <div>
-      <p class="eyebrow text-bone/50 mb-4">Épinac · Bourgogne</p>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/epinac/" class="hover:text-bone">Le domaine</a></li>
-        <li><a href="/epinac/le-domaine/" class="hover:text-bone">Visiter le lieu</a></li>
-        <li><a href="/epinac/productions/" class="hover:text-bone">Nos productions</a></li>
-        <li><a href="/epinac/contact/" class="hover:text-bone">Réserver un séjour</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="eyebrow text-bone/50 mb-4">Plaine de l'Ain</p>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/plaine-de-lain/" class="hover:text-bone">L'agence</a></li>
-        <li><a href="/plaine-de-lain/productions/" class="hover:text-bone">Nos productions</a></li>
-        <li><a href="/plaine-de-lain/realisations/" class="hover:text-bone">Notre approche</a></li>
-        <li><a href="/plaine-de-lain/contact/" class="hover:text-bone">Demander un devis</a></li>
-      </ul>
-    </div>
+    {zone === 'epinac' ? (
+      <div>
+        <p class="eyebrow text-bone/50 mb-4">Épinac · Bourgogne</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/epinac/" class="hover:text-bone">Le domaine</a></li>
+          <li><a href="/epinac/le-domaine/" class="hover:text-bone">Visiter le lieu</a></li>
+          <li><a href="/epinac/productions/" class="hover:text-bone">Nos productions</a></li>
+          <li><a href="/epinac/contact/" class="hover:text-bone">Nous contacter</a></li>
+        </ul>
+      </div>
+    ) : (
+      <div>
+        <p class="eyebrow text-bone/50 mb-4">Plaine de l'Ain</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/plaine-de-lain/" class="hover:text-bone">L'agence</a></li>
+          <li><a href="/process/" class="hover:text-bone">Notre process</a></li>
+          <li><a href="/realisations/" class="hover:text-bone">Réalisations</a></li>
+          <li><a href="/equipement/" class="hover:text-bone">Périmètre technique</a></li>
+          <li><a href="/plaine-de-lain/contact/" class="hover:text-bone">Demander un devis</a></li>
+        </ul>
+      </div>
+    )}
 
     <div>
       <p class="eyebrow text-bone/50 mb-4">Lire</p>

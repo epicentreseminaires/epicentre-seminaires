@@ -1,6 +1,6 @@
 ---
-title: "Combien coûte une plénière d'entreprise (et ce qui fait vraiment le prix)"
-description: "Plénière d'entreprise : grilles de prix réalistes selon la jauge, le format et le niveau de production technique. Le détail des postes qui font varier le devis."
+title: "Combien coûte une plénière d'entreprise ?"
+description: "Plénière d'entreprise : grilles de prix indicatives selon la jauge, le format et le niveau de production. Les postes qui font varier le devis."
 publishedAt: 2026-05-05
 cover: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=2400&q=85&auto=format&fit=crop"
 tags: ["plénière", "budget", "production technique"]
@@ -50,7 +50,7 @@ Si vous louez un espace nu (salle de séminaire d'hôtel par exemple), tout le d
 
 Si vous choisissez un lieu **déjà équipé** (auditorium, salle de spectacle, lieu de séminaire avec son et lumière intégrés), une partie du matériel est déjà sur place → économies de 10 à 25 %.
 
-C'est l'un des intérêts de notre **domaine d'Épinac** ou de certains lieux partenaires de la **Plaine de l'Ain** : le matériel structurant existe, on n'apporte que ce qui complète.
+C'est l'un des intérêts du **domaine partenaire d'Épinac** ou de certains lieux partenaires de la **Plaine de l'Ain** : le matériel structurant existe, on n'apporte que ce qui complète.
 
 ## Variable 5 : Le timing
 
@@ -81,4 +81,4 @@ Comptez **15 à 25 % du budget total de l'événement en production technique** 
 
 ---
 
-*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ou souhaitez utiliser le domaine d'Épinac ? [Décrivez-nous votre projet](/contact/) en deux lignes, on revient vers vous sous 24 h avec une grille de coûts adaptée.*
+*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ou souhaitez utiliser le domaine d'Épinac ? [Décrivez-nous votre projet](/contact/) en deux lignes, nous revenons vers vous avec une grille de coûts adaptée.*

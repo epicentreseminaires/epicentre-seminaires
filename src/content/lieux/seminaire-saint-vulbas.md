@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Saint-Vulbas et au PIPA"
-description: "Vous êtes une entreprise du PIPA ou de Saint-Vulbas ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Inauguration de site industriel, convention, AG, captation."
+description: "Agence événementielle pour les entreprises du PIPA et Saint-Vulbas. Inauguration de site industriel, convention, AG, plénière, captation vidéo."
 ville: "Saint-Vulbas"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -14,7 +14,8 @@ nearbyVilles:
   - seminaire-meximieux
   - seminaire-perouges
 nearbyArticles:
-  - 5-erreurs-confier-seminaire-generaliste
+  - securite-erp-cts-evenement-entreprise
+  - agence-evenementielle-locale-plaine-de-lain
   - captation-video-evenement-entreprise-guide
 faq:
   - q: "Vous êtes une agence implantée à Saint-Vulbas ?"

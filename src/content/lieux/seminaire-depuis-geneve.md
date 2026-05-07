@@ -1,6 +1,6 @@
 ---
-title: "Séminaire d'entreprise depuis Genève : domaine privatisé en Bourgogne, à Épinac"
-description: "Domaine privatisé en Bourgogne pour entreprises genevoises et franco-suisses : 2h45 par A40 puis A6. Alternative aux séminaires Léman saturés. Parc 9 000 m², plénière chapiteau, gala."
+title: "Séminaire d'entreprise depuis Genève : domaine d'Épinac"
+description: "Domaine partenaire en Bourgogne à 2h45 de Genève : alternative aux séminaires Léman saturés. Parc 9 000 m², plénière chapiteau, gala scénographié."
 ville: "Genève (2h45)"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -11,6 +11,7 @@ nearbyVilles:
   - seminaire-le-creusot
   - seminaire-depuis-lyon
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - 5-erreurs-confier-seminaire-generaliste
   - captation-video-evenement-entreprise-guide
 faq:
@@ -28,11 +29,11 @@ faq:
     a: "Oui, possible : Genève → Lyon Part-Dieu en TGV (2h), puis Lyon Part-Dieu → Le Creusot Montchanin (50 min), puis transfert (25 min). Soit environ 3h45 porte-à-porte. C'est plus long que la voiture mais permet aux collaborateurs de travailler / dormir pendant le trajet. Étudiable selon le profil de votre groupe."
 ---
 
-Les multinationales et grandes entreprises basées à **Genève** cherchent souvent un site de séminaire qui combine **dépaysement réel**, **cadre exclusif** et **accessibilité maîtrisée**. Le **Léman et la Haute-Savoie** sont saturés et vus dans l'écosystème genevois — chaque entreprise y est déjà allée plusieurs fois, l'effet "destination" s'use.
+Les multinationales et grandes entreprises basées à **Genève** cherchent souvent un site de séminaire qui combine **dépaysement réel**, **cadre exclusif** et **accessibilité maîtrisée**. Le **Léman et la Haute-Savoie** sont saturés et vus dans l'écosystème genevois : chaque entreprise y est déjà allée plusieurs fois, l'effet "destination" s'use.
 
 Le **sud Bourgogne**, à moins de 3h de route, offre une alternative que peu d'entreprises genevoises ont identifiée : un cadre patrimonial différent (vignoble UNESCO, gastronomie classée), une privatisation totale possible, et un signal de prestige unique.
 
-À **2h45 de Genève par A40 puis A6**, notre **domaine d'Épinac** propose 9 000 m² de parc privatisé pour des séminaires résidentiels haut de gamme. C'est un positionnement particulièrement pertinent pour les **entreprises franco-suisses** dont les équipes sont réparties Genève / Lyon / Paris, parce que la Bourgogne sud est un point de convergence naturel sur ces trois axes.
+À **2h45 de Genève par A40 puis A6**, le **domaine partenaire d'Épinac** propose 9 000 m² de parc privatisé pour des événements d'entreprise plein air. C'est un positionnement particulièrement pertinent pour les **entreprises franco-suisses** dont les équipes sont réparties Genève / Lyon / Paris, parce que la Bourgogne sud est un point de convergence naturel sur ces trois axes.
 
 ## Pourquoi venir de Genève à Épinac
 
@@ -47,7 +48,7 @@ Le **sud Bourgogne**, à moins de 3h de route, offre une alternative que peu d'e
 Le domaine d'Épinac convient particulièrement aux entreprises genevoises qui :
 
 - Organisent un **séminaire de direction** ou un comité exécutif élargi (15-50 personnes), avec besoin d'un cadre exclusif et confidentiel.
-- Préparent une **convention multi-pays** où des collaborateurs européens convergent (Genève, Lyon, Paris) — les trois axes pointent vers la Bourgogne sud, ce qui en fait un point de rendez-vous naturel.
+- Préparent une **convention multi-pays** où des collaborateurs européens convergent (Genève, Lyon, Paris) : les trois axes pointent vers la Bourgogne sud, ce qui en fait un point de rendez-vous naturel.
 - Veulent un **lancement de produit** ou un événement client haut de gamme dans un cadre patrimonial différenciant (lifestyle, finance, luxe, technologie).
 - Recherchent un **format gala** ancré dans le terroir (dégustations vins de Bourgogne, gastronomie bourguignonne, sommelier).
 - Souhaitent une **destination peu vue** dans le marché du séminaire premium genevois.
@@ -62,7 +63,7 @@ Pour un séminaire de 2 jours :
 4. **J1 14h-17h30** : plénière scénographiée sous chapiteau cristal, ateliers en sous-groupes.
 5. **J1 18h** : cocktail dans le parc.
 6. **J1 19h30** : dîner de gala scénographié, dégustation animée par un sommelier (vins de Bourgogne, possibilité de mise en parallèle avec des vins suisses pour public franco-suisse).
-7. **Nuit** : chambres d'hôtes du domaine + hôtels partenaires (Autun, Le Creusot, Beaune — selon disponibilité et préférences).
+7. **Nuit** : chambres d'hôtes du domaine + hôtels partenaires (Autun, Le Creusot, Beaune, selon disponibilité et préférences).
 8. **J2 9h-12h** : ateliers en sous-groupes ou suite plénière.
 9. **J2 12h30** : déjeuner.
 10. **J2 14h** : retour Genève.

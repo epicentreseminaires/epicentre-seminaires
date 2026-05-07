@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Meximieux"
-description: "Vous êtes une entreprise basée à Meximieux ? Epicentre est votre agence événementielle locale : renseignement, organisation, conseil de lieu. Plénière, gala, lancement, captation. À 5 min de Pérouges."
+description: "Agence événementielle pour entreprises de Meximieux : plénières, galas, lancements, captation. À 5 min de Pérouges, dans la Plaine de l'Ain."
 ville: "Meximieux"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -14,7 +14,8 @@ nearbyVilles:
   - seminaire-lagnieu
   - seminaire-saint-vulbas
 nearbyArticles:
-  - comment-choisir-agence-evenementielle-seminaire
+  - agence-evenementielle-locale-plaine-de-lain
+  - scenographie-3d-evenement-entreprise
   - pleniere-convention-seminaire-difference
 faq:
   - q: "Vous êtes une agence implantée à Meximieux ?"

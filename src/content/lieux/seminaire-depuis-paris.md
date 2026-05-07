@@ -1,6 +1,6 @@
 ---
-title: "Séminaire d'entreprise depuis Paris : domaine privatisé en Bourgogne, à Épinac"
-description: "Séminaire résidentiel depuis Paris en 2h porte-à-porte : 1h25 TGV jusqu'au Creusot Montchanin, puis 25 min jusqu'au domaine d'Épinac. 9 000 m² de parc, plénière chapiteau cristal, gala."
+title: "Séminaire d'entreprise depuis Paris : domaine d'Épinac"
+description: "Événement d'entreprise depuis Paris : 1h25 TGV jusqu'au Creusot, puis 25 min jusqu'au domaine partenaire d'Épinac. Parc 9 000 m², chapiteau, gala."
 ville: "Paris (1h25 TGV)"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -11,6 +11,7 @@ nearbyVilles:
   - seminaire-beaune
   - seminaire-depuis-lyon
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - pleniere-convention-seminaire-difference
   - combien-coute-pleniere-entreprise
 faq:
@@ -25,10 +26,10 @@ faq:
   - q: "Pourquoi pas un séminaire en Normandie, en Loire ou en Champagne ?"
     a: "Ces destinations marchent, mais elles sont vues : votre écosystème parisien y est déjà allé plusieurs fois. La Bourgogne sud reste largement sous-utilisée par les entreprises parisiennes, alors qu'elle est plus accessible et tout aussi prestigieuse (vignoble UNESCO, terroir, gastronomie). C'est un atout de différenciation."
   - q: "Vous coordonnez aussi l'hébergement à Paris si on doit prolonger d'un jour ?"
-    a: "Sur le territoire d'Épinac, oui (hébergement domaine + hôtels partenaires). Côté Paris, nous laissons la prolongation à votre logistique habituelle (services voyages d'entreprise) — ce n'est pas notre cœur de métier."
+    a: "Sur le territoire d'Épinac, oui (hébergement domaine + hôtels partenaires). Côté Paris, nous laissons la prolongation à votre logistique habituelle (services voyages d'entreprise) : ce n'est pas notre cœur de métier."
 ---
 
-Pour un séminaire d'entreprise depuis Paris, les destinations qui sortent du tiroir sont presque toujours les mêmes : Normandie, Loire, Champagne, Île-de-France élargie. À budget équivalent, **la Bourgogne sud reste largement sous-utilisée** par les entreprises parisiennes — alors qu'elle est probablement la plus accessible de toutes via la gare TGV Le Creusot Montchanin, et l'une des plus différenciantes en termes d'image (vignoble UNESCO, terroir, gastronomie).
+Pour un séminaire d'entreprise depuis Paris, les destinations qui sortent du tiroir sont presque toujours les mêmes : Normandie, Loire, Champagne, Île-de-France élargie. À budget équivalent, **la Bourgogne sud reste largement sous-utilisée** par les entreprises parisiennes, alors qu'elle est probablement la plus accessible de toutes via la gare TGV Le Creusot Montchanin, et l'une des plus différenciantes en termes d'image (vignoble UNESCO, terroir, gastronomie).
 
 Notre **domaine d'Épinac**, à 25 minutes de la gare TGV du Creusot Montchanin, est conçu précisément pour ce trajet : 1h25 de Paris Gare de Lyon, transfert en bus dédié, et vous êtes dans un cadre privatisé exclusif, à 9 000 m² de parc pour vous seuls.
 
@@ -65,7 +66,7 @@ C'est un format qui **change radicalement l'effet d'un séminaire sans peser dan
 Pour un comité exécutif élargi, un lancement interne ou un séminaire stratégique, 48 heures donnent plus de marge :
 
 - **Journée 1** : arrivée, plénière, dîner gala.
-- **Journée 2** : ateliers le matin, **après-midi terroir** (visite Hospices de Beaune à 45 min, dégustation chez un grand domaine bourguignon — Pommard, Aloxe-Corton, Chassagne-Montrachet), retour domaine, dîner plus libre.
+- **Journée 2** : ateliers le matin, **après-midi terroir** (visite Hospices de Beaune à 45 min, dégustation chez un grand domaine bourguignon : Pommard, Aloxe-Corton, Chassagne-Montrachet), retour domaine, dîner plus libre.
 - **Journée 3** : restitutions, déjeuner, retour TGV en milieu d'après-midi.
 
 ## Pour qui ce schéma fonctionne

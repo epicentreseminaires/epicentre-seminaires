@@ -1,6 +1,6 @@
 ---
-title: "Événement d'entreprise à Pérouges : production en cité médiévale"
-description: "Vous cherchez un cadre patrimonial rare pour un gala d'entreprise, un dîner premium ou un lancement ? Pérouges, l'un des Plus Beaux Villages de France, à 25 min de Lyon. Production technique experte."
+title: "Événement d'entreprise à Pérouges : cité médiévale"
+description: "Événement d'entreprise à Pérouges : production technique experte dans l'un des Plus Beaux Villages de France. Galas, dîners premium, lancements."
 ville: "Pérouges"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -14,8 +14,9 @@ nearbyVilles:
   - seminaire-lagnieu
   - seminaire-saint-vulbas
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
+  - agence-evenementielle-locale-plaine-de-lain
   - comment-choisir-agence-evenementielle-seminaire
-  - 5-erreurs-confier-seminaire-generaliste
 faq:
   - q: "Pérouges est-elle vraiment privatisable pour un événement d'entreprise ?"
     a: "Certains lieux et restaurants de la cité peuvent être privatisés pour un événement, sous réserve d'accords avec les acteurs locaux concernés et de la saison. La cité dans son ensemble n'est pas privatisable (c'est un village habité, classé Plus Beaux Villages de France). Nous accompagnons l'étude de faisabilité au cas par cas."
@@ -31,13 +32,13 @@ faq:
     a: "Pour les événements à Pérouges, nous travaillons souvent en conseil créatif en amont, parce que la cité elle-même est un acteur de la mise en scène. Mise en lumière des remparts, parcours déambulatoire, intégration sonore discrète : ce sont des dispositifs où la technique sert l'intention scénographique."
 ---
 
-**Pérouges** est l'un des "Plus Beaux Villages de France" : une cité médiévale parfaitement préservée à 25 minutes de Lyon. Pour un événement d'entreprise qui veut sortir des standards, c'est l'un des cadres les plus distinctifs de toute la région — et l'un des plus exigeants à produire techniquement.
+**Pérouges** est l'un des "Plus Beaux Villages de France" : une cité médiévale parfaitement préservée à 25 minutes de Lyon. Pour un événement d'entreprise qui veut sortir des standards, c'est l'un des cadres les plus distinctifs de toute la région, et l'un des plus exigeants à produire techniquement.
 
 Pour les entreprises basées dans la **Plaine de l'Ain** (Ambérieu, Meximieux, Lagnieu, Saint-Vulbas) ou à **Lyon**, Pérouges est l'écrin idéal pour un **gala de prestige**, une **convention de direction** ou un **lancement de produit premium**. Nous sommes l'agence qui sait y produire.
 
 ## Pour qui Pérouges est pertinent
 
-Pérouges n'est pas un lieu de séminaire courant — c'est un cadre exceptionnel à activer pour des moments forts :
+Pérouges n'est pas un lieu de séminaire courant : c'est un cadre exceptionnel à activer pour des moments forts.
 
 - **Galas de prestige** d'entreprises basées dans le bassin Plaine de l'Ain ou à Lyon qui veulent un dîner mémorable.
 - **Conventions de direction** ou comités exécutifs cherchant un cadre exclusif et un signal d'image fort.
@@ -80,10 +81,10 @@ C'est un format qui combine **rigueur technique** d'une plénière scénographi�
 
 ## Notre rôle
 
-Nous concevons et produisons l'événement (scénographie, son, lumière, captation, régie) en composant avec les contraintes du lieu. Le défi technique fait partie de la valeur — il faut une équipe qui a déjà géré ce type de cadre.
+Nous concevons et produisons l'événement (scénographie, son, lumière, captation, régie) en composant avec les contraintes du lieu. Le défi technique fait partie de la valeur : il faut une équipe qui a déjà géré ce type de cadre.
 
 Nous travaillons en lien étroit avec les acteurs locaux de la cité (restaurateurs, lieux patrimoniaux privatisables, mairie selon le format) pour que votre événement soit accueilli dans les meilleures conditions, dans le respect du lieu.
 
 ## Échangeons sur votre projet
 
-Vous imaginez un événement à Pérouges ? [Contactez-nous](/plaine-de-lain/contact/) en décrivant votre format, votre jauge cible et votre enjeu d'image. Nous étudions la faisabilité avec les acteurs locaux et nous revenons sous 72 h.
+Vous imaginez un événement à Pérouges ? [Contactez-nous](/plaine-de-lain/contact/) en décrivant votre format, votre jauge cible et votre enjeu d'image. Nous étudions la faisabilité avec les acteurs locaux et nous revenons vers vous.

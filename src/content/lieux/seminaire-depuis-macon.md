@@ -1,6 +1,6 @@
 ---
-title: "Séminaire d'entreprise depuis Mâcon : domaine privatisé en Bourgogne, à Épinac"
-description: "Domaine privatisé en Bourgogne sud à 1h de Mâcon par l'A6. Alternative aux domaines viticoles privatisés du Mâconnais. Parc 9 000 m², plénière chapiteau, dégustations, gala scénographié."
+title: "Séminaire d'entreprise depuis Mâcon : domaine d'Épinac"
+description: "Domaine partenaire d'Épinac à 1h de Mâcon par l'A6 : 9 000 m² de parc privatisé pour plénière sous chapiteau, gala scénographié, dégustations."
 ville: "Mâcon (1h)"
 zone: "epinac"
 publishedAt: 2026-05-05
@@ -11,13 +11,14 @@ nearbyVilles:
   - seminaire-le-creusot
   - seminaire-depuis-lyon
 nearbyArticles:
+  - scenographie-3d-evenement-entreprise
   - pleniere-convention-seminaire-difference
   - combien-coute-pleniere-entreprise
 faq:
   - q: "Quelle est la durée Mâcon → Épinac ?"
     a: "1h via l'A6 (sortie Beaune-Pommard ou Chalon-sur-Saône, puis D973). Conditions de trajet très stables, pas de zones de bouchons. C'est plus rapide qu'aller dans la Bresse ou en Beaujolais haut depuis Mâcon."
   - q: "Pourquoi pas un séminaire dans un domaine viticole du Mâconnais ?"
-    a: "Les domaines viticoles privatisés du Mâconnais marchent très bien — c'est même un format que nous recommandons quand il convient. La différence avec Épinac : un domaine viticole est avant tout un domaine viticole, l'événement s'y greffe. À Épinac, le domaine est conçu pour l'événement (parc, chapiteau, scénographie sur-mesure). Logique différente, à choisir selon votre format."
+    a: "Les domaines viticoles privatisés du Mâconnais marchent très bien : c'est même un format que nous recommandons quand il convient. La différence avec Épinac : un domaine viticole est avant tout un domaine viticole, l'événement s'y greffe. À Épinac, le domaine est conçu pour l'événement (parc, chapiteau, scénographie sur-mesure). Logique différente, à choisir selon votre format."
   - q: "Mâcon dispose d'une gare TGV : c'est un atout pour le séminaire ?"
     a: "Oui. Pour des invités venus de Paris ou de Lyon qui se retrouvent à votre séminaire, la gare TGV Mâcon Loché peut être un point de convergence. Les transferts vers Épinac depuis Mâcon Loché : 1h en bus. C'est étudiable selon votre cas."
   - q: "Vous travaillez avec des sommeliers du Mâconnais ?"
@@ -30,15 +31,14 @@ faq:
 
 Les entreprises basées à **Mâcon** sont sur l'axe Lyon ↔ Dijon, à un emplacement central de la Bourgogne sud. Pourtant, l'offre de séminaire premium dans ce secteur reste limitée à quelques **hôtels-séminaires standardisés** et à la **côte des grands crus en Côte-d'Or**, où la concurrence est forte et les coûts élevés en haute saison.
 
-À **1h de Mâcon par l'A6**, notre **domaine d'Épinac** offre un cadre alternatif et privatif pour des séminaires d'entreprise qui sortent du registre habituel — tout en restant dans le terroir bourguignon, ce qui maintient la cohérence avec votre identité d'entreprise mâconnaise ou du Mâconnais.
+À **1h de Mâcon par l'A6**, le **domaine d'Épinac** offre un cadre alternatif et privatif pour des séminaires d'entreprise qui sortent du registre habituel, tout en restant dans le terroir bourguignon, ce qui maintient la cohérence avec votre identité d'entreprise mâconnaise ou du Mâconnais.
 
 ## Pourquoi venir de Mâcon à Épinac
 
 - **Trajet rapide** : A6 directe, 1h, sortie Beaune-Pommard ou Chalon-sur-Saône.
 - **Cadre exclusif** : 9 000 m² de parc privatisé, vous êtes seuls sur le domaine. Pas de cohabitation avec d'autres événements comme dans un grand hôtel-séminaire en pleine saison.
 - **Au cœur de la Bourgogne** : continuité de votre identité géographique, valorisation du terroir local, partenariats croisés possibles entre vins du Mâconnais (Pouilly-Fuissé, Saint-Véran) et vins de la Côte de Beaune.
-- **Coût souvent plus rationnel** que les domaines viticoles privatisés du Mâconnais ou de la côte chalonnaise, à prestation équivalente.
-- **Format différent** : un domaine viticole est avant tout un domaine viticole, l'événement s'y greffe. À Épinac, le domaine est conçu pour l'événement — chapiteau cristal, scénographie sur-mesure, production technique complète. Logique différente, à choisir selon votre format.
+- **Format différent** : un domaine viticole est avant tout un domaine viticole, l'événement s'y greffe. À Épinac, le domaine est conçu pour l'événement : chapiteau cristal, scénographie sur-mesure, production technique complète. Logique différente, à choisir selon votre format.
 
 ## Cas d'usage adaptés
 
