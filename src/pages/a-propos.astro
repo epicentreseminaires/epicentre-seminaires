@@ -1,95 +1,82 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
 
-const title = "À propos : Epicentre Séminaires";
-const description = "Agence événementielle dans la Plaine de l'Ain et lieu d'événement plein air à Épinac, en Bourgogne. Production technique pour entreprises locales et lieu de réception.";
+const title = "À propos | Epicentre Séminaires";
+const description = "Epicentre, agence événementielle dans la Plaine de l'Ain : production technique d'événements d'entreprise, héritée des grandes scènes lyonnaises.";
 
-const cover = 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop';
+const breadcrumb = [
+  { name: 'Accueil', url: '/' },
+  { name: 'À propos' },
+];
 ---
 
-<Base title={title} description={description} zone="brand">
-  <section class="relative h-[60vh] min-h-[420px] overflow-hidden bg-ink">
-    <img src={cover} alt="Scène événementielle, mise en lumière et régie technique" class="absolute inset-0 w-full h-full object-cover opacity-50" />
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 to-ink"></div>
-    <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
-      <p class="eyebrow text-bone/70 mb-4">L'agence</p>
-      <h1 class="font-display text-4xl md:text-6xl max-w-4xl">Une agence, deux territoires.</h1>
+<Base title={title} description={description} zone="plaine">
+  <section class="bg-plaine-deep text-bone py-24 md:py-32">
+    <div class="container-wide">
+      <Breadcrumb items={breadcrumb} variant="dark" />
+      <h1 class="font-display text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.04em] max-w-4xl">
+        Une agence, un territoire.
+      </h1>
+      <p class="mt-8 text-xl text-bone/70 max-w-2xl leading-relaxed">
+        Epicentre est l'agence événementielle de la Plaine de l'Ain. Production technique pour les entreprises du bassin, du conseil au pilotage complet.
+      </p>
     </div>
   </section>
 
   <!-- POSITIONNEMENT -->
-  <section class="py-24 bg-bone">
+  <section class="py-24 md:py-32 bg-bone">
     <div class="container-wide grid md:grid-cols-12 gap-10">
       <div class="md:col-span-4">
         <p class="eyebrow">Le projet</p>
-        <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight">
+        <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight tracking-[-0.02em]">
           Un acteur local capable de produire au niveau des plus grandes scènes.
         </h2>
       </div>
       <div class="md:col-span-7 md:col-start-6 space-y-8 text-lg leading-relaxed">
         <p>
-          Epicentre est une agence événementielle ancrée dans la <strong>Plaine de l'Ain</strong>, entre Lyon et Genève. Elle accompagne les entreprises du bassin sur leurs plénières, conventions, galas, lancements et congrès, en mobilisant la culture technique des grandes scènes lyonnaises du sport et du spectacle.
+          Epicentre est une agence événementielle ancrée dans la <strong>Plaine de l'Ain</strong>, entre Lyon et Genève. L'agence accompagne les entreprises du bassin sur leurs plénières, conventions, galas, lancements et congrès, en mobilisant la culture technique des grandes scènes lyonnaises du sport et du spectacle.
         </p>
         <p>
-          L'agence travaille également avec un lieu d'événement partenaire en Bourgogne, à <strong>Épinac</strong> (Saône-et-Loire) : un domaine plein air pour des événements à la journée, des galas sous chapiteau, des soirées d'entreprise et des réceptions privées.
+          La promesse tient en une phrase : un événement n'est jamais qu'un programme. C'est un dispositif technique vivant, où chaque détail compte. Un câble, un timing, une captation. C'est cette exigence qu'Epicentre apporte à chaque mission.
         </p>
       </div>
     </div>
   </section>
 
   <!-- ORIGINE -->
-  <section class="bg-bone-soft py-24">
+  <section class="bg-bone-soft py-24 md:py-32">
     <div class="container-wide grid md:grid-cols-12 gap-10">
       <div class="md:col-span-5">
         <p class="eyebrow">L'origine</p>
-        <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight">
-          De grandes scènes lyonnaises à votre événement local.
+        <h2 class="font-display text-3xl md:text-4xl mt-6 leading-tight tracking-[-0.02em]">
+          Des grandes scènes lyonnaises à votre événement local.
         </h2>
       </div>
       <div class="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed">
         <p>
-          Epicentre est née d'un constat de terrain : beaucoup d'entreprises de la Plaine de l'Ain et de l'est lyonnais font produire leurs événements par des agences extérieures, qui ne connaissent pas le bassin et ses contraintes.
+          Epicentre est née d'un constat de terrain : beaucoup d'entreprises de la Plaine de l'Ain et de l'est lyonnais font produire leurs événements par des agences extérieures, qui ne connaissent pas le bassin ni ses contraintes.
         </p>
         <p>
           L'idée : devenir l'acteur local capable de piloter ces productions à hauteur des standards techniques pratiqués sur les plus grandes scènes événementielles de l'agglomération lyonnaise, tout en restant ancré sur le territoire.
-        </p>
-        <p>
-          La proposition tient en une phrase : <strong>un événement n'est jamais qu'un programme. C'est un dispositif technique vivant, où chaque détail compte.</strong> Un câble, un timing, une captation. C'est cette exigence qu'Epicentre apporte à chaque mission.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- DEUX MÉTIERS -->
-  <section class="bg-ink text-bone py-24">
-    <div class="container-wide">
-      <p class="eyebrow text-bone/50">Deux métiers</p>
-      <h2 class="font-display text-4xl md:text-5xl mt-6 leading-tight max-w-3xl">
-        Deux façons de travailler ensemble.
+  <!-- CTA -->
+  <section class="bg-plaine text-bone py-24 md:py-32">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <h2 class="font-display text-3xl md:text-5xl leading-tight tracking-[-0.03em]">
+        Vous avez un événement à produire ?
       </h2>
-
-      <div class="grid md:grid-cols-2 gap-6 mt-12">
-        <a href="/plaine-de-lain/" class="group border border-bone/10 p-10 hover:border-accent transition-colors">
-          <p class="eyebrow text-accent">Plaine de l'Ain</p>
-          <h3 class="font-display text-3xl mt-4">Agence de production</h3>
-          <p class="mt-4 text-bone/60 leading-relaxed">
-            Conception et production technique d'événements d'entreprise sur le lieu de votre choix dans la Plaine de l'Ain et l'est lyonnais. Plénières, galas, congrès, lancements.
-          </p>
-          <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
-            Découvrir l'agence →
-          </span>
-        </a>
-        <a href="/epinac/" class="group border border-bone/10 p-10 hover:border-accent transition-colors">
-          <p class="eyebrow text-accent">Épinac · Bourgogne</p>
-          <h3 class="font-display text-3xl mt-4">Lieu d'événement plein air</h3>
-          <p class="mt-4 text-bone/60 leading-relaxed">
-            Un domaine partenaire à Épinac, en Saône-et-Loire, pour des événements d'entreprise à la journée, galas sous chapiteau, soirées privées et réceptions, dans un cadre exclusif de plein air.
-          </p>
-          <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
-            Découvrir le domaine →
-          </span>
-        </a>
-      </div>
+      <p class="mt-8 text-bone/75 max-w-xl mx-auto leading-relaxed">
+        Décrivez-nous votre projet : format, jauge, date pressentie. Nous revenons vers vous pour cadrer un échange.
+      </p>
+      <a href="/contact/" class="btn-bone mt-10 inline-flex">
+        Demander un devis
+        <span aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 </Base>

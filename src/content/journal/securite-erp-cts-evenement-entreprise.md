@@ -80,4 +80,4 @@ Y monter un événement de qualité demande un travail de cadrage en amont : aut
 
 ---
 
-*Vous préparez un événement d'entreprise sur un site industriel de la Plaine de l'Ain ou ailleurs ? [Décrivez-nous votre projet](/plaine-de-lain/contact/), nous étudions le cadre réglementaire avec vous.*
+*Vous préparez un événement d'entreprise sur un site industriel de la Plaine de l'Ain ou ailleurs ? [Décrivez-nous votre projet](/contact/), nous étudions le cadre réglementaire avec vous.*

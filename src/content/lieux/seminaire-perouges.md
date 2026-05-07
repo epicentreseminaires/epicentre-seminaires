@@ -87,4 +87,4 @@ Nous travaillons en lien étroit avec les acteurs locaux de la cité (restaurate
 
 ## Échangeons sur votre projet
 
-Vous imaginez un événement à Pérouges ? [Contactez-nous](/plaine-de-lain/contact/) en décrivant votre format, votre jauge cible et votre enjeu d'image. Nous étudions la faisabilité avec les acteurs locaux et nous revenons vers vous.
+Vous imaginez un événement à Pérouges ? [Contactez-nous](/contact/) en décrivant votre format, votre jauge cible et votre enjeu d'image. Nous étudions la faisabilité avec les acteurs locaux et nous revenons vers vous.

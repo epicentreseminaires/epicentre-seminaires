@@ -18,11 +18,10 @@ const { lieu } = Astro.props;
 const { Content } = await render(lieu);
 
 const siteUrl = 'https://epicentre-seminaires.fr';
-const pageUrl = `${siteUrl}/plaine-de-lain/${lieu.id}/`;
+const pageUrl = `${siteUrl}/${lieu.id}/`;
 
 const breadcrumb = [
   { name: 'Accueil', url: '/' },
-  { name: 'Plaine de l\'Ain', url: '/plaine-de-lain/' },
   { name: lieu.data.ville },
 ];
 
@@ -106,7 +105,7 @@ const localBusinessJsonLd = {
         <p class="mt-6 text-bone/70">
           Décrivez votre format, votre jauge et vos enjeux : nous revenons vers vous.
         </p>
-        <a href="/plaine-de-lain/contact/" class="btn-bone mt-10 inline-flex">
+        <a href="/contact/" class="btn-bone mt-10 inline-flex">
           Demander un devis
           <span aria-hidden="true">→</span>
         </a>

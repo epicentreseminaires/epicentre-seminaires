@@ -68,4 +68,4 @@ Une réponse claire ("oui, dès la phase commerciale, on vous présente la 3D po
 
 ---
 
-*Vous préparez un événement d'entreprise dans la Plaine de l'Ain ou en Bourgogne et vous voulez voir comment la 3D peut servir votre projet ? [Décrivez-nous votre format](/plaine-de-lain/contact/), nous revenons vers vous.*
+*Vous préparez un événement d'entreprise dans la Plaine de l'Ain ou en Bourgogne et vous voulez voir comment la 3D peut servir votre projet ? [Décrivez-nous votre format](/contact/), nous revenons vers vous.*

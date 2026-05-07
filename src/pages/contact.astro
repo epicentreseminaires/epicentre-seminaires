@@ -1,51 +1,128 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { FORMSUBMIT_ENDPOINT, SITE_URL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
-const title = "Contact : Epicentre Séminaires";
-const description = "Contactez Epicentre Séminaires. Choisissez votre territoire : Plaine de l'Ain (agence de production) ou Épinac (domaine de séminaire en Bourgogne).";
+const title = "Contact : Agence événementielle Plaine de l'Ain | Epicentre";
+const description = "Demandez un devis pour une plénière, un gala, un congrès ou un lancement dans la Plaine de l'Ain. Cadrage en amont, devis ligne à ligne.";
 ---
 
-<Base title={title} description={description} zone="brand">
-  <section class="bg-ink text-bone py-24 md:py-32">
-    <div class="container-wide">
-      <p class="eyebrow text-bone/60">Contact</p>
-      <h1 class="font-display text-4xl md:text-6xl mt-6 max-w-4xl leading-tight">
-        Choisissez votre territoire.
-      </h1>
-      <p class="mt-6 text-bone/70 max-w-2xl text-lg">
-        Pour qu'on cible directement la bonne équipe, dites-nous où votre projet se passe.
-      </p>
-
-      <div class="grid md:grid-cols-2 gap-6 mt-16">
-        <a href="/plaine-de-lain/contact/" class="group bg-plaine hover:bg-plaine-deep transition-colors p-10 md:p-12 block">
-          <p class="eyebrow text-bone/60">Plaine de l'Ain</p>
-          <h2 class="font-display text-3xl md:text-4xl mt-4 leading-tight">
-            Demander un devis pour une production événementielle.
-          </h2>
-          <p class="mt-6 text-bone/70 leading-relaxed">
-            Plénière, gala, congrès, lancement, captation. Sur le lieu de votre choix dans le bassin Plaine de l'Ain.
-          </p>
-          <span class="mt-10 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
-            Aller au formulaire →
-          </span>
-        </a>
-
-        <a href="/epinac/contact/" class="group bg-epinac hover:bg-epinac-deep transition-colors p-10 md:p-12 block">
-          <p class="eyebrow text-bone/60">Épinac · Bourgogne</p>
-          <h2 class="font-display text-3xl md:text-4xl mt-4 leading-tight">
-            Réserver une visite du domaine d'Épinac.
-          </h2>
-          <p class="mt-6 text-bone/70 leading-relaxed">
-            Lieu plein air en Bourgogne pour journée d'entreprise, plénière sous chapiteau, gala, soirée privée ou réception.
-          </p>
-          <span class="mt-10 inline-flex items-center gap-2 text-sm font-medium group-hover:text-accent transition-colors">
-            Aller au formulaire →
-          </span>
-        </a>
+<Base title={title} description={description} zone="plaine">
+  <section class="bg-plaine-deep text-bone py-24 md:py-32">
+    <div class="container-wide grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <p class="eyebrow text-bone/60">Plaine de l'Ain · Entre Lyon et Genève</p>
+        <h1 class="font-display text-4xl md:text-6xl mt-6 leading-tight">Demandez votre devis.</h1>
+        <p class="mt-8 text-bone/70 leading-relaxed">
+          Décrivez votre projet pour qu'on puisse cadrer un échange utile. Plus le brief est précis, plus la proposition technique le sera.
+        </p>
+        <div class="mt-10 space-y-3 text-bone/80 text-sm">
+          <p><span class="text-bone/50">Téléphone : </span><a href={CONTACT_PHONE_HREF} class="hover:text-accent">{CONTACT_PHONE_DISPLAY}</a></p>
+          <p><span class="text-bone/50">Email : </span><a href="mailto:contact@epicentre-seminaires.fr" class="hover:text-accent">contact@epicentre-seminaires.fr</a></p>
+          <p><span class="text-bone/50">Zone : </span>Plaine de l'Ain, Bugey, Pays de Gex, Lyon est</p>
+        </div>
       </div>
 
-      <div class="mt-16 pt-10 border-t border-bone/10 text-bone/60 text-sm">
-        <p>Vous préférez écrire directement : <a href="mailto:contact@epicentre-seminaires.fr" class="text-bone hover:text-accent">contact@epicentre-seminaires.fr</a></p>
+      <div class="md:col-span-6 md:col-start-7 bg-bone text-ink p-8 md:p-12">
+        <form action={FORMSUBMIT_ENDPOINT} method="POST" class="space-y-6">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis - Plaine de l'Ain" />
+          <input type="hidden" name="_next" value={`${SITE_URL}/merci/`} />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="zone" value="Plaine de l'Ain" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="eyebrow">Prénom *</span>
+              <input type="text" name="firstname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+            <label class="block">
+              <span class="eyebrow">Nom *</span>
+              <input type="text" name="lastname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="eyebrow">Entreprise *</span>
+            <input type="text" name="company" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+          </label>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="eyebrow">Email *</span>
+              <input type="email" name="email" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+            <label class="block">
+              <span class="eyebrow">Téléphone *</span>
+              <input type="tel" name="phone" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+          </div>
+
+          <div class="pt-2 border-t border-ink/10">
+            <p class="eyebrow text-ink/55 mb-4 mt-4">Votre événement</p>
+          </div>
+
+          <label class="block">
+            <span class="eyebrow">Type d'événement *</span>
+            <select name="type" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
+              <option value="">Choisir...</option>
+              <option>Plénière / convention</option>
+              <option>Gala / remise de prix</option>
+              <option>Lancement de produit</option>
+              <option>Anniversaire d'entreprise</option>
+              <option>Inauguration / livraison de site</option>
+              <option>AG d'actionnaires</option>
+              <option>Captation vidéo seule</option>
+              <option>Autre</option>
+            </select>
+          </label>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="eyebrow">Jauge approximative *</span>
+              <select name="audience" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
+                <option value="">Choisir...</option>
+                <option>Moins de 100 personnes</option>
+                <option>100 à 300 personnes</option>
+                <option>300 à 600 personnes</option>
+                <option>600 à 1 000 personnes</option>
+                <option>Plus de 1 000 personnes</option>
+              </select>
+            </label>
+            <label class="block">
+              <span class="eyebrow">Date pressentie</span>
+              <input type="text" name="date" placeholder="ex. octobre 2026" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+            </label>
+          </div>
+
+          <label class="block">
+            <span class="eyebrow">Lieu envisagé</span>
+            <input type="text" name="venue" placeholder="ex. notre site à Ambérieu, ou à définir ensemble" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
+          </label>
+
+          <label class="block">
+            <span class="eyebrow">Budget envisagé *</span>
+            <select name="budget" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
+              <option value="">Choisir une fourchette...</option>
+              <option>Moins de 10 000 €</option>
+              <option>10 000 à 30 000 €</option>
+              <option>30 000 à 80 000 €</option>
+              <option>80 000 à 150 000 €</option>
+              <option>Plus de 150 000 €</option>
+              <option>À cadrer ensemble</option>
+            </select>
+          </label>
+
+          <label class="block">
+            <span class="eyebrow">Votre projet en quelques mots</span>
+            <textarea name="message" rows="4" placeholder="Format envisagé, contexte, objectif principal, contraintes connues..." class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink resize-none"></textarea>
+          </label>
+
+          <button type="submit" class="btn-accent w-full justify-center">Envoyer ma demande</button>
+          <p class="text-xs text-ink/45 leading-relaxed">
+            Les champs marqués d'un astérisque (*) sont obligatoires. En soumettant ce formulaire, vous acceptez d'être recontacté par Epicentre Séminaires au sujet de votre demande. Vos données ne sont utilisées que pour la prise de contact.
+          </p>
+        </form>
       </div>
     </div>
   </section>

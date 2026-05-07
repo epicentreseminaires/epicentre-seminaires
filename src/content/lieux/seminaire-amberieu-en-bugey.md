@@ -90,4 +90,4 @@ Quatre arguments concrets :
 
 ## Échangeons sur votre projet
 
-Vous êtes une entreprise d'Ambérieu-en-Bugey et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/). Premier échange sans engagement.
+Vous êtes une entreprise d'Ambérieu-en-Bugey et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/contact/). Premier échange sans engagement.

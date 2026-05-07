@@ -57,4 +57,4 @@ Pour le reste : un événement à enjeu sur le bassin Plaine de l'Ain est mieux 
 
 ---
 
-*Vous êtes une entreprise du bassin Plaine de l'Ain et vous préparez un événement à enjeu ? [Décrivez-nous votre projet](/plaine-de-lain/contact/), nous revenons vers vous.*
+*Vous êtes une entreprise du bassin Plaine de l'Ain et vous préparez un événement à enjeu ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous.*

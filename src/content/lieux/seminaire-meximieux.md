@@ -94,4 +94,4 @@ Si Lyon, Genève, ou ailleurs fait sens pour votre format : on prend en charge. 
 
 ## Échangeons sur votre projet
 
-Vous êtes une entreprise de Meximieux et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/plaine-de-lain/contact/) : réponse sous 24 h, devis détaillé sous 72 h après cadrage. Premier échange sans engagement.
+Vous êtes une entreprise de Meximieux et vous préparez un événement ? [Appelez-nous ou décrivez-nous votre projet](/contact/) : réponse sous 24 h, devis détaillé sous 72 h après cadrage. Premier échange sans engagement.
