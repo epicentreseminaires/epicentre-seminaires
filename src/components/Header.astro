@@ -8,29 +8,25 @@ export interface Props {
 }
 const { zone = 'brand', theme = 'dark' } = Astro.props;
 
-// Chaque univers a sa propre navigation : on est dans une "agence" à la fois.
-// La marque (home, journal, à propos) propose les 2 portes d'entrée.
+// Navigation harmonisée : la home, les pages brand et les pages Plaine partagent
+// le même menu pour la cohérence UX. Épinac est un mini-site séparé avec son menu propre.
+const navPlaineBrand = [
+  { label: 'Méthode', href: '/process/' },
+  { label: 'Réalisations', href: '/realisations/' },
+  { label: 'Périmètre', href: '/equipement/' },
+  { label: 'Journal', href: '/journal/' },
+  { label: 'À propos', href: '/a-propos/' },
+];
+
 const navByZone = {
-  brand: [
-    { label: 'Process', href: '/process/' },
-    { label: 'Réalisations', href: '/realisations/' },
-    { label: 'Épinac', href: '/epinac/' },
-    { label: 'Journal', href: '/journal/' },
-    { label: 'À propos', href: '/a-propos/' },
-  ],
+  brand: navPlaineBrand,
+  plaine: navPlaineBrand,
   epinac: [
     { label: 'Le domaine', href: '/epinac/le-domaine/' },
     { label: 'Productions', href: '/epinac/productions/' },
     { label: 'Journal', href: '/journal/' },
     { label: 'À propos', href: '/a-propos/' },
     { label: 'Contact', href: '/epinac/contact/' },
-  ],
-  plaine: [
-    { label: "L'agence", href: '/plaine-de-lain/agence/' },
-    { label: 'Productions', href: '/plaine-de-lain/productions/' },
-    { label: 'Notre approche', href: '/plaine-de-lain/realisations/' },
-    { label: 'Journal', href: '/journal/' },
-    { label: 'Contact', href: '/plaine-de-lain/contact/' },
   ],
 };
 
