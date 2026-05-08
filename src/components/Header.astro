@@ -3,14 +3,15 @@ import Logo from './Logo.astro';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 export interface Props {
-  zone?: 'epinac' | 'plaine' | 'brand';
+  zone?: 'plaine' | 'brand';
   theme?: 'light' | 'dark';
 }
 const { zone = 'brand', theme = 'dark' } = Astro.props;
 
-// Navigation harmonisée : la home, les pages brand et les pages Plaine partagent
-// le même menu pour la cohérence UX. Épinac est un mini-site séparé avec son menu propre.
-const navPlaineBrand = [
+// Navigation unifiée : la home, les pages brand et les pages Plaine partagent
+// le même menu. Le Domaine d'Épinac vit sur un sous-domaine séparé
+// (epinac.epicentre-seminaires.fr), aucune nav vers ce site.
+const nav = [
   { label: 'Méthode', href: '/process/' },
   { label: 'Réalisations', href: '/realisations/' },
   { label: 'Périmètre', href: '/equipement/' },
@@ -18,31 +19,8 @@ const navPlaineBrand = [
   { label: 'À propos', href: '/a-propos/' },
 ];
 
-const navByZone = {
-  brand: navPlaineBrand,
-  plaine: navPlaineBrand,
-  epinac: [
-    { label: 'Le domaine', href: '/epinac/le-domaine/' },
-    { label: 'Productions', href: '/epinac/productions/' },
-    { label: 'Journal', href: '/journal/' },
-    { label: 'À propos', href: '/a-propos/' },
-    { label: 'Contact', href: '/epinac/contact/' },
-  ],
-};
-
-const nav = navByZone[zone];
-const ctaHref = zone === 'epinac'
-  ? '/epinac/contact/'
-  : zone === 'plaine'
-  ? '/contact/'
-  : '/contact/';
-
-// Indicateur de "sous-marque" : on sait clairement dans quelle agence on est.
-const zoneTag = zone === 'epinac'
-  ? 'Épinac · Bourgogne'
-  : zone === 'plaine'
-  ? "Plaine de l'Ain"
-  : null;
+const ctaHref = '/contact/';
+const zoneTag = zone === 'plaine' ? "Plaine de l'Ain" : null;
 
 const phone = CONTACT_PHONE_DISPLAY;
 const phoneHref = CONTACT_PHONE_HREF;

@@ -29,7 +29,7 @@ faq:
   - q: "Vous gérez la coordination avec l'aéroport Lyon Saint-Exupéry ?"
     a: "Oui. Pour les événements avec invités venus en avion, nous coordonnons les transferts depuis Saint-Exupéry (25 min de Meximieux). Usage fréquent pour des conventions internationales ou des événements avec dirigeants de groupe venus de loin."
   - q: "Quel format de séminaire fonctionne le mieux à Meximieux ?"
-    a: "Conventions à la journée ou demi-journée, séminaires d'équipe avec déjeuner sur place, lancements de produits intermédiaires, AG. Pour du résidentiel haut de gamme à plusieurs nuits, nous orientons généralement vers le domaine partenaire d'Épinac en Bourgogne."
+    a: "Conventions à la journée ou demi-journée, séminaires d'équipe avec déjeuner sur place, lancements de produits intermédiaires, AG, inaugurations. Pour du résidentiel haut de gamme à plusieurs nuits, nous orientons vers nos lieux partenaires de la zone."
 ---
 
 Vous êtes une entreprise basée à **Meximieux** ou dans le secteur immédiat (logistique, services, agroalimentaire, distribution). Vous préparez un événement et vous cherchez une **agence événementielle locale** capable de le prendre en charge sérieusement.

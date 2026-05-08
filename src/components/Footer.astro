@@ -2,11 +2,6 @@
 import Logo from './Logo.astro';
 import LegalModals from './LegalModals.astro';
 
-export interface Props {
-  zone?: 'epinac' | 'plaine' | 'brand';
-}
-const { zone = 'brand' } = Astro.props;
-
 const year = new Date().getFullYear();
 ---
 
@@ -18,34 +13,20 @@ const year = new Date().getFullYear();
     <div class="md:col-span-2">
       <Logo variant="light" height={64} />
       <p class="mt-6 max-w-md text-sm leading-relaxed">
-        {zone === 'epinac'
-          ? "Lieu d'événement plein air en Bourgogne sud, à Épinac."
-          : "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, congrès, lancements de produits."}
+        Agence événementielle dans la Plaine de l'Ain. Plénières, galas, conventions, lancements de produits, captation vidéo.
       </p>
     </div>
 
-    {zone === 'epinac' ? (
-      <div>
-        <p class="eyebrow text-bone/50 mb-4">Épinac · Bourgogne</p>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/epinac/" class="hover:text-bone">Le domaine</a></li>
-          <li><a href="/epinac/le-domaine/" class="hover:text-bone">Visiter le lieu</a></li>
-          <li><a href="/epinac/productions/" class="hover:text-bone">Nos productions</a></li>
-          <li><a href="/epinac/contact/" class="hover:text-bone">Nous contacter</a></li>
-        </ul>
-      </div>
-    ) : (
-      <div>
-        <p class="eyebrow text-bone/50 mb-4">L'agence</p>
-        <ul class="space-y-2 text-sm">
-          <li><a href="/" class="hover:text-bone">Plaine de l'Ain</a></li>
-          <li><a href="/process/" class="hover:text-bone">Méthode</a></li>
-          <li><a href="/realisations/" class="hover:text-bone">Réalisations</a></li>
-          <li><a href="/equipement/" class="hover:text-bone">Périmètre technique</a></li>
-          <li><a href="/contact/" class="hover:text-bone">Demander un devis</a></li>
-        </ul>
-      </div>
-    )}
+    <div>
+      <p class="eyebrow text-bone/50 mb-4">L'agence</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="hover:text-bone">Accueil</a></li>
+        <li><a href="/process/" class="hover:text-bone">Méthode</a></li>
+        <li><a href="/realisations/" class="hover:text-bone">Réalisations</a></li>
+        <li><a href="/equipement/" class="hover:text-bone">Périmètre technique</a></li>
+        <li><a href="/contact/" class="hover:text-bone">Demander un devis</a></li>
+      </ul>
+    </div>
 
     <div>
       <p class="eyebrow text-bone/50 mb-4">Lire</p>

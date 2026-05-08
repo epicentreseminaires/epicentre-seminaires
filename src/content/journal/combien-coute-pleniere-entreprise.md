@@ -50,7 +50,7 @@ Si vous louez un espace nu (salle de séminaire d'hôtel par exemple), tout le d
 
 Si vous choisissez un lieu **déjà équipé** (auditorium, salle de spectacle, lieu de séminaire avec son et lumière intégrés), une partie du matériel est déjà sur place → économies de 10 à 25 %.
 
-C'est l'un des intérêts du **domaine partenaire d'Épinac** ou de certains lieux partenaires de la **Plaine de l'Ain** : le matériel structurant existe, on n'apporte que ce qui complète.
+C'est l'un des intérêts de certains lieux partenaires de la **Plaine de l'Ain** déjà équipés : le matériel structurant existe, on n'apporte que ce qui complète.
 
 ## Variable 5 : Le timing
 
@@ -81,4 +81,4 @@ Comptez **15 à 25 % du budget total de l'événement en production technique** 
 
 ---
 
-*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ou souhaitez utiliser le domaine d'Épinac ? [Décrivez-nous votre projet](/contact/) en deux lignes, nous revenons vers vous avec une grille de coûts adaptée.*
+*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ? [Décrivez-nous votre projet](/contact/) en deux lignes, nous revenons vers vous avec une grille de coûts adaptée.*

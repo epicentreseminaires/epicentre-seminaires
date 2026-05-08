@@ -5,12 +5,14 @@ import sitemap from '@astrojs/sitemap';
 // Site déployé via GitHub Pages avec custom domain epicentre-seminaires.fr.
 // Le CNAME dans /public/ assure le bon domaine ; le site Astro est servi à la racine.
 //
-// Architecture : le site racine = agence Plaine de l'Ain. Le mini-site Épinac
-// vit dans /epinac/* avec son propre SEO. Les anciennes URLs /plaine-de-lain/*
-// sont redirigées vers la nouvelle structure plate pour préserver le SEO acquis.
+// Architecture : le domaine racine = agence Plaine de l'Ain. Le Domaine d'Épinac
+// est déployé séparément sur le sous-domaine epinac.epicentre-seminaires.fr
+// (repo distinct). Les anciennes URLs /plaine-de-lain/* (structure historique)
+// et /epinac/* (avant migration sous-domaine) sont redirigées pour préserver le SEO.
 export default defineConfig({
   site: 'https://epicentre-seminaires.fr',
   redirects: {
+    // Anciennes URLs /plaine-de-lain/* → racine
     '/plaine-de-lain/': '/',
     '/plaine-de-lain/agence/': '/agence/',
     '/plaine-de-lain/productions/': '/productions/',
@@ -21,6 +23,19 @@ export default defineConfig({
     '/plaine-de-lain/seminaire-meximieux/': '/seminaire-meximieux/',
     '/plaine-de-lain/seminaire-saint-vulbas/': '/seminaire-saint-vulbas/',
     '/plaine-de-lain/seminaire-perouges/': '/seminaire-perouges/',
+    // Anciennes URLs /epinac/* → sous-domaine dédié
+    '/epinac/': 'https://epinac.epicentre-seminaires.fr/',
+    '/epinac/le-domaine/': 'https://epinac.epicentre-seminaires.fr/le-domaine/',
+    '/epinac/productions/': 'https://epinac.epicentre-seminaires.fr/productions/',
+    '/epinac/contact/': 'https://epinac.epicentre-seminaires.fr/contact/',
+    '/epinac/seminaire-autun/': 'https://epinac.epicentre-seminaires.fr/seminaire-autun/',
+    '/epinac/seminaire-beaune/': 'https://epinac.epicentre-seminaires.fr/seminaire-beaune/',
+    '/epinac/seminaire-le-creusot/': 'https://epinac.epicentre-seminaires.fr/seminaire-le-creusot/',
+    '/epinac/seminaire-depuis-dijon/': 'https://epinac.epicentre-seminaires.fr/seminaire-depuis-dijon/',
+    '/epinac/seminaire-depuis-geneve/': 'https://epinac.epicentre-seminaires.fr/seminaire-depuis-geneve/',
+    '/epinac/seminaire-depuis-lyon/': 'https://epinac.epicentre-seminaires.fr/seminaire-depuis-lyon/',
+    '/epinac/seminaire-depuis-macon/': 'https://epinac.epicentre-seminaires.fr/seminaire-depuis-macon/',
+    '/epinac/seminaire-depuis-paris/': 'https://epinac.epicentre-seminaires.fr/seminaire-depuis-paris/',
   },
   integrations: [
     tailwind(),
@@ -32,7 +47,7 @@ export default defineConfig({
         defaultLocale: 'fr',
         locales: { fr: 'fr-FR' },
       },
-      filter: (page) => !page.includes('/merci/') && !page.includes('/plaine-de-lain/'),
+      filter: (page) => !page.includes('/merci/') && !page.includes('/plaine-de-lain/') && !page.includes('/epinac/'),
       serialize(item) {
         // Priorités SEO sur-mesure : la home et le hub Épinac tirent le plus
         const url = item.url;

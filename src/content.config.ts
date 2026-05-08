@@ -20,7 +20,7 @@ const lieux = defineCollection({
     title: z.string().max(70),
     description: z.string().max(160),
     ville: z.string(),
-    zone: z.enum(['epinac', 'plaine']),
+    zone: z.literal('plaine'),
     publishedAt: z.coerce.date(),
     cover: z.string().optional(),
     geo: z.object({ lat: z.number(), lng: z.number() }).optional(),
