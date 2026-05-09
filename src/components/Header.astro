@@ -12,11 +12,11 @@ const { zone = 'brand', theme = 'dark' } = Astro.props;
 // le même menu. Le Domaine d'Épinac vit sur un sous-domaine séparé
 // (epinac.epicentre-seminaires.fr), aucune nav vers ce site.
 const nav = [
+  { label: 'Productions', href: '/productions/' },
   { label: "Carnet d'adresses", href: '/conseiller/' },
   { label: 'Méthode', href: '/process/' },
   { label: 'Réalisations', href: '/realisations/' },
   { label: 'Lexique', href: '/lexique/' },
-  { label: 'Journal', href: '/journal/' },
 ];
 
 const ctaHref = '/construire-mon-projet/';

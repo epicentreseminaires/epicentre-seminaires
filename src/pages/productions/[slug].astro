@@ -1,0 +1,216 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import { formatsOnFait, getFormatBySlug } from '@/data/formats';
+import { carnet } from '@/data/carnet';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
+
+export async function getStaticPaths() {
+  return formatsOnFait.map((f) => ({ params: { slug: f.slug } }));
+}
+
+const { slug } = Astro.params;
+const f = getFormatBySlug(slug!);
+if (!f || f.type !== 'on-fait') throw new Error(`Format introuvable : ${slug}`);
+
+const relatedCarnet = (f.relatedCarnet ?? [])
+  .map((s) => carnet.find((c) => c.slug === s)!)
+  .filter(Boolean);
+
+const title = `${f.title} | Epicentre Séminaires`;
+const description = f.metaDescription;
+---
+<Base title={title} description={description} zone="plaine" theme="light">
+  <div class="container-wide pt-28 md:pt-32 pb-2">
+    <Breadcrumb
+      items={[
+        { name: 'Accueil', url: '/' },
+        { name: 'Productions', url: '/productions/' },
+        { name: f.shortLabel },
+      ]}
+      variant="light"
+    />
+  </div>
+
+  <!-- HERO -->
+  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
+    <div class="container-wide max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-bone-soft text-accent">
+          <CarnetIcon name={f.iconKey} size={26} />
+        </span>
+        <p class="eyebrow">Production · {f.shortLabel}</p>
+      </div>
+
+      <h1 class="font-display font-semibold text-ink text-[2.5rem] sm:text-5xl md:text-6xl leading-[1.02] tracking-[-0.035em]">
+        {f.title}
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">{f.intro}</p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
+          Construire mon projet
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>{CONTACT_PHONE_DISPLAY}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉFINITION -->
+  {f.definition && (
+    <section class="bg-bone-soft py-16 md:py-20 border-t border-ink/10">
+      <div class="container-wide max-w-4xl">
+        <p class="eyebrow">Le format</p>
+        <p class="mt-6 text-xl md:text-2xl leading-relaxed text-ink/85 font-light">
+          {f.definition}
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- MÉTHODE -->
+  {f.method && f.method.length > 0 && (
+    <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
+      <div class="container-wide">
+        <div class="max-w-3xl mb-12 md:mb-16">
+          <p class="eyebrow">Notre méthode</p>
+          <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+            Comment on aborde <span class="text-accent">ce format.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10">
+          {f.method.map((m, i) => (
+            <div class="bg-bone p-7 md:p-8">
+              <p class="text-accent font-display text-xl">{String(i + 1).padStart(2, '0')}</p>
+              <h3 class="text-lg mt-4 leading-tight font-semibold text-ink">{m.title}</h3>
+              <p class="mt-3 text-sm text-ink/65 leading-relaxed">{m.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- DISPOSITIF TYPE -->
+  {f.dispositif && f.dispositif.length > 0 && (
+    <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
+      <div class="container-wide">
+        <div class="max-w-3xl mb-12 md:mb-16">
+          <p class="eyebrow">Dispositif type</p>
+          <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+            Ce qu'on déploie <span class="text-accent">en production.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10">
+          {f.dispositif.map((d) => (
+            <div class="bg-bone-soft p-7 md:p-8">
+              <h3 class="text-base md:text-lg leading-snug font-semibold text-ink">{d.label}</h3>
+              <p class="mt-3 text-sm text-ink/65 leading-relaxed">{d.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- DÉROULÉ TYPE -->
+  {f.schedule && f.schedule.length > 0 && (
+    <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
+      <div class="container-wide max-w-5xl">
+        <div class="max-w-3xl mb-12 md:mb-16">
+          <p class="eyebrow">Déroulé type</p>
+          <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+            Le rétroplanning <span class="text-accent">d'une production.</span>
+          </h2>
+          <p class="mt-6 text-base text-ink/65 leading-relaxed">
+            Cadre de référence. Adapté à votre format réel, votre lieu et votre conduite.
+          </p>
+        </div>
+
+        <ol class="space-y-0">
+          {f.schedule.map((s, i) => (
+            <li class="grid grid-cols-[120px_1fr] md:grid-cols-[180px_1fr] gap-6 md:gap-10 py-6 border-b border-ink/10 first:border-t">
+              <p class="font-display text-lg md:text-xl text-accent leading-snug">{s.time}</p>
+              <div>
+                <h3 class="text-base md:text-lg font-semibold text-ink leading-snug">{s.label}</h3>
+                {s.desc && <p class="mt-2 text-sm text-ink/65 leading-relaxed">{s.desc}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  <!-- BUDGET -->
+  {f.budgetRange && (
+    <section class="bg-ink text-bone py-20 md:py-24">
+      <div class="container-wide max-w-4xl">
+        <p class="eyebrow text-bone/55">Ordres de grandeur</p>
+        <p class="mt-6 text-lg md:text-xl leading-relaxed text-bone/85">
+          {f.budgetRange}
+        </p>
+        <p class="mt-6 text-sm text-bone/45 leading-relaxed">
+          Fourchettes indicatives en production technique. Le devis réel dépend du format, de la jauge, du lieu et du timing. Voir <a href="/journal/combien-coute-pleniere-entreprise/" class="text-accent hover:underline">notre article sur les coûts d'une plénière</a> pour le détail des variables.
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- CARNET LIÉ -->
+  {relatedCarnet.length > 0 && (
+    <section class="bg-bone-soft py-20 md:py-24 border-t border-ink/10">
+      <div class="container-wide max-w-5xl">
+        <p class="eyebrow">Carnet d'adresses lié</p>
+        <h2 class="text-2xl md:text-4xl mt-6 leading-tight tracking-tight">
+          Si vous gérez vous-même : <span class="text-accent">les bons critères.</span>
+        </h2>
+        <p class="mt-6 text-base text-ink/65 leading-relaxed max-w-3xl">
+          Vous voulez gérer ce format en direct sans nous confier la production ? Voici les fiches du carnet d'adresses correspondant aux postes clés de ce format.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10 mt-10">
+          {relatedCarnet.map((r) => (
+            <a href={`/conseiller/${r.slug}/`} class="group bg-bone-soft hover:bg-bone p-6 md:p-7 flex flex-col gap-4 transition-colors">
+              <CarnetIcon name={r.iconKey} class="text-accent" size={28} />
+              <p class="text-base font-semibold text-ink leading-tight">{r.cardLabel}</p>
+              <span class="mt-auto text-xs text-accent font-medium flex items-center gap-1.5">
+                Lire les critères
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA FINAL -->
+  <section class="bg-ink text-bone py-24 md:py-28">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <p class="eyebrow text-bone/55">Production clé en main</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Un projet de {f.shortLabel.toLowerCase()} ?<br /><span class="text-accent">On le produit avec vous.</span>
+      </h2>
+      <p class="mt-8 text-lg text-bone/70 leading-relaxed">
+        On revient vers vous après cadrage avec un devis ligne à ligne, équipement nommé, équipe identifiée par rôle.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/construire-mon-projet/" class="btn-bone">Construire mon projet</a>
+        <a href="/contact/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink">Décrire en libre</a>
+      </div>
+    </div>
+  </section>
+</Base>

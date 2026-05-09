@@ -1,0 +1,109 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import { formatsOnOriente, getFormatBySlug } from '@/data/formats';
+
+export async function getStaticPaths() {
+  return formatsOnOriente.map((f) => ({ params: { slug: f.slug } }));
+}
+
+const { slug } = Astro.params;
+const f = getFormatBySlug(slug!);
+if (!f || f.type !== 'on-oriente') throw new Error(`Format introuvable : ${slug}`);
+
+const title = `${f.title} | Epicentre Séminaires`;
+const description = f.metaDescription;
+---
+<Base title={title} description={description} zone="plaine" theme="light">
+  <div class="container-wide pt-28 md:pt-32 pb-2">
+    <Breadcrumb
+      items={[
+        { name: 'Accueil', url: '/' },
+        { name: "Ce qu'on oriente", url: '/orienter/' },
+        { name: f.shortLabel },
+      ]}
+      variant="light"
+    />
+  </div>
+
+  <!-- HERO -->
+  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
+    <div class="container-wide max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-bone-soft text-ink/55">
+          <CarnetIcon name={f.iconKey} size={26} />
+        </span>
+        <p class="eyebrow">On vous oriente · {f.shortLabel}</p>
+      </div>
+
+      <h1 class="font-display font-semibold text-ink text-[2.5rem] sm:text-5xl md:text-6xl leading-[1.02] tracking-[-0.035em]">
+        {f.title}
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">{f.intro}</p>
+    </div>
+  </section>
+
+  <!-- POURQUOI PAS NOUS -->
+  {f.whyNotUs && (
+    <section class="bg-bone-soft py-20 md:py-24 border-t border-ink/10">
+      <div class="container-wide max-w-4xl">
+        <p class="eyebrow text-accent">Pourquoi on n'est pas le bon interlocuteur</p>
+        <p class="mt-6 text-xl md:text-2xl leading-relaxed text-ink/85 font-light">
+          {f.whyNotUs}
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- LA BONNE APPROCHE -->
+  {f.bestApproach && (
+    <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
+      <div class="container-wide max-w-4xl">
+        <p class="eyebrow">La bonne approche</p>
+        <h2 class="text-3xl md:text-4xl mt-6 leading-tight tracking-tight">
+          Comment cadrer <span class="text-accent">votre besoin réel.</span>
+        </h2>
+        <p class="mt-8 text-base md:text-lg text-ink/75 leading-relaxed">
+          {f.bestApproach}
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- QUI APPELER -->
+  {f.whoToCall && (
+    <section class="bg-bone-soft py-20 md:py-24 border-t border-ink/10">
+      <div class="container-wide max-w-4xl">
+        <p class="eyebrow">Qui appeler</p>
+        <h2 class="text-3xl md:text-4xl mt-6 leading-tight tracking-tight">
+          Vers qui <span class="text-accent">on vous oriente.</span>
+        </h2>
+        <p class="mt-8 text-base md:text-lg text-ink/75 leading-relaxed">
+          {f.whoToCall}
+        </p>
+        <p class="mt-6 text-sm text-ink/55 leading-relaxed">
+          Ces orientations sont gratuites et sans contrepartie. Pour une recommandation nominative adaptée à votre contexte, parlez-nous.
+        </p>
+      </div>
+    </section>
+  )}
+
+  <!-- ALTERNATIVE EPICENTRE -->
+  <section class="bg-ink text-bone py-24 md:py-28">
+    <div class="container-wide max-w-4xl">
+      <p class="eyebrow text-bone/55">Si Epicentre peut quand même servir</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Un dispositif technique scénique <span class="text-accent">à intégrer ?</span>
+      </h2>
+      <p class="mt-8 text-base md:text-lg text-bone/75 leading-relaxed max-w-3xl">
+        Si votre événement, même hors périmètre principal, intègre une dimension scène, son, lumière ou captation, on peut intervenir sur cette partie en complément du prestataire principal du format.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn-bone">Décrire le projet</a>
+        <a href="/conseiller/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink">Voir le carnet d'adresses</a>
+      </div>
+    </div>
+  </section>
+</Base>

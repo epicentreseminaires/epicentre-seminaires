@@ -1,0 +1,79 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import { formatsOnOriente } from '@/data/formats';
+
+const title = "Ce qu'on oriente · Team building, salon, mariage | Epicentre";
+const description = "Formats hors périmètre Epicentre : team building, salon, événement privé, location matériel. On ne produit pas mais on conseille les bons interlocuteurs.";
+---
+<Base title={title} description={description} zone="plaine" theme="light">
+  <div class="container-wide pt-28 md:pt-32 pb-2">
+    <Breadcrumb items={[{ name: 'Accueil', url: '/' }, { name: "Ce qu'on oriente" }]} variant="light" />
+  </div>
+
+  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
+    <div class="container-wide max-w-4xl">
+      <p class="eyebrow">Ce qu'on oriente</p>
+      <h1 class="display-lg mt-6 leading-[0.95]">
+        On n'est pas le bon interlocuteur ?<br /><span class="text-accent">On vous le dit franchement.</span>
+      </h1>
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">
+        Notre niche est resserrée : la production d'événements à enjeu scénique. Sur d'autres formats, des confrères sont mieux dimensionnés. Plutôt que de bricoler une offre hors périmètre, on oriente.
+      </p>
+      <p class="mt-6 text-base text-ink/65 leading-relaxed max-w-2xl">
+        Quatre formats fréquents pour lesquels on n'est pas le bon partenaire en production complète, mais où on peut vous aiguiller.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-bone-soft py-20 md:py-24 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="grid md:grid-cols-2 gap-px bg-ink/10">
+        {formatsOnOriente.map((f) => (
+          <a href={`/orienter/${f.slug}/`} class="group bg-bone-soft hover:bg-bone p-8 md:p-10 transition-colors duration-300 flex flex-col gap-5">
+            <CarnetIcon name={f.iconKey} class="text-ink/50 group-hover:text-accent transition-colors" size={32} />
+            <div class="flex-1">
+              <h2 class="text-xl md:text-2xl font-semibold text-ink leading-tight">{f.cardLabel}</h2>
+              <p class="mt-3 text-sm md:text-base text-ink/65 leading-relaxed">{f.intro}</p>
+            </div>
+            <span class="text-xs text-accent font-medium flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity">
+              Pourquoi on oriente
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
+    <div class="container-wide max-w-4xl">
+      <p class="eyebrow">Notre logique</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Une niche resserrée. <span class="text-accent">Pour de bonnes raisons.</span>
+      </h2>
+      <p class="mt-8 text-base md:text-lg text-ink/70 leading-relaxed">
+        Une agence qui prétend tout faire fait rarement quelque chose de bien. On a fait le choix d'une niche : la production scénique d'événements d'entreprise à enjeu. C'est le métier où on est fort, c'est le métier où on rend service.
+      </p>
+      <p class="mt-6 text-base md:text-lg text-ink/70 leading-relaxed">
+        Sur les autres formats, l'honnêteté est de l'admettre. Dire « ce n'est pas notre métier » est plus utile que de produire un devis approximatif. C'est aussi pour ça qu'on tient un carnet d'adresses : la valeur n'est pas dans le périmètre qu'on couvre, mais dans la connaissance du territoire qu'on partage.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-ink text-bone py-24 md:py-28">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <p class="eyebrow text-bone/55">Pas sûr du format ?</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Décrivez le projet.<br /><span class="text-accent">On vous dit si c'est nous, ou pas.</span>
+      </h2>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/construire-mon-projet/" class="btn-bone">Construire mon projet</a>
+        <a href="/contact/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink">Échanger directement</a>
+      </div>
+    </div>
+  </section>
+</Base>
