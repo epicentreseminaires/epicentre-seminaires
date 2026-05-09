@@ -64,7 +64,7 @@ const articleJsonLd = {
   <article>
     {article.data.cover && (
       <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-ink">
-        <img src={article.data.cover} alt={article.data.title} class="absolute inset-0 w-full h-full object-cover opacity-60" />
+        <img src={article.data.cover} alt={article.data.title} loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-60" />
         <div class="absolute inset-0 bg-gradient-to-b from-ink/30 to-ink"></div>
         <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
           <Breadcrumb items={breadcrumb} variant="dark" />
@@ -94,10 +94,10 @@ const articleJsonLd = {
       </div>
     </section>
 
-    <section class="bg-ink text-bone py-24">
+    <section class="bg-ink text-bone py-24 md:py-28">
       <div class="container-wide text-center max-w-3xl mx-auto">
         <p class="eyebrow text-bone/50">Vous travaillez sur un projet ?</p>
-        <h2 class="text-3xl md:text-5xl mt-6 leading-tight">
+        <h2 class="h2-section mt-6">
           Discutons-en directement.
         </h2>
         <p class="mt-6 text-bone/70">

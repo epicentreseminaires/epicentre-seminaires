@@ -70,4 +70,71 @@
     letter-spacing: -0.04em;
     line-height: 0.95;
   }
+
+  /* Design tokens — typographie cohérente */
+  .h1-hero {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+  }
+  .h1-hero-lg {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(2.75rem, 7vw, 5rem);
+    letter-spacing: -0.04em;
+    line-height: 0.98;
+  }
+  .h1-hero-xl {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(2.75rem, 8vw, 5.5rem);
+    letter-spacing: -0.045em;
+    line-height: 0.94;
+  }
+  .h2-section {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  .h2-section-sm {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(1.625rem, 3vw, 2.25rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+  .h2-hero {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+  .h2-cta {
+    @apply font-display font-semibold text-ink;
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+  .h3-card {
+    @apply font-display font-semibold text-ink;
+    @apply text-lg md:text-xl;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .lead {
+    @apply text-lg md:text-xl text-ink/70 leading-relaxed;
+  }
+  .body-md {
+    @apply text-base md:text-lg text-ink/70 leading-relaxed;
+  }
+
+  /* Design tokens — rythme vertical des sections */
+  .section-y {
+    @apply py-20 md:py-28;
+  }
+  .section-y-lg {
+    @apply py-24 md:py-32;
+  }
+  .section-y-sm {
+    @apply py-16 md:py-20;
+  }
 }
