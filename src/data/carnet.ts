@@ -1,0 +1,463 @@
+// Carnet d'adresses : 12 catégories de prestataires sur lesquels Epicentre
+// conseille les entreprises de la Plaine de l'Ain.
+//
+// Wording impératif : « on vous conseille », jamais « partenaires ». Pas de
+// noms de prestataires nommés sur le site (règle légale absolue) : chaque
+// fiche détaille les critères, les questions à se poser et les moments où
+// appeler Epicentre. Les recommandations nominatives sont transmises par
+// téléphone ou intégrées au devis après cadrage.
+
+export type CarnetCategory = {
+  slug: string;
+  shortLabel: string;
+  cardLabel: string;
+  title: string;
+  metaDescription: string;
+  intro: string;
+  iconKey: IconKey;
+  criteria: { title: string; desc: string }[];
+  questions: string[];
+  whenToCallUs: string;
+  redFlags: string[];
+  related: string[];
+  budgetRange?: string;
+};
+
+export type IconKey =
+  | 'lieu'
+  | 'traiteur'
+  | 'son-lumiere'
+  | 'photobooth'
+  | 'mobilier'
+  | 'animation'
+  | 'securite'
+  | 'hotesses'
+  | 'communication'
+  | 'logistique'
+  | 'captation'
+  | 'scene';
+
+export const carnet: CarnetCategory[] = [
+  {
+    slug: 'lieu',
+    shortLabel: 'Lieu',
+    cardLabel: 'Trouver un lieu',
+    iconKey: 'lieu',
+    title: 'Comment choisir un lieu d\'événement d\'entreprise',
+    metaDescription: 'Lieu d\'événement d\'entreprise dans la Plaine de l\'Ain : critères techniques, jauge, accessibilité. Recommandations sur-mesure.',
+    intro: 'Le lieu conditionne tout le reste : la jauge, le dispositif technique, la logistique, le ressenti. C\'est le premier sujet à cadrer, et c\'est aussi le poste où l\'on perd le plus de temps à comparer des offres incomparables.',
+    criteria: [
+      { title: 'La jauge réelle', desc: 'Capacité assise dîner différente de capacité debout cocktail. Vérifier la jauge plénière (configuration assise face scène) et la jauge ERP avec assises et issues calculées.' },
+      { title: 'La technique pré-installée', desc: 'Son, lumière, écrans intégrés ? Rig en plafond ? Alimentations triphasées ? Un lieu équipé fait économiser 10 à 25 % sur le poste production.' },
+      { title: 'L\'accessibilité', desc: 'Distance gare TGV / aéroport, parking dimensionné, autoroute proche, transferts possibles. Pour un événement à invités venus de loin, c\'est décisif.' },
+      { title: 'Le classement ERP', desc: 'Type et catégorie ERP du lieu, dossier de sécurité existant ou à monter, commission de sécurité requise selon la jauge.' },
+      { title: 'Les contraintes acoustiques', desc: 'Voisinage, horaires sonores, niveau sonore admissible. Décisif pour un gala dansant ou un live band.' },
+      { title: 'La logistique catering', desc: 'Cuisine sur place, office traiteur, point d\'eau, électricité dédiée, accès camions traiteur séparé.' },
+    ],
+    questions: [
+      'Quelle est la jauge exacte en configuration plénière assise et en configuration cocktail debout ?',
+      'Quel est le classement ERP du lieu et la dernière date de visite de la commission de sécurité ?',
+      'Le matériel son et lumière est-il inclus, ou faut-il prévoir une location complète ?',
+      'Quelles sont les puissances électriques disponibles (mono, tri, ampérage) et les points de raccordement ?',
+      'Y a-t-il une cuisine, un office traiteur, un accès véhicule séparé pour les prestataires ?',
+      'Quels sont les horaires d\'accès montage et démontage, et à quel coût supplémentaire ?',
+      'Le lieu impose-t-il des prestataires (traiteur, sécurité, technique) ou laisse-t-il libre choix ?',
+    ],
+    whenToCallUs: 'Quand vous hésitez entre plusieurs lieux qui se ressemblent sur le papier, ou quand le lieu vous est imposé et que vous voulez en tirer le meilleur. On connaît les jauges réelles, les contraintes techniques cachées, les négociations possibles.',
+    redFlags: [
+      'Devis sans jauge précise par configuration',
+      'Pas de mention du classement ERP',
+      'Refus de communiquer les puissances électriques disponibles',
+      'Forfait technique opaque sans liste d\'équipement',
+    ],
+    related: ['traiteur', 'logistique', 'securite'],
+    budgetRange: 'À partir de 3 000 € HT pour une journée plénière 100 personnes, jusqu\'à plusieurs dizaines de milliers d\'€ pour des lieux d\'exception.',
+  },
+  {
+    slug: 'traiteur',
+    shortLabel: 'Traiteur',
+    cardLabel: 'Trouver un traiteur',
+    iconKey: 'traiteur',
+    title: 'Comment choisir un traiteur événementiel',
+    metaDescription: 'Traiteur événementiel d\'entreprise : grilles de prix, formats, critères de sélection. Recommandations adaptées à la Plaine de l\'Ain.',
+    intro: 'Le traiteur est l\'un des trois postes que les invités jugent en sortant. Le choix se fait sur le format (cocktail, mange-debout, dîner assis), la grammage, le niveau d\'exécution sur place et la capacité à tenir les délais avec une grande jauge.',
+    criteria: [
+      { title: 'Le format servi', desc: 'Cocktail dînatoire, mange-debout, dîner assis service à l\'assiette, buffet : chaque format implique un nombre de pièces, un nombre de cuisiniers et un timing différent.' },
+      { title: 'Le grammage', desc: 'Pour un cocktail dînatoire, viser 14 à 16 pièces salées + 4 à 6 sucrées par personne. En dessous, vos invités auront faim. Au-dessus, ça va à la poubelle.' },
+      { title: 'L\'équipe sur site', desc: 'Combien de cuisiniers sur place, combien de serveurs, ratio serveurs/invités. Pour un dîner assis 200 personnes, viser au minimum 1 serveur pour 12 à 15 convives.' },
+      { title: 'La gestion des régimes', desc: 'Végétarien, vegan, sans gluten, halal, casher : préciser la prise en charge dès le devis et le pourcentage incluable sans surcoût.' },
+      { title: 'La logistique froide', desc: 'Camion frigorifique, chambre froide sur place ou louée, gestion de la chaîne du froid pour les pièces sensibles.' },
+      { title: 'Le matériel inclus', desc: 'Vaisselle, verrerie, nappage, mange-debout, mobilier de service. Demander la liste complète avec quantités.' },
+    ],
+    questions: [
+      'Quel est le grammage par personne en pièces salées et sucrées ?',
+      'Combien de cuisiniers et serveurs seront-ils présents sur site ?',
+      'Comment gérez-vous les régimes alimentaires spécifiques et à partir de quel pourcentage facturez-vous un complément ?',
+      'Le matériel (vaisselle, verrerie, mobilier de service) est-il inclus ou loué en sus ?',
+      'Avez-vous une cuisine froide sur place ou prévoyez-vous une zone de réchauffe ?',
+      'Le service vin / boissons est-il inclus, et avec quelle gamme ?',
+      'Avez-vous travaillé sur des jauges similaires à la nôtre dans les 12 derniers mois ?',
+    ],
+    whenToCallUs: 'Quand vous comparez des devis traiteur incomparables (formats différents, grammages cachés, prix au cocktail vs prix au dîner). On lit les devis ligne à ligne, on identifie ce qui est facturé deux fois et ce qui manque.',
+    redFlags: [
+      'Pas de grammage précisé sur le devis',
+      'Forfait service unique sans détail effectif sur site',
+      'Absence de plan B en cas de souci logistique (panne camion, retard)',
+      'Pas d\'expérience documentée sur la jauge demandée',
+    ],
+    related: ['lieu', 'mobilier', 'logistique'],
+    budgetRange: 'Cocktail dînatoire : 35 à 80 € HT/personne. Dîner assis : 80 à 180 € HT/personne. Gala haut de gamme : 200 € HT et plus.',
+  },
+  {
+    slug: 'son-lumiere',
+    shortLabel: 'Son & lumière',
+    cardLabel: 'Son, lumière, vidéo',
+    iconKey: 'son-lumiere',
+    title: 'Comment choisir un prestataire son, lumière et vidéo',
+    metaDescription: 'Son, lumière, vidéo pour événement d\'entreprise : critères de sélection, équipement, équipe. Recommandations Plaine de l\'Ain.',
+    intro: 'Le son raté gâche la prise de parole. La lumière ratée tue la photo et la captation. La vidéo ratée fait passer la convention de l\'année pour un séminaire de production. C\'est le poste où la différence entre une prestation amateur et professionnelle s\'entend immédiatement.',
+    criteria: [
+      { title: 'L\'équipement nommé', desc: 'Marque, modèle, génération du matériel son et lumière. « Système son professionnel » ne veut rien dire. « Line array L-Acoustics K2 » est une réponse.' },
+      { title: 'La puissance dimensionnée', desc: 'Pour 300 personnes en plénière, prévoir 4 à 6 kW de son utile. Pour 1 000 personnes en gala dansant, on bascule sur du line array et on monte à 20 kW et plus.' },
+      { title: 'L\'équipe technique', desc: 'Sondier, éclairagiste, vidéaste, régisseur : chaque rôle nommé, identifié, avec le profil. Pas de polyvalents fourre-tout pour les enjeux importants.' },
+      { title: 'Le doublage des éléments critiques', desc: 'Console son de secours, micro HF de secours, double régie écran : pour un événement à enjeu, demander explicitement le plan B.' },
+      { title: 'La conduite et les répétitions', desc: 'Filage, raccord, répétition générale : combien de temps prévu et facturé, qui est présent.' },
+      { title: 'L\'expérience en jauge similaire', desc: 'Le passage de 200 à 800 personnes change tout (line array, calage acoustique, distribution). Demander des références équivalentes.' },
+    ],
+    questions: [
+      'Quelle marque et quel modèle de système son utilisez-vous, et quelle puissance utile sur la jauge demandée ?',
+      'Combien de techniciens sur site et avec quels rôles précis ?',
+      'Le matériel critique (console, micro HF) est-il doublé ?',
+      'Combien d\'heures de filage et de répétition sont incluses dans le devis ?',
+      'Avez-vous le matériel en propre ou louez-vous pour cet événement ?',
+      'Avez-vous produit sur des jauges et des formats similaires dans les 12 derniers mois ?',
+      'En cas de panne le jour J, quel est le délai de remplacement matériel ?',
+    ],
+    whenToCallUs: 'Quand vous voulez vous assurer que la production technique est au niveau de l\'enjeu, ou quand un prestataire vous a fait un devis et que vous n\'avez pas les éléments pour juger. On parle le langage technique, on lit les fiches matériel, on vérifie les dimensionnements.',
+    redFlags: [
+      'Liste matériel sans marque ni modèle',
+      'Pas d\'équipe nommée par rôle',
+      'Pas de mention du temps de répétition',
+      'Refus de fournir une fiche technique détaillée',
+    ],
+    related: ['scene', 'captation', 'lieu'],
+    budgetRange: 'Setup léger 100 personnes : 2 500 à 5 000 € HT/jour. Plénière 300 personnes : 8 000 à 18 000 € HT/jour. Convention 800+ : 25 000 € HT et plus.',
+  },
+  {
+    slug: 'scene',
+    shortLabel: 'Scène & structure',
+    cardLabel: 'Scène & structure',
+    iconKey: 'scene',
+    title: 'Comment choisir un prestataire scène et structure',
+    metaDescription: 'Scène, structure, podium, gril : critères techniques, dimensionnement, sécurité. Recommandations pour événement d\'entreprise.',
+    intro: 'La scène n\'est pas qu\'un meuble. C\'est un dispositif technique qui doit supporter les charges (matériel, intervenants, vidéo), respecter les normes (CTS, ERP), et s\'intégrer à la scénographie. Un mauvais dimensionnement se voit toute la soirée et peut, dans certains cas, faire prendre des risques.',
+    criteria: [
+      { title: 'Les dimensions dimensionnées', desc: 'Largeur scène fonction du nombre d\'intervenants en simultané, profondeur fonction du décor et du fond de scène, hauteur fonction de la jauge et de la visibilité au fond de salle.' },
+      { title: 'La structure (gril, ponts)', desc: 'Charge admissible du gril, calculs de structure, plan de levage, accroches sécurisées. Demander la note de calcul pour les structures importantes.' },
+      { title: 'L\'intégration vidéo et lumière', desc: 'Pré-équipement pour fixation écrans LED, ponts pour projecteurs, alimentations électriques intégrées. Évite les câbles apparents au sol.' },
+      { title: 'Le décor et les fonds de scène', desc: 'Habillage tissu, écrans LED, projection, décor en bois ou en carton expansé : choix selon l\'enjeu et le budget. Le décor finit la scénographie.' },
+      { title: 'Les normes ERP / CTS', desc: 'Pour les scènes en extérieur ou les structures en chapiteau, classement CTS obligatoire, dossier de sécurité, vérification réglementaire.' },
+      { title: 'Le timing montage', desc: 'Une scène 12 m × 6 m avec gril complet demande 8 à 12 heures de montage. Calage du rétroplanning indispensable.' },
+    ],
+    questions: [
+      'Quelles sont les dimensions de la scène et la charge admissible du gril ?',
+      'Quels sont les calculs de structure et qui les a établis ?',
+      'Quel est le temps de montage prévu et combien de techniciens sur site ?',
+      'Le décor et l\'habillage scénique sont-ils inclus ou en option ?',
+      'L\'intégration des écrans, ponts lumière et alimentations est-elle prévue d\'origine ?',
+      'En cas d\'extérieur, le classement CTS et le dossier de sécurité sont-ils inclus ?',
+      'Avez-vous une assurance responsabilité civile structure ?',
+    ],
+    whenToCallUs: 'Quand vous avez besoin d\'un dispositif scénique d\'envergure (plénière 300+, gala scénographié, lancement scénique). Le dimensionnement scène / lumière / vidéo doit être pensé ensemble, pas en silos.',
+    redFlags: [
+      'Pas de calcul de structure pour les grosses jauges',
+      'Pas de plan de levage pour les ponts',
+      'Pas de mention du temps de montage et démontage',
+      'Forfait scène sans précisions dimensionnelles',
+    ],
+    related: ['son-lumiere', 'lieu', 'securite'],
+    budgetRange: 'Scène plénière 8 m × 4 m : 3 000 à 6 000 € HT. Scène gala 12 m × 8 m avec gril complet : 12 000 à 30 000 € HT. Structures chapiteau : devis spécifique.',
+  },
+  {
+    slug: 'captation',
+    shortLabel: 'Captation vidéo',
+    cardLabel: 'Captation vidéo',
+    iconKey: 'captation',
+    title: 'Comment choisir un prestataire captation vidéo',
+    metaDescription: 'Captation vidéo événement d\'entreprise : monocam, multicam, streaming live. Critères, livrables, droits d\'usage.',
+    intro: 'La captation transforme un événement éphémère en actif communication. Bien faite, elle nourrit le site corporate, les réseaux, les communications internes pendant des mois. Mal faite, elle finit dans un dossier que personne ne consulte. Le périmètre du devis et les droits d\'usage sont les deux sujets clés.',
+    criteria: [
+      { title: 'Le dispositif caméras', desc: 'Monocam fixe, bicam (plan large + visage), multicam (3 à 6 caméras avec régie), captation steady : chaque dispositif sert un usage.' },
+      { title: 'Le streaming live', desc: 'Diffusion en direct sur YouTube, LinkedIn ou plateforme privée. Demander la solution technique (encodeur, redondance internet, latence).' },
+      { title: 'Le son captation', desc: 'Souvent négligé. Captation directe régie son ou micro caméra ? Une captation avec son pourri ne sert à rien.' },
+      { title: 'Le montage et les livrables', desc: 'Best-of de 2 à 3 minutes, captation intégrale, modules de 30 secondes pour les réseaux : préciser les livrables, les durées, les délais.' },
+      { title: 'Les droits d\'usage', desc: 'Cession de droits sur les rushes ou seulement sur le montage ? Usage interne uniquement ou diffusion publique autorisée ? Durée et territoire ?' },
+      { title: 'Le délai de livraison', desc: 'Best-of dans la semaine, intégrale dans le mois : un délai serré coûte plus cher mais a un vrai impact com.' },
+    ],
+    questions: [
+      'Combien de caméras, fixes ou steady, avec quelles optiques ?',
+      'Le son est-il capté directement de la régie son de l\'événement ?',
+      'Les rushes nous appartiennent-ils, ou seulement le montage final ?',
+      'Quels sont les livrables précis (best-of, intégrale, capsules réseaux) et leurs délais ?',
+      'Le streaming live est-il en option et avec quelle solution technique ?',
+      'Avez-vous une redondance internet en cas de panne ?',
+      'Les droits cédés couvrent-ils l\'usage public, la durée et le territoire que vous prévoyez ?',
+    ],
+    whenToCallUs: 'Quand l\'événement a un enjeu de communication (lancement produit, AG actionnaires, prise de parole CEO). On cadre le périmètre captation en cohérence avec le plan com derrière, et on négocie les droits.',
+    redFlags: [
+      'Pas de précision sur la cession de droits',
+      'Devis sans détail de livrables',
+      'Captation son par le micro caméra (qualité radio à 5 m)',
+      'Pas de redondance pour un live à enjeu',
+    ],
+    related: ['son-lumiere', 'communication', 'scene'],
+    budgetRange: 'Monocam : 800 à 1 500 € HT/jour. Bicam + montage : 2 500 à 5 000 € HT. Multicam + streaming + montage post-event : 8 000 à 20 000 € HT.',
+  },
+  {
+    slug: 'photobooth',
+    shortLabel: 'Photobooth',
+    cardLabel: 'Photobooth & photo',
+    iconKey: 'photobooth',
+    title: 'Comment choisir un photobooth ou un photographe événementiel',
+    metaDescription: 'Photobooth, borne photo, photographe événement d\'entreprise : critères, formats, livrables. Recommandations Plaine de l\'Ain.',
+    intro: 'Photobooth et photographe couvrent deux usages distincts. Le premier est un outil d\'animation et de souvenir distribuable instantanément. Le second est une production éditoriale qui sert la communication corporate. Les deux peuvent cohabiter sur un même événement, à condition de les briefer correctement.',
+    criteria: [
+      { title: 'Le format photobooth', desc: 'Borne fixe avec impression instantanée, photobooth animé par un photographe, photobooth 360, miroir interactif : chaque format a un coût et un usage différents.' },
+      { title: 'L\'impression et la livraison numérique', desc: 'Tirage papier instantané, envoi numérique par mail / SMS, galerie en ligne dédiée à l\'événement.' },
+      { title: 'La personnalisation', desc: 'Cadre custom aux couleurs de l\'entreprise, fond personnalisé, watermark logo, hashtag visible.' },
+      { title: 'Pour le photographe : le brief éditorial', desc: 'Photo institutionnelle, photo ambiance, portraits intervenants, photo presse. Chaque type a un cadrage et un timing différents.' },
+      { title: 'La livraison photographe', desc: 'Délai de remise, format, sélection préliminaire (photo presse à J+1), galerie complète (J+5 à J+10), retouches incluses ou non.' },
+      { title: 'Les droits cédés', desc: 'Usage interne, com externe, presse, durée. À cadrer noir sur blanc dans le devis.' },
+    ],
+    questions: [
+      'Quel format de borne et avec ou sans animateur sur place ?',
+      'L\'impression est-elle instantanée et le tirage personnalisé ?',
+      'Existe-t-il une galerie en ligne dédiée pour la diffusion ?',
+      'Pour un photographe : quel est le délai de livraison de la galerie complète ?',
+      'Combien de photos retouchées sont incluses ?',
+      'Les droits cédés couvrent-ils l\'usage public et la durée nécessaire ?',
+      'Le matériel de secours (boîtier, flash) est-il prévu ?',
+    ],
+    whenToCallUs: 'Quand vous voulez un dispositif photo qui s\'intègre à la scénographie (cohérence visuelle, intégration au décor, livrables alignés sur le plan com). Pas juste une borne posée dans un coin.',
+    redFlags: [
+      'Devis photobooth sans précisions sur l\'impression et la galerie',
+      'Photographe sans portfolio événementiel récent',
+      'Cession de droits limitée non mentionnée',
+      'Pas de matériel de secours',
+    ],
+    related: ['communication', 'animation', 'mobilier'],
+    budgetRange: 'Photobooth simple : 800 à 1 500 € HT pour 4 h. Photographe événementiel : 1 500 à 4 000 € HT/jour selon livrables.',
+  },
+  {
+    slug: 'mobilier',
+    shortLabel: 'Mobilier',
+    cardLabel: 'Mobilier & déco',
+    iconKey: 'mobilier',
+    title: 'Comment choisir un loueur de mobilier événementiel',
+    metaDescription: 'Mobilier événementiel : tables, chaises, mange-debout, salons lounge. Critères de sélection, formats, logistique.',
+    intro: 'Le mobilier signe l\'identité visuelle de l\'événement. Une plénière avec des chaises noires de séminaire ressemble à un séminaire de production. La même plénière avec des assises designées et un fond de scène cohérent ressemble à une convention. Le mobilier est un investissement faible pour un effet visuel fort.',
+    criteria: [
+      { title: 'La cohérence avec la scénographie', desc: 'Couleurs, matières, hauteurs : le mobilier doit dialoguer avec le décor scène et l\'identité visuelle de l\'événement.' },
+      { title: 'Le confort réel', desc: 'Pour une plénière de 4 heures, les chaises de séminaire premier prix garantissent l\'inattention. Tester l\'assise au showroom.' },
+      { title: 'Le dimensionnement', desc: 'Tables de 8 ou de 10 pour un dîner gala ? Mange-debout pour 4 ou pour 6 ? Salons lounge proportionnés à la jauge ?' },
+      { title: 'La logistique livraison', desc: 'Plages horaires de livraison, accès camion, mise en place ou simple dépose, reprise même jour ou J+1.' },
+      { title: 'L\'état du parc', desc: 'Mobilier récent ou usé, présence de défauts (taches, casses), uniformité du lot livré.' },
+      { title: 'La gestion des imprévus', desc: 'Casse jour J, mobilier défectueux, retard de livraison : quelle politique de remplacement et de pénalités ?' },
+    ],
+    questions: [
+      'Le mobilier proposé est-il visible en showroom ou sur photos haute définition ?',
+      'Quelles sont les plages horaires de livraison et de reprise, et facturées comment ?',
+      'La mise en place est-elle incluse ou s\'agit-il d\'une simple dépose ?',
+      'Que se passe-t-il en cas de casse ou de défaut le jour J ?',
+      'Le lot est-il uniforme (même teinte, même état) ?',
+      'Avez-vous un parc en propre ou sous-traitez-vous ?',
+      'Existe-t-il un plan B (mobilier de remplacement disponible immédiatement) ?',
+    ],
+    whenToCallUs: 'Quand le mobilier doit s\'intégrer dans une scénographie cohérente, ou quand vous comparez plusieurs catalogues fragmentés. On lit les devis, on identifie les manques, on coordonne avec le décor scène.',
+    redFlags: [
+      'Pas de showroom ni de photos haute définition',
+      'Pas de mention de l\'état du parc',
+      'Frais de livraison cachés ou facturés en double',
+      'Pas de politique claire en cas de casse',
+    ],
+    related: ['lieu', 'traiteur', 'photobooth'],
+    budgetRange: '500 € HT pour un setup léger. 2 000 à 8 000 € HT pour un dispositif convention. 15 000 € HT et plus pour un gala designé.',
+  },
+  {
+    slug: 'animation',
+    shortLabel: 'Animation',
+    cardLabel: 'Animation & artistes',
+    iconKey: 'animation',
+    title: 'Comment choisir une animation événementielle d\'entreprise',
+    metaDescription: 'Animation événement d\'entreprise : artistes, animateurs, conférenciers, DJ. Critères de sélection, formats, intégration scénique.',
+    intro: 'L\'animation d\'entreprise oscille souvent entre deux écueils : l\'animation gadget (qui donne l\'impression d\'avoir épuisé le budget en mascottes) et l\'absence d\'animation (qui transforme le gala en pause déjeuner prolongée). Le bon dispositif est celui qui sert le message et le format, pas celui qui « fait passer le temps ».',
+    criteria: [
+      { title: 'L\'adéquation au format', desc: 'Plénière institutionnelle, gala de fin d\'année, dîner partenaires, lancement produit : chaque format appelle un type d\'animation différent.' },
+      { title: 'L\'intervenant et son contenu', desc: 'Conférencier, animateur scénique, artiste, DJ : demander la fiche, le show-reel, les références récentes en contexte corporate.' },
+      { title: 'L\'intégration scénique', desc: 'L\'animation doit s\'imbriquer dans la conduite : transitions, micros, lumières, vidéo. Ne pas la traiter en silo.' },
+      { title: 'Le temps de scène', desc: 'Un keynote conférencier dure 35 à 45 minutes. Un set DJ live se cale sur 2 à 4 heures. Un magicien close-up tourne en cocktail. À calibrer.' },
+      { title: 'La gestion technique', desc: 'Fiche technique d\'animation, riders, exigences son et lumière, matériel apporté ou loué.' },
+      { title: 'La cession de droits image', desc: 'Pour un artiste, vérifier les droits captation et utilisation des images dans la com post-événement.' },
+    ],
+    questions: [
+      'Avez-vous une fiche technique et un show-reel récent en contexte corporate ?',
+      'Combien de temps de scène est prévu et avec quelle conduite précise ?',
+      'Quels sont les besoins techniques (son, lumière, scène, loge) ?',
+      'La cession de droits image et son est-elle incluse ?',
+      'Quel est le plan B en cas d\'annulation ?',
+      'Avez-vous travaillé sur des événements de format et de jauge similaires ?',
+      'L\'animation s\'intègre-t-elle dans la conduite globale ou fonctionne-t-elle en silo ?',
+    ],
+    whenToCallUs: 'Quand vous avez un format à animer (gala, lancement, soirée d\'entreprise) et que vous cherchez une animation qui dialogue avec la scénographie. On évite les sur-prestations et on cale les transitions.',
+    redFlags: [
+      'Pas de show-reel récent disponible',
+      'Pas de fiche technique d\'animation',
+      'Animation imposée par catalogue sans cohérence avec le format',
+      'Pas de plan B annulation',
+    ],
+    related: ['son-lumiere', 'scene', 'communication'],
+    budgetRange: 'DJ set 4 h : 800 à 2 500 € HT. Animateur scénique pro : 1 500 à 5 000 € HT. Conférencier reconnu : 5 000 à 30 000 € HT et plus.',
+  },
+  {
+    slug: 'securite',
+    shortLabel: 'Sécurité',
+    cardLabel: 'Sécurité & ERP',
+    iconKey: 'securite',
+    title: 'Comment choisir un prestataire sécurité événementielle',
+    metaDescription: 'Sécurité événement d\'entreprise : SSIAP, agents privés, dossier ERP, commissaire de sécurité. Critères et obligations légales.',
+    intro: 'La sécurité événementielle n\'est pas négociable. Les obligations dépendent de la jauge, du type d\'ERP et de la nature du dispositif. Un événement bien préparé sur le plan sécurité est un événement où l\'on n\'a pas à improviser le jour J. Et un événement mal préparé peut coûter, dans le pire des cas, l\'autorisation préfectorale.',
+    criteria: [
+      { title: 'La nature du dispositif', desc: 'Agents de sécurité privée (filtrage, contrôle d\'accès), agents SSIAP (sécurité incendie en ERP), service d\'ordre, équipe médicale, secouristes : chaque rôle a son rôle.' },
+      { title: 'Le ratio agents / jauge', desc: 'Calcul réglementaire selon le type ERP et la jauge. Un sous-effectif est un risque. Un sur-effectif est un coût inutile.' },
+      { title: 'Le dossier de sécurité ERP', desc: 'Pour les jauges importantes ou les ERP non prévus, dossier à monter avec la commission communale ou départementale, planning de validation à respecter.' },
+      { title: 'La coordination avec les autorités', desc: 'Mairie, préfecture, pompiers, police : qui prend en charge la coordination, sous quel délai, avec quelles pièces.' },
+      { title: 'Le plan de prévention', desc: 'Pour les événements en site industriel ou en extérieur, PPSPS rédigé, coordination HSE, mesures spécifiques (alimentations, chapiteaux CTS).' },
+      { title: 'L\'assurance', desc: 'Responsabilité civile organisateur dimensionnée à la jauge, assurance annulation pour les événements à forts engagements.' },
+    ],
+    questions: [
+      'Quel est le ratio agents / participants prévu, et sur quel calcul réglementaire ?',
+      'Le dossier de sécurité ERP est-il rédigé en interne ou délégué ?',
+      'Qui coordonne avec la mairie, la préfecture, les pompiers ?',
+      'Avez-vous une équipe SSIAP, un service d\'ordre, un poste de secours ?',
+      'Le plan de prévention est-il rédigé, et par qui ?',
+      'Quelle est l\'assurance responsabilité civile et son plafond ?',
+      'Avez-vous l\'expérience de la jauge demandée et du type ERP concerné ?',
+    ],
+    whenToCallUs: 'Quand l\'événement réunit plus de 300 personnes, se déroule en ERP non prévu pour cette nature ou en extérieur sous structure CTS. On rédige le dossier, on coordonne avec les autorités, on dimensionne le dispositif.',
+    redFlags: [
+      'Pas de calcul de dimensionnement réglementaire',
+      'Pas de coordination préfecture / mairie prévue',
+      'Pas d\'attestation d\'assurance fournie',
+      'Pas de plan de prévention pour un site industriel',
+    ],
+    related: ['lieu', 'logistique', 'scene'],
+    budgetRange: 'Agent de sécurité : 25 à 35 € HT/heure. Agent SSIAP : 30 à 45 € HT/heure. Dossier sécurité grosse jauge : 1 500 à 5 000 € HT.',
+  },
+  {
+    slug: 'hotesses',
+    shortLabel: 'Hôtesses',
+    cardLabel: 'Hôtesses & accueil',
+    iconKey: 'hotesses',
+    title: 'Comment choisir une équipe d\'hôtes et hôtesses d\'accueil',
+    metaDescription: 'Hôtesses et hôtes d\'accueil événementiel : briefing, tenues, langues, ratios. Recommandations pour événement d\'entreprise.',
+    intro: 'L\'accueil donne la première impression. Pour une convention, c\'est le premier contact entre l\'invité et l\'événement, au moment où l\'on est encore disponible pour juger. Une équipe d\'accueil mal briefée, mal habillée ou sous-dimensionnée plombe les vingt premières minutes pour tout le monde.',
+    criteria: [
+      { title: 'Le ratio accueil / jauge', desc: 'Pour 200 personnes en arrivée échelonnée, viser 4 à 6 personnes en pic. Pour une convention 800 personnes en arrivée groupée, monter à 10 à 15 personnes.' },
+      { title: 'Le profil et l\'expérience', desc: 'Hôtesse événementielle expérimentée vs étudiant débutant : pour un événement institutionnel, payer le profil expérimenté.' },
+      { title: 'Les langues parlées', desc: 'Anglais, allemand, italien, espagnol : préciser dès le devis. Un événement international avec accueil monolingue donne le ton sur la suite.' },
+      { title: 'Le brief et la formation', desc: 'Connaissance du programme, des intervenants, des lieux, des plans B : un brief de 30 minutes en amont change tout.' },
+      { title: 'Les tenues', desc: 'Tenues fournies par le prestataire ou achetées par le client, code couleur, accessoires (badge, pin, écharpe).' },
+      { title: 'La gestion du flux et des badges', desc: 'Système de badges (impression sur place ou pré-imprimés), liste émargement, scan QR code, contrôle d\'accès délicats (presse, VIP).' },
+    ],
+    questions: [
+      'Combien de personnes prévues en pic d\'arrivée et combien en mode vitesse de croisière ?',
+      'Quelle est l\'expérience moyenne de l\'équipe ?',
+      'Quelles langues sont parlées et à quel niveau ?',
+      'Combien de temps de brief est prévu en amont ?',
+      'Les tenues sont-elles fournies et quel est le code visuel ?',
+      'Quel système de badges est utilisé (pré-imprimés, impression sur place, QR) ?',
+      'Quelle politique en cas de défection le jour J ?',
+    ],
+    whenToCallUs: 'Quand l\'accueil doit faire passer un message (institutionnel, international, VIP). Le brief, le ratio et la coordination avec la sécurité sont à penser ensemble.',
+    redFlags: [
+      'Pas de brief prévu en amont',
+      'Pas d\'expérience documentée sur des événements similaires',
+      'Tenues à fournir par le client sans cadrage',
+      'Pas de plan B en cas de défection',
+    ],
+    related: ['communication', 'securite', 'logistique'],
+    budgetRange: 'Hôte/hôtesse événementielle : 18 à 28 € HT/heure selon expérience. Forfait accueil 1 journée 6 personnes : 1 500 à 3 000 € HT.',
+  },
+  {
+    slug: 'communication',
+    shortLabel: 'Communication',
+    cardLabel: 'Communication & com',
+    iconKey: 'communication',
+    title: 'Comment choisir un prestataire communication événementielle',
+    metaDescription: 'Communication événementielle : invitations, signalétique, supports print, com post-événement. Critères et coordination.',
+    intro: 'La communication encadre l\'événement : avant (invitation, save the date, page d\'inscription), pendant (signalétique, supports, badges), après (compte-rendu, capsules vidéo, communiqué presse). Trois temps qui se travaillent ensemble, dans une logique éditoriale unique, pas dans trois silos.',
+    criteria: [
+      { title: 'L\'écosystème invitations', desc: 'Save the date, invitation officielle, page d\'inscription, relances, confirmation : flux pensé comme un parcours, pas comme des envois isolés.' },
+      { title: 'La signalétique sur site', desc: 'Totems d\'accueil, kakémonos directionnels, marquage au sol, bannières scène, signalétique salle : cohérence graphique sur toute la chaîne.' },
+      { title: 'La direction artistique', desc: 'Une identité événementielle dédiée (palette, typographie, motifs) ou simple application de la charte corporate ? Le premier coûte plus, le second est plus rapide.' },
+      { title: 'Les supports print', desc: 'Programme, plaquette, livret intervenant, set de table : utiles ou décoratifs ? Toujours arbitrer en conscience.' },
+      { title: 'La gestion des réseaux le jour J', desc: 'Animation LinkedIn / X / Instagram en direct, captation de citations, capsules vidéo prêtes à diffuser. À cadrer avec captation.' },
+      { title: 'La capitalisation post-événement', desc: 'Compte-rendu interne, recap film, communiqué presse, page bilan : ce que l\'événement laisse comme actif, et qui produit quoi.' },
+    ],
+    questions: [
+      'L\'écosystème invitations / inscriptions / relances est-il géré sur une seule plateforme ?',
+      'Avez-vous une direction artistique événementielle ou êtes-vous en simple exécution de charte ?',
+      'La signalétique est-elle imprimée localement et installée par vous ?',
+      'L\'animation des réseaux pendant l\'événement est-elle proposée ?',
+      'Le compte-rendu post-événement est-il inclus ou en option ?',
+      'La coordination avec la captation vidéo est-elle prévue ?',
+      'Quels sont les délais de livraison print et le rétroplanning éditorial ?',
+    ],
+    whenToCallUs: 'Quand la communication doit s\'articuler avec la production technique et la captation pour produire un actif réutilisable. On évite les silos, on cale les délais print sur le rétroplanning de production.',
+    redFlags: [
+      'Production print sans rétroplanning calé sur la production',
+      'Pas de cohérence entre direction artistique et signalétique',
+      'Pas de proposition de capitalisation post-événement',
+      'Pas de coordination avec la captation',
+    ],
+    related: ['captation', 'photobooth', 'hotesses'],
+    budgetRange: 'Identité événementielle + signalétique : 5 000 à 25 000 € HT. Animation réseaux 1 journée : 1 500 à 4 000 € HT. Compte-rendu post-event : 2 000 à 8 000 € HT.',
+  },
+  {
+    slug: 'logistique',
+    shortLabel: 'Logistique',
+    cardLabel: 'Logistique & transport',
+    iconKey: 'logistique',
+    title: 'Comment organiser la logistique d\'un événement d\'entreprise',
+    metaDescription: 'Logistique événement d\'entreprise : transferts, hébergement, accueil, gestion VIP. Coordination Plaine de l\'Ain, Lyon, Genève.',
+    intro: 'La logistique gagne ou perd un événement aux yeux des invités, sans qu\'on sache toujours pourquoi. Le bus en retard, le parking saturé, la chambre VIP non préparée, le transfert aéroport oublié : ces détails restent en tête bien après le contenu de la plénière. La logistique se pilote comme un projet, pas comme une suite d\'achats.',
+    criteria: [
+      { title: 'Les transferts', desc: 'Bus, navettes, taxis VIP, transferts aéroport TGV : qui pilote, quel rétroplanning, quel coordinateur sur place le jour J.' },
+      { title: 'L\'hébergement', desc: 'Bloc hôtel négocié, attribution chambres VIP, communication des coordonnées, gestion des accompagnants. Pour 200 chambres réparties, c\'est un projet à part entière.' },
+      { title: 'Le parking', desc: 'Capacité dimensionnée à la jauge, signalétique d\'accès, voiturier optionnel, parking VIP séparé.' },
+      { title: 'Le check-in invités', desc: 'Listes de présence, gestion des retardataires, accueil VIP différencié, bracelets ou badges spéciaux.' },
+      { title: 'Le portage matériel', desc: 'Acheminement des supports, du mobilier, des goodies vers le lieu, parfois sur plusieurs sites consécutifs (préliminaire, plénière, gala).' },
+      { title: 'La coordination jour J', desc: 'Un coordinateur logistique dédié, pas le chef de projet général. Talkie ou messagerie privée, listes de check, veille permanente.' },
+    ],
+    questions: [
+      'Qui est le coordinateur logistique dédié et avec quel canal de communication ?',
+      'Quel est le rétroplanning des transferts et qui pilote le jour J ?',
+      'Le bloc hôtel est-il négocié et qui gère l\'attribution VIP ?',
+      'Le parking est-il dimensionné et signalé ?',
+      'Le check-in invités est-il géré sur quelle plateforme ?',
+      'Le portage matériel inter-sites est-il prévu ?',
+      'Quel plan B en cas d\'aléa transport (panne bus, retard TGV) ?',
+    ],
+    whenToCallUs: 'Quand l\'événement réunit des invités venus de loin, ou quand il s\'étale sur plusieurs jours et plusieurs sites. On établit le rétroplanning logistique, on désigne un coordinateur, on cale les plans B.',
+    redFlags: [
+      'Pas de coordinateur logistique nommé',
+      'Pas de rétroplanning transfert détaillé',
+      'Bloc hôtel non négocié à 6 mois pour une grosse jauge',
+      'Pas de plan B aléa transport',
+    ],
+    related: ['lieu', 'hotesses', 'securite'],
+    budgetRange: 'Coordination logistique 1 jour : 1 500 à 4 000 € HT. Transferts navettes : devis sur volume. Bloc hôtel négocié : sans surcoût mais réservation 4 à 6 mois en avance.',
+  },
+];
+
+export const getCategoryBySlug = (slug: string) => carnet.find((c) => c.slug === slug);

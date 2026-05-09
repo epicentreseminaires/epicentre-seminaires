@@ -3,18 +3,18 @@ import Base from '@/layouts/Base.astro';
 import TrustStrip from '@/components/TrustStrip.astro';
 import FAQ from '@/components/FAQ.astro';
 import BeforeAfter3D from '@/components/BeforeAfter3D.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import { carnet } from '@/data/carnet';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 const title = "Agence événementielle Plaine de l'Ain | Epicentre Séminaires";
-const description = "Agence événementielle dans la Plaine de l'Ain. Plénières, galas, conventions, lancements. Méthode 3D : vous voyez votre événement avant qu'il ait lieu.";
+const description = "Agence événementielle dans la Plaine de l'Ain. Production clé en main + carnet d'adresses curaté (lieu, traiteur, son, scène, captation). On vous conseille les bons interlocuteurs.";
 
-// Visuel hero : scène événementielle abstraite (lumière, fumée), sobre, premium.
 const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2000&q=85&auto=format&fit=crop';
 ---
-
-<Base title={title} description={description} zone="brand" theme="light">
-  <!-- HERO : H1 signature court, H2 SEO en sous-titre -->
-  <section class="bg-bone pt-32 md:pt-40 pb-20 md:pb-28 relative overflow-hidden">
+<Base title={title} description={description} zone="plaine" theme="light">
+  <!-- HERO -->
+  <section class="bg-bone pt-32 md:pt-40 pb-16 md:pb-20 relative overflow-hidden">
     <div class="container-wide">
       <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div class="lg:col-span-7 relative z-10">
@@ -25,25 +25,25 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
             </p>
           </div>
 
-          <h1 class="font-display font-semibold text-ink text-[3rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.94] tracking-[-0.045em]">
-            L'événement<br />avant l'événement.
+          <h1 class="font-display font-semibold text-ink text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.94] tracking-[-0.045em]">
+            Le bon contact,<br />ou tout l'événement.
           </h1>
 
           <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/65 max-w-xl">
             <strong class="text-ink/90">Agence événementielle dans la Plaine de l'Ain.</strong><br />
-            Plénières, conventions, galas, lancements. Avant le devis, vous voyez votre événement modélisé en 3D, à l'échelle, dans le moindre détail.
+            Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer. Vous choisissez le mode.
           </p>
 
-          <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <a href="/contact/" class="btn-accent text-sm px-7 py-4">
-              Demander un devis
+          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
+              Construire mon projet
               <span aria-hidden="true">→</span>
             </a>
-            <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+            <a href="#carnet" class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
+              Voir le carnet d'adresses
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <span>{CONTACT_PHONE_DISPLAY}</span>
             </a>
           </div>
         </div>
@@ -66,108 +66,154 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 
   <TrustStrip variant="light" />
 
-  <!-- SLIDER 3D ↔ PHOTO : signature visuelle unique -->
-  <section class="py-24 md:py-32 bg-bone-soft">
+  <!-- TROIS PORTES D'ENTRÉE : DISPOSITIF DE DÉCOUVERTE PRINCIPAL -->
+  <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <p class="eyebrow">Par où commencer</p>
+        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+          Trois portes d'entrée.<br /><span class="text-accent">Vous choisissez la vôtre.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+        <!-- PORTE 1 : CARNET -->
+        <a href="#carnet" class="group bg-bone-soft hover:bg-bone p-8 md:p-10 transition-colors duration-300 flex flex-col">
+          <p class="text-accent font-display text-2xl">01</p>
+          <h3 class="text-2xl mt-5 leading-tight font-semibold">Je cherche un prestataire</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed flex-1">
+            Lieu, traiteur, son, scène, captation, photobooth… 12 catégories de prestataires sur lesquels on vous conseille les bons interlocuteurs locaux.
+          </p>
+          <span class="mt-8 text-sm text-accent font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+            Voir le carnet
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- PORTE 2 : CLÉ EN MAIN -->
+        <a href="/construire-mon-projet/" class="group bg-bone-soft hover:bg-bone p-8 md:p-10 transition-colors duration-300 flex flex-col">
+          <p class="text-accent font-display text-2xl">02</p>
+          <h3 class="text-2xl mt-5 leading-tight font-semibold">Je veux un projet clé en main</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed flex-1">
+            Vous nous confiez l'orchestration complète : scénographie, prestataires, pilotage, jour J. Un seul interlocuteur, une production rodée sur les grandes scènes.
+          </p>
+          <span class="mt-8 text-sm text-accent font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+            Construire mon projet
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- PORTE 3 : ÉCHANGE DIRECT -->
+        <a href="/contact/" class="group bg-bone-soft hover:bg-bone p-8 md:p-10 transition-colors duration-300 flex flex-col">
+          <p class="text-accent font-display text-2xl">03</p>
+          <h3 class="text-2xl mt-5 leading-tight font-semibold">Je veux juste en parler</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed flex-1">
+            Format, budget, prestataires fiables, lieux disponibles à votre date. On répond, sans engagement, sans intermédiaire commercial.
+          </p>
+          <span class="mt-8 text-sm text-accent font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+            Demander un échange
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARNET D'ADRESSES : BENTO GRID -->
+  <section id="carnet" class="bg-bone py-24 md:py-32 border-t border-ink/10 scroll-mt-20">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12 md:mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <p class="eyebrow">Le carnet d'adresses</p>
+          <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
+            On vous conseille,<br /><span class="text-accent">jamais on impose.</span>
+          </h2>
+        </div>
+        <a href="/conseiller/" class="text-sm text-accent font-medium flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
+          Voir l'introduction du carnet
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="max-w-2xl text-base md:text-lg leading-relaxed text-ink/65 mb-12 md:mb-16">
+        Pour chaque catégorie, les critères qui comptent, les questions à poser, les signaux d'alerte. Quand vous voulez un nom, vous nous appelez : on vous oriente vers les bons interlocuteurs locaux.
+      </p>
+
+      <!-- BENTO GRID 12 CATÉGORIES -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-ink/10">
+        {carnet.map((cat) => (
+          <a
+            href={`/conseiller/${cat.slug}/`}
+            class="group bg-bone hover:bg-bone-soft p-6 md:p-7 transition-all duration-300 flex flex-col gap-4"
+          >
+            <CarnetIcon name={cat.iconKey} class="text-accent" size={32} />
+            <div class="flex-1">
+              <p class="text-base md:text-lg font-semibold text-ink leading-tight">{cat.cardLabel}</p>
+              <p class="text-xs text-ink/50 mt-2 leading-snug">{cat.criteria.length} critères · {cat.questions.length} questions</p>
+            </div>
+            <span class="text-xs text-accent font-medium flex items-center gap-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
+              Voir les critères
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <p class="mt-10 text-xs text-ink/45 leading-relaxed max-w-2xl">
+        Recommandations gratuites, sans contrepartie. Si un prestataire nous reverse un avantage commercial, c'est mentionné explicitement dans le devis. Aucun nom n'est publié sur le site sans accord écrit du prestataire concerné.
+      </p>
+    </div>
+  </section>
+
+  <!-- SLIDER 3D ↔ PHOTO : SIGNATURE PRODUCTION -->
+  <section class="py-24 md:py-32 bg-bone-soft border-t border-ink/10">
     <div class="container-wide">
       <div class="max-w-3xl mb-16">
-        <p class="eyebrow">Notre signature</p>
+        <p class="eyebrow">Notre méthode de production</p>
         <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
           Vous voyez votre événement<br /><span class="text-accent">avant qu'il ait lieu.</span>
         </h2>
         <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Avant le devis, avant le brief technique, le pilotage commence par la modélisation 3D. À l'échelle. Tout le monde voit la même chose, à la même seconde. Faites glisser le curseur ci-dessous.
+          Sur les projets clé en main, le pilotage commence par la modélisation 3D. À l'échelle. Tout le monde voit la même chose, à la même seconde. Faites glisser le curseur ci-dessous.
         </p>
       </div>
 
       <div class="max-w-5xl">
         <BeforeAfter3D
           context="Glissez pour comparer"
-          caption="Du plan 3D modélisé en amont à la photo finale du jour J. Le client voit son événement avant de signer, les prestataires reçoivent un référentiel partagé à l'échelle, le jour J personne ne découvre le dispositif."
+          caption="Du plan 3D modélisé en amont à la photo finale du jour J. Le client voit son événement avant de signer, les prestataires reçoivent un référentiel partagé, le jour J personne ne découvre le dispositif."
         />
-      </div>
-
-      <div class="mt-12 grid md:grid-cols-3 gap-px bg-ink/10 max-w-5xl">
-        <div class="bg-bone-soft p-8">
-          <p class="text-accent font-display text-xl">01</p>
-          <h3 class="text-lg mt-3 leading-tight font-semibold">Validation client</h3>
-          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
-            Le client voit son événement avant de signer. Les arbitrages se font sur du concret.
-          </p>
-        </div>
-        <div class="bg-bone-soft p-8">
-          <p class="text-accent font-display text-xl">02</p>
-          <h3 class="text-lg mt-3 leading-tight font-semibold">Brief des prestataires</h3>
-          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
-            Régie, sondiers, structure, traiteur reçoivent un référentiel à l'échelle. Plus d'interprétation.
-          </p>
-        </div>
-        <div class="bg-bone-soft p-8">
-          <p class="text-accent font-display text-xl">03</p>
-          <h3 class="text-lg mt-3 leading-tight font-semibold">Coordination jour J</h3>
-          <p class="mt-3 text-ink/65 leading-relaxed text-sm">
-            Personne ne découvre le dispositif en arrivant. Tout a été vu, validé, ajusté en amont.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TROIS SERVICES -->
-  <section id="services" class="bg-bone py-28 md:py-36">
-    <div class="container-wide">
-      <div class="max-w-3xl mb-20">
-        <p class="eyebrow">Nos services</p>
-        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
-          Trois façons<br />de travailler ensemble.
-        </h2>
-        <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Selon votre besoin, l'agence intervient au bon niveau. Du conseil ponctuel à la production complète, sans intermédiaire commercial.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
-        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
-          <p class="text-accent font-display text-2xl">01</p>
-          <h3 class="text-2xl mt-5 leading-tight">Conseil</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Vous avez un projet d'événement et vous voulez en parler à quelqu'un qui connaît le métier. Format, budget, prestataires, lieux disponibles. Premier échange sans engagement.
-          </p>
-        </div>
-        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
-          <p class="text-accent font-display text-2xl">02</p>
-          <h3 class="text-2xl mt-5 leading-tight">Production complète</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Vous confiez la production de bout en bout : scénographie 3D, scène, son, lumière, vidéo, captation, régie, coordination des prestataires. Un événement piloté, sans intermédiaire.
-          </p>
-        </div>
-        <div class="bg-bone p-10 hover:bg-bone-soft transition-colors duration-300">
-          <p class="text-accent font-display text-2xl">03</p>
-          <h3 class="text-2xl mt-5 leading-tight">Sourcing de lieu</h3>
-          <p class="mt-4 text-ink/65 leading-relaxed">
-            Vous cherchez le bon lieu pour votre événement : dans la Plaine de l'Ain, à Ambérieu, à Pérouges, à Lyon. Sourcing en amont du cadrage, sur la base d'une connaissance fine du territoire.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- NICHE DURE : ce qu'on fait, ce qu'on ne fait pas -->
-  <section class="bg-bone-soft py-28 md:py-36">
+  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
     <div class="container-wide">
-      <div class="max-w-3xl mb-20">
-        <p class="eyebrow">Notre périmètre</p>
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow">Notre périmètre production</p>
         <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
-          Ce qu'on fait.<br /><span class="text-accent">Ce qu'on ne fait pas.</span>
+          Ce qu'on produit.<br /><span class="text-accent">Ce qu'on oriente.</span>
         </h2>
         <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Le périmètre est volontairement resserré. C'est ce qui permet de garder le niveau d'exigence sur chaque mission.
+          Sur la production complète, le périmètre est volontairement resserré. Sur le carnet d'adresses, on couvre plus large : on ne fait pas tout, mais on connaît qui le fait bien.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-px bg-ink/10">
-        <div class="bg-bone-soft p-10">
-          <p class="eyebrow text-accent">Notre métier</p>
-          <ul class="mt-6 space-y-4 text-ink/85 text-lg leading-snug">
+        <div class="bg-bone p-10">
+          <p class="eyebrow text-accent">On produit en clé en main</p>
+          <ul class="mt-6 space-y-4 text-ink/85 text-base leading-snug">
             <li class="flex items-start gap-3">
               <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
               <span>Plénières scénographiées et conventions</span>
@@ -182,7 +228,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
             </li>
             <li class="flex items-start gap-3">
               <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-              <span>Inaugurations de sites industriels et institutionnels</span>
+              <span>Inaugurations de sites industriels</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
@@ -194,32 +240,32 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
             </li>
           </ul>
         </div>
-        <div class="bg-bone-soft p-10">
-          <p class="eyebrow text-ink/45">Hors périmètre</p>
-          <ul class="mt-6 space-y-4 text-ink/55 text-lg leading-snug">
+        <div class="bg-bone p-10">
+          <p class="eyebrow text-ink/55">On vous oriente sans produire</p>
+          <ul class="mt-6 space-y-4 text-ink/65 text-base leading-snug">
             <li class="flex items-start gap-3">
-              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
-              <span>Team building loisir, animations gadget</span>
+              <span class="text-ink/40 mt-2 inline-block w-3 h-px bg-ink/40 flex-shrink-0"></span>
+              <span>Team building, animations détente</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span class="text-ink/40 mt-2 inline-block w-3 h-px bg-ink/40 flex-shrink-0"></span>
               <span>Salons et stands commerciaux</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
+              <span class="text-ink/40 mt-2 inline-block w-3 h-px bg-ink/40 flex-shrink-0"></span>
               <span>Soirées festives sans dispositif scénique</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
-              <span>Mariages et événements privés à titre principal</span>
+              <span class="text-ink/40 mt-2 inline-block w-3 h-px bg-ink/40 flex-shrink-0"></span>
+              <span>Mariages et événements privés</span>
             </li>
             <li class="flex items-start gap-3">
-              <span class="text-ink/30 mt-2 inline-block w-3 h-px bg-ink/30 flex-shrink-0"></span>
-              <span>Location de matériel sec, régie sans pilotage</span>
+              <span class="text-ink/40 mt-2 inline-block w-3 h-px bg-ink/40 flex-shrink-0"></span>
+              <span>Location de matériel sec sans pilotage</span>
             </li>
           </ul>
           <p class="mt-8 text-sm text-ink/55 leading-relaxed">
-            Si votre projet est hors périmètre, dites-le franchement : nous orienterons vers un confrère mieux dimensionné pour vous.
+            Sur ces formats, on n'est pas le bon interlocuteur en production. Mais on connaît qui l'est : <a href="/conseiller/" class="text-accent hover:underline">le carnet d'adresses</a> couvre les catégories utiles, et on oriente vers des confrères mieux dimensionnés quand ça sert mieux votre projet.
           </p>
         </div>
       </div>
@@ -227,7 +273,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
   </section>
 
   <!-- EXPÉRIENCE : section sombre pour le contraste -->
-  <section class="bg-ink text-bone py-28 md:py-36">
+  <section class="bg-ink text-bone py-24 md:py-32">
     <div class="container-wide grid md:grid-cols-12 gap-10 items-center">
       <div class="md:col-span-6">
         <p class="eyebrow text-bone/55">L'expérience</p>
@@ -250,53 +296,26 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
     </div>
   </section>
 
-  <!-- CERTIFICATIONS & ASSURANCES : badges techniques en remplacement des logos clients -->
-  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
+  <!-- CERTIFICATIONS & ASSURANCES -->
+  <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
     <div class="container-wide">
-      <div class="max-w-3xl mb-16">
+      <div class="max-w-3xl mb-12">
         <p class="eyebrow">Cadre & assurances</p>
         <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
           Le sérieux n'est pas une promesse.<br /><span class="text-accent">C'est un dossier.</span>
         </h2>
-        <p class="mt-8 text-lg leading-relaxed text-ink/65 max-w-2xl">
-          Un événement à enjeu réclame un cadre réglementaire et assurantiel solide. Les références clients restent confidentielles ; le cadre du métier, lui, est public.
-        </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10">
         {[
-          {
-            label: 'Responsabilité civile pro',
-            desc: 'Couverture événements recevant du public, dommages corporels et matériels. Attestation transmise sur demande.',
-          },
-          {
-            label: 'Cadre ERP / CTS',
-            desc: 'Maîtrise des Établissements Recevant du Public et des Chapiteaux, Tentes, Structures. Dossiers de sécurité rédigés en interne.',
-          },
-          {
-            label: 'Plan de prévention industriel',
-            desc: 'PPSPS rédigés pour les sites industriels (PIPA, plateformes énergie, halles de production). Coordination HSE en amont.',
-          },
-          {
-            label: 'Accessibilité PMR',
-            desc: 'Dispositifs conçus dès le brief avec parcours et points d\'accueil PMR intégrés. Pas une contrainte de dernière minute.',
-          },
-          {
-            label: 'Bureau d\'études interne',
-            desc: 'Modélisation 3D (SketchUp), plans 2D techniques (AutoCAD), dossiers d\'implantation pour prestataires partenaires.',
-          },
-          {
-            label: 'Pilotage direct',
-            desc: 'Pas d\'intermédiaire commercial entre le client et l\'opérationnel. Un seul interlocuteur de la signature au démontage.',
-          },
-          {
-            label: 'Sourcing partenaires',
-            desc: 'Réseau de prestataires son, lumière, structure, traiteur, sécurité. Local par défaut, top niveau quand le projet l\'exige.',
-          },
-          {
-            label: 'Architecture budgétaire',
-            desc: 'Devis ligne à ligne, équipement nommé, équipe identifiée par rôle. Aucune ligne fourre-tout, aucun forfait opaque.',
-          },
+          { label: 'Responsabilité civile pro', desc: 'Couverture événements ERP. Attestation transmise sur demande.' },
+          { label: 'Cadre ERP / CTS', desc: 'Maîtrise ERP et chapiteaux CTS. Dossiers de sécurité rédigés en interne.' },
+          { label: 'Plan de prévention', desc: 'PPSPS pour sites industriels (PIPA, plateformes énergie). Coordination HSE.' },
+          { label: 'Accessibilité PMR', desc: 'Parcours et points d\'accueil PMR intégrés dès le brief.' },
+          { label: 'Bureau d\'études interne', desc: 'Modélisation 3D (SketchUp), plans 2D (AutoCAD), dossiers d\'implantation.' },
+          { label: 'Pilotage direct', desc: 'Pas d\'intermédiaire commercial entre le client et l\'opérationnel.' },
+          { label: 'Sourcing carnet', desc: 'Réseau de prestataires dans 12 catégories. Local par défaut.' },
+          { label: 'Devis ligne à ligne', desc: 'Équipement nommé, équipe identifiée par rôle. Aucun forfait opaque.' },
         ].map((b) => (
           <div class="bg-bone p-7">
             <p class="text-sm font-semibold text-ink leading-tight">{b.label}</p>
@@ -310,19 +329,22 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
   <FAQ />
 
   <!-- CTA FINAL -->
-  <section class="bg-bone py-28 md:py-36">
+  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
     <div class="container-wide text-center max-w-3xl mx-auto">
-      <p class="eyebrow">Parlons de votre projet</p>
+      <p class="eyebrow">Prochaine étape</p>
       <h2 class="text-4xl md:text-6xl lg:text-7xl max-w-4xl mx-auto mt-6 leading-[1] tracking-[-0.04em]">
-        Un événement à produire ?<br /><span class="text-accent">Décrivez-le nous.</span>
+        On prend la conversation,<br /><span class="text-accent">vous prenez la suite.</span>
       </h2>
       <p class="mt-10 text-lg text-ink/70 max-w-xl mx-auto leading-relaxed">
-        Format, jauge, date pressentie, budget envisagé. Nous revenons vers vous, sans engagement.
+        Trois minutes pour cadrer votre projet, ou une description libre. Vous choisissez le canal.
       </p>
       <div class="mt-12 flex flex-wrap justify-center gap-4">
-        <a href="/contact/" class="btn-accent text-base px-8 py-4">
-          Demander un devis
+        <a href="/construire-mon-projet/" class="btn-accent text-base px-8 py-4">
+          Construire mon projet
           <span aria-hidden="true">→</span>
+        </a>
+        <a href="/contact/" class="btn-outline">
+          Décrire en libre
         </a>
         <a href={CONTACT_PHONE_HREF} class="btn-outline">
           {CONTACT_PHONE_DISPLAY}

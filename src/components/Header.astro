@@ -12,14 +12,15 @@ const { zone = 'brand', theme = 'dark' } = Astro.props;
 // le même menu. Le Domaine d'Épinac vit sur un sous-domaine séparé
 // (epinac.epicentre-seminaires.fr), aucune nav vers ce site.
 const nav = [
+  { label: "Carnet d'adresses", href: '/conseiller/' },
   { label: 'Méthode', href: '/process/' },
   { label: 'Réalisations', href: '/realisations/' },
-  { label: 'Périmètre', href: '/equipement/' },
+  { label: 'Lexique', href: '/lexique/' },
   { label: 'Journal', href: '/journal/' },
-  { label: 'À propos', href: '/a-propos/' },
 ];
 
-const ctaHref = '/contact/';
+const ctaHref = '/construire-mon-projet/';
+const ctaLabel = 'Construire mon projet';
 const zoneTag = zone === 'plaine' ? "Plaine de l'Ain" : null;
 
 const phone = CONTACT_PHONE_DISPLAY;
@@ -74,7 +75,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
         <span>{phone}</span>
       </a>
       <a href={ctaHref} class={`${ctaClass} text-sm py-2.5 px-5`}>
-        Demander un devis
+        {ctaLabel}
       </a>
     </div>
 
@@ -101,7 +102,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
         </svg>
         {phone}
       </a>
-      <a href={ctaHref} class={`${ctaClass} text-sm mt-2 w-fit`}>Demander un devis</a>
+      <a href={ctaHref} class={`${ctaClass} text-sm mt-2 w-fit`}>{ctaLabel}</a>
     </nav>
   </div>
 </header>

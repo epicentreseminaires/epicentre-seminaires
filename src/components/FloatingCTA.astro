@@ -1,0 +1,44 @@
+---
+// Onglet flottant desktop : visible uniquement quand l'utilisateur a scrollé.
+// Donne un accès rapide au questionnaire « Construire mon projet ».
+// Sur mobile, le CTA est déjà dans le header.
+---
+<a
+  href="/construire-mon-projet/"
+  id="floatingCTA"
+  class="hidden lg:flex fixed bottom-8 right-8 z-40 items-center gap-3 px-5 py-4 bg-ink text-bone rounded-full shadow-2xl shadow-ink/20 opacity-0 translate-y-4 pointer-events-none transition-all duration-500 hover:bg-forest hover:scale-[1.02]"
+  aria-label="Construire mon projet"
+>
+  <span class="relative flex h-2 w-2">
+    <span class="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+  </span>
+  <span class="text-sm font-medium">Construire mon projet</span>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+</a>
+
+<script>
+  const cta = document.getElementById('floatingCTA');
+  // Pas d'auto-affichage si on est déjà sur le questionnaire ou la page contact
+  const path = window.location.pathname;
+  const hideOn = ['/construire-mon-projet/', '/construire-mon-projet', '/contact/', '/contact', '/merci/'];
+  const shouldHide = hideOn.some((p) => path === p || path.startsWith(p));
+
+  if (cta && !shouldHide) {
+    const onScroll = () => {
+      if (window.scrollY > 600) {
+        cta.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        cta.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        cta.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+        cta.classList.remove('opacity-100', 'translate-y-0');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  } else if (cta) {
+    cta.style.display = 'none';
+  }
+</script>

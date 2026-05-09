@@ -1,0 +1,204 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import { carnet, getCategoryBySlug } from '@/data/carnet';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
+
+export async function getStaticPaths() {
+  return carnet.map((cat) => ({ params: { slug: cat.slug } }));
+}
+
+const { slug } = Astro.params;
+const cat = getCategoryBySlug(slug!);
+if (!cat) throw new Error(`Catégorie introuvable : ${slug}`);
+
+const related = cat.related.map((s) => carnet.find((c) => c.slug === s)!).filter(Boolean);
+
+const title = `${cat.title} | Epicentre Séminaires`;
+const description = cat.metaDescription;
+---
+<Base title={title} description={description} zone="plaine" theme="light">
+  <div class="container-wide pt-28 md:pt-32 pb-2">
+    <Breadcrumb
+      items={[
+        { name: 'Accueil', url: '/' },
+        { name: "Carnet d'adresses", url: '/conseiller/' },
+        { name: cat.shortLabel },
+      ]}
+      variant="light"
+    />
+  </div>
+
+  <!-- HERO -->
+  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-24">
+    <div class="container-wide max-w-4xl">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-bone-soft text-accent">
+          <CarnetIcon name={cat.iconKey} size={26} />
+        </span>
+        <p class="eyebrow">Carnet d'adresses · {cat.shortLabel}</p>
+      </div>
+
+      <h1 class="font-display font-semibold text-ink text-[2.5rem] sm:text-5xl md:text-6xl leading-[1.02] tracking-[-0.035em]">
+        {cat.title}
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">
+        {cat.intro}
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a href="/contact/" class="btn-accent text-sm px-7 py-4">
+          Demander une recommandation
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>{CONTACT_PHONE_DISPLAY}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRITÈRES -->
+  <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <p class="eyebrow">Les critères qui comptent</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+          Ce qu'on regarde <span class="text-accent">avant de recommander.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10">
+        {cat.criteria.map((c, i) => (
+          <div class="bg-bone-soft p-7 md:p-8">
+            <p class="text-accent font-display text-base">{String(i + 1).padStart(2, '0')}</p>
+            <h3 class="text-lg mt-3 leading-snug font-semibold text-ink">{c.title}</h3>
+            <p class="mt-3 text-sm text-ink/65 leading-relaxed">{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTIONS À POSER -->
+  <section class="bg-bone py-20 md:py-28">
+    <div class="container-wide max-w-5xl">
+      <div class="grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-5">
+          <p class="eyebrow">Questions à poser</p>
+          <h2 class="text-3xl md:text-4xl mt-6 leading-tight tracking-tight">
+            7 questions <span class="text-accent">qui font la différence.</span>
+          </h2>
+          <p class="mt-6 text-base text-ink/65 leading-relaxed">
+            Posez-les telles quelles. Les réponses précises distinguent un prestataire sérieux d'un commercial.
+          </p>
+        </div>
+        <div class="md:col-span-7">
+          <ol class="space-y-5">
+            {cat.questions.map((q, i) => (
+              <li class="flex gap-5 group">
+                <span class="text-accent font-display text-2xl font-light shrink-0 w-10 leading-none mt-1">{String(i + 1).padStart(2, '0')}</span>
+                <p class="text-base md:text-lg text-ink/85 leading-relaxed pb-5 border-b border-ink/10 group-last:border-b-0 flex-1">{q}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET + WHEN TO CALL -->
+  <section class="bg-ink text-bone py-20 md:py-28">
+    <div class="container-wide max-w-5xl">
+      <div class="grid md:grid-cols-2 gap-px bg-bone/10">
+        <div class="bg-ink p-8 md:p-10">
+          <p class="eyebrow text-bone/55">Quand nous appeler</p>
+          <p class="mt-6 text-lg md:text-xl leading-relaxed text-bone/85">
+            {cat.whenToCallUs}
+          </p>
+        </div>
+        {cat.budgetRange && (
+          <div class="bg-ink p-8 md:p-10">
+            <p class="eyebrow text-bone/55">Ordres de grandeur</p>
+            <p class="mt-6 text-base md:text-lg leading-relaxed text-bone/75">
+              {cat.budgetRange}
+            </p>
+            <p class="mt-4 text-xs text-bone/45 leading-relaxed">
+              Fourchettes indicatives. Le bon devis dépend du format, de la jauge et de l'enjeu.
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- RED FLAGS -->
+  <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
+    <div class="container-wide max-w-4xl">
+      <p class="eyebrow text-accent">Signaux d'alerte</p>
+      <h2 class="text-3xl md:text-4xl mt-6 leading-tight tracking-tight max-w-2xl">
+        Si vous voyez ça dans un devis, <span class="text-accent">demandez des explications.</span>
+      </h2>
+
+      <ul class="mt-12 space-y-3 max-w-2xl">
+        {cat.redFlags.map((flag) => (
+          <li class="flex items-start gap-4 p-5 bg-bone-soft border border-ink/10">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent shrink-0 mt-0.5">
+              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="text-base text-ink/85 leading-snug">{flag}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- CATÉGORIES LIÉES -->
+  {related.length > 0 && (
+    <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
+      <div class="container-wide max-w-5xl">
+        <p class="eyebrow">À voir aussi</p>
+        <h2 class="text-2xl md:text-4xl mt-6 leading-tight tracking-tight">
+          Sujets connexes
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/10 mt-10">
+          {related.map((r) => (
+            <a href={`/conseiller/${r.slug}/`} class="group bg-bone hover:bg-bone-soft p-6 md:p-8 flex flex-col gap-4 transition-colors">
+              <CarnetIcon name={r.iconKey} class="text-accent" size={28} />
+              <p class="text-base font-semibold text-ink leading-tight">{r.cardLabel}</p>
+              <span class="mt-auto text-xs text-accent font-medium flex items-center gap-1.5">
+                Lire les critères
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA FINAL -->
+  <section class="bg-ink text-bone py-24 md:py-28">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <p class="eyebrow text-bone/55">Recommandation locale</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Vous voulez le bon contact ?<br /><span class="text-accent">On vous le donne.</span>
+      </h2>
+      <p class="mt-8 text-lg text-bone/70 leading-relaxed">
+        Sur la catégorie <strong class="text-bone/90">{cat.shortLabel.toLowerCase()}</strong>, on a en tête plusieurs interlocuteurs sérieux selon votre format et votre jauge. Décrivez votre projet, on vous oriente.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/contact/" class="btn-bone">Demander une recommandation</a>
+        <a href="/construire-mon-projet/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink">Construire le projet complet</a>
+      </div>
+    </div>
+  </section>
+</Base>

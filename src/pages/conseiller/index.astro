@@ -1,0 +1,113 @@
+---
+import Base from '@/layouts/Base.astro';
+import CarnetIcon from '@/components/CarnetIcon.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import { carnet } from '@/data/carnet';
+import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
+
+const title = "Carnet d'adresses événementiel | Epicentre Séminaires";
+const description = "Carnet d'adresses curaté : 12 catégories de prestataires événementiels (lieu, traiteur, son, scène, captation). On vous conseille les bons interlocuteurs.";
+---
+<Base title={title} description={description} zone="plaine" theme="light">
+  <div class="container-wide pt-28 md:pt-32 pb-2">
+    <Breadcrumb items={[{ name: 'Accueil', url: '/' }, { name: "Carnet d'adresses" }]} variant="light" />
+  </div>
+
+  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
+    <div class="container-wide max-w-4xl">
+      <p class="eyebrow">Le carnet d'adresses</p>
+      <h1 class="display-lg mt-6 leading-[0.95]">
+        Le bon prestataire,<br /><span class="text-accent">pas le premier venu.</span>
+      </h1>
+      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">
+        Vous cherchez un traiteur, un photobooth, une équipe son et lumière, un lieu pour 300 personnes. Choisir au hasard est rapide. Choisir le bon prestataire est rentable.
+      </p>
+      <p class="mt-6 text-lg leading-relaxed text-ink/70 max-w-2xl">
+        Pour chaque catégorie, on partage les critères qui comptent, les questions à poser, et ce qu'on évite. Pour les recommandations nominatives, on en parle de vive voix.
+      </p>
+    </div>
+  </section>
+
+  <!-- BENTO GRID DES 12 CATÉGORIES -->
+  <section class="bg-bone-soft py-16 md:py-24 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-ink/10">
+        {carnet.map((cat) => (
+          <a
+            href={`/conseiller/${cat.slug}/`}
+            class="group bg-bone-soft hover:bg-bone p-6 md:p-8 transition-all duration-300 flex flex-col gap-4"
+          >
+            <CarnetIcon name={cat.iconKey} class="text-accent" size={36} />
+            <div>
+              <p class="text-base md:text-lg font-semibold text-ink leading-tight">{cat.cardLabel}</p>
+              <p class="text-xs text-ink/55 mt-2 leading-snug line-clamp-2">{cat.criteria[0].title}, {cat.criteria[1].title.toLowerCase()}, …</p>
+            </div>
+            <span class="mt-auto text-xs text-accent font-medium flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity">
+              Voir les critères
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ON FONCTIONNE -->
+  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
+    <div class="container-wide max-w-5xl">
+      <div class="max-w-3xl mb-16">
+        <p class="eyebrow">Comment ça marche</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+          Service public ou production : <span class="text-accent">vous choisissez.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
+        <div class="bg-bone p-8">
+          <p class="text-accent font-display text-2xl">01</p>
+          <h3 class="text-xl mt-4 leading-tight font-semibold">Vous lisez la fiche</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed text-sm">
+            Vous cadrez votre besoin avec les critères et les questions à poser. Vous gagnez du temps face aux devis qui se ressemblent tous.
+          </p>
+        </div>
+        <div class="bg-bone p-8">
+          <p class="text-accent font-display text-2xl">02</p>
+          <h3 class="text-xl mt-4 leading-tight font-semibold">On vous conseille</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed text-sm">
+            Vous nous appelez ou vous nous écrivez. On vous oriente vers les bons interlocuteurs sur la catégorie demandée, sans engagement.
+          </p>
+        </div>
+        <div class="bg-bone p-8">
+          <p class="text-accent font-display text-2xl">03</p>
+          <h3 class="text-xl mt-4 leading-tight font-semibold">Vous traitez en direct</h3>
+          <p class="mt-4 text-ink/65 leading-relaxed text-sm">
+            Vous gérez votre événement vous-même. Si vous voulez qu'on coordonne l'ensemble, on bascule en mode production complète.
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-12 max-w-3xl text-sm text-ink/55 leading-relaxed">
+        Les recommandations sont gratuites et sans contrepartie. Quand un prestataire nous reverse un avantage commercial, on le mentionne dans le devis. La transparence est non négociable.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-ink text-bone py-24 md:py-28">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <p class="eyebrow text-bone/55">Demande de recommandation</p>
+      <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
+        Une catégorie en tête ?<br /><span class="text-accent">On vous oriente.</span>
+      </h2>
+      <p class="mt-8 text-lg text-bone/70 leading-relaxed">
+        Décrivez en deux phrases ce que vous cherchez, à quelle date et pour quelle jauge. On revient vers vous avec une orientation précise.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/contact/" class="btn-bone">Demander une recommandation</a>
+        <a href={CONTACT_PHONE_HREF} class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink">{CONTACT_PHONE_DISPLAY}</a>
+      </div>
+    </div>
+  </section>
+</Base>
