@@ -107,6 +107,25 @@ const description = cat.metaDescription;
               </li>
             ))}
           </ol>
+
+          {cat.redFlags.length > 0 && (
+            <div class="mt-12 pt-10 border-t border-ink/15">
+              <p class="eyebrow text-accent flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Signaux d'alerte
+              </p>
+              <ul class="mt-5 space-y-2.5">
+                {cat.redFlags.map((flag) => (
+                  <li class="flex items-start gap-3 text-sm text-ink/75 leading-snug">
+                    <span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
+                    <span>{flag}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -134,27 +153,6 @@ const description = cat.metaDescription;
           </div>
         )}
       </div>
-    </div>
-  </section>
-
-  <!-- RED FLAGS -->
-  <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
-    <div class="container-wide max-w-4xl">
-      <p class="eyebrow text-accent">Signaux d'alerte</p>
-      <h2 class="text-3xl md:text-4xl mt-6 leading-tight tracking-tight max-w-2xl">
-        Si vous voyez ça dans un devis, <span class="text-accent">demandez des explications.</span>
-      </h2>
-
-      <ul class="mt-12 space-y-3 max-w-2xl">
-        {cat.redFlags.map((flag) => (
-          <li class="flex items-start gap-4 p-5 bg-bone-soft border border-ink/10">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-accent shrink-0 mt-0.5">
-              <path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <span class="text-base text-ink/85 leading-snug">{flag}</span>
-          </li>
-        ))}
-      </ul>
     </div>
   </section>
 

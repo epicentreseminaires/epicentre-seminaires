@@ -49,6 +49,13 @@ const description = f.metaDescription;
 
       <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">{f.intro}</p>
 
+      {f.definition && (
+        <p class="mt-6 pt-6 border-t border-ink/10 text-base md:text-lg leading-relaxed text-ink/65 max-w-2xl">
+          <span class="eyebrow text-ink/55 block mb-3">Le format</span>
+          {f.definition}
+        </p>
+      )}
+
       <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
         <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
           Construire mon projet
@@ -63,18 +70,6 @@ const description = f.metaDescription;
       </div>
     </div>
   </section>
-
-  <!-- DÉFINITION -->
-  {f.definition && (
-    <section class="bg-bone-soft py-16 md:py-20 border-t border-ink/10">
-      <div class="container-wide max-w-4xl">
-        <p class="eyebrow">Le format</p>
-        <p class="mt-6 text-xl md:text-2xl leading-relaxed text-ink/85 font-light">
-          {f.definition}
-        </p>
-      </div>
-    </section>
-  )}
 
   <!-- MÉTHODE -->
   {f.method && f.method.length > 0 && (
@@ -119,35 +114,6 @@ const description = f.metaDescription;
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  )}
-
-  <!-- DÉROULÉ TYPE -->
-  {f.schedule && f.schedule.length > 0 && (
-    <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
-      <div class="container-wide max-w-5xl">
-        <div class="max-w-3xl mb-12 md:mb-16">
-          <p class="eyebrow">Déroulé type</p>
-          <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-tight">
-            Le rétroplanning <span class="text-accent">d'une production.</span>
-          </h2>
-          <p class="mt-6 text-base text-ink/65 leading-relaxed">
-            Cadre de référence. Adapté à votre format réel, votre lieu et votre conduite.
-          </p>
-        </div>
-
-        <ol class="space-y-0">
-          {f.schedule.map((s, i) => (
-            <li class="grid grid-cols-[120px_1fr] md:grid-cols-[180px_1fr] gap-6 md:gap-10 py-6 border-b border-ink/10 first:border-t">
-              <p class="font-display text-lg md:text-xl text-accent leading-snug">{s.time}</p>
-              <div>
-                <h3 class="text-base md:text-lg font-semibold text-ink leading-snug">{s.label}</h3>
-                {s.desc && <p class="mt-2 text-sm text-ink/65 leading-relaxed">{s.desc}</p>}
-              </div>
-            </li>
-          ))}
-        </ol>
       </div>
     </section>
   )}

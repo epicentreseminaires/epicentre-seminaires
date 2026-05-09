@@ -1,8 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
 import TrustStrip from '@/components/TrustStrip.astro';
-import FAQ from '@/components/FAQ.astro';
-import BeforeAfter3D from '@/components/BeforeAfter3D.astro';
 import CarnetIcon from '@/components/CarnetIcon.astro';
 import { carnet } from '@/data/carnet';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
@@ -175,28 +173,6 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
     </div>
   </section>
 
-  <!-- SLIDER 3D ↔ PHOTO : SIGNATURE PRODUCTION -->
-  <section class="py-24 md:py-32 bg-bone-soft border-t border-ink/10">
-    <div class="container-wide">
-      <div class="max-w-3xl mb-16">
-        <p class="eyebrow">Notre méthode de production</p>
-        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
-          Vous voyez votre événement<br /><span class="text-accent">avant qu'il ait lieu.</span>
-        </h2>
-        <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Sur les projets clé en main, le pilotage commence par la modélisation 3D. À l'échelle. Tout le monde voit la même chose, à la même seconde. Faites glisser le curseur ci-dessous.
-        </p>
-      </div>
-
-      <div class="max-w-5xl">
-        <BeforeAfter3D
-          context="Glissez pour comparer"
-          caption="Du plan 3D modélisé en amont à la photo finale du jour J. Le client voit son événement avant de signer, les prestataires reçoivent un référentiel partagé, le jour J personne ne découvre le dispositif."
-        />
-      </div>
-    </div>
-  </section>
-
   <!-- NICHE DURE : ce qu'on fait, ce qu'on ne fait pas -->
   <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
     <div class="container-wide">
@@ -273,62 +249,6 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
       </div>
     </div>
   </section>
-
-  <!-- EXPÉRIENCE : section sombre pour le contraste -->
-  <section class="bg-ink text-bone py-24 md:py-32">
-    <div class="container-wide grid md:grid-cols-12 gap-10 items-center">
-      <div class="md:col-span-6">
-        <p class="eyebrow text-bone/55">L'expérience</p>
-        <h2 class="text-4xl md:text-6xl mt-6 leading-[1] tracking-[-0.03em]">
-          Une production rodée<br /><span class="text-accent">sur les plus grandes scènes.</span>
-        </h2>
-      </div>
-      <div class="md:col-span-6 space-y-6 text-lg leading-relaxed text-bone/75">
-        <p>
-          Epicentre apporte aux entreprises de la Plaine de l'Ain une culture de production technique forgée sur les plus grandes scènes lyonnaises du sport et du spectacle.
-        </p>
-        <p>
-          La même exigence opérationnelle : doublage des éléments critiques, plans de prévention écrits, rétroplanning calé, équipe sur place. Un événement n'est jamais qu'un programme : c'est un dispositif technique vivant, où chaque détail compte.
-        </p>
-        <a href="/a-propos/" class="btn-outline border-bone/30 text-bone hover:bg-bone hover:text-ink mt-4 inline-flex">
-          Notre histoire
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS & ASSURANCES -->
-  <section class="bg-bone py-20 md:py-24 border-t border-ink/10">
-    <div class="container-wide">
-      <div class="max-w-3xl mb-12">
-        <p class="eyebrow">Cadre & assurances</p>
-        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
-          Le sérieux n'est pas une promesse.<br /><span class="text-accent">C'est un dossier.</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10">
-        {[
-          { label: 'Responsabilité civile pro', desc: 'Couverture événements ERP. Attestation transmise sur demande.' },
-          { label: 'Cadre ERP / CTS', desc: 'Maîtrise ERP et chapiteaux CTS. Dossiers de sécurité rédigés en interne.' },
-          { label: 'Plan de prévention', desc: 'PPSPS pour sites industriels (PIPA, plateformes énergie). Coordination HSE.' },
-          { label: 'Accessibilité PMR', desc: 'Parcours et points d\'accueil PMR intégrés dès le brief.' },
-          { label: 'Bureau d\'études interne', desc: 'Modélisation 3D (SketchUp), plans 2D (AutoCAD), dossiers d\'implantation.' },
-          { label: 'Pilotage direct', desc: 'Pas d\'intermédiaire commercial entre le client et l\'opérationnel.' },
-          { label: 'Sourcing carnet', desc: 'Réseau de prestataires dans 12 catégories. Local par défaut.' },
-          { label: 'Devis ligne à ligne', desc: 'Équipement nommé, équipe identifiée par rôle. Aucun forfait opaque.' },
-        ].map((b) => (
-          <div class="bg-bone p-7">
-            <p class="text-sm font-semibold text-ink leading-tight">{b.label}</p>
-            <p class="mt-3 text-xs text-ink/60 leading-relaxed">{b.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <FAQ />
 
   <!-- CTA FINAL -->
   <section class="bg-bone py-24 md:py-32 border-t border-ink/10">

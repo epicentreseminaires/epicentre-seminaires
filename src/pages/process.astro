@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
+import BeforeAfter3D from '@/components/BeforeAfter3D.astro';
 
 const title = "Notre process | Epicentre Séminaires";
 const description = "Comment Epicentre pilote vos événements : brief, modélisation 3D, devis, production, livraison. Une méthode structurée pour des productions sans dérive.";
@@ -57,11 +58,32 @@ const steps = [
     </div>
   </section>
 
-  <section class="bg-bone py-28 md:py-36">
+  <!-- Signature 3D : voir avant de signer -->
+  <section class="bg-bone py-20 md:py-28">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12">
+        <p class="eyebrow">Notre signature</p>
+        <h2 class="text-3xl md:text-5xl mt-6 leading-tight tracking-[-0.03em]">
+          Vous voyez votre événement<br /><span class="text-accent">avant qu'il ait lieu.</span>
+        </h2>
+        <p class="mt-6 text-base md:text-lg text-ink/70 leading-relaxed">
+          Faites glisser le curseur : du plan 3D modélisé en amont à la photo finale du jour J.
+        </p>
+      </div>
+      <div class="max-w-5xl">
+        <BeforeAfter3D
+          context="Glissez pour comparer"
+          caption="Le client voit son événement avant de signer. Les prestataires reçoivent un référentiel partagé. Le jour J, personne ne découvre le dispositif."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bone-soft py-20 md:py-28 border-t border-ink/10">
     <div class="container-wide">
       <div class="space-y-px bg-ink/10">
         {steps.map((step) => (
-          <div class="bg-bone p-10 md:p-14 grid md:grid-cols-12 gap-10 items-start">
+          <div class="bg-bone-soft p-10 md:p-14 grid md:grid-cols-12 gap-10 items-start">
             <div class="md:col-span-2">
               <p class="text-accent font-display text-3xl md:text-4xl">{step.n}</p>
             </div>
@@ -75,7 +97,7 @@ const steps = [
     </div>
   </section>
 
-  <section class="bg-bone-soft py-28 md:py-36">
+  <section class="bg-bone py-24 md:py-32 border-t border-ink/10">
     <div class="container-wide grid md:grid-cols-12 gap-10">
       <div class="md:col-span-5">
         <p class="eyebrow">Pourquoi cette méthode</p>
