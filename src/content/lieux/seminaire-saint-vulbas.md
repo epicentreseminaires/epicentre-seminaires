@@ -11,8 +11,8 @@ geo:
 nearbyVilles:
   - seminaire-amberieu-en-bugey
   - seminaire-lagnieu
-  - seminaire-meximieux
-  - seminaire-perouges
+  - agence-evenementielle-lyon
+  - agence-evenementielle-geneve
 nearbyArticles:
   - securite-erp-cts-evenement-entreprise
   - agence-evenementielle-locale-plaine-de-lain

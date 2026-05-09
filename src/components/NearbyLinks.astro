@@ -21,7 +21,10 @@ const articlesToShow = articles.length > 0
   ? allArticles.filter((a) => articleSlugs.has(a.id))
   : [];
 
-const zonePath = zone === 'epinac' ? '/epinac' : '/plaine-de-lain';
+// Plaine de l'Ain : le domaine racine = agence Plaine, donc les pages lieux sont
+// servies à la racine (ex. /seminaire-meximieux/). Pour Épinac, on redirige
+// désormais vers le sous-domaine dédié.
+const linkBase = zone === 'epinac' ? 'https://epinac.epicentre-seminaires.fr/' : '/';
 ---
 
 {(villesToShow.length > 0 || articlesToShow.length > 0) && (
@@ -34,7 +37,7 @@ const zonePath = zone === 'epinac' ? '/epinac' : '/plaine-de-lain';
           <ul class="mt-8 space-y-3">
             {villesToShow.map((l) => (
               <li>
-                <a href={`${zonePath}/${l.id}/`} class="group flex items-center justify-between border-b border-ink/10 pb-3 hover:border-ink transition-colors">
+                <a href={`${linkBase}${l.id}/`} class="group flex items-center justify-between border-b border-ink/10 pb-3 hover:border-ink transition-colors">
                   <span class="text-base md:text-lg font-medium">{l.data.ville}</span>
                   <span class="text-ink-muted group-hover:text-ink transition-colors" aria-hidden="true">→</span>
                 </a>

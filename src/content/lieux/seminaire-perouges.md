@@ -11,8 +11,8 @@ geo:
 nearbyVilles:
   - seminaire-meximieux
   - seminaire-amberieu-en-bugey
-  - seminaire-lagnieu
-  - seminaire-saint-vulbas
+  - agence-evenementielle-lyon
+  - agence-evenementielle-geneve
 nearbyArticles:
   - scenographie-3d-evenement-entreprise
   - agence-evenementielle-locale-plaine-de-lain

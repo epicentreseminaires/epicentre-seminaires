@@ -10,9 +10,9 @@ geo:
   lng: 5.3597
 nearbyVilles:
   - seminaire-lagnieu
-  - seminaire-meximieux
   - seminaire-perouges
-  - seminaire-saint-vulbas
+  - agence-evenementielle-lyon
+  - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
   - agence-evenementielle-locale-plaine-de-lain
   - scenographie-3d-evenement-entreprise

@@ -11,8 +11,8 @@ geo:
 nearbyVilles:
   - seminaire-amberieu-en-bugey
   - seminaire-saint-vulbas
-  - seminaire-meximieux
-  - seminaire-perouges
+  - agence-evenementielle-lyon
+  - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
   - agence-evenementielle-locale-plaine-de-lain
   - securite-erp-cts-evenement-entreprise
