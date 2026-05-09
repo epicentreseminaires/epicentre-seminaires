@@ -10,6 +10,17 @@ export type LexiqueEntry = {
   definition: string;
 };
 
+// Slugifie un nom (catégorie ou terme) en URL-safe : minuscules, sans accents,
+// espaces → tirets. Utilisé pour les pages /lexique/[category]/ et les ancres.
+export const slugify = (s: string): string =>
+  s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+
 export const lexiqueCategories = [
   'Régie',
   'Audio',

@@ -55,6 +55,14 @@ export default defineConfig({
         else if (url.endsWith('/epinac/')) item.priority = 0.9;
         // Pages lieux Plaine SEO porteuses (cocon géo)
         else if (/\/seminaire-(amberieu|lagnieu|meximieux|saint-vulbas|perouges)/.test(url)) item.priority = 0.85;
+        // Pages géo étendues (Lyon, Bourg, Genève, Mâcon)
+        else if (/\/agence-evenementielle-(lyon|bourg|geneve|macon)/.test(url)) item.priority = 0.85;
+        // Pages catégorie lexique (15 pages SEO porteuses pour glossaire)
+        else if (url.match(/\/lexique\/[a-z]+\/$/)) item.priority = 0.8;
+        // Pages catégorie carnet d'adresses
+        else if (url.match(/\/conseiller\/[a-z-]+\/$/)) item.priority = 0.8;
+        // Pages production formats
+        else if (url.match(/\/productions\/[a-z-]+\/$/)) item.priority = 0.8;
         // Pages lieux Épinac depuis grandes villes
         else if (/\/epinac\/seminaire-depuis-(lyon|paris|geneve|dijon)/.test(url)) item.priority = 0.85;
         else if (url.includes('/epinac/seminaire-')) item.priority = 0.8;

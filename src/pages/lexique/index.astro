@@ -1,14 +1,42 @@
 ---
 import Base from '@/layouts/Base.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
-import { lexique, lexiqueCategories } from '@/data/lexique';
+import { lexique, lexiqueCategories, slugify } from '@/data/lexique';
 
-const title = "Lexique événementiel FR / EN | Epicentre Séminaires";
-const description = "Lexique événementiel français-anglais : régie, audio, lumière, vidéo, structure, sécurité. Le vocabulaire pour lire un devis et parler le métier.";
+const title = "Lexique événementiel FR / EN | 2000+ termes | Epicentre Séminaires";
+const description = "Lexique événementiel français-anglais : 2000+ termes en régie, audio, lumière, vidéo, structure, sécurité, catering, mariage, streaming. Référence du métier.";
 
 const total = lexique.length;
+
+const countByCategory = lexiqueCategories.reduce((acc, cat) => {
+  acc[cat] = lexique.filter((l) => l.category === cat).length;
+  return acc;
+}, {} as Record<string, number>);
+
+// Schema.org DefinedTermSet : signal explicite à Google que c'est un glossaire.
+// On ne peut pas embarquer 2000 termes sans alourdir le HTML, on en met 50
+// représentatifs et chaque page catégorie embarque les siens.
+const siteUrl = 'https://epicentre-seminaires.fr';
+const definedTermSet = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  '@id': `${siteUrl}/lexique/`,
+  name: 'Lexique événementiel FR / EN',
+  description: '2000+ termes du métier événementiel en français et anglais.',
+  url: `${siteUrl}/lexique/`,
+  inLanguage: ['fr', 'en'],
+  hasDefinedTerm: lexique.slice(0, 50).map((l) => ({
+    '@type': 'DefinedTerm',
+    name: l.fr,
+    alternateName: l.en,
+    description: l.definition,
+    inDefinedTermSet: `${siteUrl}/lexique/`,
+  })),
+};
 ---
 <Base title={title} description={description} zone="plaine" theme="light">
+  <script type="application/ld+json" set:html={JSON.stringify(definedTermSet)} />
+
   <div class="container-wide pt-28 md:pt-32 pb-2">
     <Breadcrumb items={[{ name: 'Accueil', url: '/' }, { name: 'Lexique événementiel' }]} variant="light" />
   </div>
@@ -20,12 +48,38 @@ const total = lexique.length;
       <h1 class="h1-hero-lg mt-6">
         Le vocabulaire<br /><span class="text-accent">qui change un devis.</span>
       </h1>
-      <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/70 max-w-2xl">
-        Le métier événementiel a son langage. Connaître les bons mots permet de lire un devis, repérer les approximations, dimensionner ses besoins. Bilingue français-anglais, parce que les fournisseurs et les régies parlent les deux.
+      <p class="mt-8 lead max-w-2xl">
+        Le métier événementiel a son langage. Connaître les bons mots permet de lire un devis, repérer les approximations, dimensionner ses besoins. {total} termes bilingues français-anglais, organisés en {lexiqueCategories.length} catégories.
       </p>
       <p class="mt-6 text-sm text-ink/55">
         {total} termes · {lexiqueCategories.length} catégories · ressource gratuite
       </p>
+    </div>
+  </section>
+
+  <!-- BENTO CATÉGORIES (porte d'entrée principale, SEO-friendly) -->
+  <section class="bg-bone-soft py-16 md:py-24 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-10 md:mb-14">
+        <p class="eyebrow">Explorer par catégorie</p>
+        <h2 class="h2-section mt-6">
+          {lexiqueCategories.length} catégories. <span class="text-accent">Le métier complet.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-ink/10">
+        {lexiqueCategories.map((cat) => (
+          <a href={`/lexique/${slugify(cat)}/`} class="group bg-bone-soft hover:bg-bone p-6 md:p-7 transition-all duration-300 flex flex-col gap-3">
+            <p class="text-base md:text-lg font-semibold text-ink leading-tight">{cat}</p>
+            <p class="text-xs text-ink/55">{countByCategory[cat]} termes</p>
+            <span class="mt-auto text-xs text-accent font-medium flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity">
+              Voir la catégorie
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -41,7 +95,7 @@ const total = lexique.length;
           <input
             type="search"
             id="lexSearch"
-            placeholder="Rechercher un terme (FR ou EN)…"
+            placeholder="Rechercher dans 2000+ termes (FR ou EN)…"
             class="w-full pl-12 pr-4 py-3.5 bg-bone border border-ink/15 focus:outline-none focus:border-accent text-base transition-colors"
           />
         </div>
@@ -60,13 +114,14 @@ const total = lexique.length;
     </div>
   </section>
 
-  <!-- LISTE DES TERMES -->
+  <!-- LISTE COMPLÈTE (toutes catégories, ancres ID, badges cat cliquables) -->
   <section class="bg-bone py-12 md:py-16">
     <div class="container-wide">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink/10" id="lexGrid">
         {lexique.map((entry) => (
           <article
-            class="lexEntry bg-bone p-6 md:p-7 transition-opacity"
+            id={slugify(entry.fr)}
+            class="lexEntry bg-bone p-6 md:p-7 transition-opacity scroll-mt-32"
             data-cat={entry.category}
             data-search={`${entry.fr.toLowerCase()} ${(entry.en ?? '').toLowerCase()} ${entry.definition.toLowerCase()}`}
           >
@@ -74,7 +129,9 @@ const total = lexique.length;
               <h3 class="font-display text-xl md:text-2xl text-ink leading-tight tracking-tight">{entry.fr}</h3>
               {entry.en && <span class="text-sm text-ink/45 font-mono">/ {entry.en}</span>}
             </div>
-            <p class="mt-1 text-[0.65rem] uppercase tracking-[0.2em] text-accent font-medium">{entry.category}</p>
+            <a href={`/lexique/${slugify(entry.category)}/#${slugify(entry.fr)}`} class="mt-1 inline-block text-[0.65rem] uppercase tracking-[0.2em] text-accent font-medium hover:underline">
+              {entry.category}
+            </a>
             <p class="mt-4 text-sm text-ink/70 leading-relaxed">{entry.definition}</p>
           </article>
         ))}
@@ -90,7 +147,7 @@ const total = lexique.length;
   <section class="bg-ink text-bone py-24 md:py-28">
     <div class="container-wide text-center max-w-3xl mx-auto">
       <p class="eyebrow text-bone/55">Aller plus loin</p>
-      <h2 class="h2-section mt-6">
+      <h2 class="h2-section mt-6 text-bone">
         Un mot vous échappe ?<br /><span class="text-accent">Posez la question.</span>
       </h2>
       <p class="mt-8 text-base text-bone/70 leading-relaxed">
@@ -138,7 +195,7 @@ const total = lexique.length;
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.dataset.active = 'false');
+      filterBtns.forEach((b) => (b.dataset.active = 'false'));
       btn.dataset.active = 'true';
       activeCat = btn.dataset.cat ?? 'all';
       apply();
