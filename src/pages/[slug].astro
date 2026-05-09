@@ -67,9 +67,9 @@ const localBusinessJsonLd = {
   {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
 
   <article>
-    <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-plaine-deep">
+    <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-ink">
       <img src={lieu.data.cover} alt={lieu.data.title} loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-50" />
-      <div class="absolute inset-0 bg-gradient-to-b from-plaine-deep/30 to-plaine-deep"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink/30 to-ink"></div>
       <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
         <Breadcrumb items={breadcrumb} variant="dark" />
         <h1 class="text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight mt-6">
@@ -97,7 +97,7 @@ const localBusinessJsonLd = {
       articles={lieu.data.nearbyArticles}
     />
 
-    <section class="bg-plaine text-bone py-24">
+    <section class="bg-ink text-bone py-24 md:py-28">
       <div class="container-wide text-center max-w-3xl mx-auto">
         <h2 class="text-3xl md:text-5xl leading-tight">
           Parlons de votre projet à {lieu.data.ville}.
