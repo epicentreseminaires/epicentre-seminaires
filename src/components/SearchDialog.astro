@@ -1,0 +1,304 @@
+---
+import { getCollection } from 'astro:content';
+import { carnet } from '@/data/carnet';
+import { formats } from '@/data/formats';
+import { lexique } from '@/data/lexique';
+
+// Index unifié construit au build : pas de dépendance externe, recherche
+// 100% côté client. Catégories distinctes pour grouper les résultats.
+
+type SearchEntry = {
+  title: string;
+  description: string;
+  url: string;
+  category: 'Production' | 'Carnet' | 'Lieu' | 'Article' | 'Lexique' | 'Page';
+  haystack: string;
+};
+
+const lieux = await getCollection('lieux');
+const journal = await getCollection('journal');
+
+const entries: SearchEntry[] = [
+  // Pages structurantes
+  { title: 'Construire mon projet', description: 'Cadrage en 7 questions', url: '/construire-mon-projet/', category: 'Page', haystack: '' },
+  { title: "Carnet d'adresses", description: '12 catégories de prestataires', url: '/conseiller/', category: 'Page', haystack: '' },
+  { title: 'Productions', description: 'Ce qu\'on produit en clé en main', url: '/productions/', category: 'Page', haystack: '' },
+  { title: 'Lexique événementiel', description: 'Vocabulaire FR / EN', url: '/lexique/', category: 'Page', haystack: '' },
+  { title: 'Méthode', description: 'Notre approche de production', url: '/process/', category: 'Page', haystack: '' },
+  { title: 'Réalisations', description: 'Productions passées', url: '/realisations/', category: 'Page', haystack: '' },
+  { title: 'À propos', description: 'L\'agence Epicentre', url: '/a-propos/', category: 'Page', haystack: '' },
+  { title: 'Journal', description: 'Articles sur le métier événementiel', url: '/journal/', category: 'Page', haystack: '' },
+  { title: 'Contact', description: 'Demander un devis', url: '/contact/', category: 'Page', haystack: '' },
+
+  // Productions (on-fait + on-oriente)
+  ...formats.map((f) => ({
+    title: f.cardLabel,
+    description: f.intro.slice(0, 140),
+    url: f.type === 'on-fait' ? `/productions/${f.slug}/` : `/orienter/${f.slug}/`,
+    category: 'Production' as const,
+    haystack: `${f.title} ${f.intro}`,
+  })),
+
+  // Carnet d'adresses
+  ...carnet.map((c) => ({
+    title: c.title,
+    description: c.intro.slice(0, 140),
+    url: `/conseiller/${c.slug}/`,
+    category: 'Carnet' as const,
+    haystack: `${c.title} ${c.intro} ${c.shortLabel}`,
+  })),
+
+  // Lieux (zones d'intervention)
+  ...lieux.map((l) => ({
+    title: l.data.title,
+    description: l.data.description,
+    url: `/${l.id}/`,
+    category: 'Lieu' as const,
+    haystack: `${l.data.title} ${l.data.ville} ${l.data.description}`,
+  })),
+
+  // Articles journal
+  ...journal.map((a) => ({
+    title: a.data.title,
+    description: a.data.description,
+    url: `/journal/${a.id}/`,
+    category: 'Article' as const,
+    haystack: `${a.data.title} ${a.data.description} ${(a.data.tags ?? []).join(' ')}`,
+  })),
+
+  // Lexique : indexable mais on n'embarque que les FR/EN, la définition
+  // est trop verbeuse pour la search globale (cible : retrouver un terme
+  // précis ; pour explorer, /lexique/ a sa propre recherche)
+  ...lexique.map((l) => ({
+    title: l.fr,
+    description: `${l.category} · ${l.en ?? ''} · ${l.definition.slice(0, 120)}`,
+    url: `/lexique/#${l.fr.toLowerCase().replace(/\s+/g, '-')}`,
+    category: 'Lexique' as const,
+    haystack: `${l.fr} ${l.en ?? ''} ${l.category}`,
+  })),
+];
+
+// Normalize haystack with title + description for fallback matching
+const indexed = entries.map((e) => ({
+  ...e,
+  haystack: `${e.title} ${e.description} ${e.haystack}`.toLowerCase(),
+}));
+---
+
+<dialog id="searchDialog" class="fixed inset-0 m-0 w-full h-full max-w-none max-h-none p-0 bg-transparent backdrop:bg-ink/60 backdrop:backdrop-blur-sm">
+  <div class="min-h-screen flex items-start justify-center p-4 md:p-12">
+    <div class="w-full max-w-2xl bg-bone shadow-2xl mt-8 md:mt-20" data-search-panel>
+      <!-- Champ de recherche -->
+      <div class="flex items-center gap-4 px-6 py-5 border-b border-ink/10">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ink/55 shrink-0">
+          <circle cx="11" cy="11" r="7" />
+          <path d="M21 21l-4.35-4.35" stroke-linecap="round" />
+        </svg>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Rechercher une page, un format, une ville, un terme…"
+          class="flex-1 bg-transparent text-base md:text-lg text-ink placeholder:text-ink/40 focus:outline-none"
+          autocomplete="off"
+        />
+        <kbd class="hidden md:inline-flex items-center gap-1 px-2 py-1 text-[0.65rem] uppercase tracking-wider text-ink/45 border border-ink/15 rounded">esc</kbd>
+        <button type="button" id="searchClose" class="md:hidden text-ink/55 hover:text-ink" aria-label="Fermer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Résultats -->
+      <div id="searchResults" class="max-h-[60vh] overflow-y-auto">
+        <div id="searchEmpty" class="p-8 text-center text-ink/55 text-sm">
+          <p>Tapez votre recherche.</p>
+          <p class="mt-2 text-xs text-ink/40">Productions, prestataires, villes, articles, lexique technique.</p>
+        </div>
+        <div id="searchHits" class="hidden"></div>
+        <div id="searchNoResults" class="hidden p-8 text-center text-ink/55 text-sm">
+          <p>Aucun résultat.</p>
+          <p class="mt-2 text-xs text-ink/40">Essayez avec un mot plus court ou plus général.</p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="px-6 py-3 border-t border-ink/10 flex items-center justify-between text-[0.7rem] uppercase tracking-[0.18em] text-ink/45">
+        <span class="hidden md:inline">Naviguer</span>
+        <div class="flex items-center gap-3 md:gap-4">
+          <span class="flex items-center gap-1.5"><kbd class="inline-flex items-center justify-center w-5 h-5 text-[0.6rem] border border-ink/15 rounded">↑</kbd><kbd class="inline-flex items-center justify-center w-5 h-5 text-[0.6rem] border border-ink/15 rounded">↓</kbd></span>
+          <span class="flex items-center gap-1.5"><kbd class="inline-flex items-center justify-center px-1.5 h-5 text-[0.6rem] border border-ink/15 rounded">↵</kbd><span class="text-ink/40 normal-case tracking-normal">ouvrir</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script is:inline define:vars={{ indexed }}>
+  (() => {
+    const dialog = document.getElementById('searchDialog');
+    const input = document.getElementById('searchInput');
+    const empty = document.getElementById('searchEmpty');
+    const hits = document.getElementById('searchHits');
+    const noResults = document.getElementById('searchNoResults');
+    const closeBtn = document.getElementById('searchClose');
+    const panel = document.querySelector('[data-search-panel]');
+
+    if (!dialog || !input || !hits) return;
+
+    let activeIdx = -1;
+    let currentResults = [];
+
+    const renderResults = (q) => {
+      const query = q.trim().toLowerCase();
+      if (!query) {
+        empty.classList.remove('hidden');
+        hits.classList.add('hidden');
+        noResults.classList.add('hidden');
+        return;
+      }
+
+      const tokens = query.split(/\s+/).filter(Boolean);
+      const scored = indexed
+        .map((e) => {
+          let score = 0;
+          for (const t of tokens) {
+            if (e.title.toLowerCase().includes(t)) score += 10;
+            if (e.haystack.includes(t)) score += 1;
+          }
+          return { e, score };
+        })
+        .filter((s) => s.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 30);
+
+      currentResults = scored.map((s) => s.e);
+
+      if (currentResults.length === 0) {
+        empty.classList.add('hidden');
+        hits.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      // Group by category
+      const groups = {};
+      currentResults.forEach((e) => {
+        if (!groups[e.category]) groups[e.category] = [];
+        groups[e.category].push(e);
+      });
+
+      const categoryOrder = ['Production', 'Carnet', 'Lieu', 'Article', 'Lexique', 'Page'];
+      let html = '';
+      let globalIdx = 0;
+
+      for (const cat of categoryOrder) {
+        if (!groups[cat] || groups[cat].length === 0) continue;
+        html += `<div class="px-6 py-3 bg-bone-soft border-y border-ink/5"><p class="text-[0.65rem] uppercase tracking-[0.2em] text-ink/55 font-medium">${cat}</p></div>`;
+        for (const item of groups[cat]) {
+          html += `<a href="${item.url}" data-idx="${globalIdx}" class="searchHit block px-6 py-4 border-b border-ink/5 hover:bg-bone-soft transition-colors group">
+            <p class="text-sm md:text-base font-medium text-ink leading-snug">${escapeHtml(item.title)}</p>
+            <p class="text-xs text-ink/55 mt-1 leading-snug line-clamp-2">${escapeHtml(item.description)}</p>
+          </a>`;
+          globalIdx++;
+        }
+      }
+
+      hits.innerHTML = html;
+      empty.classList.add('hidden');
+      noResults.classList.add('hidden');
+      hits.classList.remove('hidden');
+      activeIdx = -1;
+    };
+
+    const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+    const updateActive = () => {
+      const items = hits.querySelectorAll('.searchHit');
+      items.forEach((el, i) => {
+        if (i === activeIdx) {
+          el.classList.add('bg-bone-soft');
+          el.scrollIntoView({ block: 'nearest' });
+        } else {
+          el.classList.remove('bg-bone-soft');
+        }
+      });
+    };
+
+    input.addEventListener('input', (e) => {
+      renderResults(e.target.value);
+    });
+
+    input.addEventListener('keydown', (e) => {
+      const items = hits.querySelectorAll('.searchHit');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeIdx = Math.min(activeIdx + 1, items.length - 1);
+        updateActive();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeIdx = Math.max(activeIdx - 1, -1);
+        updateActive();
+      } else if (e.key === 'Enter') {
+        if (activeIdx >= 0 && items[activeIdx]) {
+          e.preventDefault();
+          window.location.href = items[activeIdx].href;
+        }
+      } else if (e.key === 'Escape') {
+        dialog.close();
+      }
+    });
+
+    closeBtn?.addEventListener('click', () => dialog.close());
+
+    // Close on backdrop click (panel = inner area; click outside closes)
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+
+    // Open via trigger
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('[data-search-trigger]');
+      if (trigger) {
+        e.preventDefault();
+        dialog.showModal();
+        setTimeout(() => input.focus(), 50);
+      }
+    });
+
+    // Keyboard shortcut Cmd+K / Ctrl+K
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        if (dialog.open) {
+          dialog.close();
+        } else {
+          dialog.showModal();
+          setTimeout(() => input.focus(), 50);
+        }
+      }
+      // Slash shortcut
+      if (e.key === '/' && !dialog.open && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        dialog.showModal();
+        setTimeout(() => input.focus(), 50);
+      }
+    });
+
+    // Reset state on close
+    dialog.addEventListener('close', () => {
+      input.value = '';
+      renderResults('');
+    });
+  })();
+</script>
+
+<style>
+  #searchDialog[open] {
+    display: block;
+  }
+  #searchDialog::backdrop {
+    background: rgba(11, 11, 15, 0.55);
+    backdrop-filter: blur(8px);
+  }
+</style>
