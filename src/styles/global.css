@@ -136,6 +136,31 @@
     @apply text-base md:text-lg text-ink/70 leading-relaxed;
   }
 
+  /* Override critique : les classes typo (.h1-hero, .h2-section, etc) ont text-ink hard-coded.
+     Sur fond vert, on force text-bone pour éviter du noir illisible. */
+  .bg-forest-gradient .h1-hero,
+  .bg-forest-gradient .h1-hero-lg,
+  .bg-forest-gradient .h1-hero-xl,
+  .bg-forest-gradient .h2-section,
+  .bg-forest-gradient .h2-section-sm,
+  .bg-forest-gradient .h2-hero,
+  .bg-forest-gradient .h2-cta,
+  .bg-forest-gradient .h3-card,
+  .bg-forest-gradient .lead,
+  .bg-forest-gradient .body-md,
+  .bg-forest-deep .h1-hero,
+  .bg-forest-deep .h1-hero-lg,
+  .bg-forest-deep .h1-hero-xl,
+  .bg-forest-deep .h2-section,
+  .bg-forest-deep .h2-section-sm,
+  .bg-forest-deep .h2-hero,
+  .bg-forest-deep .h2-cta,
+  .bg-forest-deep .h3-card,
+  .bg-forest-deep .lead,
+  .bg-forest-deep .body-md {
+    color: #F5F1EA;
+  }
+
   /* Texte en dégradé brand : applique le gradient #003707 → #00491b sur le texte. */
   .text-gradient {
     background: linear-gradient(135deg, #003707 0%, #00491b 100%);
