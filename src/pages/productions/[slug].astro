@@ -21,55 +21,122 @@ const relatedCarnet = (f.relatedCarnet ?? [])
 const title = `${f.title} | Epicentre Séminaires`;
 const description = f.metaDescription;
 ---
-<Base title={title} description={description} zone="plaine" theme="dark">
-  <div class="container-wide pt-28 md:pt-32 pb-2">
-    <Breadcrumb
-      items={[
-        { name: 'Accueil', url: '/' },
-        { name: 'Productions', url: '/productions/' },
-        { name: f.shortLabel },
-      ]}
-      variant="light"
-    />
-  </div>
-
-  <!-- HERO -->
-  <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
-    <div class="container-wide max-w-4xl">
-      <div class="flex items-center gap-4 mb-8">
-        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-bone-soft text-accent">
-          <CarnetIcon name={f.iconKey} size={26} />
-        </span>
-        <p class="eyebrow">Production · {f.shortLabel}</p>
+<Base title={title} description={description} zone="plaine" theme="dark" image={f.cover} transparentTop={!!f.cover}>
+  {f.cover && (
+    <section class="relative overflow-hidden bg-ink text-bone min-h-[78vh] flex items-end pt-32 md:pt-40 pb-12 md:pb-16">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <img
+          src={f.cover}
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/10 to-transparent"></div>
       </div>
 
-      <h1 class="h1-hero">
-        {f.title}
-      </h1>
-
-      <p class="mt-8 lead max-w-2xl">{f.intro}</p>
-
-      {f.definition && (
-        <div class="mt-6 pt-6 border-t border-ink/10 max-w-2xl">
-          <span class="eyebrow text-ink/55 block mb-3">Le format</span>
-          <p class="body-md text-ink/65">{f.definition}</p>
+      <div class="container-wide relative z-10 max-w-4xl">
+        <div class="mb-6">
+          <Breadcrumb
+            items={[
+              { name: 'Accueil', url: '/' },
+              { name: 'Productions', url: '/productions/' },
+              { name: f.shortLabel },
+            ]}
+            variant="dark"
+          />
         </div>
-      )}
 
-      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-        <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
-          Construire mon projet
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>{CONTACT_PHONE_DISPLAY}</span>
-        </a>
+        <div class="flex items-center gap-3 mb-7">
+          <span class="block w-10 h-px bg-bone/55"></span>
+          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-bone/70 font-medium">
+            Production · {f.shortLabel}
+          </p>
+        </div>
+
+        <h1 class="!text-bone font-display font-semibold leading-[0.98] tracking-[-0.04em]" style="font-size: clamp(2.25rem, 5vw, 4rem);">
+          {f.title}
+        </h1>
+
+        <p class="mt-7 text-lg md:text-xl leading-relaxed text-bone/85 max-w-2xl">{f.intro}</p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a href="/construire-mon-projet/" class="btn bg-bone text-forest-deep hover:bg-bone-soft text-sm px-7 py-4 font-semibold shadow-xl shadow-forest-deep/30">
+            Construire mon projet
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href={CONTACT_PHONE_HREF} class="text-bone/85 hover:text-bone text-sm font-semibold flex items-center gap-2 transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{CONTACT_PHONE_DISPLAY}</span>
+          </a>
+        </div>
       </div>
+    </section>
+  )}
+
+  {f.cover && f.definition && (
+    <section class="bg-bone-soft py-14 md:py-16 border-b border-ink/10">
+      <div class="container-wide max-w-4xl">
+        <span class="eyebrow text-ink/55 block mb-3">Le format</span>
+        <p class="body-md text-ink/75">{f.definition}</p>
+      </div>
+    </section>
+  )}
+
+  {!f.cover && (
+    <div class="container-wide pt-28 md:pt-32 pb-2">
+      <Breadcrumb
+        items={[
+          { name: 'Accueil', url: '/' },
+          { name: 'Productions', url: '/productions/' },
+          { name: f.shortLabel },
+        ]}
+        variant="light"
+      />
     </div>
-  </section>
+  )}
+
+  {!f.cover && (
+    <section class="bg-bone pt-6 md:pt-8 pb-16 md:pb-20">
+      <div class="container-wide max-w-4xl">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-bone-soft text-accent">
+            <CarnetIcon name={f.iconKey} size={26} />
+          </span>
+          <p class="eyebrow">Production · {f.shortLabel}</p>
+        </div>
+
+        <h1 class="h1-hero">
+          {f.title}
+        </h1>
+
+        <p class="mt-8 lead max-w-2xl">{f.intro}</p>
+
+        {f.definition && (
+          <div class="mt-6 pt-6 border-t border-ink/10 max-w-2xl">
+            <span class="eyebrow text-ink/55 block mb-3">Le format</span>
+            <p class="body-md text-ink/65">{f.definition}</p>
+          </div>
+        )}
+
+        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
+            Construire mon projet
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href={CONTACT_PHONE_HREF} class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>{CONTACT_PHONE_DISPLAY}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- MÉTHODE -->
   {f.method && f.method.length > 0 && (

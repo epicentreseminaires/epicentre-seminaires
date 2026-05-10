@@ -19,6 +19,8 @@ export type FormatEntry = {
   title: string;
   metaDescription: string;
   intro: string;
+  /** URL d'une image cinéma 21:9 affichée en hero de la fiche format. Optionnel. */
+  cover?: string;
   // Pour les formats « on fait »
   definition?: string;
   method?: { title: string; desc: string }[];
@@ -108,6 +110,7 @@ export const formats: FormatEntry[] = [
     title: 'Gala d\'entreprise : dîner assis, scène, animation',
     metaDescription: 'Gala d\'entreprise : dîner assis scénographié, remise de prix, animation. Production complète Plaine de l\'Ain et région lyonnaise.',
     intro: 'Le gala est un format de récompense, de rassemblement, de moment fort. Dîner assis, scénographie de salle, prise de parole, animation, remise de prix. La frontière entre un dîner d\'entreprise et un gala mémorable tient à l\'attention portée aux détails scénographiques et à la fluidité du déroulé.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/epicentre-villieu.jpg',
     definition: 'Soirée d\'entreprise avec dîner assis et programme scénique : prises de parole, remises de prix, animation, parfois show. Cible : 100 à 1 200 personnes. Lieu privatisé (château, hôtel, lieu d\'exception) ou salle aménagée. Durée typique : 4 à 6 heures.',
     method: [
       { title: 'Direction scénographique', desc: 'Identité visuelle dédiée : palette couleurs, mobilier, fleurissement, éclairage ambiance, fond de scène. Le gala se vit dans une atmosphère.' },
