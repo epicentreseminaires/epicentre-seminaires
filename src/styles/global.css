@@ -153,6 +153,36 @@
     color: transparent;
   }
 
+  /* Cinematic grade : grain film + vignette + léger color shift, à appliquer sur les heros image AI pour les rendre photo-réalistes */
+  .cinema-grade {
+    position: relative;
+    isolation: isolate;
+  }
+  .cinema-grade > img {
+    filter: contrast(1.04) saturate(1.05) brightness(0.97);
+  }
+  /* Grain film via SVG fractal noise, subtil */
+  .cinema-grade::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-size: 320px 320px;
+    opacity: 0.13;
+    mix-blend-mode: overlay;
+  }
+  /* Vignette douce : bords assombris pour focaliser le regard */
+  .cinema-grade::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.35) 100%);
+  }
+
   /* Design tokens — rythme vertical des sections */
   .section-y {
     @apply py-20 md:py-28;
