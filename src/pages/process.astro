@@ -58,7 +58,7 @@ const steps = [
     </div>
   </section>
 
-  <!-- Signature 3D : voir avant de signer -->
+  <!-- Signature 3D : voir avant de signer (côte à côte) -->
   <section class="bg-bone py-20 md:py-28">
     <div class="container-wide">
       <div class="max-w-3xl mb-12">
@@ -67,18 +67,48 @@ const steps = [
           Vous voyez votre événement<br /><span class="text-gradient">avant qu'il ait lieu.</span>
         </h2>
         <p class="mt-6 text-base md:text-lg text-ink/70 leading-relaxed">
-          Faites glisser le curseur : du plan 3D modélisé en amont à la photo finale du jour J.
+          À gauche, la modélisation 3D présentée au client en amont. À droite, la photo du jour J. Le dispositif a été vu, validé, ajusté avant montage : aucune surprise, aucun écart.
         </p>
       </div>
-      <div class="max-w-5xl">
-        <BeforeAfter3D
-          beforeImg="https://enjoylife.b-cdn.net/Epicentre/3D.jpg"
-          afterImg="https://enjoylife.b-cdn.net/Epicentre/photofinal.jpg"
-          beforeLabel="Modélisation 3D · validation client"
-          afterLabel="Photo · jour J"
-          context="Glissez pour comparer"
-          caption="Le client voit son événement avant de signer. Les prestataires reçoivent un référentiel partagé. Le jour J, personne ne découvre le dispositif."
-        />
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl">
+        <!-- Modélisation 3D -->
+        <figure class="flex flex-col gap-4">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-sm border border-ink/10 bg-bone-soft">
+            <img
+              src="https://enjoylife.b-cdn.net/Epicentre/3D.jpg"
+              alt="Modélisation 3D présentée au client en amont"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <span class="absolute top-4 left-4 text-[0.65rem] uppercase tracking-[0.18em] font-medium text-bone bg-ink/65 backdrop-blur-md px-3 py-1.5">
+              Avant · Modélisation 3D
+            </span>
+          </div>
+          <figcaption class="text-sm text-ink/65 leading-relaxed">
+            <strong class="text-ink/90">Le client voit son événement.</strong> Plan d'implantation, scène, écrans, parcours invité, points logistiques modélisés à l'échelle. Les arbitrages se font sur du concret.
+          </figcaption>
+        </figure>
+
+        <!-- Photo jour J -->
+        <figure class="flex flex-col gap-4">
+          <div class="relative aspect-[16/10] overflow-hidden rounded-sm border border-ink/10 bg-bone-soft cinema-grade">
+            <img
+              src="https://enjoylife.b-cdn.net/Epicentre/photofinal.jpg"
+              alt="Photo du dispositif réel jour J"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <span class="absolute top-4 left-4 z-[4] text-[0.65rem] uppercase tracking-[0.18em] font-medium text-bone bg-ink/65 backdrop-blur-md px-3 py-1.5">
+              Après · Photo jour J
+            </span>
+          </div>
+          <figcaption class="text-sm text-ink/65 leading-relaxed">
+            <strong class="text-ink/90">Le dispositif livré.</strong> Identique au plan validé. Les prestataires ont reçu le même référentiel 3D : tout le monde monte sur la même base, le jour J personne ne découvre rien.
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
