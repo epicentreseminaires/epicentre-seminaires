@@ -50,6 +50,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
   class={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,padding] duration-300 ${headerBgInitial} border-b ${borderClass}`}
   data-scrolled="false"
   data-theme={theme}
+  data-transparent-top={transparentTop ? 'true' : 'false'}
   data-bg-initial={headerBgInitial}
   data-bg-scrolled={headerBgScrolled}
 >
@@ -176,8 +177,19 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
   #siteHeader[data-scrolled="true"] .header-logo {
     transform: scale(0.7);
   }
+  /* Bouton search : monochrome quand header transparent au top, redevient vert/sombre quand scrolled */
+  #siteHeader [data-search-trigger] {
+    transition: padding 0.3s cubic-bezier(0.22, 1, 0.36, 1), font-size 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  }
+  #siteHeader[data-scrolled="false"][data-transparent-top="true"] [data-search-trigger] {
+    background-color: transparent !important;
+    border-color: rgba(245, 241, 234, 0.4) !important;
+  }
+  #siteHeader[data-scrolled="false"][data-transparent-top="true"] [data-search-trigger]:hover {
+    background-color: rgba(245, 241, 234, 0.08) !important;
+    border-color: rgba(245, 241, 234, 0.7) !important;
+  }
   /* Boutons et CTA se resserrent aussi pour que la row diminue vraiment */
-  #siteHeader [data-search-trigger],
   #siteHeader .header-cta,
   #siteHeader .header-phone {
     transition: padding 0.3s cubic-bezier(0.22, 1, 0.36, 1), font-size 0.3s ease;
