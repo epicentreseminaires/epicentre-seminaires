@@ -196,6 +196,7 @@ export const formats: FormatEntry[] = [
     title: 'Événement de recrutement Plaine de l\'Ain : production premium pour bassin emploi',
     metaDescription: 'Événement de recrutement scénographié dans la Plaine de l\'Ain : forum entreprises, job dating premium, branding employeur. Production complète.',
     intro: 'Le bassin Plaine de l\'Ain concentre des besoins de recrutement importants : logistique, industrie, services, distribution. L\'événement de recrutement premium se distingue d\'un simple forum par sa scénographie, son branding employeur et sa capacité à transformer la candidature en moment d\'expérience marque. Format souvent combiné avec une soirée concert pour transformer un job dating en événement marquant.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/recrutement.jpg',
     definition: 'Événement organisé par une entreprise ou un consortium pour attirer, qualifier et engager des candidats. Format possible : forum métiers, job dating premium, journée portes ouvertes industrielle, soirée recrutement scénographiée. Cible : 100 à 2 000 candidats sur la journée.',
     method: [
       { title: 'Stratégie marque employeur', desc: 'Direction artistique cohérente avec la communication RH, identité visuelle dédiée à l\'événement, narrative employeur fort déployé sur tous les supports.' },
