@@ -53,9 +53,11 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
   data-bg-initial={headerBgInitial}
   data-bg-scrolled={headerBgScrolled}
 >
-  <div class="container-wide flex items-center justify-between py-4 md:py-5">
+  <div class="container-wide flex items-center justify-between header-row">
     <div class="flex items-center gap-4">
-      <Logo variant={logoVariant} height={56} />
+      <span class="header-logo inline-flex items-center transition-transform duration-300 origin-left">
+        <Logo variant={logoVariant} height={56} />
+      </span>
       {zoneTag && (
         <span class={`hidden md:flex items-center gap-3 ${textZoneTag} text-[0.7rem] uppercase tracking-[0.2em] border-l ${borderZoneTag} pl-4 ml-1`}>
           {zoneTag}
@@ -156,3 +158,30 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 </script>
+
+<style>
+  .header-row {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: padding 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @media (min-width: 768px) {
+    .header-row { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+  }
+  #siteHeader[data-scrolled="true"] .header-row {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  @media (min-width: 768px) {
+    #siteHeader[data-scrolled="true"] .header-row {
+      padding-top: 0.65rem;
+      padding-bottom: 0.65rem;
+    }
+  }
+  #siteHeader[data-scrolled="true"] .header-logo {
+    transform: scale(0.78);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .header-row, .header-logo { transition: none; }
+  }
+</style>
