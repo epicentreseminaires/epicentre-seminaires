@@ -112,6 +112,7 @@ export const formats: FormatEntry[] = [
     title: 'Lancement de produit : reveal scénographié + presse',
     metaDescription: 'Lancement de produit en entreprise : reveal scénographié, dispositif presse, captation, communication. Production complète et coordination.',
     intro: 'Le lancement de produit est un événement à enjeu communication maximum. Le reveal doit produire un effet visuel marquant, le dispositif presse doit garantir la diffusion, la captation doit nourrir la communication digitale post-événement. Chaque détail sert le récit.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/presentation.png',
     definition: 'Événement dévoilant un nouveau produit, service ou marque, en interne (équipes, distributeurs) ou en externe (presse, clients, partenaires). Cible : 100 à 800 personnes. Format typique : moment d\'attente, prise de parole, reveal scénique, démonstration, cocktail networking.',
     method: [
       { title: 'Architecture du reveal', desc: 'Le moment du dévoilement est conçu en amont : effet lumière, vidéo, son, parfois scénographie mécanique. C\'est le pic émotionnel de l\'événement.' },
