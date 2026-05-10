@@ -220,6 +220,7 @@ export const formats: FormatEntry[] = [
     title: 'Réunion stratégique d\'entreprise : business center, écran XXL, traiteur',
     metaDescription: 'Réunion stratégique d\'une journée ou demi-journée : salle privée, écran TV XXL, traiteur, scénographie soignée. Plaine de l\'Ain et Lyon.',
     intro: 'La réunion stratégique en petit comité demande la même rigueur de production qu\'un événement à grande jauge : silence acoustique, écran adapté, son intelligible, mobilier ergonomique pour la journée, traiteur calé sur le timing décisionnel. C\'est cette production audiovisuelle invisible qui change la qualité d\'une décision prise en comité de direction.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/business-center.jpg',
     definition: 'Réunion en petit comité (8 à 30 personnes), d\'une journée ou demi-journée, en business center privé, hôtel ou lieu d\'exception. Cible : comité de direction, board meeting, séminaire stratégique restreint, comité d\'investissement, réunion d\'avocats, négociation. Le confort, la confidentialité et la qualité audiovisuelle priment sur le spectaculaire.',
     method: [
       { title: 'Sourcing salle', desc: 'Business center adapté au nombre, équipement audiovisuel pro (écran 75 à 110 pouces selon la salle), isolation acoustique vérifiée, confidentialité garantie par le lieu.' },
