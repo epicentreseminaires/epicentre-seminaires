@@ -47,6 +47,7 @@ export const formats: FormatEntry[] = [
     title: 'Conférence, congrès, plénière d\'entreprise : production scénographiée',
     metaDescription: 'Conférence, congrès, plénière d\'entreprise : scène, son, lumière, vidéo, IMAG. Production complète Plaine de l\'Ain, Lyon, Genève.',
     intro: 'Conférence, congrès et plénière partagent une mécanique : un public assis, une scène, des intervenants, un message qui doit porter. Le dispositif change avec la jauge et la durée, mais l\'exigence reste la même : scénographie tenue, intelligibilité son, lumière qui sert le propos. C\'est la production technique qui fait la différence entre un message qui marque et un qui s\'oublie.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/congres.jpg',
     definition: 'Format réunissant un public assis face à une scène. Conférence : intervenants ciblés, durée 2 à 4 heures, 100 à 800 personnes. Plénière : moment fort intégré à un séminaire ou une convention, 200 à 1 500 personnes. Congrès : multi-jours, intervenants multiples, ateliers parallèles, 300 à 2 000 personnes. La logique de production technique se calque sur la jauge réelle et le format prévu.',
     method: [
       { title: 'Cadrage du dispositif', desc: 'Jauge, durée, format de prise de parole, intervenants, message clé. On dimensionne le dispositif à l\'enjeu, pas l\'inverse.' },
