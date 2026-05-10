@@ -12,7 +12,7 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
 ---
 <Base title={title} description={description} zone="plaine" theme="dark" transparentTop>
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-ink text-bone min-h-[92vh] flex items-center pt-32 md:pt-36 pb-20">
+  <section class="relative overflow-hidden bg-ink text-bone min-h-[88vh] flex items-center pt-30 md:pt-32 pb-20">
     <!-- Image plein cadre HD avec Ken Burns + grade cinéma (grain film + vignette) -->
     <div class="absolute inset-0 pointer-events-none cinema-grade" aria-hidden="true">
       <img
@@ -54,6 +54,14 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
             <span>Voir le carnet d'adresses</span>
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Indicateur de scroll discret -->
+    <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 pointer-events-none hero-fade" style="animation-delay:700ms" aria-hidden="true">
+      <div class="flex flex-col items-center gap-1.5 text-bone/55">
+        <span class="text-[0.6rem] uppercase tracking-[0.3em] font-medium">Découvrir</span>
+        <span class="scroll-cue-line"></span>
       </div>
     </div>
   </section>
@@ -151,8 +159,22 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
     .hero-fade {
       animation: heroFade 0.8s cubic-bezier(0.22,1,0.36,1) both;
     }
+    /* Indicateur scroll : ligne fine animée bas vers haut */
+    .scroll-cue-line {
+      display: block;
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, rgba(245,241,234,0) 0%, rgba(245,241,234,0.6) 50%, rgba(245,241,234,0) 100%);
+      transform-origin: top;
+      animation: scrollCue 2.4s ease-in-out infinite;
+    }
+    @keyframes scrollCue {
+      0%   { transform: scaleY(0.4) translateY(-30%); opacity: 0.25; }
+      50%  { transform: scaleY(1) translateY(0); opacity: 0.9; }
+      100% { transform: scaleY(0.4) translateY(30%); opacity: 0.25; }
+    }
     @media (prefers-reduced-motion: reduce) {
-      .hero-img, .hero-fade, .hero-btn-primary, .hero-btn-primary svg, .hero-btn-ghost { animation: none !important; transition: none !important; }
+      .hero-img, .hero-fade, .hero-btn-primary, .hero-btn-primary svg, .hero-btn-ghost, .scroll-cue-line { animation: none !important; transition: none !important; }
       .hero-fade { opacity: 1; transform: none; }
     }
   </style>
