@@ -168,6 +168,7 @@ export const formats: FormatEntry[] = [
     title: 'Concert privé d\'entreprise : production scénique complète',
     metaDescription: 'Concert privé d\'entreprise : booking artistique, scène, son grand format, lumière, sécurité spectateurs. Production Plaine de l\'Ain, Lyon, Genève.',
     intro: 'Le concert privé est un moment fort de fidélisation, de récompense, de communication. Booking artiste, scénographie scénique, son grand format, sécurité spectateurs : la production technique d\'un concert obéit à des règles propres, différentes d\'une conférence ou d\'une soirée d\'entreprise. Format souvent enchaîné en clôture d\'une convention ou d\'un événement de recrutement.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/concert.jpg',
     definition: 'Concert d\'un artiste ou d\'un groupe en cadre privé d\'entreprise : showcase intimiste, soirée d\'équipe, clôture de congrès, lancement majeur. Cible : 200 à 5 000 personnes. Implique relations artistiques, contraintes techniques rider, sécurité spectateurs, déclarations SACEM, autorisations ERP/CTS.',
     method: [
       { title: 'Booking artistique', desc: 'Sélection adaptée à l\'audience et au budget, négociation cachet, contractualisation, lecture précise du rider technique et hospitality.' },
