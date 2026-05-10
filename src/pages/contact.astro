@@ -3,127 +3,439 @@ import Base from '@/layouts/Base.astro';
 import { FORMSUBMIT_ENDPOINT, SITE_URL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 const title = "Contact : Agence événementielle Plaine de l'Ain | Epicentre";
-const description = "Demandez un devis pour une plénière, un gala, un congrès ou un lancement dans la Plaine de l'Ain. Cadrage en amont, devis ligne à ligne.";
+const description = "Demandez un devis pour une plénière, un gala, un congrès, un lancement dans la Plaine de l'Ain. Échange direct, sans intermédiaire commercial.";
+
+const formats = [
+  { v: 'Conférence, congrès, plénière' },
+  { v: 'Soirée d\'entreprise, gala, remise de prix' },
+  { v: 'Lancement de produit' },
+  { v: 'Inauguration de site' },
+  { v: 'Concert privé' },
+  { v: 'Événement de recrutement' },
+  { v: 'Réunion stratégique' },
+  { v: 'Sur-mesure ou autre format' },
+];
+
+const audiences = [
+  { v: 'Moins de 100 personnes' },
+  { v: '100 à 300 personnes' },
+  { v: '300 à 1 000 personnes' },
+  { v: 'Plus de 1 000 personnes' },
+];
+
+const budgets = [
+  { v: 'Moins de 10 000 € HT' },
+  { v: '10 000 à 30 000 € HT' },
+  { v: '30 000 à 80 000 € HT' },
+  { v: '80 000 à 150 000 € HT' },
+  { v: 'Plus de 150 000 € HT' },
+  { v: 'À cadrer ensemble' },
+];
 ---
 
 <Base title={title} description={description} zone="plaine">
-  <section class="bg-forest-gradient text-bone py-24 md:py-32">
-    <div class="container-wide grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <p class="eyebrow text-bone/60">Plaine de l'Ain · Entre Lyon et Genève</p>
-        <h1 class="font-display text-4xl md:text-6xl mt-6 leading-tight">Demandez votre devis.</h1>
-        <p class="mt-8 text-bone/70 leading-relaxed">
-          Décrivez votre projet pour qu'on puisse cadrer un échange utile. Plus le brief est précis, plus la proposition technique le sera.
-        </p>
-        <div class="mt-10 space-y-3 text-bone/80 text-sm">
-          <p><span class="text-bone/50">Téléphone : </span><a href={CONTACT_PHONE_HREF} class="text-bone hover:text-bone/70 underline underline-offset-4">{CONTACT_PHONE_DISPLAY}</a></p>
-          <p><span class="text-bone/50">Email : </span><a href="mailto:contact@epicentre-seminaires.fr" class="text-bone hover:text-bone/70 underline underline-offset-4">contact@epicentre-seminaires.fr</a></p>
-          <p><span class="text-bone/50">Zone : </span>Plaine de l'Ain, Bugey, Pays de Gex, Lyon est</p>
+  <section class="relative bg-forest-gradient text-bone min-h-screen pt-32 md:pt-36 pb-20 md:pb-28 overflow-hidden">
+    <!-- Halo radial subtil pour profondeur -->
+    <div class="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,rgba(245,241,234,0.06)_0%,transparent_60%)] pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(0,73,27,0.4)_0%,transparent_70%)] pointer-events-none"></div>
+
+    <div class="container-wide relative z-10">
+      <!-- Header haut -->
+      <div class="flex items-start justify-between gap-6 mb-10 md:mb-14 max-w-3xl">
+        <div>
+          <p class="eyebrow text-bone/60">Échange direct</p>
+          <h1 class="font-display text-3xl md:text-5xl font-semibold mt-4 leading-tight !text-bone">
+            On prend la conversation.
+          </h1>
         </div>
       </div>
 
-      <div class="md:col-span-6 md:col-start-7 bg-bone text-ink p-8 md:p-12">
-        <form action={FORMSUBMIT_ENDPOINT} method="POST" class="space-y-6">
-          <input type="hidden" name="_subject" value="Nouvelle demande de devis - Plaine de l'Ain" />
+      <!-- Conversation card -->
+      <div class="max-w-2xl mx-auto" id="convoCard">
+        <!-- Progress -->
+        <div class="flex items-center gap-3 mb-7" data-progress>
+          <span class="text-[0.65rem] uppercase tracking-[0.22em] text-bone/55 font-medium" data-progress-label>Étape 1 sur 6</span>
+          <div class="flex-1 h-px bg-bone/10 relative overflow-hidden">
+            <div class="absolute inset-y-0 left-0 bg-bone/70 transition-[width] duration-500 ease-out" style="width: 16.67%" data-progress-bar></div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form id="convoForm" action={FORMSUBMIT_ENDPOINT} method="POST" class="relative">
+          <input type="hidden" name="_subject" value="Nouvelle demande Epicentre - Plaine de l'Ain" />
           <input type="hidden" name="_next" value={`${SITE_URL}/merci/`} />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="zone" value="Plaine de l'Ain" />
           <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
-          <div class="grid md:grid-cols-2 gap-4">
-            <label class="block">
-              <span class="eyebrow">Prénom *</span>
-              <input type="text" name="firstname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-            </label>
-            <label class="block">
-              <span class="eyebrow">Nom *</span>
-              <input type="text" name="lastname" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-            </label>
+          <!-- Étape 1 : Format -->
+          <div class="convo-step" data-step="1">
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Sur quoi souhaitez-vous échanger ?</p>
+            </div>
+            <div class="convo-options grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5">
+              {formats.map((f) => (
+                <button type="button" class="convo-choice" data-field="type" data-value={f.v}>{f.v}</button>
+              ))}
+            </div>
+            <input type="hidden" name="type" data-store="type" required />
           </div>
 
-          <label class="block">
-            <span class="eyebrow">Entreprise *</span>
-            <input type="text" name="company" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-          </label>
-
-          <div class="grid md:grid-cols-2 gap-4">
-            <label class="block">
-              <span class="eyebrow">Email *</span>
-              <input type="email" name="email" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-            </label>
-            <label class="block">
-              <span class="eyebrow">Téléphone *</span>
-              <input type="tel" name="phone" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-            </label>
+          <!-- Étape 2 : Date -->
+          <div class="convo-step" data-step="2" hidden>
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Pour quand envisagez-vous l'événement ?</p>
+            </div>
+            <div class="mt-5">
+              <input type="text" name="date" placeholder="ex : octobre 2026, T2 2027, à définir..." class="convo-input" />
+              <button type="button" class="convo-next mt-4" data-next>Continuer →</button>
+            </div>
           </div>
 
-          <div class="pt-2 border-t border-ink/10">
-            <p class="eyebrow text-ink/55 mb-4 mt-4">Votre événement</p>
+          <!-- Étape 3 : Jauge -->
+          <div class="convo-step" data-step="3" hidden>
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Une jauge en tête ?</p>
+            </div>
+            <div class="convo-options grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5">
+              {audiences.map((a) => (
+                <button type="button" class="convo-choice" data-field="audience" data-value={a.v}>{a.v}</button>
+              ))}
+            </div>
+            <input type="hidden" name="audience" data-store="audience" required />
           </div>
 
-          <label class="block">
-            <span class="eyebrow">Type d'événement *</span>
-            <select name="type" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
-              <option value="">Choisir...</option>
-              <option>Plénière / convention</option>
-              <option>Gala / remise de prix</option>
-              <option>Lancement de produit</option>
-              <option>Anniversaire d'entreprise</option>
-              <option>Inauguration / livraison de site</option>
-              <option>AG d'actionnaires</option>
-              <option>Captation vidéo seule</option>
-              <option>Autre</option>
-            </select>
-          </label>
-
-          <div class="grid md:grid-cols-2 gap-4">
-            <label class="block">
-              <span class="eyebrow">Jauge approximative *</span>
-              <select name="audience" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
-                <option value="">Choisir...</option>
-                <option>Moins de 100 personnes</option>
-                <option>100 à 300 personnes</option>
-                <option>300 à 600 personnes</option>
-                <option>600 à 1 000 personnes</option>
-                <option>Plus de 1 000 personnes</option>
-              </select>
-            </label>
-            <label class="block">
-              <span class="eyebrow">Date pressentie</span>
-              <input type="text" name="date" placeholder="ex. octobre 2026" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-            </label>
+          <!-- Étape 4 : Budget -->
+          <div class="convo-step" data-step="4" hidden>
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Quelle fourchette budgétaire ?</p>
+            </div>
+            <p class="convo-help">On préfère cadrer en amont pour vous proposer une production réaliste.</p>
+            <div class="convo-options grid grid-cols-1 sm:grid-cols-2 gap-2 mt-5">
+              {budgets.map((b) => (
+                <button type="button" class="convo-choice" data-field="budget" data-value={b.v}>{b.v}</button>
+              ))}
+            </div>
+            <input type="hidden" name="budget" data-store="budget" required />
           </div>
 
-          <label class="block">
-            <span class="eyebrow">Lieu envisagé</span>
-            <input type="text" name="venue" placeholder="ex. notre site à Ambérieu, ou à définir ensemble" class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink" />
-          </label>
+          <!-- Étape 5 : Coordonnées -->
+          <div class="convo-step" data-step="5" hidden>
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Comment on vous joint ?</p>
+            </div>
+            <div class="mt-5 grid sm:grid-cols-2 gap-3">
+              <input type="text" name="firstname" placeholder="Prénom *" class="convo-input" required />
+              <input type="text" name="lastname" placeholder="Nom *" class="convo-input" required />
+              <input type="text" name="company" placeholder="Entreprise *" class="convo-input sm:col-span-2" required />
+              <input type="email" name="email" placeholder="Email *" class="convo-input" required />
+              <input type="tel" name="phone" placeholder="Téléphone *" class="convo-input" required />
+            </div>
+            <button type="button" class="convo-next mt-5" data-next>Continuer →</button>
+          </div>
 
-          <label class="block">
-            <span class="eyebrow">Budget envisagé *</span>
-            <select name="budget" required class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink">
-              <option value="">Choisir une fourchette...</option>
-              <option>Moins de 10 000 €</option>
-              <option>10 000 à 30 000 €</option>
-              <option>30 000 à 80 000 €</option>
-              <option>80 000 à 150 000 €</option>
-              <option>Plus de 150 000 €</option>
-              <option>À cadrer ensemble</option>
-            </select>
-          </label>
+          <!-- Étape 6 : Contexte + envoi -->
+          <div class="convo-step" data-step="6" hidden>
+            <div class="convo-q">
+              <span class="convo-avatar">E</span>
+              <p class="convo-bubble">Un mot sur le contexte ?</p>
+            </div>
+            <p class="convo-help">Format envisagé, lieu, contraintes, message clé. Tout détail aide à la première réponse.</p>
+            <div class="mt-5">
+              <textarea name="message" rows="5" placeholder="Décrivez librement..." class="convo-input"></textarea>
+            </div>
+            <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <p class="text-xs text-bone/55 leading-relaxed max-w-md">
+                En envoyant ce message, vous acceptez d'être recontacté par Epicentre Séminaires au sujet de votre demande. Vos données ne sont utilisées que pour la prise de contact.
+              </p>
+              <button type="submit" class="convo-submit">
+                Envoyer
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
-          <label class="block">
-            <span class="eyebrow">Votre projet en quelques mots</span>
-            <textarea name="message" rows="4" placeholder="Format envisagé, contexte, objectif principal, contraintes connues..." class="mt-2 w-full bg-transparent border-b border-ink/20 py-2 focus:outline-none focus:border-ink resize-none"></textarea>
-          </label>
-
-          <button type="submit" class="btn-accent w-full justify-center">Envoyer ma demande</button>
-          <p class="text-xs text-ink/45 leading-relaxed">
-            Les champs marqués d'un astérisque (*) sont obligatoires. En soumettant ce formulaire, vous acceptez d'être recontacté par Epicentre Séminaires au sujet de votre demande. Vos données ne sont utilisées que pour la prise de contact.
-          </p>
+          <!-- Bouton retour (caché sur étape 1) -->
+          <button type="button" class="convo-back" data-back hidden>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Retour
+          </button>
         </form>
+
+        <!-- Footer infos contact direct -->
+        <div class="mt-12 pt-7 border-t border-bone/10 grid sm:grid-cols-3 gap-5 text-sm">
+          <div>
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/45 font-medium mb-1.5">Téléphone direct</p>
+            <a href={CONTACT_PHONE_HREF} class="text-bone hover:text-bone/80 font-semibold transition-colors">{CONTACT_PHONE_DISPLAY}</a>
+          </div>
+          <div>
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/45 font-medium mb-1.5">Email</p>
+            <a href="mailto:contact@epicentre-seminaires.fr" class="text-bone hover:text-bone/80 transition-colors break-all">contact@epicentre-seminaires.fr</a>
+          </div>
+          <div>
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/45 font-medium mb-1.5">Zone</p>
+            <p class="text-bone/80">Plaine de l'Ain, Bugey, Pays de Gex, Lyon est</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <style>
+    /* Conversation styles */
+    .convo-step {
+      animation: convoFadeIn 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @keyframes convoFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .convo-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .convo-avatar {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: rgba(245, 241, 234, 0.95);
+      color: #003707;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .convo-bubble {
+      flex: 1;
+      font-size: 1.125rem;
+      line-height: 1.45;
+      color: #F5F1EA;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      padding-top: 0.45rem;
+    }
+    @media (min-width: 768px) {
+      .convo-bubble { font-size: 1.375rem; }
+    }
+    .convo-help {
+      margin-top: 0.5rem;
+      margin-left: 48px;
+      font-size: 0.85rem;
+      color: rgba(245, 241, 234, 0.55);
+      line-height: 1.5;
+      max-width: 30rem;
+    }
+    .convo-options {
+      margin-left: 48px;
+    }
+    .convo-choice {
+      text-align: left;
+      padding: 0.85rem 1.1rem;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 241, 234, 0.18);
+      background: rgba(245, 241, 234, 0.04);
+      color: rgba(245, 241, 234, 0.92);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .convo-choice:hover {
+      background: rgba(245, 241, 234, 0.10);
+      border-color: rgba(245, 241, 234, 0.5);
+      transform: translateY(-1px);
+    }
+    .convo-choice:focus-visible {
+      outline: 2px solid #F5F1EA;
+      outline-offset: 2px;
+    }
+    .convo-input {
+      display: block;
+      width: 100%;
+      padding: 0.95rem 1.1rem;
+      background: rgba(245, 241, 234, 0.05);
+      border: 1px solid rgba(245, 241, 234, 0.18);
+      border-radius: 6px;
+      color: #F5F1EA;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s ease;
+      margin-left: 48px;
+      width: calc(100% - 48px);
+      resize: vertical;
+    }
+    .convo-input:focus {
+      outline: none;
+      background: rgba(245, 241, 234, 0.10);
+      border-color: rgba(245, 241, 234, 0.55);
+    }
+    .convo-input::placeholder {
+      color: rgba(245, 241, 234, 0.45);
+    }
+    /* Inputs in grid (step 5) ne prennent pas le margin gauche */
+    .grid .convo-input {
+      margin-left: 0;
+      width: 100%;
+    }
+    .convo-next {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: 48px;
+      padding: 0.75rem 1.5rem;
+      background: rgba(245, 241, 234, 0.95);
+      color: #003707;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .convo-next:hover {
+      background: #F5F1EA;
+      transform: translateY(-1px);
+    }
+    /* Sur étape 5 (coords), le bouton next n'est pas margé */
+    [data-step="5"] .convo-next {
+      margin-left: 48px;
+    }
+    .convo-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 1rem 2rem;
+      background: #F5F1EA;
+      color: #003707;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.4);
+    }
+    .convo-submit:hover {
+      background: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.5);
+    }
+    .convo-back {
+      position: absolute;
+      top: -3.25rem;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.75rem;
+      color: rgba(245, 241, 234, 0.55);
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+    .convo-back:hover {
+      color: #F5F1EA;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .convo-step, .convo-choice, .convo-next, .convo-submit { animation: none; transition: none; }
+    }
+  </style>
+
+  <script is:inline>
+    (() => {
+      const form = document.getElementById('convoForm');
+      if (!form) return;
+      const steps = Array.from(form.querySelectorAll('.convo-step'));
+      const total = steps.length;
+      const progressBar = document.querySelector('[data-progress-bar]');
+      const progressLabel = document.querySelector('[data-progress-label]');
+      const backBtn = form.querySelector('[data-back]');
+      let currentStep = 1;
+
+      const showStep = (n) => {
+        currentStep = n;
+        steps.forEach((s) => {
+          const idx = parseInt(s.getAttribute('data-step'), 10);
+          s.hidden = idx !== n;
+          if (idx === n) {
+            // Re-trigger animation
+            s.style.animation = 'none';
+            void s.offsetHeight;
+            s.style.animation = '';
+            // Focus first input/button
+            setTimeout(() => {
+              const firstInteractive = s.querySelector('input:not([type=hidden]), textarea, button.convo-choice');
+              if (firstInteractive) firstInteractive.focus({ preventScroll: false });
+            }, 100);
+          }
+        });
+        const pct = (n / total) * 100;
+        if (progressBar) progressBar.style.width = `${pct}%`;
+        if (progressLabel) progressLabel.textContent = `Étape ${n} sur ${total}`;
+        if (backBtn) backBtn.hidden = n === 1;
+      };
+
+      // Choice buttons : auto-advance
+      form.querySelectorAll('.convo-choice').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const field = btn.getAttribute('data-field');
+          const value = btn.getAttribute('data-value');
+          const hidden = form.querySelector(`input[data-store="${field}"]`);
+          if (hidden) hidden.value = value;
+          // Visual selected state
+          btn.parentElement.querySelectorAll('.convo-choice').forEach((b) => b.removeAttribute('data-selected'));
+          btn.setAttribute('data-selected', 'true');
+          btn.style.background = 'rgba(245, 241, 234, 0.15)';
+          btn.style.borderColor = 'rgba(245, 241, 234, 0.7)';
+          // Auto-advance après court délai
+          setTimeout(() => {
+            if (currentStep < total) showStep(currentStep + 1);
+          }, 250);
+        });
+      });
+
+      // Next buttons (texte/coords steps)
+      form.querySelectorAll('[data-next]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          // Validation simple : tous les inputs requis du step doivent être remplis
+          const step = btn.closest('.convo-step');
+          const requireds = step.querySelectorAll('input[required], textarea[required]');
+          let valid = true;
+          requireds.forEach((inp) => {
+            if (!inp.value.trim()) {
+              inp.style.borderColor = 'rgba(255, 100, 100, 0.7)';
+              valid = false;
+            } else {
+              inp.style.borderColor = '';
+            }
+          });
+          if (valid && currentStep < total) showStep(currentStep + 1);
+        });
+      });
+
+      // Back button
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          if (currentStep > 1) showStep(currentStep - 1);
+        });
+      }
+
+      // Init
+      showStep(1);
+    })();
+  </script>
 </Base>
