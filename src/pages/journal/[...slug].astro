@@ -63,9 +63,9 @@ const articleJsonLd = {
 
   <article>
     {article.data.cover && (
-      <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-forest-deep">
+      <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-forest-deep cinema-grade">
         <img src={article.data.cover} alt={article.data.title} loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-60" />
-        <div class="absolute inset-0 bg-gradient-to-b from-forest-deep/30 to-forest-deep"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-forest-deep/30 to-forest-deep z-[3]"></div>
         <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
           <Breadcrumb items={breadcrumb} variant="dark" />
           <h1 class="text-3xl md:text-5xl lg:text-6xl max-w-4xl leading-tight mt-6">

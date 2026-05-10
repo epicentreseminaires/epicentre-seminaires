@@ -34,8 +34,8 @@ const description = "Productions événementielles d'entreprise : plénières, c
             href={`/productions/${f.slug}/`}
             class="group bg-bone hover:bg-bone-soft border border-ink/10 hover:border-ink/20 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-ink/5"
           >
-            <!-- Image en haut, ratio fixe -->
-            <div class="relative overflow-hidden aspect-[4/3]">
+            <!-- Image en haut, ratio fixe + cinema-grade pour le grain -->
+            <div class="relative overflow-hidden aspect-[4/3] cinema-grade">
               {f.cover ? (
                 <img
                   src={f.cover}
@@ -49,8 +49,8 @@ const description = "Productions événementielles d'entreprise : plénières, c
                   <CarnetIcon name={f.iconKey} class="text-ink/30" size={48} />
                 </div>
               )}
-              <!-- Overlay subtil pour cohérence -->
-              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/15 pointer-events-none"></div>
+              <!-- Overlay subtil bottom pour cohérence -->
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/15 pointer-events-none z-[3]"></div>
             </div>
 
             <!-- Bloc texte cream uni -->
