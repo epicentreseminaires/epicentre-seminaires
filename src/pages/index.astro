@@ -12,57 +12,100 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 ---
 <Base title={title} description={description} zone="plaine" theme="light">
   <!-- HERO -->
-  <section class="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28 bg-forest-gradient text-bone">
-    <!-- Image immersive en arrière-plan droite -->
-    <div class="absolute inset-y-0 right-0 w-full lg:w-3/5 pointer-events-none" aria-hidden="true">
+  <section class="relative overflow-hidden min-h-[88vh] flex items-center bg-forest-deep text-bone pt-28 md:pt-32 pb-16">
+    <!-- Image plein cadre avec Ken Burns -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <img
         src={heroImg}
         alt=""
-        class="absolute inset-0 w-full h-full object-cover opacity-50 lg:opacity-70"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 hero-img"
         loading="eager"
         fetchpriority="high"
       />
-      <!-- Fondu vers le vert : l'image se dissout dans le fond -->
-      <div class="absolute inset-0 bg-gradient-to-r from-forest-deep via-forest-deep/85 to-forest-deep/15"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-transparent to-forest-deep/30"></div>
+      <!-- Vignette + dégradés verts superposés pour ancrer la lecture à gauche -->
+      <div class="absolute inset-0 bg-gradient-to-r from-forest-deep via-forest-deep/75 to-forest-deep/15"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/40 to-forest-deep/10"></div>
+      <!-- Faisceau de lumière diagonal subtil (rappelle l'éclairage de scène) -->
+      <div class="absolute -top-1/4 -right-1/4 w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,transparent_60%)] pointer-events-none"></div>
+      <div class="absolute -bottom-1/3 -left-1/4 w-[60vw] h-[60vw] rounded-full bg-[radial-gradient(circle,rgba(0,73,27,0.45)_0%,transparent_70%)] pointer-events-none"></div>
     </div>
 
-    <!-- Halo accent crème en haut-droite -->
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] -translate-y-1/3 translate-x-1/4 rounded-full bg-bone/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
-
     <div class="container-wide relative z-10">
-      <div class="max-w-2xl">
-        <div class="flex items-center gap-3 mb-8">
-          <span class="block w-8 h-px bg-bone/40"></span>
-          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-bone/65 font-medium">
+      <div class="max-w-3xl">
+        <div class="flex items-center gap-3 mb-10 hero-fade" style="animation-delay:0ms">
+          <span class="block w-10 h-px bg-bone/50"></span>
+          <p class="text-[0.7rem] uppercase tracking-[0.24em] text-bone/70 font-medium">
             Plaine de l'Ain · Entre Lyon et Genève
           </p>
         </div>
 
-        <h1 class="h1-hero-xl !text-bone">
-          Le bon contact,<br />ou tout l'événement.
+        <h1 class="hero-headline !text-bone hero-fade" style="animation-delay:100ms">
+          Le bon contact,<br />
+          <span class="text-gradient-bone">ou tout l'événement.</span>
         </h1>
 
-        <p class="mt-8 text-lg md:text-xl leading-relaxed text-bone/80 max-w-xl">
-          <strong class="text-bone">Agence événementielle dans la Plaine de l'Ain.</strong><br />
-          Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer. Vous choisissez le mode.
+        <p class="mt-10 text-lg md:text-xl lg:text-2xl leading-relaxed text-bone/80 max-w-2xl hero-fade" style="animation-delay:250ms">
+          <strong class="text-bone font-medium">Agence événementielle dans la Plaine de l'Ain.</strong> Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer. Vous choisissez le mode.
         </p>
 
-        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-          <a href="/construire-mon-projet/" class="btn bg-bone text-forest-deep hover:bg-bone-soft text-sm px-7 py-4 font-semibold">
+        <div class="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4 hero-fade" style="animation-delay:400ms">
+          <a href="/construire-mon-projet/" class="btn bg-bone text-forest-deep hover:bg-bone-soft text-sm px-8 py-4 font-semibold shadow-2xl shadow-forest-deep/30">
             Construire mon projet
             <span aria-hidden="true">→</span>
           </a>
-          <a href="#carnet" class="text-bone/85 hover:text-bone text-sm font-semibold flex items-center gap-2 transition-colors">
+          <a href="#carnet" class="text-bone/85 hover:text-bone text-sm font-semibold flex items-center gap-2 transition-colors group">
             Voir le carnet d'adresses
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="transition-transform group-hover:translate-y-0.5">
               <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </a>
         </div>
       </div>
     </div>
+
+    <!-- Indicateur de scroll discret -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hero-fade pointer-events-none" style="animation-delay:700ms" aria-hidden="true">
+      <div class="flex flex-col items-center gap-2 text-bone/55">
+        <span class="text-[0.6rem] uppercase tracking-[0.3em]">Découvrir</span>
+        <span class="block w-px h-10 bg-gradient-to-b from-bone/0 via-bone/50 to-bone/0 animate-scroll-cue"></span>
+      </div>
+    </div>
   </section>
+
+  <style>
+    @keyframes heroKenBurns {
+      0%   { transform: scale(1.05); }
+      100% { transform: scale(1.18); }
+    }
+    .hero-img { animation: heroKenBurns 22s ease-out forwards; }
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-fade {
+      animation: heroFade 0.9s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    @keyframes scrollCue {
+      0%   { transform: scaleY(0.4) translateY(-30%); opacity: 0.2; }
+      50%  { transform: scaleY(1) translateY(0); opacity: 0.9; }
+      100% { transform: scaleY(0.4) translateY(30%); opacity: 0.2; }
+    }
+    .animate-scroll-cue {
+      transform-origin: top;
+      animation: scrollCue 2.4s ease-in-out infinite;
+    }
+    .hero-headline {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(3rem, 9vw, 7rem);
+      letter-spacing: -0.05em;
+      line-height: 0.94;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-img, .hero-fade, .animate-scroll-cue { animation: none !important; }
+      .hero-fade { opacity: 1; transform: none; }
+    }
+  </style>
 
   <TrustStrip variant="light" />
 
@@ -72,7 +115,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
       <div class="max-w-3xl mb-12 md:mb-16">
         <p class="eyebrow">Par où commencer</p>
         <h2 class="h2-hero mt-6">
-          Trois portes d'entrée.<br /><span class="text-accent">Vous choisissez la vôtre.</span>
+          Trois portes d'entrée.<br /><span class="text-gradient">Vous choisissez la vôtre.</span>
         </h2>
       </div>
 
@@ -132,7 +175,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
         <div>
           <p class="eyebrow">Le carnet d'adresses</p>
           <h2 class="h2-hero mt-6">
-            On vous conseille,<br /><span class="text-accent">jamais on impose.</span>
+            On vous conseille,<br /><span class="text-gradient">jamais on impose.</span>
           </h2>
         </div>
         <a href="/conseiller/" class="text-sm text-accent font-medium flex items-center gap-2 hover:gap-3 transition-all whitespace-nowrap">
@@ -181,7 +224,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
       <div class="max-w-3xl mb-16">
         <p class="eyebrow">Notre périmètre production</p>
         <h2 class="h2-hero mt-6">
-          Ce qu'on produit.<br /><span class="text-accent">Ce qu'on oriente.</span>
+          Ce qu'on produit.<br /><span class="text-gradient">Ce qu'on oriente.</span>
         </h2>
         <p class="mt-8 text-lg leading-relaxed text-ink/70 max-w-2xl">
           Sur la production complète, le périmètre est volontairement resserré. Sur le carnet d'adresses, on couvre plus large : on ne fait pas tout, mais on connaît qui le fait bien.
@@ -190,7 +233,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 
       <div class="grid md:grid-cols-2 gap-px bg-ink/10">
         <div class="bg-bone p-10">
-          <p class="eyebrow text-accent">On produit en clé en main</p>
+          <p class="eyebrow text-gradient">On produit en clé en main</p>
           <ul class="mt-6 space-y-4 text-ink/85 text-base leading-snug">
             <li class="flex items-start gap-3">
               <span class="text-accent mt-2 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
@@ -257,7 +300,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
     <div class="container-wide text-center max-w-3xl mx-auto">
       <p class="eyebrow">Prochaine étape</p>
       <h2 class="h2-cta mt-6 max-w-4xl mx-auto">
-        On prend la conversation,<br /><span class="text-accent">vous prenez la suite.</span>
+        On prend la conversation,<br /><span class="text-gradient">vous prenez la suite.</span>
       </h2>
       <p class="mt-10 text-lg text-ink/70 max-w-xl mx-auto leading-relaxed">
         Trois minutes pour cadrer votre projet, ou une description libre. Vous choisissez le canal.

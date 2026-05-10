@@ -136,6 +136,23 @@
     @apply text-base md:text-lg text-ink/70 leading-relaxed;
   }
 
+  /* Texte en dégradé brand : applique le gradient #003707 → #00491b sur le texte. */
+  .text-gradient {
+    background: linear-gradient(135deg, #003707 0%, #00491b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  /* Variante pour fond sombre vert : dégradé crème → bone-soft, lisible sur forest */
+  .text-gradient-bone {
+    background: linear-gradient(135deg, #FFFFFF 0%, #EFEAE0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
   /* Design tokens — rythme vertical des sections */
   .section-y {
     @apply py-20 md:py-28;
