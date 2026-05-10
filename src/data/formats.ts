@@ -138,6 +138,7 @@ export const formats: FormatEntry[] = [
     title: 'Inauguration de site industriel ou de bâtiment',
     metaDescription: 'Inauguration de site industriel, livraison de bâtiment : discours officiel, presse, captation, cocktail. Coordination ERP et sécurité.',
     intro: 'L\'inauguration combine un dispositif événementiel et des contraintes industrielles. Site en activité, normes sécurité spécifiques, présence officielle (élus, presse, dirigeants), invités venus de loin. Le pilotage exige une expérience croisée du métier événementiel et du milieu industriel.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/inauguration-plainedel%27ain.jpg',
     definition: 'Cérémonie officielle marquant l\'ouverture, l\'agrandissement ou la livraison d\'un site (usine, plateforme logistique, bâtiment institutionnel). Cible : 100 à 600 personnes. Présence fréquente d\'élus locaux et nationaux, de la presse, des partenaires économiques.',
     method: [
       { title: 'Coordination industrielle', desc: 'Plan de prévention rédigé, coordination HSE avec le site, accès véhicule, parcours visiteurs sécurisé, EPI selon les zones.' },
