@@ -12,6 +12,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://epicentre-seminaires.fr',
   redirects: {
+    // Slugs production fusionnés ou retirés (mai 2026)
+    '/productions/convention-entreprise/': '/productions/pleniere-entreprise/',
+    '/productions/captation-multicam/': '/productions/',
     // Anciennes URLs /plaine-de-lain/* → racine
     '/plaine-de-lain/': '/',
     '/plaine-de-lain/agence/': '/agence/',
