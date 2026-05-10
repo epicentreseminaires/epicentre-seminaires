@@ -8,11 +8,11 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 const title = "Agence événementielle Plaine de l'Ain | Epicentre Séminaires";
 const description = "Agence événementielle dans la Plaine de l'Ain. Production clé en main + carnet d'adresses curaté (lieu, traiteur, son, scène, captation). On vous conseille les bons interlocuteurs.";
 
-const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=2600&q=92&auto=format&fit=crop';
+const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
 ---
 <Base title={title} description={description} zone="plaine" theme="dark" transparentTop>
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-ink text-bone min-h-[92vh] flex items-center pt-28 md:pt-32 pb-20">
+  <section class="relative overflow-hidden bg-ink text-bone min-h-[92vh] flex items-start pt-32 md:pt-40 pb-20">
     <!-- Image plein cadre HD avec Ken Burns -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <img
@@ -22,9 +22,9 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
         loading="eager"
         fetchpriority="high"
       />
-      <!-- Dégradé sombre bas + gauche pour lisibilité du texte sans masquer l'image -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/15 to-transparent"></div>
+      <!-- Dégradé : assombrit le HAUT (où va le texte sur le ciel) et adoucit le BAS pour ne pas écraser le cocktail/parking -->
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/15 to-black/35"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/10 to-transparent"></div>
     </div>
 
     <div class="container-wide relative z-10">
