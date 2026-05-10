@@ -90,7 +90,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
         </svg>
         <span>{phone}</span>
       </a>
-      <a href={ctaHref} class={`${ctaClass} text-sm py-2.5 px-5`}>
+      <a href={ctaHref} class={`${ctaClass} header-cta text-sm py-2.5 px-5`}>
         {ctaLabel}
       </a>
     </div>
@@ -168,20 +168,31 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
   @media (min-width: 768px) {
     .header-row { padding-top: 1.25rem; padding-bottom: 1.25rem; }
   }
+  /* État scrollé : compactage marqué */
   #siteHeader[data-scrolled="true"] .header-row {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  @media (min-width: 768px) {
-    #siteHeader[data-scrolled="true"] .header-row {
-      padding-top: 0.65rem;
-      padding-bottom: 0.65rem;
-    }
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
   }
   #siteHeader[data-scrolled="true"] .header-logo {
-    transform: scale(0.78);
+    transform: scale(0.7);
+  }
+  /* Boutons et CTA se resserrent aussi pour que la row diminue vraiment */
+  #siteHeader [data-search-trigger],
+  #siteHeader .header-cta,
+  #siteHeader .header-phone {
+    transition: padding 0.3s cubic-bezier(0.22, 1, 0.36, 1), font-size 0.3s ease;
+  }
+  #siteHeader[data-scrolled="true"] [data-search-trigger] {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+  #siteHeader[data-scrolled="true"] .header-cta {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media (prefers-reduced-motion: reduce) {
-    .header-row, .header-logo { transition: none; }
+    .header-row, .header-logo, #siteHeader [data-search-trigger], #siteHeader .header-cta { transition: none; }
   }
 </style>
