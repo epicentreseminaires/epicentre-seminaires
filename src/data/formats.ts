@@ -243,6 +243,34 @@ export const formats: FormatEntry[] = [
     budgetRange: 'Réunion stratégique 12 personnes journée : 1 200 à 3 500 € HT (salle + écran + traiteur, hors traiteur premium). Réunion direction 20 personnes 1 jour avec captation et confidentialité renforcée : 3 500 à 8 000 € HT.',
     relatedCarnet: ['lieu', 'traiteur'],
   },
+  {
+    slug: 'evenement-sur-mesure',
+    type: 'on-fait',
+    shortLabel: 'Sur-mesure',
+    cardLabel: 'Événement sur-mesure',
+    iconKey: 'lieu',
+    title: 'Événement sur-mesure : votre format, votre lieu, votre dispositif',
+    metaDescription: 'Événement entreprise sur-mesure : construction éphémère, marquise scénographiée, format hybride. Plaine de l\'Ain, terrain privé, site industriel.',
+    intro: 'Tous les projets ne tiennent pas dans une fiche. Marquise cristal montée dans un champ, format hybride conférence + concert + cocktail dînatoire, événement multi-jours sur site privé, lieu inhabituel à équiper de A à Z. Sur ces dossiers hors standard, on prend en charge la conception architecturale éphémère, la production technique et la coordination logistique. Le format se construit avec vous, pas l\'inverse.',
+    cover: 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg',
+    definition: 'Événement entreprise dont le format, le lieu ou le dispositif sortent du standard. Construction éphémère possible (marquise, chapiteau, structure tendue) sur terrain privé ou site industriel. Format hybride combinant plusieurs déroulés (conférence + dîner + concert, par exemple). Cible : projets premium 100 à 2 000 personnes, contraintes spécifiques (lieu vierge, dispositif technique non standard, scénographie unique).',
+    method: [
+      { title: 'Cadrage du projet', desc: 'On part de votre intention plutôt que d\'un format figé. Lieu envisagé, jauge, durée, contraintes calendaires, message porté. Le format émerge du brief, pas l\'inverse.' },
+      { title: 'Conception architecturale éphémère', desc: 'Si le lieu est vierge ou non équipé : modélisation 3D de la structure (marquise, chapiteau CTS, scène extérieure), plan d\'implantation, calculs charge et sécurité, dossiers ERP.' },
+      { title: 'Production technique intégrée', desc: 'Son, lumière, vidéo, scénographie dimensionnés au dispositif unique. Sourcing prestataires en fonction des contraintes spécifiques du projet.' },
+      { title: 'Coordination logistique', desc: 'Accès véhicules, alimentation électrique, accueil invités, traiteur, hébergement, transferts, signalétique. Tous les postes coordonnés sur un projet hors standard.' },
+    ],
+    dispositif: [
+      { label: 'Structure éphémère', desc: 'Marquise cristal, chapiteau CTS, tente vitrée, structure tendue. Calculs au vent, ancrage, dossier sécurité, montage et démontage clé en main.' },
+      { label: 'Scène et production', desc: 'Scène modulaire dimensionnée, gril lumière au plafond de la structure, son et vidéo selon le format défini.' },
+      { label: 'Aménagement intérieur', desc: 'Sol modulaire si terrain irrégulier, mobilier coordonné, climatisation ou chauffage selon saison, sanitaires et vestiaires temporaires.' },
+      { label: 'Alimentation', desc: 'Tirage électrique depuis source existante ou groupes électrogènes silencieux dimensionnés à la consommation totale, distribution sécurisée.' },
+      { label: 'Sécurité ERP/CTS', desc: 'Dossier sécurité monté en amont, validation préfecture, plan de prévention, agents de sécurité, plan d\'évacuation, vérification commission.' },
+      { label: 'Coordination terrain', desc: 'Chef de projet dédié, régie générale jour J, équipes par poste, gestion des aléas spécifiques au lieu (météo, accès, voisinage).' },
+    ],
+    budgetRange: 'Marquise scénographiée 200 personnes en plein air avec production technique : 80 000 à 200 000 € HT. Format hybride 500 personnes multi-jours en site privé : 250 000 à 700 000 € HT et plus selon la complexité du dispositif.',
+    relatedCarnet: ['lieu', 'logistique', 'son-lumiere', 'scene', 'securite', 'traiteur'],
+  },
 
   // ============================================================
   // CE QU'ON ORIENTE
