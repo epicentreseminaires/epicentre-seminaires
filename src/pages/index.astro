@@ -12,7 +12,7 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 ---
 <Base title={title} description={description} zone="plaine" theme="dark" transparentTop>
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-ink text-bone min-h-[88vh] flex items-end pt-28 md:pt-32 pb-16 md:pb-20">
+  <section class="relative overflow-hidden bg-ink text-bone min-h-[92vh] flex items-center pt-28 md:pt-32 pb-20">
     <!-- Image plein cadre HD avec Ken Burns -->
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <img
@@ -23,38 +23,35 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
         fetchpriority="high"
       />
       <!-- Dégradé sombre bas + gauche pour lisibilité du texte sans masquer l'image -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/15 to-transparent"></div>
     </div>
 
     <div class="container-wide relative z-10">
-      <div class="max-w-2xl">
-        <div class="flex items-center gap-3 mb-8 hero-fade" style="animation-delay:0ms">
-          <span class="block w-10 h-px bg-bone/50"></span>
-          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-bone/70 font-medium">
-            Plaine de l'Ain · Entre Lyon et Genève
-          </p>
-        </div>
+      <div class="max-w-3xl">
+        <p class="hero-eyebrow hero-fade" style="animation-delay:0ms">
+          <span class="block w-10 h-px bg-bone/55"></span>
+          <span>Plaine de l'Ain · Entre Lyon et Genève</span>
+        </p>
 
-        <h1 class="h1-hero-xl !text-bone hero-fade" style="animation-delay:100ms">
+        <h1 class="hero-title !text-bone hero-fade mt-7 md:mt-9" style="animation-delay:100ms">
           Le bon contact,<br />
           <span class="text-gradient-bone">ou tout l'événement.</span>
         </h1>
 
-        <p class="mt-8 text-lg md:text-xl leading-relaxed text-bone/80 max-w-xl hero-fade" style="animation-delay:250ms">
-          <strong class="text-bone font-medium">Agence événementielle dans la Plaine de l'Ain.</strong> Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer.
+        <p class="hero-lead hero-fade mt-7 md:mt-9 max-w-xl" style="animation-delay:250ms">
+          Agence événementielle dans la Plaine de l'Ain. Vous choisissez le mode : un nom à appeler, ou une production complète clé en main.
         </p>
 
-        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4 hero-fade" style="animation-delay:400ms">
-          <a href="/construire-mon-projet/" class="btn bg-bone text-forest-deep hover:bg-bone-soft text-sm px-7 py-4 font-semibold shadow-xl shadow-forest-deep/30">
-            Construire mon projet
-            <span aria-hidden="true">→</span>
-          </a>
-          <a href="#carnet" class="text-bone/85 hover:text-bone text-sm font-semibold flex items-center gap-2 transition-colors group">
-            Voir le carnet d'adresses
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="transition-transform group-hover:translate-y-0.5">
-              <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
+        <div class="hero-actions hero-fade mt-10 md:mt-12" style="animation-delay:400ms">
+          <a href="/construire-mon-projet/" class="hero-btn-primary">
+            <span>Construire mon projet</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+          </a>
+          <a href="#carnet" class="hero-btn-ghost">
+            <span>Voir le carnet d'adresses</span>
           </a>
         </div>
       </div>
@@ -62,20 +59,100 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
   </section>
 
   <style>
+    /* Eyebrow */
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.875rem;
+      color: rgba(245, 241, 234, 0.75);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+    /* Titre : taille raisonnable mais avec présence */
+    .hero-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      letter-spacing: -0.045em;
+      line-height: 0.96;
+    }
+    /* Lead court, calé sur la même grille typographique */
+    .hero-lead {
+      font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+      line-height: 1.55;
+      color: rgba(245, 241, 234, 0.82);
+    }
+    /* Container de boutons */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1rem;
+    }
+    /* Bouton primaire : crème plein, avec flèche qui glisse au hover */
+    .hero-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 1rem 1.75rem;
+      background: #F5F1EA;
+      color: #003707;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      border-radius: 999px;
+      box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.55);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
+    }
+    .hero-btn-primary:hover {
+      background: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 24px 50px -22px rgba(0, 0, 0, 0.6);
+    }
+    .hero-btn-primary svg {
+      transition: transform 0.25s ease;
+    }
+    .hero-btn-primary:hover svg {
+      transform: translateX(3px);
+    }
+    /* Bouton secondaire : outline crème transparent */
+    .hero-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      color: rgba(245, 241, 234, 0.95);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 241, 234, 0.28);
+      background: rgba(245, 241, 234, 0.04);
+      backdrop-filter: blur(6px);
+      transition: background 0.25s ease, border-color 0.25s ease, color 0.2s ease;
+    }
+    .hero-btn-ghost:hover {
+      background: rgba(245, 241, 234, 0.10);
+      border-color: rgba(245, 241, 234, 0.5);
+      color: #F5F1EA;
+    }
+    /* Animations */
     @keyframes heroKenBurns {
       0%   { transform: scale(1.04); }
       100% { transform: scale(1.14); }
     }
     .hero-img { animation: heroKenBurns 24s ease-out forwards; }
     @keyframes heroFade {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     .hero-fade {
       animation: heroFade 0.8s cubic-bezier(0.22,1,0.36,1) both;
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-img, .hero-fade { animation: none !important; }
+      .hero-img, .hero-fade, .hero-btn-primary, .hero-btn-primary svg, .hero-btn-ghost { animation: none !important; transition: none !important; }
       .hero-fade { opacity: 1; transform: none; }
     }
   </style>
