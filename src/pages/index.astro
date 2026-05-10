@@ -243,20 +243,41 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
   <!-- ANCRAGE GÉOGRAPHIQUE : ON EST LÀ, EN VRAI -->
   <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
     <div class="container-wide">
-      <div class="max-w-3xl mb-12 md:mb-16">
+      <!-- Header -->
+      <div class="max-w-3xl mb-12 md:mb-14">
         <p class="eyebrow">Notre point d'ancrage</p>
         <h2 class="h2-hero mt-6">
           Basés à Meximieux,<br /><span class="text-gradient">au cœur de la Plaine de l'Ain.</span>
         </h2>
         <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Pas une boîte aux lettres. Un bureau, une vue, un ancrage local. Entre Lyon et Genève, à 30 minutes des deux, à portée des sites industriels du PIPA et des grands groupes du bassin.
+          Pas une boîte aux lettres. Un bureau, une vue, un ancrage local. Entre Lyon et Genève, à portée immédiate des sites industriels du PIPA et des grands groupes du bassin.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-        <!-- IMAGE VUE BUREAU (portrait, plus compacte) -->
-        <div class="lg:col-span-4">
-          <div class="relative overflow-hidden rounded-sm aspect-[3/4] cinema-grade">
+      <!-- KPI distances : 3 pills prominent en haut -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/10 mb-10 md:mb-12">
+        <div class="bg-bone-soft p-6 md:p-7 flex flex-col gap-1">
+          <p class="text-[0.65rem] uppercase tracking-[0.22em] text-ink/55 font-medium">Lyon</p>
+          <p class="mt-1 font-display text-2xl md:text-3xl font-semibold text-ink leading-none">45 km</p>
+          <p class="text-sm text-ink/55">35 min via A42</p>
+        </div>
+        <div class="bg-bone-soft p-6 md:p-7 flex flex-col gap-1">
+          <p class="text-[0.65rem] uppercase tracking-[0.22em] text-ink/55 font-medium">Bourg-en-Bresse</p>
+          <p class="mt-1 font-display text-2xl md:text-3xl font-semibold text-ink leading-none">35 km</p>
+          <p class="text-sm text-ink/55">30 min via A40</p>
+        </div>
+        <div class="bg-bone-soft p-6 md:p-7 flex flex-col gap-1">
+          <p class="text-[0.65rem] uppercase tracking-[0.22em] text-ink/55 font-medium">Genève</p>
+          <p class="mt-1 font-display text-2xl md:text-3xl font-semibold text-ink leading-none">90 km</p>
+          <p class="text-sm text-ink/55">1 h 15 via A40</p>
+        </div>
+      </div>
+
+      <!-- Bloc principal : photo + carte mieux liées dans un cadre commun -->
+      <div class="bg-bone-soft border border-ink/10 overflow-hidden">
+        <div class="grid lg:grid-cols-12">
+          <!-- Photo vue bureau -->
+          <div class="lg:col-span-5 relative aspect-[4/5] lg:aspect-auto cinema-grade">
             <img
               src="https://enjoylife.b-cdn.net/Epicentre/meximieux.jpg"
               alt="Vue depuis nos bureaux à Meximieux, Plaine de l'Ain"
@@ -264,136 +285,156 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
               decoding="async"
               class="absolute inset-0 w-full h-full object-cover"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent z-[3]"></div>
-            <div class="absolute bottom-5 left-5 right-5 z-[4] text-bone">
-              <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/70 font-medium">Vue bureau</p>
-              <p class="mt-1.5 text-sm md:text-base font-semibold leading-tight">Meximieux,<br />Plaine de l'Ain</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-[3]"></div>
+            <div class="absolute bottom-6 left-6 right-6 z-[4] text-bone">
+              <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/70 font-medium">Vue depuis nos bureaux</p>
+              <p class="mt-2 text-lg md:text-xl font-semibold leading-tight">Meximieux<br /><span class="text-bone/70 font-normal text-sm md:text-base">45.91° N · 5.20° E</span></p>
             </div>
           </div>
-        </div>
 
-        <!-- CARTE GÉOGRAPHIQUE RÉELLE + INFOS -->
-        <div class="lg:col-span-8 flex flex-col">
-          <div class="bg-bone-soft p-6 md:p-8 flex-1 flex flex-col gap-6">
-            <!-- Carte géographique stylisée -->
+          <!-- Carte géographique refondue -->
+          <div class="lg:col-span-7 p-6 md:p-8 lg:p-10 flex flex-col gap-6">
             <div class="relative w-full">
-              <svg viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte géographique de la Plaine de l'Ain entre Lyon, Bourg-en-Bresse et Genève">
+              <svg viewBox="0 0 800 480" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte de la Plaine de l'Ain entre Lyon, Bourg-en-Bresse et Genève">
                 <defs>
-                  <linearGradient id="brandGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#003707" />
-                    <stop offset="100%" stop-color="#00491b" />
+                  <linearGradient id="plaineFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00491b" stop-opacity="0.18" />
+                    <stop offset="100%" stop-color="#003707" stop-opacity="0.22" />
                   </linearGradient>
-                  <pattern id="hillshade" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                    <line x1="0" y1="0" x2="0" y2="6" stroke="#003707" stroke-opacity="0.18" stroke-width="1" />
+                  <pattern id="bugeyHillshade" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="5" stroke="#003707" stroke-opacity="0.14" stroke-width="0.8" />
                   </pattern>
-                  <radialGradient id="meximieuxGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#00491b" stop-opacity="0.55" />
-                    <stop offset="60%" stop-color="#00491b" stop-opacity="0.10" />
+                  <radialGradient id="mexHalo" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#00491b" stop-opacity="0.45" />
+                    <stop offset="55%" stop-color="#00491b" stop-opacity="0.12" />
                     <stop offset="100%" stop-color="#00491b" stop-opacity="0" />
                   </radialGradient>
+                  <filter id="cityShadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="0.5" />
+                    <feOffset dx="0" dy="0.5" result="offsetblur" />
+                    <feFlood flood-color="#003707" flood-opacity="0.3" />
+                    <feComposite in2="offsetblur" operator="in" />
+                    <feMerge>
+                      <feMergeNode />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
                 </defs>
 
-                <!-- Fond clair -->
-                <rect width="800" height="500" fill="#EFEAE0" />
+                <!-- Fond carte (assorti au cadre) -->
+                <rect width="800" height="480" fill="#EFEAE0" />
 
-                <!-- Lac Léman au coin nord-est (référence Genève) -->
-                <path d="M 720 60 Q 745 50 770 65 Q 780 75 770 90 Q 750 100 730 95 Q 715 85 720 60 Z" fill="#003707" fill-opacity="0.18" />
-                <text x="745" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.45" font-style="italic">lac Léman</text>
+                <!-- Lac Léman (référence visuelle Genève NE) -->
+                <path d="M 700 70 Q 740 60 770 80 Q 785 95 770 110 Q 740 122 705 112 Q 685 92 700 70 Z" fill="#003707" fill-opacity="0.22" />
+                <text x="735" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.5" font-style="italic">lac Léman</text>
 
-                <!-- Bugey foothills (relief, hachure SE de la Plaine) -->
-                <path d="M 360 200 Q 410 180 470 195 Q 540 210 600 240 Q 660 280 690 340 Q 700 400 660 440 Q 600 460 530 440 Q 460 420 400 380 Q 360 320 360 200 Z" fill="url(#hillshade)" fill-opacity="0.55" />
-                <text x="540" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" fill-opacity="0.5" font-style="italic" letter-spacing="0.05em">massif du Bugey</text>
+                <!-- Massif du Bugey (relief hachuré, est) -->
+                <path d="M 410 230 Q 470 215 530 230 Q 600 250 645 290 Q 680 335 685 380 Q 670 425 615 435 Q 555 440 495 420 Q 440 395 405 350 Q 385 290 410 230 Z" fill="url(#bugeyHillshade)" />
+                <text x="555" y="375" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" fill-opacity="0.45" font-style="italic" letter-spacing="0.04em">massif du Bugey</text>
 
-                <!-- Région Plaine de l'Ain (polygone réaliste) -->
-                <path d="M 200 200 Q 230 180 290 185 Q 340 195 360 240 Q 365 295 340 340 Q 310 380 260 380 Q 215 375 195 340 Q 175 290 200 200 Z"
-                      fill="url(#brandGrad2)" fill-opacity="0.14" stroke="#00491b" stroke-opacity="0.45" stroke-width="1.5" />
+                <!-- Plaine de l'Ain (polygone plus précis, ovale étiré) -->
+                <path d="M 215 235 Q 250 215 305 215 Q 360 220 380 250 Q 395 285 380 320 Q 360 355 320 365 Q 270 370 235 350 Q 200 320 200 285 Q 200 255 215 235 Z" fill="url(#plaineFill)" stroke="#00491b" stroke-opacity="0.5" stroke-width="1.5" />
 
-                <!-- Rhône (rivière, courbe sud-est → sud-ouest, contourne Lyon) -->
-                <path d="M 700 360 Q 620 380 540 410 Q 460 430 380 415 Q 320 405 280 395 Q 230 385 180 400 Q 130 415 90 440"
-                      stroke="#00491b" stroke-opacity="0.45" stroke-width="2.5" fill="none" stroke-linecap="round" />
-                <text x="500" y="445" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#00491b" fill-opacity="0.55" font-style="italic">le Rhône</text>
+                <!-- Rhône (courbe sud sous la Plaine) -->
+                <path d="M 700 380 Q 600 395 510 405 Q 420 412 340 405 Q 270 395 215 400 Q 150 408 90 425" stroke="#003707" stroke-opacity="0.4" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                <text x="465" y="430" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" fill-opacity="0.55" font-style="italic">le Rhône</text>
 
-                <!-- Rivière Ain (du nord vers Rhône) -->
-                <path d="M 280 80 Q 270 130 265 180 Q 260 230 270 280 Q 275 330 260 380"
-                      stroke="#00491b" stroke-opacity="0.4" stroke-width="1.8" fill="none" stroke-linecap="round" />
-                <text x="240" y="150" text-anchor="end" font-family="Inter, sans-serif" font-size="9" fill="#00491b" fill-opacity="0.5" font-style="italic">l'Ain</text>
+                <!-- Rivière Ain (du nord, traverse Plaine) -->
+                <path d="M 305 95 Q 295 145 295 195 Q 295 245 290 295 Q 290 340 280 385" stroke="#003707" stroke-opacity="0.35" stroke-width="1.8" fill="none" stroke-linecap="round" />
+                <text x="278" y="170" text-anchor="end" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.5" font-style="italic">l'Ain</text>
 
-                <!-- Autoroute A42 (Lyon → Plaine → Genève) -->
-                <path d="M 90 380 Q 200 360 290 350 Q 380 340 480 320 Q 570 300 660 250 Q 720 200 740 150"
-                      stroke="#003707" stroke-opacity="0.35" stroke-width="1.2" fill="none" stroke-dasharray="6 4" />
-                <text x="630" y="290" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.45" font-weight="500">A42</text>
+                <!-- A42 (axe stratégique Lyon ↔ Genève) -->
+                <path d="M 95 405 Q 195 380 290 365 Q 380 345 470 320 Q 565 290 645 240 Q 705 195 730 160" stroke="#003707" stroke-opacity="0.3" stroke-width="1.2" fill="none" stroke-dasharray="5 4" />
+                <text x="610" y="280" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.5" font-weight="600" letter-spacing="0.05em">A42</text>
 
-                <!-- LYON (référence ouest, gros point) -->
-                <circle cx="80" cy="395" r="6" fill="#003707" fill-opacity="0.6" />
-                <circle cx="80" cy="395" r="3" fill="#003707" />
-                <text x="80" y="425" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#003707" font-weight="700" letter-spacing="-0.01em">Lyon</text>
-                <text x="80" y="442" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.55">45 km · 35 min</text>
+                <!-- A40 (axe nord vers Genève) -->
+                <path d="M 285 95 Q 380 130 480 165 Q 580 195 660 195 Q 720 175 740 155" stroke="#003707" stroke-opacity="0.25" stroke-width="1.2" fill="none" stroke-dasharray="5 4" />
+                <text x="495" y="155" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.45" font-weight="600" letter-spacing="0.05em">A40</text>
+
+                <!-- LYON (référence ouest) -->
+                <g filter="url(#cityShadow)">
+                  <circle cx="85" cy="412" r="7" fill="#003707" fill-opacity="0.7" />
+                  <circle cx="85" cy="412" r="3" fill="#003707" />
+                </g>
+                <text x="85" y="438" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" fill="#003707" font-weight="700" letter-spacing="-0.01em">Lyon</text>
 
                 <!-- BOURG-EN-BRESSE (nord) -->
-                <circle cx="290" cy="80" r="5" fill="#003707" fill-opacity="0.55" />
-                <circle cx="290" cy="80" r="2.5" fill="#003707" />
-                <text x="290" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#003707" font-weight="600">Bourg-en-Bresse</text>
-                <text x="290" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55">35 km · 30 min</text>
+                <g filter="url(#cityShadow)">
+                  <circle cx="285" cy="85" r="6" fill="#003707" fill-opacity="0.65" />
+                  <circle cx="285" cy="85" r="2.5" fill="#003707" />
+                </g>
+                <text x="285" y="68" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#003707" font-weight="700">Bourg-en-Bresse</text>
 
                 <!-- GENÈVE (référence est) -->
-                <circle cx="745" cy="105" r="6" fill="#003707" fill-opacity="0.6" />
-                <circle cx="745" cy="105" r="3" fill="#003707" />
-                <text x="745" y="135" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#003707" font-weight="700" letter-spacing="-0.01em">Genève</text>
-                <text x="745" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#003707" fill-opacity="0.55">90 km · 1h15</text>
+                <g filter="url(#cityShadow)">
+                  <circle cx="735" cy="115" r="7" fill="#003707" fill-opacity="0.7" />
+                  <circle cx="735" cy="115" r="3" fill="#003707" />
+                </g>
+                <text x="735" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" fill="#003707" font-weight="700" letter-spacing="-0.01em">Genève</text>
 
-                <!-- Villes Plaine de l'Ain : PEROUGES -->
-                <circle cx="225" cy="265" r="3.5" fill="#003707" />
-                <text x="225" y="252" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="500">Pérouges</text>
+                <!-- Villes Plaine de l'Ain (cercles solides verts) -->
+                <!-- PEROUGES -->
+                <circle cx="240" cy="278" r="4" fill="#003707" />
+                <text x="225" y="270" text-anchor="end" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="600">Pérouges</text>
 
                 <!-- AMBERIEU -->
-                <circle cx="335" cy="225" r="3.5" fill="#003707" />
-                <text x="335" y="212" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="500">Ambérieu</text>
+                <circle cx="345" cy="245" r="4" fill="#003707" />
+                <text x="360" y="240" text-anchor="start" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="600">Ambérieu-en-Bugey</text>
 
                 <!-- LAGNIEU -->
-                <circle cx="345" cy="305" r="3.5" fill="#003707" />
-                <text x="362" y="310" text-anchor="start" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="500">Lagnieu</text>
+                <circle cx="365" cy="320" r="4" fill="#003707" />
+                <text x="380" y="324" text-anchor="start" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="600">Lagnieu</text>
 
-                <!-- SAINT-VULBAS (PIPA) -->
-                <circle cx="290" cy="365" r="3.5" fill="#003707" />
-                <text x="290" y="383" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="500">Saint-Vulbas</text>
-                <text x="290" y="397" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" fill="#003707" fill-opacity="0.55" letter-spacing="0.06em">PIPA</text>
+                <!-- SAINT-VULBAS -->
+                <circle cx="305" cy="358" r="4" fill="#003707" />
+                <text x="305" y="378" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="600">Saint-Vulbas</text>
+                <text x="305" y="392" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55" letter-spacing="0.1em" font-weight="700">PIPA</text>
 
-                <!-- POINT MEXIMIEUX (mis en avant, halo + pin) -->
-                <circle cx="265" cy="295" r="42" fill="url(#meximieuxGlow)" />
-                <circle cx="265" cy="295" r="11" fill="url(#brandGrad2)" />
-                <circle cx="265" cy="295" r="4" fill="#F5F1EA" />
-                <text x="265" y="278" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#003707" font-weight="800" letter-spacing="-0.01em">Meximieux</text>
-                <text x="265" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" font-weight="600" letter-spacing="0.12em">NOTRE BUREAU</text>
+                <!-- POINT MEXIMIEUX (focal, halo radial double + pin) -->
+                <circle cx="280" cy="305" r="50" fill="url(#mexHalo)" />
+                <circle cx="280" cy="305" r="14" fill="#00491b" />
+                <circle cx="280" cy="305" r="7" fill="#F5F1EA" />
+                <circle cx="280" cy="305" r="3" fill="#003707" />
+                <text x="280" y="285" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#003707" font-weight="800" letter-spacing="-0.01em">Meximieux</text>
+                <text x="280" y="335" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" font-weight="700" letter-spacing="0.16em">NOTRE BUREAU</text>
 
                 <!-- Compass rose -->
-                <g transform="translate(750, 460)">
-                  <circle r="14" fill="#EFEAE0" stroke="#003707" stroke-opacity="0.4" stroke-width="1" />
-                  <path d="M 0 -10 L 3 0 L 0 10 L -3 0 Z" fill="#003707" fill-opacity="0.55" />
-                  <text y="-18" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" font-weight="700">N</text>
+                <g transform="translate(745, 440)">
+                  <circle r="16" fill="#F5F1EA" stroke="#003707" stroke-opacity="0.45" stroke-width="1" />
+                  <path d="M 0 -11 L 3.5 0 L 0 11 L -3.5 0 Z" fill="#003707" fill-opacity="0.6" />
+                  <text y="-22" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#003707" font-weight="800">N</text>
                 </g>
 
                 <!-- Échelle -->
-                <g transform="translate(40, 470)">
-                  <line x1="0" y1="0" x2="60" y2="0" stroke="#003707" stroke-opacity="0.55" stroke-width="2" />
-                  <line x1="0" y1="-3" x2="0" y2="3" stroke="#003707" stroke-opacity="0.55" stroke-width="2" />
-                  <line x1="60" y1="-3" x2="60" y2="3" stroke="#003707" stroke-opacity="0.55" stroke-width="2" />
-                  <text x="30" y="16" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.6">10 km</text>
+                <g transform="translate(45, 460)">
+                  <line x1="0" y1="0" x2="50" y2="0" stroke="#003707" stroke-opacity="0.55" stroke-width="2.5" />
+                  <line x1="0" y1="-3.5" x2="0" y2="3.5" stroke="#003707" stroke-opacity="0.55" stroke-width="2.5" />
+                  <line x1="50" y1="-3.5" x2="50" y2="3.5" stroke="#003707" stroke-opacity="0.55" stroke-width="2.5" />
+                  <text x="25" y="17" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.6" font-weight="600">10 km</text>
                 </g>
               </svg>
             </div>
 
-            <!-- Liste villes -->
-            <div class="border-t border-ink/10 pt-5">
-              <p class="eyebrow text-ink/55 mb-4">Bassin d'intervention</p>
-              <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2 text-sm">
-                <a href="/seminaire-meximieux/" class="text-ink/75 hover:text-accent transition-colors">Meximieux</a>
-                <a href="/seminaire-amberieu-en-bugey/" class="text-ink/75 hover:text-accent transition-colors">Ambérieu</a>
-                <a href="/seminaire-perouges/" class="text-ink/75 hover:text-accent transition-colors">Pérouges</a>
-                <a href="/seminaire-lagnieu/" class="text-ink/75 hover:text-accent transition-colors">Lagnieu</a>
-                <a href="/seminaire-saint-vulbas/" class="text-ink/75 hover:text-accent transition-colors">Saint-Vulbas</a>
-                <a href="/agence-evenementielle-lyon/" class="text-ink/55 hover:text-accent transition-colors">Lyon est</a>
-                <a href="/agence-evenementielle-bourg-en-bresse/" class="text-ink/55 hover:text-accent transition-colors">Bourg-en-Bresse</a>
-                <a href="/agence-evenementielle-geneve/" class="text-ink/55 hover:text-accent transition-colors">Pays de Gex</a>
+            <!-- Liste villes : 2 niveaux -->
+            <div class="border-t border-ink/10 pt-5 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p class="eyebrow text-ink/55 mb-3">Plaine de l'Ain</p>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                  <a href="/seminaire-meximieux/" class="text-ink hover:text-accent font-medium transition-colors">Meximieux</a>
+                  <a href="/seminaire-amberieu-en-bugey/" class="text-ink/80 hover:text-accent transition-colors">Ambérieu</a>
+                  <a href="/seminaire-perouges/" class="text-ink/80 hover:text-accent transition-colors">Pérouges</a>
+                  <a href="/seminaire-lagnieu/" class="text-ink/80 hover:text-accent transition-colors">Lagnieu</a>
+                  <a href="/seminaire-saint-vulbas/" class="text-ink/80 hover:text-accent transition-colors">Saint-Vulbas</a>
+                </div>
+              </div>
+              <div>
+                <p class="eyebrow text-ink/55 mb-3">Zones étendues</p>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                  <a href="/agence-evenementielle-lyon/" class="text-ink/65 hover:text-accent transition-colors">Lyon est</a>
+                  <a href="/agence-evenementielle-bourg-en-bresse/" class="text-ink/65 hover:text-accent transition-colors">Bourg-en-Bresse</a>
+                  <a href="/agence-evenementielle-geneve/" class="text-ink/65 hover:text-accent transition-colors">Pays de Gex</a>
+                  <a href="/agence-evenementielle-macon/" class="text-ink/65 hover:text-accent transition-colors">Mâcon</a>
+                </div>
               </div>
             </div>
           </div>
