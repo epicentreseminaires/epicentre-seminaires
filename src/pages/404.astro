@@ -1,0 +1,123 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const title = "Page introuvable | Epicentre Séminaires";
+const description = "La page que vous cherchez n'existe pas ou n'est plus accessible. Reprenez par les sections principales d'Epicentre Séminaires.";
+---
+
+<Base title={title} description={description} zone="plaine" theme="dark" noindex={true}>
+  <section class="relative min-h-screen bg-ink text-bone overflow-hidden flex items-center pt-32 md:pt-36 pb-20">
+    <!-- Background image floutée + cinema-grade -->
+    <div class="absolute inset-0 cinema-grade pointer-events-none" aria-hidden="true">
+      <img
+        src="https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg"
+        alt=""
+        loading="eager"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover opacity-25"
+        style="filter: blur(4px) saturate(0.8)"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-forest-deep/85 z-[3]"></div>
+    </div>
+
+    <!-- Halo accent emerald -->
+    <div class="absolute top-1/4 right-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(0,73,27,0.45)_0%,transparent_60%)] pointer-events-none"></div>
+
+    <div class="container-wide relative z-10 text-center max-w-3xl mx-auto">
+      <!-- Code 404 visuel -->
+      <p class="font-display text-[8rem] md:text-[12rem] leading-none tracking-[-0.04em] text-bone/15 select-none mb-2">404</p>
+
+      <p class="eyebrow text-bone/55">Page introuvable</p>
+      <h1 class="font-display font-semibold mt-5 leading-[0.98] tracking-[-0.04em] !text-bone" style="font-size: clamp(2.25rem, 5vw, 4rem);">
+        Vous êtes sorti de la plaine.
+      </h1>
+      <p class="mt-7 text-lg md:text-xl text-bone/75 leading-relaxed max-w-xl mx-auto">
+        La page que vous cherchez n'existe pas, plus, ou jamais. Reprenez par une des entrées principales.
+      </p>
+
+      <!-- Recovery cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12">
+        <a href="/" class="recovery-card">
+          <span class="recovery-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" />
+              <polyline points="9 22 9 12 15 12 15 22" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="recovery-card__label">Accueil</span>
+        </a>
+        <a href="/productions/" class="recovery-card">
+          <span class="recovery-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="14" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="3" y1="21" x2="21" y2="21" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="recovery-card__label">Productions</span>
+        </a>
+        <a href="/conseiller/" class="recovery-card">
+          <span class="recovery-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="recovery-card__label">Carnet</span>
+        </a>
+        <a href="/construire-mon-projet/" class="recovery-card">
+          <span class="recovery-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="recovery-card__label">Construire mon projet</span>
+        </a>
+      </div>
+
+      <!-- Contact direct -->
+      <p class="mt-12 text-sm text-bone/55">
+        Vous cherchez quelque chose de précis ?
+        <a href="/contact/" class="text-bone hover:text-bone/80 underline underline-offset-4 transition-colors ml-1">Demandez-nous directement</a>
+      </p>
+    </div>
+  </section>
+
+  <style>
+    .recovery-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.4rem 1rem;
+      background: rgba(245, 241, 234, 0.04);
+      border: 1px solid rgba(245, 241, 234, 0.15);
+      border-radius: 6px;
+      color: rgba(245, 241, 234, 0.85);
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+    .recovery-card:hover {
+      background: rgba(245, 241, 234, 0.10);
+      border-color: rgba(245, 241, 234, 0.45);
+      color: #F5F1EA;
+      transform: translateY(-2px);
+    }
+    .recovery-card__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: rgba(245, 241, 234, 0.08);
+    }
+    .recovery-card__label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      line-height: 1.2;
+      text-align: center;
+    }
+  </style>
+</Base>
