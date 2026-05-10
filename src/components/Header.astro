@@ -5,8 +5,9 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 export interface Props {
   zone?: 'plaine' | 'brand';
   theme?: 'light' | 'dark';
+  transparentTop?: boolean;
 }
-const { zone = 'brand', theme = 'dark' } = Astro.props;
+const { zone = 'brand', theme = 'dark', transparentTop = false } = Astro.props;
 
 // Navigation unifiée : la home, les pages brand et les pages Plaine partagent
 // le même menu. Le Domaine d'Épinac vit sur un sous-domaine séparé
@@ -28,7 +29,9 @@ const phoneHref = CONTACT_PHONE_HREF;
 // Theme adaptable : light pour fond clair (home premium), dark pour heros sombres
 const isLight = theme === 'light';
 const logoVariant = isLight ? 'dark' : 'light';
-const headerBgInitial = isLight ? 'bg-bone/0' : 'bg-transparent';
+const headerBgInitial = isLight
+  ? 'bg-bone/0'
+  : (transparentTop ? 'bg-transparent' : 'bg-forest-gradient');
 const headerBgScrolled = isLight ? 'bg-bone/90 backdrop-blur-md' : 'bg-forest-gradient';
 const borderClass = isLight ? 'border-ink/5' : 'border-bone/5';
 const textBase = isLight ? 'text-ink/85' : 'text-bone/85';
