@@ -218,6 +218,123 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
     </div>
   </section>
 
+  <!-- ANCRAGE GÉOGRAPHIQUE : ON EST LÀ, EN VRAI -->
+  <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <p class="eyebrow">Notre point d'ancrage</p>
+        <h2 class="h2-hero mt-6">
+          Basés à Meximieux,<br /><span class="text-gradient">au cœur de la Plaine de l'Ain.</span>
+        </h2>
+        <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70 max-w-2xl">
+          Pas une boîte aux lettres. Un bureau, une vue, un ancrage local. Entre Lyon et Genève, à 30 minutes des deux, à portée des sites industriels du PIPA et des grands groupes du bassin.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <!-- IMAGE VUE BUREAU -->
+        <div class="lg:col-span-7 relative overflow-hidden rounded-sm">
+          <div class="relative aspect-[4/3] cinema-grade">
+            <img
+              src="https://enjoylife.b-cdn.net/Epicentre/meximieux.jpg"
+              alt="Vue depuis nos bureaux à Meximieux, Plaine de l'Ain"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-[3]"></div>
+            <div class="absolute bottom-5 left-5 right-5 z-[4] text-bone">
+              <p class="text-[0.65rem] uppercase tracking-[0.22em] text-bone/70 font-medium">Vue depuis nos bureaux</p>
+              <p class="mt-1.5 text-sm md:text-base font-semibold">Meximieux, Plaine de l'Ain</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARTE STYLISÉE + INFOS -->
+        <div class="lg:col-span-5 flex flex-col">
+          <div class="bg-bone-soft p-7 md:p-8 flex-1 flex flex-col justify-between gap-8">
+            <!-- Carte SVG stylisée -->
+            <div class="relative">
+              <svg viewBox="0 0 400 240" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carte de la Plaine de l'Ain entre Lyon et Genève">
+                <!-- Fond pointillé subtil -->
+                <defs>
+                  <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+                    <circle cx="2" cy="2" r="0.7" fill="#003707" fill-opacity="0.10" />
+                  </pattern>
+                  <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#003707" />
+                    <stop offset="100%" stop-color="#00491b" />
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="240" fill="url(#dots)" />
+
+                <!-- Fleuve / axe Rhône stylisé (horizontal léger) -->
+                <path d="M 0 145 Q 100 130 200 140 T 400 130" stroke="#00491b" stroke-opacity="0.18" stroke-width="1.2" fill="none" stroke-dasharray="3 3" />
+
+                <!-- Région Plaine de l'Ain (forme organique abstraite) -->
+                <path d="M 130 105 Q 165 90 215 95 Q 255 100 270 130 Q 265 165 220 175 Q 175 180 145 165 Q 120 145 130 105 Z"
+                      fill="url(#brandGrad)" fill-opacity="0.10" stroke="#00491b" stroke-opacity="0.3" stroke-width="1" />
+
+                <!-- Ville LYON (référence ouest) -->
+                <circle cx="50" cy="155" r="3.5" fill="#00491b" fill-opacity="0.4" />
+                <text x="50" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#00491b" fill-opacity="0.55" font-weight="500">Lyon</text>
+                <text x="50" y="188" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.4">45 km · 35 min</text>
+
+                <!-- Ville BOURG-EN-BRESSE -->
+                <circle cx="135" cy="55" r="3" fill="#00491b" fill-opacity="0.4" />
+                <text x="135" y="44" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#00491b" fill-opacity="0.55" font-weight="500">Bourg-en-Bresse</text>
+
+                <!-- Ville PEROUGES -->
+                <circle cx="155" cy="120" r="2.5" fill="#003707" fill-opacity="0.5" />
+                <text x="155" y="111" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55">Pérouges</text>
+
+                <!-- Ville AMBERIEU -->
+                <circle cx="220" cy="115" r="2.5" fill="#003707" fill-opacity="0.5" />
+                <text x="220" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55">Ambérieu</text>
+
+                <!-- Ville LAGNIEU -->
+                <circle cx="240" cy="155" r="2.5" fill="#003707" fill-opacity="0.5" />
+                <text x="245" y="167" text-anchor="start" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55">Lagnieu</text>
+
+                <!-- Ville SAINT-VULBAS (PIPA) -->
+                <circle cx="195" cy="170" r="2.5" fill="#003707" fill-opacity="0.5" />
+                <text x="195" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.55">Saint-Vulbas</text>
+
+                <!-- Ville GENEVE (référence est) -->
+                <circle cx="355" cy="120" r="3.5" fill="#00491b" fill-opacity="0.4" />
+                <text x="355" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#00491b" fill-opacity="0.55" font-weight="500">Genève</text>
+                <text x="355" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#003707" fill-opacity="0.4">90 km · 1h15</text>
+
+                <!-- POINT MEXIMIEUX (mis en avant) -->
+                <circle cx="170" cy="138" r="14" fill="url(#brandGrad)" fill-opacity="0.18" />
+                <circle cx="170" cy="138" r="8" fill="url(#brandGrad)" fill-opacity="0.35" />
+                <circle cx="170" cy="138" r="4.5" fill="url(#brandGrad)" />
+                <circle cx="170" cy="138" r="1.6" fill="#F5F1EA" />
+                <text x="170" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#003707" font-weight="700" letter-spacing="-0.01em">Meximieux</text>
+                <text x="170" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="8.5" fill="#003707" fill-opacity="0.6" letter-spacing="0.06em">NOTRE BUREAU</text>
+              </svg>
+            </div>
+
+            <!-- Liste villes -->
+            <div class="border-t border-ink/10 pt-6">
+              <p class="eyebrow text-ink/55 mb-4">Bassin d'intervention</p>
+              <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <a href="/seminaire-meximieux/" class="text-ink/75 hover:text-accent transition-colors">Meximieux</a>
+                <a href="/seminaire-amberieu-en-bugey/" class="text-ink/75 hover:text-accent transition-colors">Ambérieu</a>
+                <a href="/seminaire-perouges/" class="text-ink/75 hover:text-accent transition-colors">Pérouges</a>
+                <a href="/seminaire-lagnieu/" class="text-ink/75 hover:text-accent transition-colors">Lagnieu</a>
+                <a href="/seminaire-saint-vulbas/" class="text-ink/75 hover:text-accent transition-colors">Saint-Vulbas</a>
+                <a href="/agence-evenementielle-lyon/" class="text-ink/55 hover:text-accent transition-colors">Lyon est</a>
+                <a href="/agence-evenementielle-bourg-en-bresse/" class="text-ink/55 hover:text-accent transition-colors">Bourg-en-Bresse</a>
+                <a href="/agence-evenementielle-geneve/" class="text-ink/55 hover:text-accent transition-colors">Pays de Gex</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CARNET D'ADRESSES : BENTO GRID -->
   <section id="carnet" class="bg-bone py-24 md:py-32 border-t border-ink/10 scroll-mt-20">
     <div class="container-wide">
