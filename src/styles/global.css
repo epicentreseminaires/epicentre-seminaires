@@ -40,10 +40,19 @@
     letter-spacing: -0.005em;
   }
   .btn-primary {
-    @apply btn bg-ink text-bone hover:bg-ink-soft;
+    @apply btn text-bone;
+    background: linear-gradient(135deg, #003707 0%, #00491b 100%);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.15);
   }
   .btn-outline {
-    @apply btn border border-ink text-ink hover:bg-ink hover:text-bone;
+    @apply btn border border-forest text-forest-deep hover:text-bone;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .btn-outline:hover {
+    background: linear-gradient(135deg, #003707 0%, #00491b 100%);
+    border-color: transparent;
   }
   .btn-bone {
     @apply btn bg-bone text-ink hover:bg-bone-soft;

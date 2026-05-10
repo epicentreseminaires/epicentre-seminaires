@@ -12,51 +12,53 @@ const heroImg = 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=
 ---
 <Base title={title} description={description} zone="plaine" theme="light">
   <!-- HERO -->
-  <section class="bg-bone pt-32 md:pt-40 pb-16 md:pb-20 relative overflow-hidden">
-    <div class="container-wide">
-      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-        <div class="lg:col-span-7 relative z-10">
-          <div class="flex items-center gap-3 mb-8">
-            <span class="block w-8 h-px bg-ink/30"></span>
-            <p class="text-[0.7rem] uppercase tracking-[0.22em] text-ink/55 font-medium">
-              Plaine de l'Ain · Entre Lyon et Genève
-            </p>
-          </div>
+  <section class="relative overflow-hidden pt-32 md:pt-40 pb-20 md:pb-28 bg-forest-gradient text-bone">
+    <!-- Image immersive en arrière-plan droite -->
+    <div class="absolute inset-y-0 right-0 w-full lg:w-3/5 pointer-events-none" aria-hidden="true">
+      <img
+        src={heroImg}
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover opacity-50 lg:opacity-70"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <!-- Fondu vers le vert : l'image se dissout dans le fond -->
+      <div class="absolute inset-0 bg-gradient-to-r from-forest-deep via-forest-deep/85 to-forest-deep/15"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-transparent to-forest-deep/30"></div>
+    </div>
 
-          <h1 class="h1-hero-xl">
-            Le bon contact,<br />ou tout l'événement.
-          </h1>
+    <!-- Halo accent crème en haut-droite -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] -translate-y-1/3 translate-x-1/4 rounded-full bg-bone/5 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
-          <p class="mt-8 text-lg md:text-xl leading-relaxed text-ink/65 max-w-xl">
-            <strong class="text-ink/90">Agence événementielle dans la Plaine de l'Ain.</strong><br />
-            Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer. Vous choisissez le mode.
+    <div class="container-wide relative z-10">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="block w-8 h-px bg-bone/40"></span>
+          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-bone/65 font-medium">
+            Plaine de l'Ain · Entre Lyon et Genève
           </p>
-
-          <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <a href="/construire-mon-projet/" class="btn-accent text-sm px-7 py-4">
-              Construire mon projet
-              <span aria-hidden="true">→</span>
-            </a>
-            <a href="#carnet" class="text-ink/85 hover:text-ink text-sm font-semibold flex items-center gap-2 transition-colors">
-              Voir le carnet d'adresses
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-                <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </div>
         </div>
 
-        <div class="lg:col-span-5 relative">
-          <div class="relative aspect-[4/5] overflow-hidden bg-ink-soft rounded-sm">
-            <img
-              src={heroImg}
-              alt="Scène événementielle, mise en lumière et atmosphère technique"
-              class="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
-              fetchpriority="high"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent"></div>
-          </div>
+        <h1 class="h1-hero-xl !text-bone">
+          Le bon contact,<br />ou tout l'événement.
+        </h1>
+
+        <p class="mt-8 text-lg md:text-xl leading-relaxed text-bone/80 max-w-xl">
+          <strong class="text-bone">Agence événementielle dans la Plaine de l'Ain.</strong><br />
+          Carnet d'adresses curaté pour vous orienter, ou production complète quand vous voulez tout déléguer. Vous choisissez le mode.
+        </p>
+
+        <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a href="/construire-mon-projet/" class="btn bg-bone text-forest-deep hover:bg-bone-soft text-sm px-7 py-4 font-semibold">
+            Construire mon projet
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="#carnet" class="text-bone/85 hover:text-bone text-sm font-semibold flex items-center gap-2 transition-colors">
+            Voir le carnet d'adresses
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

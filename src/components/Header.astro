@@ -28,8 +28,8 @@ const phoneHref = CONTACT_PHONE_HREF;
 // Theme adaptable : light pour fond clair (home premium), dark pour heros sombres
 const isLight = theme === 'light';
 const logoVariant = isLight ? 'dark' : 'light';
-const headerBgInitial = isLight ? 'bg-bone/0' : 'bg-ink/60 backdrop-blur-md';
-const headerBgScrolled = isLight ? 'bg-bone/90 backdrop-blur-md' : 'bg-ink/95';
+const headerBgInitial = isLight ? 'bg-bone/0' : 'bg-forest-deep/60 backdrop-blur-md';
+const headerBgScrolled = isLight ? 'bg-bone/90 backdrop-blur-md' : 'bg-forest-deep/95';
 const borderClass = isLight ? 'border-ink/5' : 'border-bone/5';
 const textBase = isLight ? 'text-ink/85' : 'text-bone/85';
 const textHover = isLight ? 'hover:text-ink' : 'hover:text-bone';
@@ -38,7 +38,7 @@ const borderZoneTag = isLight ? 'border-ink/15' : 'border-bone/20';
 const phoneText = isLight ? 'text-ink hover:text-ink/70' : 'text-bone hover:text-bone/80';
 const ctaClass = isLight ? 'btn-accent' : 'btn-bone';
 const burgerColor = isLight ? 'text-ink' : 'text-bone';
-const mobileMenuBg = isLight ? 'bg-bone border-ink/10' : 'bg-ink border-bone/10';
+const mobileMenuBg = isLight ? 'bg-bone border-ink/10' : 'bg-forest-gradient border-bone/10';
 const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
 ---
 
@@ -71,7 +71,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
         type="button"
         data-search-trigger
         aria-label="Rechercher sur le site"
-        class={`group flex items-center gap-2.5 px-3.5 py-2 rounded-full border transition-all duration-200 ${isLight ? 'border-ink/12 hover:border-ink/30 bg-bone/40 hover:bg-bone' : 'border-bone/15 hover:border-bone/35 bg-ink-soft/60 hover:bg-ink-soft'}`}
+        class={`group flex items-center gap-2.5 px-3.5 py-2 rounded-full border transition-all duration-200 ${isLight ? 'border-ink/12 hover:border-ink/30 bg-bone/40 hover:bg-bone' : 'border-bone/15 hover:border-bone/35 bg-forest-deep/60 hover:bg-forest-deep'}`}
       >
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class={isLight ? 'text-ink/55 group-hover:text-ink/75' : 'text-bone/55 group-hover:text-bone/75'}>
           <circle cx="11" cy="11" r="7" />

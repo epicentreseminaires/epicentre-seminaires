@@ -100,11 +100,11 @@ const definedTermSet = {
           />
         </div>
         <div class="flex gap-2 flex-wrap" id="lexFilters">
-          <button type="button" data-cat="all" class="lexFilterBtn px-4 py-2 text-xs uppercase tracking-[0.18em] border border-ink/15 hover:border-ink/40 transition-colors data-[active=true]:bg-ink data-[active=true]:text-bone data-[active=true]:border-ink" data-active="true">
+          <button type="button" data-cat="all" class="lexFilterBtn px-4 py-2 text-xs uppercase tracking-[0.18em] border border-ink/15 hover:border-ink/40 transition-colors data-[active=true]:bg-forest-deep data-[active=true]:text-bone data-[active=true]:border-forest-deep" data-active="true">
             Tout
           </button>
           {lexiqueCategories.map((cat) => (
-            <button type="button" data-cat={cat} class="lexFilterBtn px-4 py-2 text-xs uppercase tracking-[0.18em] border border-ink/15 hover:border-ink/40 transition-colors data-[active=true]:bg-ink data-[active=true]:text-bone data-[active=true]:border-ink">
+            <button type="button" data-cat={cat} class="lexFilterBtn px-4 py-2 text-xs uppercase tracking-[0.18em] border border-ink/15 hover:border-ink/40 transition-colors data-[active=true]:bg-forest-deep data-[active=true]:text-bone data-[active=true]:border-forest-deep">
               {cat}
             </button>
           ))}
@@ -144,7 +144,7 @@ const definedTermSet = {
   </section>
 
   <!-- CTA -->
-  <section class="bg-ink text-bone py-24 md:py-28">
+  <section class="bg-forest-gradient text-bone py-24 md:py-28">
     <div class="container-wide text-center max-w-3xl mx-auto">
       <p class="eyebrow text-bone/55">Aller plus loin</p>
       <h2 class="h2-section mt-6 text-bone">
