@@ -9,6 +9,7 @@ geo:
   lat: 45.7993
   lng: 5.2734
 nearbyVilles:
+  - seminaire-miribel
   - seminaire-amberieu-en-bugey
   - seminaire-lagnieu
   - agence-evenementielle-lyon

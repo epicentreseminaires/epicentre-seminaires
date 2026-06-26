@@ -76,12 +76,31 @@ const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
         name: 'Epicentre Séminaires',
         description: "Agence événementielle dans la Plaine de l'Ain. Production technique d'événements d'entreprise : plénières, galas, conventions, lancements, captation vidéo.",
         url: `${siteUrl}/`,
+        telephone: '+33744980015',
         address: {
           '@type': 'PostalAddress',
-          addressRegion: 'Auvergne-Rhône-Alpes',
+          addressLocality: 'Meximieux',
+          addressRegion: 'Ain',
+          postalCode: '01800',
           addressCountry: 'FR',
         },
-        areaServed: ["Plaine de l'Ain", 'Ambérieu-en-Bugey', 'Lagnieu', 'Meximieux', 'Saint-Vulbas', 'Pérouges', 'Bugey', 'Lyon est', 'Pays de Gex'],
+        areaServed: [
+          "Plaine de l'Ain",
+          'Ambérieu-en-Bugey',
+          'Lagnieu',
+          'Meximieux',
+          'Saint-Vulbas',
+          'Pérouges',
+          'Montluel',
+          'Miribel',
+          'Oyonnax',
+          'Bellegarde-sur-Valserine',
+          'Bugey',
+          'Bourg-en-Bresse',
+          'Mâcon',
+          'Lyon',
+          'Pays de Gex',
+        ],
       })} />
     ) : (
       <script type="application/ld+json" set:html={JSON.stringify({

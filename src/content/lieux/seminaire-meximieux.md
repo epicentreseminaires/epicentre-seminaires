@@ -9,6 +9,7 @@ geo:
   lat: 45.9075
   lng: 5.2018
 nearbyVilles:
+  - seminaire-montluel
   - seminaire-perouges
   - seminaire-amberieu-en-bugey
   - agence-evenementielle-lyon

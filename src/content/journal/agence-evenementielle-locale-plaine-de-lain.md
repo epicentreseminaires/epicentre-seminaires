@@ -15,7 +15,7 @@ Pourtant, quand un dirigeant ou un DRH cherche une agence événementielle, le r
 
 Une agence événementielle ancrée dans la Plaine de l'Ain connaît, par usage, des éléments qu'une agence extérieure découvre à chaque mission :
 
-- **Les lieux disponibles** dans le bassin : salles polyvalentes communales (Ambérieu, Lagnieu, Meximieux), parcs d'activités du PIPA, sites industriels privatisables, hôtels-séminaires, lieux patrimoniaux comme Pérouges. Pas seulement les noms : les capacités réelles, les contraintes électriques, les stationnements, les accès poids lourds, les saisons d'ouverture.
+- **Les lieux disponibles** dans le bassin : salles polyvalentes communales ([Ambérieu](/seminaire-amberieu-en-bugey/), [Lagnieu](/seminaire-lagnieu/), [Meximieux](/seminaire-meximieux/), [Montluel](/seminaire-montluel/), [Miribel](/seminaire-miribel/)), parcs d'activités du [PIPA à Saint-Vulbas](/seminaire-saint-vulbas/), sites industriels privatisables, hôtels-séminaires, lieux patrimoniaux comme [Pérouges](/seminaire-perouges/). Pas seulement les noms : les capacités réelles, les contraintes électriques, les stationnements, les accès poids lourds, les saisons d'ouverture.
 - **Les prestataires régionaux** : sondiers, éclairagistes, structureurs, traiteurs, sécurité, photographes, animateurs locaux qui connaissent le terrain. Avec leur niveau de qualité, leur rapidité de réaction, leurs particularités.
 - **Les contraintes des sites industriels** : plans de prévention, accès sécurisés, accueil intermittents, fenêtres horaires de montage compatibles avec la production de l'usine.
 - **Les institutions et collectivités** : mairies, intercommunalités, services préfectoraux quand un événement nécessite des autorisations spécifiques.
@@ -57,4 +57,4 @@ Pour le reste : un événement à enjeu sur le bassin Plaine de l'Ain est mieux 
 
 ---
 
-*Vous êtes une entreprise du bassin Plaine de l'Ain et vous préparez un événement à enjeu ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous.*
+Vous êtes une entreprise du bassin ([Meximieux](/seminaire-meximieux/), [Saint-Vulbas](/seminaire-saint-vulbas/), [Ambérieu](/seminaire-amberieu-en-bugey/), [Lagnieu](/seminaire-lagnieu/), [Montluel](/seminaire-montluel/), [Miribel](/seminaire-miribel/), [Pérouges](/seminaire-perouges/)) et vous préparez un événement à enjeu ? [Décrivez-nous votre projet](/contact/) : nous revenons vers vous sous 24 h.

@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Ambérieu-en-Bugey"
-description: "Agence événementielle pour entreprises d'Ambérieu-en-Bugey : plénières, galas, lancements, captation vidéo. Bassin Plaine de l'Ain et Bugey."
+description: "Organisateur d'événements pour les entreprises d'Ambérieu-en-Bugey : plénières, galas, inaugurations, captation. Agence dans la Plaine de l'Ain."
 ville: "Ambérieu-en-Bugey"
 zone: "plaine"
 publishedAt: 2026-05-05
@@ -10,6 +10,7 @@ geo:
   lng: 5.3597
 nearbyVilles:
   - seminaire-lagnieu
+  - agence-evenementielle-oyonnax
   - seminaire-perouges
   - agence-evenementielle-lyon
   - agence-evenementielle-bourg-en-bresse
