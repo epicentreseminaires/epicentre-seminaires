@@ -1,6 +1,6 @@
 ---
-title: "Agence événementielle à Miribel"
-description: "Agence événementielle pour les entreprises de Miribel et des Échets : conventions, plénières, galas, captation vidéo. Dans l'Ain, aux portes de Lyon."
+title: "Organiser un événement d'entreprise à Miribel"
+description: "Organiser un événement d'entreprise à Miribel : séminaire, convention, soirée, plénière, captation. Dans l'Ain, aux portes immédiates de Lyon."
 ville: "Miribel"
 zone: "plaine"
 publishedAt: 2026-06-26

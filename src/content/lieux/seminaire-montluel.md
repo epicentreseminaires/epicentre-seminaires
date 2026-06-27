@@ -1,6 +1,6 @@
 ---
-title: "Agence événementielle à Montluel"
-description: "Agence événementielle pour les entreprises de Montluel : plénières, galas, inaugurations, captation. Plaine de l'Ain, 22 km de Lyon, accès A42."
+title: "Organiser un séminaire ou événement à Montluel"
+description: "Organiser un séminaire ou événement d'entreprise à Montluel : plénière, gala, inauguration, soirée. Plaine de l'Ain, 22 km de Lyon, axe A42."
 ville: "Montluel"
 zone: "plaine"
 publishedAt: 2026-06-26

@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Saint-Vulbas et au PIPA"
-description: "Agence événementielle pour les entreprises du PIPA et Saint-Vulbas. Inauguration de site industriel, convention, AG, plénière, captation vidéo."
+description: "Organiser votre événement d'entreprise au PIPA et Saint-Vulbas : inauguration industrielle, convention, plénière, soirée. Agence Plaine de l'Ain."
 ville: "Saint-Vulbas"
 zone: "plaine"
 publishedAt: 2026-05-05

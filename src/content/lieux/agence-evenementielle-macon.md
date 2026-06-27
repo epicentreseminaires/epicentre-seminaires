@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Mâcon"
-description: "Agence événementielle à Mâcon : conventions, galas, captation, dégustation domaine viticole. Agence Plaine de l'Ain à 1 heure de Mâcon, axe TGV Paris."
+description: "Organiser un événement d'entreprise à Mâcon : séminaire, gala, convention, domaine viticole, captation. Agence Plaine de l'Ain, axe TGV Paris-Lyon."
 ville: "Mâcon"
 zone: "plaine"
 publishedAt: 2026-05-09

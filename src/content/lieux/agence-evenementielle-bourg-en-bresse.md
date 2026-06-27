@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Bourg-en-Bresse"
-description: "Agence événementielle à Bourg-en-Bresse : plénières, galas, conventions, captation. Agence Plaine de l'Ain à 40 minutes de Bourg, préfecture de l'Ain."
+description: "Organiser un événement d'entreprise à Bourg-en-Bresse : séminaire, gala, plénière, soirée. Agence Plaine de l'Ain, préfecture de l'Ain, 40 min."
 ville: "Bourg-en-Bresse"
 zone: "plaine"
 publishedAt: 2026-05-09

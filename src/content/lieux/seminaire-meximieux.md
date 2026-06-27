@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Meximieux"
-description: "Agence événementielle pour entreprises de Meximieux : plénières, galas, lancements, captation. À 5 min de Pérouges, dans la Plaine de l'Ain."
+description: "Organiser un événement d'entreprise à Meximieux : séminaire, gala, plénière, inauguration. À 5 min de Pérouges, agence Plaine de l'Ain, Ain."
 ville: "Meximieux"
 zone: "plaine"
 publishedAt: 2026-05-05

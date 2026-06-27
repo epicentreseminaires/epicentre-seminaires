@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle Genève et Pays de Gex"
-description: "Agence événementielle Genève et Pays de Gex : conventions multilingues, captation, dispositif presse. Agence Plaine de l'Ain à 1h de Genève."
+description: "Organiser un événement d'entreprise Pays de Gex et région de Genève : convention, séminaire, gala. Agence française, basée dans la Plaine de l'Ain."
 ville: "Genève"
 zone: "plaine"
 publishedAt: 2026-05-09

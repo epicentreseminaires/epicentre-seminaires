@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Lagnieu"
-description: "Agence événementielle pour entreprises de Lagnieu : plénières, galas, lancements, inaugurations de sites industriels, captation. Bassin Plaine de l'Ain."
+description: "Organisation d'événement d'entreprise à Lagnieu : plénière, gala, inauguration industrielle, séminaire, captation. Bassin Plaine de l'Ain, Ain."
 ville: "Lagnieu"
 zone: "plaine"
 publishedAt: 2026-05-05

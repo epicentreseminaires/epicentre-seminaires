@@ -1,6 +1,6 @@
 ---
 title: "Agence événementielle à Lyon"
-description: "Agence événementielle à Lyon : plénières, galas, conventions, lancements, captation. Production technique de la Plaine de l'Ain à Lyon, 35 minutes."
+description: "Organiser votre événement d'entreprise à Lyon : séminaire, plénière, gala, soirée, inauguration. Production technique Plaine de l'Ain, Lyon en 35 min."
 ville: "Lyon"
 zone: "plaine"
 publishedAt: 2026-05-09
