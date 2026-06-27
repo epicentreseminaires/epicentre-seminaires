@@ -97,4 +97,4 @@ Si l'agence répond avec précision aux cinq, vous êtes en bonnes mains. Si ell
 
 ---
 
-*Vous travaillez sur un projet de plénière, convention ou lancement avec captation vidéo dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre format](/contact/), nous revenons vers vous.*
+*Vous travaillez sur un projet de plénière, convention ou lancement avec captation vidéo ? [Enclenchez l'étude technique](/construire-mon-projet/) : format, jauge, date.*

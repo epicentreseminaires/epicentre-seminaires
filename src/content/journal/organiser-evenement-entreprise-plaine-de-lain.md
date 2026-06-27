@@ -110,4 +110,4 @@ Retrouvez les pages dédiées à votre ville :
 
 **Ain et région :** [Bourg-en-Bresse](/agence-evenementielle-bourg-en-bresse/) · [Oyonnax](/agence-evenementielle-oyonnax/) · [Bellegarde-sur-Valserine](/seminaire-bellegarde-sur-valserine/) · [Lyon](/agence-evenementielle-lyon/) · [Pays de Gex](/agence-evenementielle-geneve/)
 
-Ou [décrivez-nous votre projet directement](/construire-mon-projet/) : format, date, jauge approximative. On revient vers vous sous 24 h.
+Ou [enclenchez directement votre étude technique](/construire-mon-projet/) : format, date, jauge approximative.

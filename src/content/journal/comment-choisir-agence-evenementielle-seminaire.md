@@ -85,4 +85,4 @@ C'est rare. Mais ça existe.
 
 ---
 
-*Cet article fait partie de notre journal sur la production événementielle. Pour discuter d'un projet de séminaire ou de plénière dans la Plaine de l'Ain ou en Bourgogne, [contactez-nous](/contact/).*
+*Cet article fait partie de notre journal sur la production événementielle. Vous avez un projet à enclencher ? [Démarrez l'étude technique](/construire-mon-projet/).*

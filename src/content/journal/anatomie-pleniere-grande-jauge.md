@@ -100,4 +100,4 @@ Une plénière grande jauge réussie, c'est entre 100 et 200 heures de préparat
 
 ---
 
-*Vous préparez une plénière grande jauge, une convention ou un événement à enjeu dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous pour caler un échange.*
+*Vous préparez une plénière grande jauge, une convention ou un événement à enjeu ? [Enclenchez l'étude technique](/construire-mon-projet/) : format, jauge, date.*

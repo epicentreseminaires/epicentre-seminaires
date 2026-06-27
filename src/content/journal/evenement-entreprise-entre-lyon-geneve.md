@@ -54,7 +54,7 @@ Vos participants ont probablement déjà fait des événements à Lyon. Ils n'on
 
 ---
 
-## Ce que nous organisons pour les entreprises du corridor
+## Ce que nous concevons et produisons pour les entreprises du corridor
 
 Nous sommes une **agence de production événementielle basée dans la Plaine de l'Ain**. Notre ancrage est local. Notre périmètre d'intervention couvre tout le corridor Lyon-Genève.
 
@@ -113,7 +113,7 @@ Nous intervenons pour des entreprises du [Pays de Gex et de Genève](/agence-eve
 
 ## Votre prochain événement dans la Plaine de l'Ain
 
-Vous êtes à Lyon, à Genève, ou ailleurs dans le corridor. Vous voulez organiser dans la Plaine de l'Ain. Décrivez-nous votre projet : format, date, jauge approximative, contraintes spécifiques.
+Vous êtes à Lyon, à Genève, ou ailleurs dans le corridor. Vous voulez produire dans la Plaine de l'Ain. [Enclenchez votre étude technique](/construire-mon-projet/) : format, date, jauge approximative, contraintes spécifiques.
 
 Nous vous revenons avec une recommandation de lieu, une approche de production et un cadrage budgétaire. [Décrire votre projet](/construire-mon-projet/) ou consulter notre [guide des lieux du bassin](/journal/lieux-seminaire-evenement-plaine-de-lain/).
 

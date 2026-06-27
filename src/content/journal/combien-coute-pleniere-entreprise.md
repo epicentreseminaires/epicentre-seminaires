@@ -81,4 +81,4 @@ Comptez **15 à 25 % du budget total de l'événement en production technique** 
 
 ---
 
-*Vous travaillez sur un projet de plénière dans la Plaine de l'Ain ? [Décrivez-nous votre projet](/contact/) en deux lignes, nous revenons vers vous avec une grille de coûts adaptée.*
+*Vous travaillez sur un projet de plénière ? [Enclenchez l'étude technique](/construire-mon-projet/) : format, jauge, lieu envisagé. Nous modélisons avant d'engager quoi que ce soit.*

@@ -71,7 +71,7 @@ La salle des fêtes de [Pérouges](/seminaire-perouges/) accueille des événeme
 
 ### Saint-Maurice-de-Gourdans — lieu du Printemps de Pérouges
 
-Saint-Maurice-de-Gourdans est un lieu de caractère dans la Plaine de l'Ain, connu pour accueillir le Printemps de Pérouges, festival culturel de référence dans la région. Ce cadre patrimonial et naturel est disponible **sur demande et sur-mesure** pour des événements d'entreprise, en dehors du calendrier du festival.
+Saint-Maurice-de-Gourdans est un lieu de caractère dans la Plaine de l'Ain, connu pour accueillir le Printemps de Pérouges, festival culturel de référence dans la région. Ce cadre patrimonial et naturel est disponible **sur demande** pour des événements d'entreprise selon votre format et votre calendrier, en dehors du calendrier du festival.
 
 Pour un **gala en plein air**, une **cérémonie de prestige**, un **événement à dimension culturelle forte** ou une **soirée de direction dans un cadre hors du commun**, c'est une piste à envisager. Les conditions de privatisation se négocient directement selon la nature et la date du projet.
 

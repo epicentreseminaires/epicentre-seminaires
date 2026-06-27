@@ -7,7 +7,7 @@ tags: ["plaine de l'ain", "agence locale", "production événementielle"]
 readingTime: "5 min"
 ---
 
-La **Plaine de l'Ain** est l'un des bassins industriels les plus dynamiques de France : aéronautique, énergie, agro-industrie, logistique, services. Les entreprises qui y sont implantées organisent régulièrement des événements à enjeu : conventions annuelles, anniversaires d'entreprise, inaugurations de sites, lancements produits, AG d'actionnaires.
+La **Plaine de l'Ain** est l'un des bassins industriels les plus denses de France : aéronautique, énergie, agro-industrie, logistique, services. Les entreprises qui y sont implantées produisent régulièrement des événements à enjeu : conventions annuelles, anniversaires d'entreprise, inaugurations de sites, lancements produits, AG d'actionnaires.
 
 Pourtant, quand un dirigeant ou un DRH cherche une agence événementielle, le réflexe est souvent de regarder vers Lyon ou Paris. Cet article explique pourquoi, pour les entreprises du bassin, **un acteur local change concrètement la qualité de la production**, et ce que cela signifie en pratique.
 
@@ -57,4 +57,4 @@ Pour le reste : un événement à enjeu sur le bassin Plaine de l'Ain est mieux 
 
 ---
 
-Vous êtes une entreprise du bassin ([Meximieux](/seminaire-meximieux/), [Saint-Vulbas](/seminaire-saint-vulbas/), [Ambérieu](/seminaire-amberieu-en-bugey/), [Lagnieu](/seminaire-lagnieu/), [Montluel](/seminaire-montluel/), [Miribel](/seminaire-miribel/), [Pérouges](/seminaire-perouges/)) et vous préparez un événement à enjeu ? [Décrivez-nous votre projet](/contact/) : nous revenons vers vous sous 24 h.
+Vous êtes une entreprise du bassin ([Meximieux](/seminaire-meximieux/), [Saint-Vulbas](/seminaire-saint-vulbas/), [Ambérieu](/seminaire-amberieu-en-bugey/), [Lagnieu](/seminaire-lagnieu/), [Montluel](/seminaire-montluel/), [Miribel](/seminaire-miribel/), [Pérouges](/seminaire-perouges/)) et vous préparez un événement à enjeu ? [Enclenchez votre étude technique](/construire-mon-projet/) : format, jauge, date.

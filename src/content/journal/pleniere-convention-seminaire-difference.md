@@ -94,4 +94,4 @@ Le bon dimensionnement, c'est l'enjeu central de l'avant-projet. Il se cale en a
 
 ---
 
-*Vous préparez une plénière, une convention ou un séminaire dans la Plaine de l'Ain ou en Bourgogne ? [Décrivez-nous votre projet](/contact/), nous revenons vers vous pour caler un échange.*
+*Vous préparez une plénière, une convention ou un séminaire ? [Enclenchez l'étude technique](/construire-mon-projet/) : format, jauge, date.*
