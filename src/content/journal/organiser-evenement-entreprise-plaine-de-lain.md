@@ -90,7 +90,7 @@ Les budgets varient fortement selon le format, la jauge et le niveau d'ambition.
 - **Gala 100-400 personnes** : lieu privatisé, scénographie de salle, son, animation, traiteur. Budget réparti entre lieu, traiteur et technique.
 - **Inauguration industrielle** : variable selon la complexité du site et le dispositif.
 
-Pour en savoir plus, lisez notre article sur [combien coûte une plénière d'entreprise](/journal/combien-coute-pleniere-entreprise/).
+Pour en savoir plus, lisez notre article sur [combien coûte une plénière d'entreprise](/journal/combien-coute-pleniere-entreprise/). Pour choisir votre espace, consultez notre [sélection des lieux et salles de la Plaine de l'Ain](/journal/lieux-seminaire-evenement-plaine-de-lain/).
 
 ## Délais à prévoir
 

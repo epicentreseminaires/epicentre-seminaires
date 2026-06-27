@@ -15,6 +15,7 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-geneve
 nearbyArticles:
+  - lieux-seminaire-evenement-plaine-de-lain
   - securite-erp-cts-evenement-entreprise
   - agence-evenementielle-locale-plaine-de-lain
   - captation-video-evenement-entreprise-guide
