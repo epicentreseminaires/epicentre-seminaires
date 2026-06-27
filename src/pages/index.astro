@@ -6,7 +6,7 @@ import { carnet } from '@/data/carnet';
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '@/config';
 
 const title = "Agence événementielle Plaine de l'Ain | Epicentre Séminaires";
-const description = "Agence événementielle dans la Plaine de l'Ain. Production clé en main + carnet d'adresses curaté (lieu, traiteur, son, scène, captation). On vous conseille les bons interlocuteurs.";
+const description = "Agence événementielle à Meximieux, Plaine de l'Ain. Modélisation 3D, production complète : plénière, inauguration PIPA, gala, convention. CEPA, Amblamex, Ain.";
 
 const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
 ---
@@ -240,6 +240,56 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
     </div>
   </section>
 
+  <!-- MÉTHODE DIFFÉRENCIANTE : MODÉLISATION 3D -->
+  <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
+    <div class="container-wide">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <div>
+          <p class="eyebrow">Notre méthode</p>
+          <h2 class="h2-hero mt-6">
+            Vous voyez l'événement<br /><span class="text-gradient">avant de le produire.</span>
+          </h2>
+          <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70">
+            Avant de commander une heure de matériel, nous modélisons votre événement en 3D dans votre espace réel. Position de scène, son, lumière, flux d'accueil : vous validez le rendu. La production qui suit est l'exécution d'un plan déjà approuvé.
+          </p>
+          <p class="mt-4 text-base md:text-lg leading-relaxed text-ink/70">
+            Pour un DG, un DRH ou un responsable de site, c'est la garantie de savoir ce qu'on achète avant de s'engager. Pas de description. Pas de promesse. Un rendu.
+          </p>
+          <a href="/journal/modelisation-3d-evenement-entreprise/" class="mt-8 inline-flex items-center gap-2 text-sm text-accent font-medium hover:gap-3 transition-all">
+            Comprendre la méthode 3D
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-bone-soft border border-ink/10 p-6 flex flex-col gap-2">
+              <p class="text-[0.6rem] uppercase tracking-[0.22em] text-ink/45 font-medium">Format minimal</p>
+              <p class="font-display text-3xl font-semibold text-ink leading-none">5</p>
+              <p class="text-sm text-ink/60 leading-snug">personnes, comité de direction confidentiel</p>
+            </div>
+            <div class="bg-bone-soft border border-ink/10 p-6 flex flex-col gap-2">
+              <p class="text-[0.6rem] uppercase tracking-[0.22em] text-ink/45 font-medium">Format maximal</p>
+              <p class="font-display text-3xl font-semibold text-ink leading-none">5 000+</p>
+              <p class="text-sm text-ink/60 leading-snug">personnes, plénière ou inauguration industrielle</p>
+            </div>
+          </div>
+          <div class="bg-ink text-bone p-6 flex flex-col gap-4">
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/45 font-medium">Territoire et institutions</p>
+            <div class="flex flex-wrap gap-2">
+              {['PIPA Saint-Vulbas', 'CEPA', 'Amblamex', 'CCPA', 'Ekinox Bourg', 'LDLC Arena', 'Groupama Stadium', 'Valexpo Oyonnax'].map(tag => (
+                <span class="text-xs text-bone/70 border border-bone/20 px-2.5 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+            <p class="text-sm text-bone/60 leading-relaxed">Entreprises du PIPA, membres de la CEPA ou d'Amblamex : nous sommes votre agence de production locale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ANCRAGE GÉOGRAPHIQUE : ON EST LÀ, EN VRAI -->
   <section class="bg-bone py-20 md:py-28 border-t border-ink/10">
     <div class="container-wide">
@@ -250,7 +300,7 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
           Basés à Meximieux,<br /><span class="text-gradient">au cœur de la Plaine de l'Ain.</span>
         </h2>
         <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70 max-w-2xl">
-          Pas une boîte aux lettres. Un bureau, une vue, un ancrage dans l'Ain. Notre agence événementielle couvre tout le bassin : Montluel, Miribel, Ambérieu-en-Bugey, Lagnieu, Saint-Vulbas, Pérouges, Oyonnax et au-delà, entre Lyon et Genève.
+          Pas une boîte aux lettres. Un bureau, une vue, un ancrage dans l'Ain. Nous travaillons avec les entreprises du PIPA, les membres de la CEPA, d'Amblamex et de la CCPA. Notre périmètre couvre tout le bassin : Montluel, Miribel, Ambérieu-en-Bugey, Lagnieu, Saint-Vulbas, Pérouges, Oyonnax et au-delà, entre Lyon et Genève.
         </p>
       </div>
 
