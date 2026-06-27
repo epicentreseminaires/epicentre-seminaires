@@ -7,9 +7,11 @@ tags: ["inauguration industrielle", "PIPA", "plaine de l'ain", "saint-vulbas", "
 readingTime: "7 min"
 ---
 
-Le **Parc Industriel de la Plaine de l'Ain** est l'un des premiers parcs industriels de France en superficie. Ses entreprises inaugurent régulièrement : nouveau bâtiment de production, extension de site, mise en service d'une ligne de fabrication, ouverture d'un entrepôt logistique. Ces moments méritent une production à la hauteur de leur signification industrielle et symbolique.
+Le **Parc Industriel de la Plaine de l'Ain** est l'un des premiers parcs industriels de France en superficie. Ses entreprises inaugurent régulièrement : nouveau bâtiment de production, extension de site, mise en service d'une ligne de fabrication, ouverture d'un entrepôt logistique.
 
-Epicentre Séminaires produit ces événements depuis son ancrage à Meximieux, au coeur du bassin.
+Ces moments concentrent des enjeux simultanés : protocole avec des élus, communication interne auprès des équipes, image presse, sécurité réglementaire sur site industriel. Ils exigent une architecture événementielle à la hauteur, pas un cocktail improvisé.
+
+Epicentre Séminaires conçoit et produit ces espaces éphémères depuis son ancrage à Meximieux, au cœur du bassin.
 
 ---
 

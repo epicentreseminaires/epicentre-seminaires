@@ -1,6 +1,6 @@
 ---
 title: "Réunion confidentielle de direction dans la Plaine de l'Ain"
-description: "Réunion confidentielle de direction dans la Plaine de l'Ain : lieu discret, sourcing sur-mesure, logistique maîtrisée. Epicentre Séminaires, Meximieux."
+description: "Réunion confidentielle de direction, Plaine de l'Ain : lieu discret hors-circuits, ingénierie logistique, aucune trace publique. Epicentre Séminaires."
 publishedAt: 2026-06-27
 cover: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=2400&q=85&auto=format&fit=crop"
 tags: ["réunion dirigeants", "séminaire confidentiel", "plaine de l'ain", "comité de direction", "ain"]
@@ -9,9 +9,9 @@ readingTime: "5 min"
 
 Vous avez 5, 8 ou 12 personnes à réunir. Ce n'est pas un séminaire. Ce n'est pas une plénière. C'est un comité de direction, une session de travail stratégique, une réunion de crise ou la signature d'un accord que vous ne souhaitez pas voir filtrer.
 
-Le problème des salles de réunion classiques : elles sont référencées, visibles, et partagées.
+Le problème des salles de réunion classiques : elles sont référencées, visibles, partagées. Le personnel va et vient. La réunion d'à côté entend la vôtre.
 
-Nous proposons autre chose.
+**Nous concevons et coordonnons des espaces confidentiels.** Voici ce que cela signifie concrètement.
 
 ---
 

@@ -1,15 +1,17 @@
 ---
 title: "Business center et réunion de direction à Meximieux, Plaine de l'Ain"
-description: "Business center et réunion de direction à Meximieux, Plaine de l'Ain : espace sur-mesure, discrétion, sourcing local. Agence Epicentre Séminaires."
+description: "Business center à Meximieux, Plaine de l'Ain : ingénierie logistique discrète, sourcing hors-circuits, modélisation 3D. Epicentre Séminaires."
 publishedAt: 2026-06-28
 cover: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=2400&q=85&auto=format&fit=crop"
 tags: ["business center", "réunion direction", "Meximieux", "plaine de l'ain", "comité de direction"]
 readingTime: "5 min"
 ---
 
-Vous dirigez une entreprise dans la Plaine de l'Ain, au PIPA ou dans le corridor Lyon-Genève. Vous avez besoin d'un espace de travail professionnel pour une réunion de direction, un comité restreint, une session de travail confidentielle. Pas une salle de réunion d'hôtel partagée avec d'autres groupes. Un espace pensé pour votre format, votre niveau d'exigence et votre contrainte de discrétion.
+Vous dirigez une entreprise dans la Plaine de l'Ain, au PIPA ou dans le corridor Lyon-Genève. Vous avez besoin d'un espace de travail professionnel pour une réunion de direction, un comité restreint, une session confidentielle. Pas une salle d'hôtel partagée. Un espace conçu pour votre format exact, votre niveau d'exigence et votre contrainte de discrétion.
 
-Meximieux, au cœur de la Plaine de l'Ain, est le point de convergence naturel pour les dirigeants du bassin. À 35 minutes de Lyon, à 35 minutes de Bourg-en-Bresse, à 20 minutes de l'aéroport Lyon-Saint-Exupéry.
+Nous ne proposons pas un catalogue de salles. **Nous concevons et coordonnons l'espace événementiel adapté à votre réunion**, en sourçant hors des circuits référencés, en modélisant la configuration avant votre arrivée.
+
+Meximieux, au cœur de la Plaine de l'Ain, est le point de convergence naturel. À 35 minutes de Lyon, à 35 minutes de Bourg-en-Bresse, à 20 minutes de l'aéroport Lyon-Saint-Exupéry.
 
 ---
 
@@ -86,7 +88,7 @@ La **CCPA** (Communauté de Communes de la Plaine de l'Ain) et ses partenaires i
 
 ---
 
-## Comment organiser votre réunion de direction à Meximieux
+## Comment enclencher votre étude technique
 
 Ce type de demande ne passe pas par un formulaire public.
 
