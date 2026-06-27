@@ -15,9 +15,9 @@ const { zone = 'brand', theme = 'dark', transparentTop = false } = Astro.props;
 // Navigation unifiée. Productions et Carnet ouvrent des mega-menus.
 const nav = [
   { label: 'Productions', href: '/productions/', mega: 'productions' as const },
-  { label: 'Carnet', href: '/conseiller/', mega: 'carnet' as const },
   { label: 'Méthode', href: '/process/' },
-  { label: 'Lexique', href: '/lexique/' },
+  { label: "L'agence", href: '/agence/' },
+  { label: 'Carnet', href: '/conseiller/', mega: 'carnet' as const },
 ];
 
 const ctaHref = '/construire-mon-projet/';
@@ -259,7 +259,7 @@ const mobileTextColor = isLight ? 'text-ink/80' : 'text-bone/80';
       <div class="mt-8 flex flex-col gap-3 text-sm text-bone/65">
         <a href="/realisations/" class="hover:text-bone transition-colors">Réalisations</a>
         <a href="/journal/" class="hover:text-bone transition-colors">Journal</a>
-        <a href="/agence/" class="hover:text-bone transition-colors">L'agence</a>
+        <a href="/lexique/" class="hover:text-bone transition-colors">Lexique</a>
         <a href="/contact/" class="hover:text-bone transition-colors">Contact</a>
       </div>
     </nav>
