@@ -7,8 +7,15 @@ const description = "Cadrez votre événement d'entreprise en 7 questions. Forma
 ---
 <Base title={title} description={description} zone="plaine" theme="dark" noindex={false}>
   <section class="min-h-screen bg-bone flex flex-col pt-24 md:pt-28">
+    <!-- Hook 3D avant le formulaire -->
+    <div class="container-wide pt-8 pb-0">
+      <p class="text-xs text-ink/45 leading-relaxed max-w-2xl">
+        Après réception de votre brief, la première chose que nous vous soumettons est une esquisse de pré-modélisation 3D de votre dispositif dans votre espace. Vous voyez avant d'engager.
+      </p>
+    </div>
+
     <!-- Barre de progression -->
-    <div class="container-wide pt-8 pb-6">
+    <div class="container-wide pt-6 pb-6">
       <div class="flex items-center justify-between mb-3">
         <p class="eyebrow text-ink/55">Construire mon projet</p>
         <p class="text-xs text-ink/55 tabular-nums" id="qStepLabel">Étape 1 / 7</p>

@@ -1,80 +1,230 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { CONTACT_PHONE_HREF, CONTACT_PHONE_DISPLAY } from '@/config';
 
-const title = "L'agence : Production événementielle Plaine de l'Ain | Epicentre";
-const description = "Agence de production événementielle dans la Plaine de l'Ain. Notre méthode : pilotage technique direct, sans intermédiaire, hérité des grandes scènes du sport et du spectacle français.";
+const title = "L'agence : Ingénierie de production événementielle | Epicentre Séminaires";
+const description = "12 ans de production événementielle. Cabinet d'ingénierie basé à Meximieux : modélisation 3D, production scénique complète, de 5 à 5 000 personnes. Plaine de l'Ain, PIPA, CEPA.";
 
 const cover = 'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=2400&q=85&auto=format&fit=crop';
 ---
 
 <Base title={title} description={description} zone="plaine">
-  <section class="relative h-[55vh] min-h-[380px] overflow-hidden bg-forest-deep cinema-grade">
-    <img src={cover} alt="Agence événementielle Plaine de l'Ain" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-60" />
-    <div class="absolute inset-0 bg-gradient-to-b from-forest-deep/30 to-forest-deep z-[3]"></div>
-    <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-16 text-bone">
-      <p class="eyebrow text-bone/70 mb-4">L'agence</p>
-      <h1 class="h1-hero-lg max-w-4xl text-bone">Production événementielle, sans intermédiaire.</h1>
+
+  <!-- HERO -->
+  <section class="relative h-[60vh] min-h-[420px] overflow-hidden bg-forest-deep cinema-grade">
+    <img src={cover} alt="Ingénierie de production événementielle Plaine de l'Ain" loading="eager" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-55" />
+    <div class="absolute inset-0 bg-gradient-to-b from-forest-deep/25 to-forest-deep z-[3]"></div>
+    <div class="relative z-10 h-full container-wide flex flex-col justify-end pb-20 text-bone">
+      <p class="eyebrow text-bone/65 mb-5">L'agence</p>
+      <h1 class="h1-hero-lg max-w-4xl text-bone leading-[0.98]">
+        Ingénierie de production<br />événementielle.
+      </h1>
+      <p class="mt-6 text-bone/70 text-lg max-w-xl leading-relaxed">
+        12 ans de production. Basés à Meximieux, Plaine de l'Ain. De 5 à 5 000 personnes.
+      </p>
     </div>
   </section>
 
-  <section class="py-24 bg-bone">
-    <div class="container-wide grid md:grid-cols-12 gap-10">
+  <!-- POSITIONNEMENT : CABINET D'INGÉNIERIE -->
+  <section class="py-24 md:py-32 bg-bone border-b border-ink/10">
+    <div class="container-wide grid md:grid-cols-12 gap-10 md:gap-16">
       <div class="md:col-span-5">
-        <p class="eyebrow">Notre méthode</p>
+        <p class="eyebrow">Positionnement</p>
         <h2 class="h2-section-sm mt-6">
-          Le pilotage technique d'une grande scène, à votre échelle.
+          Pas une agence concept.<br />Un cabinet d'ingénierie.
         </h2>
       </div>
-      <div class="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed">
+      <div class="md:col-span-7 md:col-start-6 space-y-6 text-lg leading-relaxed text-ink/80">
         <p>
-          Epicentre n'est pas une agence "concept-board" qui sous-traite la production. L'agence <strong>pilote techniquement</strong> chaque événement de bout en bout : scénographie, scène, son, lumière, vidéo, captation, régie.
+          La plupart des agences événementielles vendent des idées. Epicentre produit des événements. La différence : <strong>chaque rouage technique est piloté directement</strong>, pas délégué à un inconnu le jour J.
         </p>
         <p>
-          Cette logique vient des productions menées sur les plus grandes scènes du sport et du spectacle français. Aucun rouage technique n'est délégué à un inconnu, parce qu'aucun ne peut l'être quand l'enjeu compte.
+          Cette logique est héritée de 12 ans de production sur les plus grandes scènes du sport et du spectacle français. Sur ces scènes, un câble mal placé ou un prestataire non briefé a des conséquences immédiates et visibles. Cette exigence, nous l'appliquons à votre plénière, votre inauguration, votre gala.
+        </p>
+        <p>
+          Nous sommes basés à Meximieux, au cœur de la Plaine de l'Ain. Ce n'est pas un argument de proximité : c'est la garantie d'une connaissance terrain réelle des lieux, des contraintes logistiques et du tissu de prestataires fiables du bassin.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="bg-forest-gradient text-bone py-24 md:py-28">
+  <!-- MÉTHODE 3D : LE DIFFÉRENCIANT -->
+  <section class="bg-bone-soft py-24 md:py-32 border-b border-ink/10">
     <div class="container-wide">
-      <p class="eyebrow text-bone/50">Trois principes</p>
-      <h2 class="h2-section mt-6 max-w-3xl">
-        Comment on travaille.
-      </h2>
+      <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+        <div>
+          <p class="eyebrow">Notre méthode</p>
+          <h2 class="h2-section-sm mt-6">
+            On modélise avant de produire.
+          </h2>
+          <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70">
+            Avant de commander une heure de matériel ou d'engager un prestataire, nous modélisons votre événement en 3D dans votre espace réel. Position de scène, implantation son, mapping lumière, flux d'accueil et de secours : vous validez le rendu.
+          </p>
+          <p class="mt-4 text-base md:text-lg leading-relaxed text-ink/70">
+            Ce n'est pas une présentation. C'est une maquette opérationnelle. La production qui suit est l'exécution d'un plan déjà approuvé par votre comité.
+          </p>
+          <p class="mt-4 text-base md:text-lg leading-relaxed text-ink/70">
+            Cette méthode est aussi l'outil de brief le plus précis qui existe pour les prestataires : le sondier, l'éclairagiste, le traiteur reçoivent un plan d'implantation exact. Le jour J, personne ne découvre.
+          </p>
+          <a href="/process/" class="mt-8 inline-flex items-center gap-2 text-sm text-accent font-medium hover:gap-3 transition-all">
+            Voir le process complet
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 gap-3">
+          <div class="bg-bone border border-ink/10 p-7 flex flex-col gap-3">
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-ink/45 font-medium">Phase 1</p>
+            <p class="text-lg font-semibold text-ink leading-tight">Brief et cadrage</p>
+            <p class="text-sm text-ink/60 leading-snug">Comprendre l'objectif réel avant de proposer quoi que ce soit. Contraintes, date, lieu, jauge, budget.</p>
+          </div>
+          <div class="bg-bone border border-ink/10 p-7 flex flex-col gap-3">
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-ink/45 font-medium">Phase 2</p>
+            <p class="text-lg font-semibold text-ink leading-tight">Modélisation 3D</p>
+            <p class="text-sm text-ink/60 leading-snug">L'événement à l'échelle dans une scène 3D. Vous voyez le dispositif avant de signer. Les arbitrages se font sur du concret.</p>
+          </div>
+          <div class="bg-ink text-bone p-7 flex flex-col gap-3">
+            <p class="text-[0.6rem] uppercase tracking-[0.22em] text-bone/45 font-medium">Phase 3</p>
+            <p class="text-lg font-semibold text-bone leading-tight">Production et régie jour J</p>
+            <p class="text-sm text-bone/60 leading-snug">Exécution du plan validé. Un seul pilote sur place. Plan B documenté. Le client n'a pas à gérer les coulisses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-3 gap-6 mt-12">
+  <!-- SCALABILITÉ -->
+  <section class="bg-bone py-24 md:py-32 border-b border-ink/10">
+    <div class="container-wide">
+      <div class="max-w-3xl mb-14">
+        <p class="eyebrow">Formats</p>
+        <h2 class="h2-section-sm mt-6">
+          Du comité de direction confidentiel<br />à la super-production de 5 000 personnes.
+        </h2>
+        <p class="mt-8 text-base md:text-lg leading-relaxed text-ink/70">
+          La méthode 3D s'adapte à chaque jauge. Ce n'est pas la même production à 5 et à 5 000, mais c'est la même rigueur de pilotage.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10">
         {[
           {
-            n: '01',
-            t: 'Direct.',
-            d: 'Vous parlez à celui qui pilote la production. Pas d\'intermédiaire commercial entre vous et l\'opérationnel.',
+            jauge: '5 à 20',
+            label: 'Confidentiel',
+            desc: 'Comité de direction, réunion stratégique, session de négociation. Espace discret, configuration sur-mesure, aucune trace publique. Sourcing de lieu hors circuits habituels.',
           },
           {
-            n: '02',
-            t: 'Précis.',
-            d: 'Devis ligne à ligne, équipement nommé, rétroplanning détaillé, équipe identifiée. Pas de poste vague ni de forfait opaque.',
+            jauge: '80 à 500',
+            label: 'Plénière et convention',
+            desc: 'Scène, sonorisation HF, IMAG, éclairage de mise en valeur, captation. L\'Espace Vaugelas, le CIR de Saint-Vulbas, l\'Espace 1500 d\'Ambérieu : on connaît ces salles de l\'intérieur.',
           },
           {
-            n: '03',
-            t: 'Local.',
-            d: 'Basés dans la Plaine de l\'Ain, nous connaissons les lieux du bassin et les prestataires fiables sur place.',
+            jauge: '500 à 5 000+',
+            label: 'Grand format',
+            desc: 'Inauguration industrielle, convention nationale, gala de prestige. Ekinox, Valexpo, LDLC Arena, Groupama Stadium : production technique complète en environnement grande jauge.',
           },
-        ].map((p) => (
-          <div class="border border-bone/10 p-8">
-            <p class="eyebrow text-gradient-bone">{p.n}</p>
-            <h3 class="font-display text-3xl mt-4">{p.t}</h3>
-            <p class="mt-4 text-bone/60 text-sm leading-relaxed">{p.d}</p>
+        ].map((f) => (
+          <div class="bg-bone p-8 md:p-10 flex flex-col gap-4">
+            <div>
+              <p class="font-display text-4xl font-semibold text-ink leading-none">{f.jauge}</p>
+              <p class="text-[0.6rem] uppercase tracking-[0.22em] text-ink/45 font-medium mt-1">personnes</p>
+            </div>
+            <p class="text-base font-semibold text-accent">{f.label}</p>
+            <p class="text-sm text-ink/65 leading-relaxed">{f.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- ANCRAGE INSTITUTIONNEL -->
   <section class="bg-forest-gradient text-bone py-24 md:py-28">
-    <div class="container-wide text-center">
-      <h2 class="h2-section">On étudie votre projet ?</h2>
-      <a href="/contact/" class="btn-bone mt-10 inline-flex">Demander un devis</a>
+    <div class="container-wide">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-start">
+        <div class="md:col-span-5">
+          <p class="eyebrow text-bone/50">Territoire</p>
+          <h2 class="h2-section mt-6 max-w-2xl">
+            Enracinés dans le tissu décisionnel de la Plaine de l'Ain.
+          </h2>
+          <p class="mt-8 text-bone/65 text-base leading-relaxed">
+            Nous travaillons avec les entreprises membres du PIPA, de la CEPA, d'Amblamex et de la CCPA. Ce n'est pas un argument marketing : c'est la réalité de notre ancrage.
+          </p>
+          <p class="mt-4 text-bone/65 text-base leading-relaxed">
+            Notre connaissance du bassin nous permet de proposer des lieux, des prestataires et des formats adaptés aux réalités industrielles du territoire : contraintes HSE sur site, protocole avec des élus, confidentialité pour des réunions sensibles.
+          </p>
+        </div>
+        <div class="md:col-span-6 md:col-start-7">
+          <div class="grid grid-cols-2 gap-3">
+            {[
+              { code: 'PIPA', name: 'Parc Industriel de la Plaine de l\'Ain', url: '/seminaire-saint-vulbas/' },
+              { code: 'CEPA', name: 'Club des Entreprises du PIPA', url: '/journal/inauguration-industrielle-pipa-plaine-de-lain/' },
+              { code: 'Amblamex', name: 'Club Ambérieu · Meximieux · Lagnieu', url: '/seminaire-amberieu-en-bugey/' },
+              { code: 'CCPA', name: 'Communauté de Communes de la Plaine de l\'Ain', url: '/seminaire-meximieux/' },
+              { code: 'Ekinox', name: 'Ainterexpo · Bourg-en-Bresse', url: '/journal/convention-ekinox-bourg-en-bresse/' },
+              { code: 'Valexpo', name: 'Plastics Valley · Oyonnax', url: '/journal/valexpo-oyonnax-convention-plastics-valley/' },
+            ].map((inst) => (
+              <a href={inst.url} class="group border border-bone/15 p-5 hover:border-bone/35 transition-colors">
+                <p class="text-base font-semibold text-bone leading-tight">{inst.code}</p>
+                <p class="text-xs text-bone/45 mt-1.5 leading-snug group-hover:text-bone/65 transition-colors">{inst.name}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- 3 PRINCIPES -->
+  <section class="bg-bone py-24 md:py-28 border-b border-ink/10">
+    <div class="container-wide">
+      <p class="eyebrow">Comment on travaille</p>
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10 mt-12">
+        {[
+          {
+            n: '01',
+            t: 'Direct.',
+            d: 'Vous parlez à celui qui pilote la production. Pas d\'intermédiaire commercial entre vous et l\'opérationnel. Ce qui a été convenu au brief est ce qui est livré.',
+          },
+          {
+            n: '02',
+            t: 'Précis.',
+            d: 'Devis ligne à ligne, matériel nommé, équipe identifiée par rôle, rétroplanning détaillé. Pas de poste vague ni de forfait opaque. Le devis devient le contrat opérationnel.',
+          },
+          {
+            n: '03',
+            t: 'Ancré.',
+            d: 'Basés à Meximieux depuis plus de 10 ans de production. Connaissance réelle des lieux du bassin, des prestataires fiables et des contraintes logistiques de la Plaine de l\'Ain.',
+          },
+        ].map((p) => (
+          <div class="bg-bone p-8 md:p-10 flex flex-col gap-4">
+            <p class="text-accent font-display text-2xl">{p.n}</p>
+            <h3 class="font-display text-3xl font-semibold mt-2">{p.t}</h3>
+            <p class="mt-2 text-ink/65 text-sm leading-relaxed">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-bone py-24 md:py-28">
+    <div class="container-wide text-center max-w-3xl mx-auto">
+      <h2 class="h2-cta">
+        Décrivez votre projet.<br /><span class="text-gradient">On commence par une esquisse 3D.</span>
+      </h2>
+      <p class="mt-8 text-lg text-ink/65 max-w-xl mx-auto leading-relaxed">
+        Quel que soit le format, la première chose que nous vous soumettons est une modélisation de votre dispositif dans votre espace réel.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/construire-mon-projet/" class="btn-accent text-base px-8 py-4">
+          Décrire mon projet
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href={CONTACT_PHONE_HREF} class="btn-outline">
+          {CONTACT_PHONE_DISPLAY}
+        </a>
+      </div>
+    </div>
+  </section>
+
 </Base>
