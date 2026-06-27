@@ -1,6 +1,6 @@
 ---
 title: "Sécurité ERP/CTS d'un événement : ce qu'il faut savoir"
-description: "Cadre ERP, CTS, plan de prévention, accessibilité PMR : ce qu'un dirigeant ou DRH doit comprendre sur la sécurité réglementaire d'un événement d'entreprise."
+description: "ERP, CTS, plan de prévention, PMR : ce qu'un dirigeant ou DRH doit savoir sur la sécurité réglementaire d'un événement d'entreprise."
 publishedAt: 2026-05-07
 cover: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=2400&q=85&auto=format&fit=crop"
 tags: ["sécurité", "ERP", "CTS", "réglementation"]

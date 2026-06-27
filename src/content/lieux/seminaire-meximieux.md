@@ -15,9 +15,10 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
+  - modelisation-3d-evenement-entreprise
+  - reunion-confidentielle-dirigeants-ain
+  - pleniere-gala-evenement-plaine-de-lain
   - agence-evenementielle-locale-plaine-de-lain
-  - scenographie-3d-evenement-entreprise
-  - pleniere-convention-seminaire-difference
 faq:
   - q: "Vous êtes une agence implantée à Meximieux ?"
     a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement à Meximieux et alentours. Nous connaissons les acteurs locaux, les lieux et les contraintes du secteur."

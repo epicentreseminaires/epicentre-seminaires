@@ -15,10 +15,10 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
+  - modelisation-3d-evenement-entreprise
+  - inauguration-industrielle-pipa-plaine-de-lain
+  - pleniere-gala-evenement-plaine-de-lain
   - lieux-seminaire-evenement-plaine-de-lain
-  - agence-evenementielle-locale-plaine-de-lain
-  - scenographie-3d-evenement-entreprise
-  - anatomie-pleniere-grande-jauge
 faq:
   - q: "Vous êtes une agence basée à Ambérieu-en-Bugey ?"
     a: "Oui. Notre ancrage est la Plaine de l'Ain : nous sommes votre agence événementielle locale pour les entreprises basées à Ambérieu, et nous connaissons les acteurs, les lieux et les prestataires du bassin. Pas une agence parisienne ou lyonnaise qui passe une fois."

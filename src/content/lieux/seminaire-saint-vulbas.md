@@ -15,10 +15,10 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-geneve
 nearbyArticles:
+  - inauguration-industrielle-pipa-plaine-de-lain
+  - modelisation-3d-evenement-entreprise
   - lieux-seminaire-evenement-plaine-de-lain
   - securite-erp-cts-evenement-entreprise
-  - agence-evenementielle-locale-plaine-de-lain
-  - captation-video-evenement-entreprise-guide
 faq:
   - q: "Vous êtes une agence implantée à Saint-Vulbas ?"
     a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement sur le PIPA et alentours. Nous connaissons les contraintes industrielles spécifiques (énergie, aéronautique, sous-traitance technique) et le tissu de prestataires locaux fiables."

@@ -14,9 +14,10 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
+  - inauguration-industrielle-pipa-plaine-de-lain
+  - modelisation-3d-evenement-entreprise
   - agence-evenementielle-locale-plaine-de-lain
   - securite-erp-cts-evenement-entreprise
-  - 5-erreurs-confier-seminaire-generaliste
 faq:
   - q: "Vous êtes une agence implantée à Lagnieu ?"
     a: "Notre ancrage est la Plaine de l'Ain. Nous sommes basés dans le bassin et nous intervenons régulièrement à Lagnieu, à 15 minutes du PIPA, à 20 minutes d'Ambérieu. Nous connaissons les acteurs industriels locaux (verre, sous-traitance technique) et les contraintes de production sur site."

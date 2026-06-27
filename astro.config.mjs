@@ -69,6 +69,8 @@ export default defineConfig({
         // Pages lieux Épinac depuis grandes villes
         else if (/\/epinac\/seminaire-depuis-(lyon|paris|geneve|dijon)/.test(url)) item.priority = 0.85;
         else if (url.includes('/epinac/seminaire-')) item.priority = 0.8;
+        // Articles journal stratégiques : piliers GEO et longue traîne institutionnelle
+        else if (/\/journal\/(modelisation-3d|inauguration-industrielle-pipa|evenement-groupama|reunion-confidentielle|evenement-entre-lyon-geneve|pleniere-gala-evenement|lieux-seminaire-evenement|convention-ekinox|valexpo-oyonnax)/.test(url)) item.priority = 0.85;
         // Articles journal : porteurs de longue traîne
         else if (url.includes('/journal/') && !url.endsWith('/journal/')) item.priority = 0.75;
         // Pages structurantes (process, equipement, agence, productions, realisations)

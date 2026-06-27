@@ -1,6 +1,6 @@
 ---
 title: "Organiser un événement d'entreprise entre Lyon et Genève"
-description: "Organiser un séminaire, une plénière ou un gala d'entreprise entre Lyon et Genève : la Plaine de l'Ain, territoire événementiel à mi-chemin. Agence locale."
+description: "Organiser un séminaire ou un gala entre Lyon et Genève : la Plaine de l'Ain, territoire événementiel à mi-chemin. Agence Epicentre Séminaires."
 publishedAt: 2026-06-27
 cover: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=85&auto=format&fit=crop"
 tags: ["entre lyon et genève", "plaine de l'ain", "séminaire entreprise", "événement entreprise"]
