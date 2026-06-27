@@ -14,8 +14,9 @@ nearbyVilles:
   - seminaire-amberieu-en-bugey
   - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
+  - evenement-entreprise-entre-lyon-geneve
+  - pleniere-gala-evenement-plaine-de-lain
   - agence-evenementielle-locale-plaine-de-lain
-  - comment-choisir-agence-evenementielle-seminaire
   - combien-coute-pleniere-entreprise
 faq:
   - q: "Vous êtes une agence basée à Lyon ?"

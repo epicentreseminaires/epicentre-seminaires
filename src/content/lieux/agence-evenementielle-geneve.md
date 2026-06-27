@@ -14,9 +14,10 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - agence-evenementielle-bourg-en-bresse
 nearbyArticles:
+  - evenement-entreprise-entre-lyon-geneve
+  - lieux-seminaire-evenement-plaine-de-lain
   - agence-evenementielle-locale-plaine-de-lain
   - captation-video-evenement-entreprise-guide
-  - comment-choisir-agence-evenementielle-seminaire
 faq:
   - q: "Vous intervenez à Genève côté suisse ou côté français ?"
     a: "Les deux. En Suisse : conventions, lancements, AG dans des hôtels Genève centre, Palexpo, lieux du lac Léman. Côté Pays de Gex (français) : Ferney-Voltaire, Saint-Genis-Pouilly, Divonne-les-Bains. La frontière est administrative ; pour la production technique, c'est le même métier. Nous gérons la coordination douane si du matériel doit traverser."

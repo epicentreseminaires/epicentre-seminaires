@@ -59,7 +59,7 @@ export default defineConfig({
         // Pages lieux Plaine SEO porteuses (cocon géo)
         else if (/\/seminaire-(amberieu|lagnieu|meximieux|saint-vulbas|perouges|montluel|miribel|bellegarde)/.test(url)) item.priority = 0.85;
         // Pages géo étendues (Lyon, Bourg, Genève, Mâcon, Oyonnax)
-        else if (/\/agence-evenementielle-(lyon|bourg|geneve|macon|oyonnax)/.test(url)) item.priority = 0.85;
+        else if (/\/agence-evenementielle-(lyon|bourg|geneve|macon|oyonnax|grenoble|annecy)/.test(url)) item.priority = 0.85;
         // Pages catégorie lexique (15 pages SEO porteuses pour glossaire)
         else if (url.match(/\/lexique\/[a-z]+\/$/)) item.priority = 0.8;
         // Pages catégorie carnet d'adresses
