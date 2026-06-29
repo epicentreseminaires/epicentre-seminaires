@@ -12,7 +12,7 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
 ---
 <Base title={title} description={description} zone="plaine" theme="dark" transparentTop>
   <!-- HERO -->
-  <section class="relative overflow-hidden bg-ink text-bone min-h-[88vh] flex items-center pt-24 md:pt-32 pb-20">
+  <section class="relative overflow-hidden bg-ink text-bone min-h-[88vh] flex flex-col pt-24 md:pt-32 pb-20">
     <!-- Image plein cadre HD avec Ken Burns + grade cinéma (grain film + vignette) -->
     <div class="absolute inset-0 pointer-events-none cinema-grade" aria-hidden="true">
       <img
@@ -27,7 +27,8 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30 z-[3]"></div>
     </div>
 
-    <div class="container-wide relative z-10">
+    <div class="flex-1 flex items-center relative z-10">
+    <div class="container-wide">
       <div class="max-w-3xl">
         <p class="hero-eyebrow hero-fade" style="animation-delay:0ms">
           <span class="block w-10 h-px bg-bone/55"></span>
@@ -55,6 +56,7 @@ const heroImg = 'https://enjoylife.b-cdn.net/Epicentre/epicentre_hero.jpg';
           </a>
         </div>
       </div>
+    </div>
     </div>
 
     <!-- Indicateur de scroll discret -->
