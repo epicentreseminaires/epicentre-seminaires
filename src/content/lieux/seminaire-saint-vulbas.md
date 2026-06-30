@@ -32,6 +32,10 @@ faq:
     a: "Très souvent oui. Pour une AG avec collaborateurs sur sites distants (le PIPA en compte beaucoup), une captation multicam avec streaming live permet à tout le monde de suivre en direct ou en replay. Pour une inauguration, la captation devient une archive corporate utilisée plusieurs années (rapport annuel, communication interne, presse)."
   - q: "Combien de temps prévoir pour une inauguration au PIPA ?"
     a: "Pour une inauguration de site industriel avec discours, scénographie, captation et cocktail : compter 8 à 12 semaines de préparation. Le délai est souvent contraint par la livraison du bâtiment lui-même. Nous nous adaptons à votre calendrier industriel, pas l'inverse."
+  - q: "Vous organisez des assemblées générales d'entreprise à Saint-Vulbas ?"
+    a: "Oui. Les AG d'entreprise au PIPA sont l'un de nos formats habituels : sonorisation adaptée à la jauge, mise en scène de la prise de parole, captation multicam, vote électronique si nécessaire, streaming pour les participants distants. On intègre les contraintes logistiques spécifiques au site (badging, accès véhicules, sécurité de zone industrielle) dès la phase de préparation."
+  - q: "Vous gérez des séminaires résidentiels pour les entreprises du PIPA ?"
+    a: "Oui. Le PIPA n'a pas d'hôtellerie intégrée, mais nous coordonnons le bloc hôtel avec les établissements du bassin proche (Ambérieu, Meximieux, axe A42) pour vos séminaires résidentiels. La production événementielle se tient sur votre site industriel ou dans une salle partenaire du secteur. On gère la coordination complète : lieu, hébergement, transferts, production."
 ---
 
 Vous êtes une entreprise basée à **Saint-Vulbas** ou implantée sur le **Parc Industriel de la Plaine de l'Ain (PIPA)** : industrie lourde, énergie, sous-traitance technique, logistique, sécurité. Vous préparez un événement (**inauguration de site, mise en service, convention interne, AG, lancement de gamme**) et vous cherchez une **agence événementielle** capable de le prendre en charge dans un cadre technique exigeant.

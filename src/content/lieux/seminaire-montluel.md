@@ -13,6 +13,7 @@ nearbyVilles:
   - seminaire-miribel
   - agence-evenementielle-lyon
   - seminaire-perouges
+  - seminaire-beynost-dagneux
 nearbyArticles:
   - agence-evenementielle-locale-plaine-de-lain
   - comment-choisir-agence-evenementielle-seminaire

@@ -34,6 +34,10 @@ faq:
     a: "Idéalement 3 à 6 mois pour une plénière de plus de 200 personnes avec scénographie complète. Nous gérons aussi des productions plus rapides (4 à 8 semaines) sur des formats plus contenus, notamment pour des AG ou des inaugurations institutionnelles."
   - q: "Quel budget prévoir pour un séminaire ?"
     a: "Chaque mission est sur-mesure. Le devis se construit après un échange de cadrage qui précise votre format, votre jauge, votre date et vos enjeux. Devis livré ligne à ligne, équipement nommé, équipe identifiée, rétroplanning détaillé."
+  - q: "Vous intervenez près de la gare d'Ambérieu-en-Bugey pour des séminaires ?"
+    a: "Oui. La gare d'Ambérieu-en-Bugey est sur l'axe Lyon-Genève (TER direct, environ 40 min de Lyon Part-Dieu). Pour vos invités venus de Lyon ou de Genève en train, c'est un point d'entrée logistique réel. On coordonne les transferts gare vers le lieu de votre événement. Un séminaire sur Ambérieu est accessible sans voiture depuis les deux métropoles voisines."
+  - q: "Vous assurez la sono et la lumière pour des événements à Ambérieu-en-Bugey ?"
+    a: "Oui. Sonorisation de salle, éclairage scénique, vidéo-projection et IMAG : on déploie le dispositif technique adapté à votre jauge et à votre lieu. Sur Ambérieu et le bassin du Bugey, on intervient régulièrement. Si vous cherchez un prestataire son et lumière pour un événement sur Ambérieu, c'est notre périmètre technique."
 ---
 
 Vous êtes une entreprise basée à **Ambérieu-en-Bugey** : aéronautique, défense, énergie, sous-traitance industrielle, services. Vous préparez un **séminaire d'entreprise**, une **plénière**, un **gala interne** ou un **lancement de produit**, et vous cherchez une **agence événementielle** capable de le prendre en charge sérieusement.

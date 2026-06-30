@@ -13,6 +13,7 @@ nearbyVilles:
   - agence-evenementielle-lyon
   - seminaire-meximieux
   - seminaire-saint-vulbas
+  - seminaire-villars-les-dombes
 nearbyArticles:
   - agence-evenementielle-locale-plaine-de-lain
   - captation-video-evenement-entreprise-guide

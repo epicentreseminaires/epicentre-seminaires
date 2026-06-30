@@ -32,6 +32,8 @@ faq:
     a: "Oui. Pour les événements avec invités venus en avion, nous coordonnons les transferts depuis Saint-Exupéry (25 min de Meximieux). Usage fréquent pour des conventions internationales ou des événements avec dirigeants de groupe venus de loin."
   - q: "Quel format de séminaire fonctionne le mieux à Meximieux ?"
     a: "Conventions à la journée ou demi-journée, séminaires d'équipe avec déjeuner sur place, lancements de produits intermédiaires, AG, inaugurations. Pour du résidentiel haut de gamme à plusieurs nuits, nous orientons vers nos lieux partenaires de la zone."
+  - q: "Vous organisez des afterworks et événements de cohésion à Meximieux ?"
+    a: "Oui. Cocktail de fin d'année, afterwork commercial, soirée interne, journée de cohésion avec programme de réflexion : formats courants pour les entreprises de Meximieux. On produit l'ambiance (éclairage, fond sonore, mise en scène du programme) avec rigueur. Pour les activités d'animation et de team building à proprement parler, on oriente vers des confrères spécialisés : ce n'est pas notre périmètre de production."
 ---
 
 Vous êtes une entreprise basée à **Meximieux** ou dans le secteur immédiat (logistique, services, agroalimentaire, distribution). Vous préparez un événement et vous cherchez une **agence événementielle locale** capable de le prendre en charge sérieusement.

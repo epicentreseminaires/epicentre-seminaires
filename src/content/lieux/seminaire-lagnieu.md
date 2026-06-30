@@ -31,6 +31,8 @@ faq:
     a: "À partir de 80 à 100 personnes. En dessous, le dispositif technique qu'on met en œuvre n'est pas dimensionné à votre besoin. On peut alors vous orienter vers d'autres prestataires locaux mieux calibrés."
   - q: "Vous proposez la captation vidéo seule, sans la production complète ?"
     a: "Oui, prestation autonome possible. Captation multicam (2 à 6 caméras), régie, streaming live, livrables post-événement. Utile pour des AG, des conférences internes, ou des archives corporate sur des inaugurations."
+  - q: "Vous conseillez pour un repas d'affaires ou déjeuner de direction à Lagnieu ?"
+    a: "Oui, dans notre périmètre de conseil. Sélection du lieu selon le registre (traiteur industriel, restaurant privé, salle hôtelière), coordination de la mise en ambiance sobre, intégration dans un programme de journée. Si la réception inclut une prise de parole, une remise de prix ou un lancement, on bascule sur une production complète. Le conseil lieu est gratuit en amont du cadrage."
 ---
 
 Vous êtes une entreprise basée à **Lagnieu** : industrie du verre, sous-traitance technique, transformation, services. Vous préparez un événement (**inauguration de site, plénière, convention, AG**) et vous cherchez une **agence événementielle** capable de le prendre en charge sérieusement, avec une vraie connaissance du tissu industriel local.
